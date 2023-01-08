@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Relativity</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/Einstein01.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Class 01</h1>
+                        <hr class="small">
+                        <span class="subheading">=== </span>
+                        <span class="subheading">=== </span>
+                        <h2>Introduction to the Theory of Special Relativity</h2>
+                        <h3>PHYS-221 Jan 17/2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <h2 class="post-title">
+                        Things look a lot diferent at 299792458 m/s
+                        </h2>
+                        <p>
+                            Special relativity is the theory dealing with the consecuences of physical phenomena involving speeds comparable to the speed of light, under the (experimentally proven) fact that the speed of light is the maximun speed in the universe. At such speeds, classical Newtonian mechanics is inadequate, and turns out to be just an aproximation at small speeds of a more general framework, where seemingly well understood concepts such space, time and energy are deeply altered. Due that our usual human experiences happen at slow speeds, the predictions from the theory of special relativity appeared to be quite counter-intuitive at first, meeting a great deal of rejection, but the fact that such predictions does not match our daily life experiences, does not imply they are contrary to observation. New advances in technology however, had allow us to test and confirm its perdictions time and time again and nowadays no serious opposition remains.
+                        </p>
+
+                        <h2>Origins</h2>
+                        <p>The origins of special relativity lie in electromagnetism. I would dare to say that it was Maxwell theory of EM which forced us to consider it. One of the strinking predictions of Maxwell theory, is that light obeys a wave equation:<center> $\left(\nabla^2-{1\over c^2}{\partial^2\over \partial t^2} \right)\phi=0\qquad\qquad (1)$</center>
+                            With $\phi$ any cartesian component of the EM field.
+                            </br></br>
+                            Previous to the 1900s, all experience with waves involve the existence of a medium for the wave to propagate, so it was only natural that physicists at the time consider the existence of a medium on which light would propagate. Such medium was termed <em>Ether</em>. However, in order to maintain well known facts about light, it should have very particular propierties, such us: it must permeate all space, was of negligible density and had negligible interaction with matter, because it only shoulds serves as a vehicule to transport light waves.
+                            <br></br>
+However, the Ether hypotesis came along with a few inconsistencies. Probably the most important of them, was the well known incompatibility of the wave equation with Galilean transformation. Allow me to elaborate; If we have two references frames, moving at constant speed $\bf{v}$ with respect to each other, the space and time coordinates in the two frames are related by the following Galilean transformations: $\bf{x}'=\bf{x-v}t$,  $t=t'$.  For the sake of the argument, let us consider a system of particles interacting via a two-body central potential, i.e, by Newton's second law, a particle $i$ in such system is described in the first coordinate system by
+                            <center>$ m_i \bf{a}_i=-\nabla_i\sum_{j}V_{ij}(|\bf{x}_i-\bf{x_j}|)$</center>. Applying a Galilean transformation to this equation is strairforward to see that in the prime frame (the other coordinate system), the equation of motion of the same particle is given by
+                            <center>$ m_i \bf{a}'_i=-\nabla'_i\sum_{j}V_{ij}(|\bf{x}'_i-\bf{x'_j}|)$</center>
+                            <p style="color:blue;">Prove it: Homework.</p>
+                            We say that Newtonian mechanics are invariant under Galilean relativity. However, if we now apply the same transformations to the wave equation (1), we get an unpleasant surprise: in the prime frame, the wave equation transfroms to:
+                            <center> $\left(\nabla^2-{1\over c^2}{\partial^2\over \partial t^2} \right)\phi -{1\over c^2}\left(2 \bf{v\cdot\nabla}\partial_t+ \bf{v\cdot\nabla v\cdot \nabla}\right)\phi=0\qquad\qquad (2)$</center>
+                            <p style="color:blue;">Prove it: Homework.</p>
+Of course this lack of invariance  under Galilean transformations is common in other wave phenomena. The key difference is that other wave phenomena are itself consecuences of Galilean classical mechanics. In other words, the existence of a preferred frame where the phenomena obeys the standard wave equation, is well understood in terms of the motion of the media, whereas the Ether seems truly ethereal, with no further manifestation other than transport light.
+                            </br>By the 1900, Maxwell theory was already well established, so the above exercise was an indication that, if we want to preserve the concept of invarance of the physical laws under change of intertial frames, new transformations laws need to be found for the EM waves.</br></br>
+
+                            <strong>Inertial Frame</strong> <em>By definition, this is a frame of reference in which an object experiencing zero net force. A free object—moves at constant velocity. In classical physics, this is any frame moving at constant velocity.
+                            </em></br></br>
+                            The possibility of the Ether was debunked by the pivotal experiment of Michelson and Morley (to be discussed later), so the hypothesis of new transformation gain traction. Lorentz and Poincare showed that the Maxwell equations are invariant under what is today known as the Lorentz transformations (to be derived in a few minutes), but they lacked the physical intuition to provide for a satisfactory interpretation of them. It was the genius of Einstein that understood the true meaning of such transformations as well as to realized that invariance under such transformations was not exclusive to light, but to all phenomena in nature.     </p>
+
+
+                        </p>
+                        <h2>What is a theory of relativity really?</h2>
+                        <p>A theory of relativity is a kind of dictionary that allows observers in different frames of reference to compare the results of their measures. Think about standing beside the road and looking at a pole next to you. The velocity of such pole measured from your expensive velocimeter is equal to zero. However, someone passing by in a car observing the same pole and measuring its speed with the same expensive device you got for Christmas will get a different from zero velocity for the pole, to this person the pole appears to be moving. In order to reconciliate both views, or to compare them, we need to apply a <em>coordinate transformation</em>. But from the purely mathematical point of view, we have an infinite number of posible coordinate transformations, so the role of a theory of relativity is to provide physical criteria that pin down the, possibly unique, family of transformations that agree with ALL observations in nature, i.e. the experiments (and previous well stablished knowledge.). </br></br> Our usual physical criteria to choose the physical coordinate transformation is that the law of physics should be invariatn regardles the inertial observer. We have seen previously that the second Newton's laws are invariant under Galilean transformations, we could have run the argument backwards and ask for those transformations that leave Newtons laws invariant, and we will reach the same conclusion: Galilean transformations. Unfortunately, as we saw, those does not generalized nicely to light phenomena. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

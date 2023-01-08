@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>19th Century</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/tesla.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Class 00</h1>
+                        <hr class="small">
+                        <span class="subheading">=== </span>
+                        <span class="subheading">=== </span>
+                        <h2>The State of Physics by the end of the 19th Century</h2>
+                        <h3>PHYS-221 Jan 18/2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <p>
+                        If you were a physicist traveling to the end of the 19th century, or perhaps just happend to be living at that time, you probably would have heard Albert Michelson, of the Michelson-Morley Experiment (which we will be cover soon), stating: </br></br>
+                        "<em>While it is never safe to affirm that the future of Physical Science has no marvels in store even more astonishing than those of the past, it seems probable that most of the grand underlying principles have been firmly established and that further advances are to be sought chiefly in the rigorous application of these principles to all the phenomena which come under our notice. It is here that the science of measurement shows its importance — where quantitative work is more to be desired than qualitative work. An eminent physicist remarked that the future truths of physical science are to be looked for in the sixth place of decimals.</em>" </br></br>
+                        (This quote has been often missatributed to Lord Kelvin.) In hindsight the quote seems pretty naive, but it well represent the state of affairs by the end of the 19th century and the early 20th.  Newton’s colossal contributions were established (mechanics, gravitation, optics, calculus, thermodynamics) and their success had provided a framework for understanding the interactions among objects. Maxwell’s electromagnetic equations and it's prediction on the wave nature of light had been discovered and investigated in experimentally and it was well accepted already. The laws of thermodynamics and kinetic theory had been particularly successful explaning macroscopic thermal phenomena. These group of theories, electromagnetism, and thermodynamics, is what we call today “classical physics.” <br></br>
+                        Even though these theories agreed pretty well with most of experimental evidence, there were a few of important experiments that were not explained by the consequences of classical physics
+                        <ul style="list-style-type square">
+                            <li>Classical considerations suggested that light needed a medium to propagate, but experiments failed to detect such medium  </li>
+                            <li>Experiments to study the emission of electromagnetic waves by thermal objects (ultraviolet catastrophe) as well as experiments on the emission of electrons from  objects illuminated with light (photoelectric effect), could not be explained from classical considerations  <a href="https://www.youtube.com/watch?v=jjDWzlCHQc4" target="_blank">Demo photoelectric effect here</a> </li>
+    </li>
+    <li>The fact that different elements (gases in particular), emitted different colors of light, was not understood. <a href="https://www.youtube.com/watch?v=nzPUVmON3ak" target="_blank">See a little demo here.</a></li>
+                        </ul>
+                        While the amount of experiments disagreeing with classical physics may not seem to be too overwhelming in comparison to its success, these few observations ignited an absolute physics revolution, which ultimately had lead us to  a profound transformation of the world, scientifically, technologically and even politically,  from the development of the fundamental theories of special, general relativity and quantum mechanics.<br></br>
+Next, it is worth to review some few classical concepts that will turn out to be useful in our coming discussions. Also, as is usual in physics (and should be), new concepts are build on top of the old ones.
+                    </p>
+
+                        <h2>Classical Physics. Some Mechanics</h2>
+                        Many Newtonian mechanical problems can be analyzed and/or solved by using just three universal principles:
+                        <ul style="list-style-type square">
+                            <li>I. Conservation of Energy. The total energy of an isolated system (on which no net external force acts) remains constant.
+                            </li>
+                            <li>II. Conservation of Linear Momentum. The total linear momentum of an isolated system remains constant. </li>
+                            <li>III. Conservation of Angular Momentum. Angular momentum of a system is conserved as long as there is no net external torque acting on the system</li>
+                        </ul>
+                        In general, the energy can be written a sum over kinetic and potential energy $E=K+U$. Usually we express $K={1\over 2}m v^2$ and linear momentum as ${\bf p}=m{\bf v}$, whereas the potential energy is related to the force acting on the system as: $F=-{dU\over dx}$. Angular momentum is often express as ${\bf L}={\bf r}\times{\bf p}$.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
