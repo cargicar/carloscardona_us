@@ -18,3 +18,5 @@ def class01(request):
 def class00(request):
      return TemplateResponse( request,"weeks/class00.html",)
 
+def qm2(request):
+     return TemplateResponse( request,"weeks/qm2.html",)

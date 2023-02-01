@@ -22,4 +22,5 @@ urlpatterns = [
     path("syllabus/", syllabus, name="syllabus"),
     path("class01/", class01, name="class01"),
     path("class00/", class00, name="class00"),
+    path("qm2/", qm2, name="qm2"),
 ]
