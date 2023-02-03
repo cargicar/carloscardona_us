@@ -23,4 +23,5 @@ urlpatterns = [
     path("class01/", class01, name="class01"),
     path("class00/", class00, name="class00"),
     path("qm2/", qm2, name="qm2"),
+    path("qm3/", qm3, name="qm3"),
 ]

@@ -20,3 +20,6 @@ def class00(request):
 
 def qm2(request):
      return TemplateResponse( request,"weeks/qm2.html",)
+
+def qm3(request):
+     return TemplateResponse( request,"weeks/qm3.html",)
