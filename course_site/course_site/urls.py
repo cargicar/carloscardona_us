@@ -24,4 +24,5 @@ urlpatterns = [
     path("class00/", class00, name="class00"),
     path("qm2/", qm2, name="qm2"),
     path("qm3/", qm3, name="qm3"),
+    path("bohr_model/", bohr_model , name="bohr_model"),
 ]

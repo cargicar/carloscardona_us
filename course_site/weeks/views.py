@@ -23,3 +23,7 @@ def qm2(request):
 
 def qm3(request):
      return TemplateResponse( request,"weeks/qm3.html",)
+
+
+def bohr_model(request):
+     return TemplateResponse( request, "weeks/bohr_model.html",)

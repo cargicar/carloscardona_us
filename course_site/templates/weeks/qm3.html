@@ -95,7 +95,7 @@
                     <h2>The Schrödinger equation</h2>
                     Every wave obeys a wave equation. We can derive the wave equation of a wave on a string or on a body of water, by using Newton's first and second law (since they are both mechanical waves). Or we can derive the EM wave by combining Maxwells equations into a single equation (sort of). <br><br>
 
-                    The wave equation for matter fields is given by the Schrödinger Equation
+                    The wave equation for (free) matter fields is given by the Schrödinger Equation
 
                     \begin{equation}
                     -{\hbar^2\over 2 m}{\partial^2\Psi(x,t)\over\partial x^2}=i\hbar{\partial\Psi(x,t)\over\partial t}\,,
@@ -127,7 +127,7 @@
                     \begin{equation}
                     E\psi={p^2\over 2m}\psi+u(x)\psi\quad\rightarrow\quad-{\hbar^2\over 2m} {d^2\psi\over dx^2}+u(x)\psi=i\hbar{d\psi\over dt}
                     \end{equation}
-                    And therefore the  Schrödinger equation is nothing else but the energy of the wave/particle (I have actually now gave you a more general version of it) &#128526;.
+                    And therefore the  Schrödinger equation is nothing else but the energy of the wave/particle (I have actually now gave you a more general version of it, including an interaction term) &#128526;.
 
                     Few clarifications are in order: Both the wave equation and its solution are complex. One one end, that is just a convenient mathematical way to write things, with further physical consecuences. On the other end, the things that we measure will be real. For example, I have mentioned previously that the probability associated to the quantum particle is given by the square of its wave function $|\psi|^2$, which is real.<br><br>
                     <hr>
@@ -137,7 +137,7 @@
                     \end{equation}
                     <hr>
                     <h2>Heisenberg Uncertainty Principle</h2>
-                    In the previous lecture we argue that the square of the wave function is related to the probability of finding the particle in a given region at a given time. However, it is obvious that the probability of finding a particle anywhere in the WHOLE space time most be one, i.e:
+                    In the previous lecture we argue that the square of the wave function is related to the probability of finding the particle in a given region at a given time. However, it is obvious that the probability of finding a particle anywhere in the WHOLE space most be one, i.e:
                     \begin{equation}
                     \int d P(x,t)=1=C\times\int |\psi(x,t)|^2 dV
                     \end{equation}
@@ -149,7 +149,7 @@
                     \begin{equation}
                     \psi(x,t)=C\int_{-\infty}^{\infty} A(k) {\rm e}^{i(k x- w t)} dk
                     \end{equation}
-                    The equation above is known as a <em>Fourier transform</em> and is widely used in physics, math and engineering. It is indeed a powerful tool with deep physical implication, such as the <b>Heisenberg Uncertainty Principle</b>, which states that the variance for the position of a wave function times the variance of the momemtum, is always bigger than half $\hbar$, i.e,
+                    The equation above is known as a <em>Fourier transform</em> and is widely used in physics, math and engineering. It is indeed a powerful tool with deep physical implication, such as the <b>Heisenberg Uncertainty Principle</b>, which states that the uncertainty (standard deviation) in the position of a particle times the uncertainty in the  momemtum, is always bigger than half $\hbar$, i.e,
                     \begin{equation}
                     \sigma_x \sigma_p \geq {\hbar\over 2}
                     \end{equation}
@@ -186,6 +186,7 @@ Some rare subatomic particles have a very short life span, say $10^{-20}$, givin
                     <center>   <img src="{% static "img/niels_bohr_institute.jpg" %}" width="700"><p>Niels Bohr Institute</p></center><br><br>
 
                     <center>   <img src="{% static "img/hein_bath.jpg" %}" width="700"><p>Heisenberg's Bathtub</p></center><br><br>
+                    Next class we wil be covering the Niels Bohr model of the atom and will see some simple solutions to Schrodinger equation.
                     <br><br><br>
 
                 </div>
