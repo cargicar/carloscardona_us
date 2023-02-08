@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bound_states</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/quantum-corral.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Week 4: Quantum Mechanics in One Dimension I</h1>
+                        <hr class="small">
+                        <span class="subheading">=== </span>
+                        <span class="subheading">=== </span>
+                        <h2>Bound States</h2>
+                        <h3>PHYS-221 Feb 8 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <b>Announcements</b>: Homework extension will be handled by the graders (you still need to request the extension to me). Please let me know if a problem with an extension occurs. <br>
+
+                    <h2>Shrödinger Equation and Stationary States</h2>
+                    <em>We now can take for granted all the unintuitive aspects of QM, and just focus into using it to explain and use nature.</em><br><br>
+                    In order to apply quantum mechanics to real problems and applications, we need to developed some techniques in order to solve the Shrödinger Equation.<br><br> In Classical Mechanics, to determine the behaviour of a system, we first try to apply Newtons laws and solve the corresponding equations. Analogously, in QM, in order to understand a quantum system,  we want to solve the Shrödinger Equation for the wave function(s) of the system. Easier said than done, because in the vast majority of cases, the SE can not be solved exactly and we need to use large computers and sofisticated numerical methods in order to solve it.
+                    <br><br>However luckily, there are a few simplified examples that allow an analytical treatment, and serve as an intuitive guide for more realistic yet complex situations. In the remaining of this week and next, we are going to consider some simplified important examples in one dimension, that have served as a stepping stone towards harder problems in QM. <br><br>
+                    <h3>Stationary States</h3>
+                    \begin{equation}
+                    E\Psi\rightarrow-{\hbar^2\over 2m} {d^2\Psi(x,t)\over dx^2}+u(x)\Psi(x,t)=i\hbar{d\Psi(x,t)\over dt}
+                    \end{equation}
+                    A standard method to solve differential equations in more than one variable is by doing <em>separation of variables</em>:
+
+                    \begin{equation}
+                    \Psi(x,t)=\psi(x)\phi(t)
+                    \end{equation}
+                    Imposing such condition reduce the spaces of solutions to a smaller space, however, as we will see in a minute, this space is one of special physical interest (quick comment: The fact that a function is a solution of the SE, does not imply that the function exist in nature!). Replacing the variable separated wave function in the SE we have:
+
+                    \begin{equation}
+                    -{\hbar^2\over 2m\psi(x)} {d^2\psi(x)\over dx^2}+u(x)={i\hbar\over \phi(t)}{d\phi(t)\over dt}=C
+                    \end{equation}
+                    The last equality is just stating that in order to both sides to have different variable dependencies, they need to be equal to a constant $C$. More generally, the potential energy could be a function of time, and hence the previous argument would fail. Therefore, the physical assumption in this particular separation of variables is that the potential only depend on $x$.<br><br>
+                    Let's consider the temporal piece:
+                    \begin{equation}
+                    {i\hbar\over \phi(t)}{d\phi(t)\over dt}=C\quad\rightarrow\quad \phi(t)=e^{-i{C\over\hbar}t}
+                    \end{equation}
+                    By using Euler formula we can see that $\omega={C\over\hbar}$. Remembering that $E=\hbar\omega$ we conclude that $E=\hbar\omega=C$ is a constant! <em>Separation of variables, select the space of constant energy wave functions.</em>
+                   Also notice that the temporal component is the same for any energy conserving wave function! <br><br>
+                    Without solving the spacial component yet, let us consider:
+                    \begin{equation}
+                    \Psi(x,t)\Psi(x,t)^*=\psi(x)\psi(x)^*=|\psi(x)|^2
+                    \end{equation}
+                    The spatial probabilities are constant in time, or equivalently, the space of wave functions satisfying the separation of variables condition are <b>stationary states</b>. Giving that, in what follows we only need to be concerned with the spatial piece (and stationary systems):
+ \begin{equation}
+                    -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}+u(x)\psi(x)=E\psi(x)\,.
+                    \end{equation}
+                    Above equation is also known as the time-independent Schrodinger equation.
+                    <h3>More Physical Conditions</h3>
+                    As stated above, not all solutions of SE need to be physical. For one, we need that the square of the function represents a probability, and since the sum of all probabilities should sum to one, we need to additionally impose:
+                    \begin{equation}
+                    \int_{\rm all~space}|\Psi(x,t)|^2 dV=1\,.
+                    \end{equation}
+                    In math terms $\Psi$ must be an <b> square-integrable function</b>.<br><br>  Second, since we want the solutions to be wave functions, we need to requiere that they are smooth and continuous.
+                    \begin{equation}
+                   |{d\Psi(x,t)\over dx}|<\infty\,.
+                    \end{equation}
+                    <h2>Bound States</h2>
+                    A bound state is one in which a particle's motion is restricted twithin a finite region by an external force: ex. A mass on a spring, a planet orbiting a star, and electron inside an atom, etc. Take the example of a mass on a spring. The mass is confined to move in a narrow region confined by a parabolic potential (Hooke's potential).
+                    <center>   <img src="{% static "img/spring.png" %}" width="500"></center><br><br>
+                    The total energy of this mass is constant in time and it's potential energy is time-independent. This will be a situation where at the quantum level the separation of variables is suitable. We can just plug in Hooke's potential into SE and consider a wave inside it instead of a particle, but solution in such situation is a bit complicated. Let us do some simplifications that will allow us to solve the SE rapidly and still learn some important lessons for a quantum particle in a infinitly tall potential.<br><br>
+                    <center>   <img src="{% static "img/infi_well.png" %}" width="500"></center><br><br>
+                    Inside the well, $u(x)=0$, and then the time-independent SE simplies to:
+                    \begin{equation}
+                    -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}=E\psi(x)\quad{\rm or}\quad\, {d^2\psi(x)\over dx^2}=-k^2\psi(x)
+                    \end{equation}
+                    with $k=\sqrt{2mE\over \hbar^2}$. What solution whould it be?<br><br><br>
+                    \begin{equation}
+                    \psi(x)=A~sin(kx)\,.
+                    \end{equation}
+                    What is the value of $\psi$ outside the walls?.<br><br>
+                    $\infty\psi(x<0)=E\psi(x<0)\quad\rightarrow\quad \psi(x<0)\to{1\over \infty}\to 0$ (or we can just think analogously with the classical example, but it does not generalize to finite potentials.)<br><br>
+                    We also need the wavefunction to be continuous, i.e $\psi(0)=0$ and $\psi(L)=0$. The first condition is automatically satisfied, but the second is a bit strange:
+                    \begin{equation}
+                    A~sin(kL)=0\,.
+                    \end{equation}
+                    <center>   <img src="{% static "img/sine.gif" %}" width="500"></center><br><br>
+                    \begin{equation}
+                    kL=n\pi\quad\rightarrow\quad E={n^2\pi^2\hbar^2\over 2mL}\,.
+                    \end{equation}
+                    Just by asking continuity of the wave function, we once more arrive to one of the most fascinating predictions of quantum mechanics, the particle's energy is quantized, it can not take arbitrary continuous values, but the particle need to sit in one of this energy levels. <br><br>
+                    We still have one physical requirement: the sum of all probabilities  should be one:
+                    \begin{equation}
+                    \int_{\rm all~space}|\Psi(x,t)|^2=\int_{-\infty}^{\infty}|\psi(x)|^2 dx=\int_{0}^{L}|A sin(kx)|^2 dx=1\,,
+                    \end{equation}
+                    $A^2\int_{-\infty}^{\infty}|sin(kx)|^2 dx=A^2{L\over 2}$, then the final solution looks like:
+                    \begin{equation}
+                    \psi_n(x)=\sqrt{2\over L}sin{n\pi x\over L}
+                    \end{equation}
+                    and $ E={n^2\pi^2\hbar^2\over 2mL}$. <br><br>
+                    The solution is the tipical solution of a standing wave, and tipically we encounter that quantum mechanically, bound states are standing waves, which gives a more appealing explanation to Bohr postulate.  
+                    <center>   <img src="{% static "img/inf_well_sol.png" %}" width="500"></center><br><br>
+
+                    <center>   <img src="{% static "img/inf_well_prob.png" %}" width="500"></center><br><br>
+The nodes of the standing wave corresponds to regions of probability zero of finding the particle, yet the  particle can be at either side of the node, without even crossing it!. <br><br>
+                    Also notice that a we can't have $E_k=0$ or equivalently $n=0$, since that implies a particle at rest, but that would violate the uncertanty principle, for having a position uncertanty or order $L$ can not have a zero momentum uncertanty. Therefore, the lowest energy is attained at $n=1$, it's known as the <b>ground state energy</b>, and the corresponding standing wave with that energy is known as <b>ground state.</b><br><br>
+                    The classical limit corresponds to large $n$ or very short wave length. 
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

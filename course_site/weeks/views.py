@@ -27,3 +27,6 @@ def qm3(request):
 
 def bohr_model(request):
      return TemplateResponse( request, "weeks/bohr_model.html",)
+
+def bound_states(request):
+     return TemplateResponse( request, "weeks/bound_states.html",)
