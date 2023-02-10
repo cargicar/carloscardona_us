@@ -26,4 +26,5 @@ urlpatterns = [
     path("qm3/", qm3, name="qm3"),
     path("bohr_model/", bohr_model , name="bohr_model"),
     path("bound_states/", bound_states , name="bound_states"),
+    path("tunneling/", tunneling , name="tunneling"),
 ]
