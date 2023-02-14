@@ -33,3 +33,8 @@ def bound_states(request):
 
 def tunneling(request):
      return TemplateResponse( request, "weeks/tunneling.html",)
+
+def quantum_math(request):
+     return TemplateResponse( request, "weeks/quantum_math.html",)
+
+ 
