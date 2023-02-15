@@ -99,7 +99,7 @@ We will continue our exploration of one-dimensional solutions of the SE. We stil
                     Imagine an incoming wave from the left to the right. At $x=0$ the wave meet the barrier (or better, a force $F=-du/dx$ due to the barrier potential), part of the wave is then bounced back and somoe part is transmitted. Our task is to estimate how much cross the barrier and how much is reflected. <br><br>
                     We have three regions to consider: Region I : $x<0$, Region II : $ 0< x< L $ and Region III : $L< x$, which corresponding SE given by:<br><br>
                     \begin{equation}
-                    -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}+u(x)\psi(x)=E\psi(x)\,.
+                   \boxed{ -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}+u(x)\psi(x)=E\psi(x)}\,.
                     \end{equation}
 
                     Region I and II:
@@ -113,15 +113,15 @@ We will continue our exploration of one-dimensional solutions of the SE. We stil
 
                     This equations are very similar to that one for the particle inside a box, however we now have a fundamental physical diference: We have a component of the wave moving right (incoming wave) and another component moving left (reflected wave).  In other words, we should have a wave component propagating to the right $e^{i(+kx-\omega t)}$ and other to the left  $e^{i(-kx-\omega t)}$. In other words, we expect that the spatial  wave in region $I$ to take the form:
                     \begin{equation}
-                    \psi_I(x)= A_Ie^{+ikx} +B_Ie^{-ikx}\,,
+                   \boxed{ \psi_I(x)= A_Ie^{+ikx} +B_Ie^{-ikx}}\,,
                     \end{equation}
                     Similarly for region $II$
                     \begin{equation}
-                    \psi_{II}(x)=A_{II}e^{+ik'x} +B_{II}e^{-ik'x}\,,
+\boxed{                    \psi_{II}(x)=A_{II}e^{+ik'x} +B_{II}e^{-ik'x}}\,,
                     \end{equation}
                     and finally for region III,
                     \begin{equation}
-                    \psi_{III}(x)= A_{III}e^{+ikx}\,.
+    \boxed{                \psi_{III}(x)= A_{III}e^{+ikx}}\,.
                     \end{equation}
                     Now we need to impose the continuity and smoothness conditions at the boundaries:
                     \begin{equation}
@@ -140,12 +140,12 @@ We will continue our exploration of one-dimensional solutions of the SE. We stil
                     \end{equation}
                     Reflection probability is given by the ratio between the reflected probability and the incoming probability:
                     \begin{equation}
-                    R={|B_I|^2\over |A_{I}|^2}
+                   \boxed{ R={|B_I|^2\over |A_{I}|^2}}
                     \end{equation}
 
                     whereas transmission probability, is related to the ratio between the trasmitted probability and the incoming probability:
                     \begin{equation}
-                    T={|A_{III}|^2\over |A_{I}|^2}
+\boxed{                    T={|A_{III}|^2\over |A_{I}|^2}}
                     \end{equation}
                     From the continuity and smoothness conditions, we can solve all the $B_I$ and $A_{III}$ in terms of $A_I$. The algebra is a little lengthly, but straigthforward. Doing so, and considering first the case $E>U_0$, we obtain:
                     \begin{equation}
@@ -156,10 +156,10 @@ We will continue our exploration of one-dimensional solutions of the SE. We stil
                     \end{equation}
                     Noticed that $R+T=1$, as they should, since the total probability should sum up to one. <br><br>
                     The result for the reflection coefficient lead us to an interesting phenomena: it can be zero sometimes!:
-                    \begin{equation} R=0 \quad {\rm if} \quad sin^2\left[\sqrt{2m(E-U_0)}L/\hbar\right]=0\quad\rightarrow \sqrt{2m(E-U_0)}L/\hbar=n\pi
+                    \begin{equation}\boxed{ R=0} \quad {\rm if} \quad sin^2\left[\sqrt{2m(E-U_0)}L/\hbar\right]=0\quad\rightarrow \sqrt{2m(E-U_0)}L/\hbar=n\pi
                     \end{equation}
                     \begin{equation}
-                    E=U_0+{n^2\pi^2\hbar^2\over2mL^2}
+\boxed{                    E=U_0+{n^2\pi^2\hbar^2\over2mL^2} }
                     \end{equation}
                     This is known as <b>resonant transmission</b>, and implies that a particle can cross a barrier complete, unscratched (It is the equivalent of classical resonance).  This does not imply energy quantization, since unlike bound states, unbound states energies can take any value, it just mean that only certain energies can be transmitted entirely. Also observe that in order for this effect to take place, the kinetic energy of the particle should be bigger than the barrier potential. <br><br>
                     We can now look into the situation where a particle come towars the barrier with kinetic energy smaller than the potential barrier, i.e, $E< U_0$. We can go ahead and repeat the same analysis from top for such case, but is not really necessary:  we just need to use the fact that $sin(i x)=i~ sinh^2(x)$, to get:
@@ -169,9 +169,9 @@ We will continue our exploration of one-dimensional solutions of the SE. We stil
                     \begin{equation}
                     T={4(E/U_0)\left[(E/U_0)-1 \right]\over sinh^2\left[\sqrt{2m(E-U_0)}L/\hbar\right]+4(E/U_0)\left[(E/U_0)-1 \right]}
                     \end{equation}
-                    Even thougt in this case, disappointingly, we don't observer resonant transmission &#128549; ,we still find a non-zero probability of a particle crossing the barrier, despite not having enough energy to surmount the potential barrier. This effect is known as <b>tunneling</b>, and has large technological implications. Is important to observe however, that the probability of transmission can be very small, exponentially small:
+                    Even thougt in this case, disappointingly, we don't observer resonant transmission &#128549; ,<mark>we still find a non-zero probability of a particle crossing the barrier</mark>, despite not having enough energy to surmount the potential barrier. This effect is known as <b>tunneling</b>, and has large technological implications. Is important to observe however, that the probability of transmission can be very small, exponentially small:
                     \begin{equation}
-                    T\sim 16{E\over U_0}\left(1-{E\over U_0}\right)e^{-2L\sqrt{2m(U_0-E)}/\hbar}
+\boxed{                    T\sim 16{E\over U_0}\left(1-{E\over U_0}\right)e^{-2L\sqrt{2m(U_0-E)}/\hbar}}
                     \end{equation}
                     <br><br>
                     Tunneling has found many technological applications (as well as the explanation of several phenomena, like Radioactive decay and nuclear fusion in starts), to mention a few: Tunnel diode and Tunnel field transistors which are some new type of superconductors, tunnel junction that serve to measure very small magnetic fields such as those produced in our brains and hearts! &#x1F92F; , however the most widely and still growing technology that uses it is the <b>The scanning tunneling microscope</b>, which uses the strong dependence of tunneling on the barrier widht.

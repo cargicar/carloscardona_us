@@ -28,4 +28,5 @@ urlpatterns = [
     path("bound_states/", bound_states , name="bound_states"),
     path("tunneling/", tunneling , name="tunneling"),
     path("quantum_math/", quantum_math , name="quantum_math"),
+    path("se_3d/", se_3d , name="se_3d"),
 ]

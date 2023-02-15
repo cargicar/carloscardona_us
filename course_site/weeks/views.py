@@ -37,4 +37,7 @@ def tunneling(request):
 def quantum_math(request):
      return TemplateResponse( request, "weeks/quantum_math.html",)
 
- 
+def se_3d(request):
+     return TemplateResponse( request, "weeks/se_3d.html",)
+
+

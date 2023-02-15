@@ -119,23 +119,23 @@
                     \end{equation}
                     By using Euler formula we can see that $\omega={C\over\hbar}$. Remembering that $E=\hbar\omega$ we conclude that $E=\hbar\omega=C$ is a constant! <em>Separation of variables, select the space of constant energy wave functions.</em>
                    Also notice that the temporal component is the same for any energy conserving wave function! <br><br>
-                    Without solving the spacial component yet, let us consider:
+                    Without solving the spacial component yet, let us consider <mark>probability density for an stationary state:</mark>:
                     \begin{equation}
-                    \Psi(x,t)\Psi(x,t)^*=\psi(x)\psi(x)^*=|\psi(x)|^2
+ \boxed{                   \Psi(x,t)\Psi(x,t)^*=\psi(x)\psi(x)^*=|\psi(x)|^2}
                     \end{equation}
                     The spatial probabilities are constant in time, or equivalently, the space of wave functions satisfying the separation of variables condition are <b>stationary states</b>. Giving that, in what follows we only need to be concerned with the spatial piece (and stationary systems):
  \begin{equation}
-                    -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}+u(x)\psi(x)=E\psi(x)\,.
+                   \boxed{ -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}+u(x)\psi(x)=E\psi(x)}\,.
                     \end{equation}
                     Above equation is also known as the time-independent Schrodinger equation.
                     <h3>More Physical Conditions</h3>
                     As stated above, not all solutions of SE need to be physical. For one, we need that the square of the function represents a probability, and since the sum of all probabilities should sum to one, we need to additionally impose:
                     \begin{equation}
-                    \int_{\rm all~space}|\Psi(x,t)|^2 dV=1\,.
+\boxed{                    \int_{\rm all~space}|\Psi(x,t)|^2 dV=1}\,.
                     \end{equation}
                     In math terms $\Psi$ must be an <b> square-integrable function</b>.<br><br>  Second, since we want the solutions to be wave functions, we need to requiere that they are smooth and continuous.
                     \begin{equation}
-                   |{d\Psi(x,t)\over dx}|<\infty\,.
+                  \boxed{ |{d\Psi(x,t)\over dx}|<\infty}\,.
                     \end{equation}
                     <h2>Bound States</h2>
                     A bound state is one in which a particle's motion is restricted twithin a finite region by an external force: ex. A mass on a spring, a planet orbiting a star, and electron inside an atom, etc. Take the example of a mass on a spring. The mass is confined to move in a narrow region confined by a parabolic potential (Hooke's potential).
@@ -167,15 +167,15 @@
                     \end{equation}
                     $A^2\int_{-\infty}^{\infty}|sin(kx)|^2 dx=A^2{L\over 2}$, then the final solution looks like:
                     \begin{equation}
-                    \psi_n(x)=\sqrt{2\over L}sin{n\pi x\over L}
+               \boxed{     \psi_n(x)=\sqrt{2\over L}sin{n\pi x\over L}}
                     \end{equation}
                     and $ E={n^2\pi^2\hbar^2\over 2mL}$. <br><br>
-                    The solution is the tipical solution of a standing wave, and tipically we encounter that quantum mechanically, bound states are standing waves, which gives a more appealing explanation to Bohr postulate.  
+                    The solution is the tipical solution of a standing wave, and tipically we encounter that quantum mechanically,<mark> bound states are standing waves</mark>, which gives a more appealing explanation to Bohr postulate.  
                     <center>   <img src="{% static "img/inf_well_sol.png" %}" width="500"></center><br><br>
 
                     <center>   <img src="{% static "img/inf_well_prob.png" %}" width="500"></center><br><br>
 The nodes of the standing wave corresponds to regions of probability zero of finding the particle, yet the  particle can be at either side of the node, without even crossing it!. <br><br>
-                    Also notice that a we can't have $E_k=0$ or equivalently $n=0$, since that implies a particle at rest, but that would violate the uncertanty principle, for having a position uncertanty or order $L$ can not have a zero momentum uncertanty. Therefore, the lowest energy is attained at $n=1$, it's known as the <b>ground state energy</b>, and the corresponding standing wave with that energy is known as <b>ground state.</b><br><br>
+                    Also<mark> notice that a we can't have $E_k=0$ or equivalently $n=0$</mark>, since that implies a particle at rest, but that would violate the uncertanty principle, for having a position uncertanty or order $L$ can not have a zero momentum uncertanty. Therefore,<mark> the lowest energy is attained at $n=1$, it's known as the <b>ground state energy</b>, and the corresponding standing wave with that energy is known as <b>ground state.</mark><br><br>
                     The classical limit corresponds to large $n$ or very short wave length. 
                     <br><br><br>
                 </div>
