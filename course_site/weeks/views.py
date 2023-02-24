@@ -40,4 +40,7 @@ def quantum_math(request):
 def se_3d(request):
      return TemplateResponse( request, "weeks/se_3d.html",)
 
+def hydrogen_atom(request):
+     return TemplateResponse( request, "weeks/hydrogen_atom.html",)
+
 

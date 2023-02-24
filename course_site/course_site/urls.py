@@ -29,4 +29,6 @@ urlpatterns = [
     path("tunneling/", tunneling , name="tunneling"),
     path("quantum_math/", quantum_math , name="quantum_math"),
     path("se_3d/", se_3d , name="se_3d"),
+    path("hydrogen_atom/", hydrogen_atom , name="hydrogen_atom"),
+
 ]

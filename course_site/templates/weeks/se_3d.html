@@ -70,12 +70,12 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url({% static 'img/Electron_Wave_Packets.gif' %})">
+    <header class="intro-header" style="background-image: url({% static 'img/quantum-corral.jpg' %})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1 style="color:Moccasin;">Week 5 </h1>
+                        <h1 style="color:Moccasin;">Week 6 </h1>
                         <hr class="small">
                         <h2>Quantum Mechanics in Three Dimensions</h2>
                         <h3>PHYS-221 Feb 15 / 2023 </h3>
@@ -99,9 +99,9 @@
                     and we also argued that this equation is based on energy considerations for a particle-wave object. <br></br>
                     The generalization to higher dimensions is almost obvious:
                     \begin{equation}
-                    -{\hbar^2\over 2 m}\left({\partial^2\over \partial x^2}+{\partial^2\over \partial y^2}+{\partial^2\over \partial z^2}\right)\Psi(x,y,z,t)+U(x)\Psi(x,y,z,t)=i\hbar{\partial\over \partial t}\Psi(x,y,z,t)\,,
+                    -{\hbar^2\over 2 m}\left({\partial^2\over \partial x^2}+{\partial^2\over \partial y^2}+{\partial^2\over \partial z^2}\right)\Psi(x,y,z,t)+U(x,y,z,t)\Psi(x,y,z,t)=i\hbar{\partial\over \partial t}\Psi(x,y,z,t)\,,
                     \end{equation}
-                    However, higher dimensions introduce some complexities. For exampl, the SE written in rectangular coordinates as above, does not explote the spatial symmetries of particular problems, for example usual problems with spherical symmetry. Later we are going to use other more convenient coordinate systems, in which the SE adopt slightly diferent forms.
+                    However, higher dimensions introduce some complexities. For example, the SE written in rectangular coordinates as above, does not explote the spatial symmetries of particular problems, for example usual problems with spherical symmetry. Later we are going to use other more convenient coordinate systems, in which the SE adopt slightly diferent forms.
                     <h3>Probability density</h3>
                     As in one dimension, the square of the wave function represent the probability density, i.e, Probability per unit of lenght. In three dimensions we say that the square of the wave function represent the probability per unit of volume, or in math form
                     \begin{equation}
@@ -140,9 +140,15 @@
                     Here is worth doing some clarifications that I have ommited during the one dimension discussion. The most general solution to equation above is
 
                     \begin{equation}
-                    \Gamma(\gamma)=A_{\gamma}e^{ikx}+B_{\gamma}e^{-ikx}\,.
+                    \Gamma(\gamma)=A_{\gamma}e^{ik\gamma}+B_{\gamma}e^{-ik\gamma}\,.
                     \end{equation}
-                    Since the wave can't penetrate an infinite potential (it would requiere an infinite initial energy), the probability of bounce in the boundary has to be equal to the probability of the incoming wave (in other words, transmision is zero), or $|A_{\gamma}|=|B_{\gamma}|$.  Additionally, we are positioning the cube as shown at the figure above, which in particular  imply that we want $\Gamma(0)=0$, which impose $A_{\gamma}=-B_{\gamma}$, leading us to the result quoted.<br><br>
+                    Since the wave can't penetrate an infinite potential (it would requiere an infinite initial energy), the probability of bounce in the boundary has to be equal to the probability of the incoming wave (in other words, transmision is zero), or $|A_{\gamma}|=|B_{\gamma}|$.  Additionally, we are positioning the cube as shown at the figure above, which in particular  imply that we want $\Gamma(0)=0$, which impose $A_{\gamma}=-B_{\gamma}$, leading us to the result quoted. Expanding back from $\Gamma(\gamma)$ to $X,Y,Z$ we have the total solution to be:
+
+                    \begin{equation}
+                    \Psi(\vec{r})=2^3 A_{x}A_{y}A_{z}{\rm sin}{n_{x}\pi x\over L_{x}}{\rm sin}{n_{y}\pi y\over L_{y}}{\rm sin}{n_{z}\pi z\over L_{z}} \,. 
+                    \end{equation}
+                    
+                    <br><br>
                     The only actual difference with the case in one dimension, is that now we have three indepent solutions, which give us three contributing quantizations to the energy:
 
                     \begin{equation}
@@ -157,9 +163,9 @@
                     
                     with corresponding wave function:
                     \begin{equation}
-                    \Psi(\vec{r})= A_{x}A_{y}A_{z}{\rm sin}{n_{x}\pi x\over L_{x}}{\rm sin}{n_{y}\pi y\over L_{y}}{\rm sin}{n_{z}\pi z\over L_{z}} \,. 
+                    \Psi(\vec{r})= A\,{\rm sin}{n_{x}\pi x\over L_{x}}{\rm sin}{n_{y}\pi y\over L_{y}}{\rm sin}{n_{z}\pi z\over L_{z}} \,. 
                     \end{equation}
-                    We can define a single constant $A=A_{x}A_{y}A_{z}$. Each triple $(n_x,n_y,n_z)$ defines a three dimensional standing wave. Each new spatial dimensions leads to a corresponding <b>quantum number</b> contributing to the energy.<br><br>
+                    We can define a single constant $A=2^3A_{x}A_{y}A_{z}$. Each triple $(n_x,n_y,n_z)$ defines a three dimensional standing wave. Each new spatial dimensions leads to a corresponding <b>quantum number</b> contributing to the energy.<br><br>
                     As in one dimension, none quantum number $n_{\gamma}$ is allowed to become zero, since that will vanish the wave function and will violate the uncertanty principle. Then again, the lowes energy state, or ground state, corresponds to the energy at $(n_x,n_y,n_z)=(1,1,1)$.<br><br>
 
                     Unlike in one dimension, now is not quite obvious what state is the next energy level above the ground state (do some analysis here). <br><br> Even more, there might be multiple states with the same energy! This phenomena s know as <b>degeneracy</b>. To see why that is possible, lets take the actual cube $L_{\gamma}=L$, then:
@@ -187,15 +193,16 @@
                     $$E_{1,1,2}= E_{1,2,1}= E_{2,1,1}$$
                     whereas the deformed cube will produce different values for each term, i.e:
                     \begin{equation}
-                   E_{1,1,2}= {1^2\over(L+\delta L_{x})^2}+{1^2\over(L+\delta L_{y})^2}+{2^2\over(L+\delta L_{z})^2}
+                    E_{1,1,2}= {1^2\over(L+\delta L_{x})^2}+{1^2\over(L+\delta L_{y})^2}+{2^2\over(L+\delta L_{z})^2}
                     \end{equation}
                     is different for permutations of $[(1,1,2)]$, as long as $\delta_{x}\neq\delta_{y}\neq \delta_{y}$ (BB):
                     $$E_{1,1,2}\neq E_{1,2,1}\neq E_{2,1,1}$$
 
                     <hr><b>Problem:</b><br>
-                    We have some electrons of the same energy inside an 3D infinite well of side size 1nm. We have measure the energy of one of these electrons to be 2.26 eV<br> (a) How many possible different wave functions we have inside the well?<br> (b) Write down the three corresponding wave functions for each electron?<br> (c) Where each of these electrons have the maximum probability to be found?
+                    We have some electrons of the same energy inside an 3D infinite well of side size 1nm. We have measure the energy of one of these electrons to be 2.26 eV<br> (a) How many possible different wave functions we have inside the well?<br> (b) Write down the corresponding wave functions for each electron?<br> (c) Where each of these electrons have the maximum probability to be found?
                     <hr>
-
+                    <p>Video Shared by Jack Solomon
+                        <a href="https://www.youtube.com/watch?v=nmC0ygr08tE">pilot-wave dynamics of walking droplets</a> February 24, 2023</p>
                     <br><br><br>
                 </div>
             </div>

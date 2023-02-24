@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>3D QM</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/hydrogen-atom.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Week 6 </h1>
+                        <hr class="small">
+                        <h2>The Hydrogen Atom Revisited </h2>
+                        <h3>PHYS-221 Feb 24 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    Announcement: 
+                    <h2>Hydrogen Spectral Lines</h2>
+                    Let us go back to our old friend the hydrogen atom, and try to do a more accurate Quantum Mechanical treatment. We can start by once again thinking about it as light negative charged particle orbitin a heavy (2000 heavier) positively charged particle. With those assumptions, we can think of the electron as moving around the proton under the influence of the central potential
+                    \begin{equation}
+                    u(r)=-{1\over4\pi \epsilon_0}{e^2\over r}\,
+                    \end{equation}
+                    which looks like
+                    <center>   <img src="{% static "img/hydrogen_potential.png" %}" width="400"></center><br><br>
+which pretty much looks like a deep well. But with a non-constant potential energy. We can expect some general features from the well to happen here, like energy quantization and stationary solutions, but in order to ge the actual quantum states, we need to solve the Schrodinger equation for the given potential rigorously. Before doing that, lets look a bit deeper into the experimental observations on the hydrogen atom, previous to its quantum mechanical description.
+                    <h3>Balmer Spectral Series</h3>
+                    When looking into the spectra decomposition of light emitted by a hydrogen lamp
+                    <center>   <img src="{% static "img/spectral.jpg" %}" width="500"></center><br><br>
+the following spectrum was observed:
+                    <center>   <img src="{% static "img/balmer.png" %}" width="700"></center><br><br>
+which corresponds to wavelenghts 410nm, 434nm, 486nm, 656nm. By fitting those number into a formula, Johann Balmer found that those wavelenghts obey the relation,
+                    \begin{equation}
+                    {1\over \lambda}=R\left({1\over 4}-{1\over n^2}\right)\,\qquad n=3,4,5,\cdots.
+                    \end{equation}
+                    with $R=1.097\times 10^7m^{-1}=$<b>Rydberg constant</b>, which was adjusted so the formula fit the right observed values. <br><br>
+                    We have seen previously that's Bohr's model sucesfully explain Balmer's formula, let's see how:
+                    \begin{equation}
+                    E_{Bohr}=-{m e^2\over2 (4\pi\epsilon_0)^2 n^2}
+                    \end{equation}
+(BB)<br>
+                    however, it's very limited, and a more rigurous treatment of the hydrogen atom, and every other atom, is requiered.
+
+                    <h3>Probability density</h3>
+                       <hr><b>Problem:</b><br>
+                    We have some electrons of the same energy inside an 3D infinite well of side size 1nm. We have measure the energy of one of these electrons to be 2.26 eV<br> (a) How many possible different wave functions we have inside the well?<br> (b) Write down the three corresponding wave functions for each electron?<br> (c) Where each of these electrons have the maximum probability to be found?
+                    <hr>
+
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
