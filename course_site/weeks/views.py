@@ -43,4 +43,7 @@ def se_3d(request):
 def hydrogen_atom(request):
      return TemplateResponse( request, "weeks/hydrogen_atom.html",)
 
+def hydrogen_atom2(request):
+     return TemplateResponse( request, "weeks/hydrogen_atom2.html",)
+
 
