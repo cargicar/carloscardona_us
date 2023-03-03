@@ -31,5 +31,6 @@ urlpatterns = [
     path("se_3d/", se_3d , name="se_3d"),
     path("hydrogen_atom/", hydrogen_atom , name="hydrogen_atom"),
     path("hydrogen_atom2/", hydrogen_atom2 , name="hydrogen_atom2"),
+    path("hydrogen_atom3/", hydrogen_atom3 , name="hydrogen_atom3"),
 
 ]
