@@ -49,4 +49,7 @@ def hydrogen_atom2(request):
 def hydrogen_atom3(request):
      return TemplateResponse( request, "weeks/hydrogen_atom3.html",)
 
+def spin(request):
+     return TemplateResponse( request, "weeks/spin.html",)
+
 
