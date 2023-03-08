@@ -52,4 +52,7 @@ def hydrogen_atom3(request):
 def spin(request):
      return TemplateResponse( request, "weeks/spin.html",)
 
+def exclusion(request):
+     return TemplateResponse( request, "weeks/exclusion.html",)
+
 
