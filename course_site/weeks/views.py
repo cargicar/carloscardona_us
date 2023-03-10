@@ -55,4 +55,7 @@ def spin(request):
 def exclusion(request):
      return TemplateResponse( request, "weeks/exclusion.html",)
 
+def multi_electron(request):
+     return TemplateResponse( request, "weeks/multi_electron.html",)
+
 

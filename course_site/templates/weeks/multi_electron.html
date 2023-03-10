@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>3D QM</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/espin.gif' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Week 8 </h1>
+                        <hr class="small">
+                        <h2>Many Electron Atoms</h2>
+                        <h3>PHYS-221 March 10 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    Announcement:
+                    <h2>The quantum mechanical description of the periodic table</h2>
+                    This seccion will be very quantitative, however as we will see, many of the quantum mechanical features we have found in our study of the hydrogen atom, are also found on the remaining elements of the periodic table. 
+                    <h3>Dependence of Energy on $\ell$</h3>
+                    A useful observation is that low angular momentum electrons describe more elliptical orbits than higher angular momentum electrons, as seen from their radial probabilities,
+                    <center>   <img src="{% static "img/radial_prob.png" %}" width="800"></center><br>
+                    <br>
+                    Such property carries over many-electrons atoms. Unfortunately in general, we don't have analytical close-form solutions for the SE other than the hydrogen atom, and we need to rely on numerical and approximation methods. An important property exhibited by numerical solutions, is that as electrons fill states in an atom, they do so according to the lowest value of $n+\ell$, as shown in the picture below:<br><br>
+                    <center>   <img src="{% static "img/sub_ordering.png" %}" width="800"></center><br>
+
+
+                    We refer to electrons with a given value of n as being in the $n$th <b> shell</b> and the subset with a given value of $\ell$ as being in the $n\ell$-<b>subshell</b>.
+                    <h3>The Periodic Table</h3>
+                    With all this tools, we are ready to understand the ordering of the periodic table,<br><br>
+                    <center>   <img src="{% static "img/periodic_table.png" %}" width="800"></center><br><br>
+                    It would be hard to see on the screen the whole table, so lets focus on the first two columns and two rows first,
+                    <center>   <img src="{% static "img/periodic_table_slice.png" %}" width="400"> <img src="{% static "img/periodic_table_slice2.png" %}" width="500"></center><br><br>
+
+                    <h3>X-ray Atom-Fingerprinting</h3>
+                    We have seen during our discussion of the Hydrogen atom, the emission and absorption of certain frecuencies of light only, characterized all different elements. In ground-state atoms, (non-excited levels),  all lowest energy states are filled and the only transitions occurring  are due to valence electrons moving within the highest energy levels. However, something else can happen. An acelerated free electron can  hit and knock out an electron on deep inner shell, creating a hole that is quickly fill by a weak tight electron in the upper levels. This kind of transitions produce X-rays that are characteristic of the particular element, and are also used as fingerprints for elements. That's  one of the rearons we want to look at the space in the X-ray spectrum. Let's estimate the wavelength of one such process.<br><br>
+                    <hr>
+                    We want to estimate the wavelength of a photon emmited by an electron transitioning from $n=2$ to $n=1$ in a neodymium (Z=20 atom). 
+                    Let's approximate an atom with atomic number $Z$, by an hidrogen atom with a nucleus of size $Z$ (known as an Hydrogen-like atom). What are the corresponding energy levels?.<br>
+                    Lets recall the energy levels for a Hydrogen atom
+                    $$E_n=-{m(e^2)^2\over2 (4\pi\epsilon_0)^2\hbar}{1\over n^2}={-13.6\, eV\over n^2}. $$ Therefore, if the nucleus now has $q=Z\,e$, we get,
+                    $$E_n=-{m(Ze\times e)^2\over2 (4\pi\epsilon_0)^2\hbar}{1\over n^2}={-13.6\, eV}{Z^2\over n^2} $$
+Aditionally, we want to account for the other electrons by estimating that before the transition the effective charge the electron feels is $Z=55$ due to screening from its lower orbital fellows, whereas it feels $Z=59$ after transitioning to the lower level. <br>
+                    The energy emmited, is equal to the energy release by the electron falling from $n=2$ to $n=1$:
+                    $$h\,f={hc\over \lambda}=-13.6\,eV\left( {55^2\over 2^2}-{59^2\over 1^2}\right) =3.71\times 10^4\, eV$$ or,
+                    $\lambda=30 $ pm. (X-rays go from $10$ pm to $10$ nm.) The experimental value is around the same. 
+
+                    <hr>
+                    <!-- <a href="https://en.wikipedia.org/wiki/Laguerre_polynomials">associated Laguerre equation</a>, which defined the associated Laguerre polynomials.<br><br>
+                         <br>
+ <center>   <img src="{% static "img/spherical_harm.png" %}" width="800"></center><br> -->
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

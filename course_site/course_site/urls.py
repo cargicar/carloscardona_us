@@ -34,5 +34,6 @@ urlpatterns = [
     path("hydrogen_atom3/", hydrogen_atom3 , name="hydrogen_atom3"),
     path("spin/", spin , name="spin"),
     path("exclusion/", exclusion , name="exclusion"),
+    path("multi_electron/",  multi_electron, name="multi_electron"),
 
 ]
