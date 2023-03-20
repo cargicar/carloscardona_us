@@ -58,4 +58,23 @@ def exclusion(request):
 def multi_electron(request):
      return TemplateResponse( request, "weeks/multi_electron.html",)
 
+def simple_thermo(request):
+     return TemplateResponse( request, "weeks/simple_thermo.html",)
+
+def boltzmann(request):
+     return TemplateResponse( request, "weeks/boltzmann.html",)
+
+# def simple_thermo(request):
+#     if request.method == 'POST':
+#         Nt = request.POST.get('textfield', None)
+#         try:
+#             user = Person.objects.get(name = search_id)
+#             #do something with user
+#             html = ("<H1>%s</H1>", user)
+#             return HttpResponse(html)
+#         except Person.DoesNotExist:
+#             return HttpResponse("no such user")  
+#     else:
+#         return render(request, 'form.html')
+
 

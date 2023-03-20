@@ -70,7 +70,7 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url({% static 'img/espin.gif' %})">
+    <header class="intro-header" style="background-image: url({% static 'img/mendelev.jpg' %})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -99,6 +99,8 @@
                     <br>
                     Such property carries over many-electrons atoms. Unfortunately in general, we don't have analytical close-form solutions for the SE other than the hydrogen atom, and we need to rely on numerical and approximation methods. An important property exhibited by numerical solutions, is that as electrons fill states in an atom, they do so according to the lowest value of $n+\ell$, as shown in the picture below:<br><br>
                     <center>   <img src="{% static "img/sub_ordering.png" %}" width="800"></center><br>
+                    <center>   <img src="{% static "img/ordering2.png" %}" width="800"></center><br>
+                    <center>   <img src="{% static "img/ordering3.png" %}" width="450"></center><br>
 
 
                     We refer to electrons with a given value of n as being in the $n$th <b> shell</b> and the subset with a given value of $\ell$ as being in the $n\ell$-<b>subshell</b>.
@@ -107,6 +109,7 @@
                     <center>   <img src="{% static "img/periodic_table.png" %}" width="800"></center><br><br>
                     It would be hard to see on the screen the whole table, so lets focus on the first two columns and two rows first,
                     <center>   <img src="{% static "img/periodic_table_slice.png" %}" width="400"> <img src="{% static "img/periodic_table_slice2.png" %}" width="500"></center><br><br>
+                    
 
                     <h3>X-ray Atom-Fingerprinting</h3>
                     We have seen during our discussion of the Hydrogen atom, the emission and absorption of certain frecuencies of light only, characterized all different elements. In ground-state atoms, (non-excited levels),  all lowest energy states are filled and the only transitions occurring  are due to valence electrons moving within the highest energy levels. However, something else can happen. An acelerated free electron can  hit and knock out an electron on deep inner shell, creating a hole that is quickly fill by a weak tight electron in the upper levels. This kind of transitions produce X-rays that are characteristic of the particular element, and are also used as fingerprints for elements. That's  one of the rearons we want to look at the space in the X-ray spectrum. Let's estimate the wavelength of one such process.<br><br>
