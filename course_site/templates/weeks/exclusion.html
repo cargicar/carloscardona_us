@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>3D QM</title>
+    <title>Exclusion</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -104,8 +104,8 @@
                     Fundamental particles are indistinguishable. Every electron in the universe is identical to every other electron. Say we have two electrons in a box, label 1 and 2. Then we measure that one of them is at level $n=3$. Which one of them is at level $n=3$? 1 or 2?. We don't know, therefore, unlike the wavefunction, we can't compute the probability as two independent probabilities. We should be free to swap particle 1 and 2 without changing the total probability.
                     We need to define a symmetric probability, that does not change when we swap 1 and 2. It turns out, there are two ways of doing that:
                     <br> <br>
-                    $$\Psi_S(x_1, x_2)=\psi_{n_1}(x_1)\psi_{n_2}(x_2)+\psi_{n_1}(x_2)\psi_{n_2}(x_1)\,\qquad{\rm Symmetric} $$
-                    $$\Psi_A(x_1, x_2)=\psi_{n_1}(x_1)\psi_{n_2}(x_2)-\psi_{n_1}(x_2)\psi_{n_2}(x_1)\,\qquad{\rm Anti-symmetric} $$
+                    $$ \boxed{\Psi_S(x_1, x_2)=\psi_{n_1}(x_1)\psi_{n_2}(x_2)+\psi_{n_1}(x_2)\psi_{n_2}(x_1)\,\qquad{\rm Symmetric}} $$
+                    $$ \boxed{\Psi_A(x_1, x_2)=\psi_{n_1}(x_1)\psi_{n_2}(x_2)-\psi_{n_1}(x_2)\psi_{n_2}(x_1)\,\qquad{\rm Anti-symmetric} }$$
                     which produce probabilites:
                     $$P_S(x_1,x_2)=\psi_S^2(x_1,x_2)=(\psi_{n_1}(x_1)\psi_{n_2}(x_2))^2+(\psi_{n_1}(x_2)\psi_{n_2}(x_1))^2 $$
                     $$+2\psi_{n_1}(x_1)\psi_{n_2}(x_2)\psi_{n_1}(x_2)\psi_{n_2}(x_1) $$
@@ -117,21 +117,24 @@
                          <center>   <img src="{% static "img/spherical_harm.png" %}" width="800"></center><br> -->
                     <br>
                     <center>   <img src="{% static "img/sym_anti_sym.png" %}" width="800"></center><br><br>
+                    <hr>
+                    --------------------------------------------------------------------------
                     <h3>Spin-Statistics Theorem</h3>
-                    The theorem states that:
+                    <div class="boxed"> The theorem states that:
                     <ul>
                         <li> The wave function of a system of identical integer-spin particles has the same value when the positions of any two particles are swapped. Particles with wave functions symmetric under exchange are called <b>bosons</b>.
                     </li>
                     <li>   The wave function of a system of identical half-integer–spin particles changes sign when two particles are swapped. Particles with wave functions antisymmetric under exchange are called <b>fermions</b>.
                      </li>
                     </ul>
-
                     <h3>Pauli Exclusion Principle</h3>
                     Consider a system of two fermions occupying states $n_1$ and $n_2$. If $n_1=n_2$:
                     $$\Psi_A(x_1, x_2)=\psi_{n_1}(x_1)\psi_{n_1}(x_2)-\psi_{n_1}(x_2)\psi_{n_1}(x_1)=0. $$
                     <b>Exclusion principle:</b> No two indistinguishable fermions may occupy the same individual-particle state.<br>
--                    Wolfgang Pauli (Nobel 1945).
+                    -                    Wolfgang Pauli (Nobel 1945).
                     <br>
+                    <hr>
+                    --------------------------------------------------------------------------
                     <h3>Composite particles</h3>
                     We can combine fundamental particles in order to form composite particles. which satisfies the following ``logic'' table, for positive intenger $n$:<br><br>
                     $(n)-$Bosons  &#8611;   Composite  Boson <br>
