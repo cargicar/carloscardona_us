@@ -78,7 +78,7 @@
                         <h1>Week 8</h1>
                         <hr class="small">
                         <h2>The Boltzmann Distribution </h2>
-                        <h3>PHYS-221 March 22 / 2023 </h3>
+                        <h3>PHYS-221 March 31 / 2023 </h3>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@ Now we will start moving towards Quantum Statistical Mechanics. Let's come back 
                    The total quantum internal energy is given by
                    $$ E_T=\sum_{i=1}^Nn_i\hbar\omega\equiv M\hbar\omega $$ where $N$ is the total number of harmonic oscilators and $M$ is the sum over all quantum numbers for the energy, or $\sum_{i=1}^Nn_i=M$.<br><br>
                    Our goal is to find the probability that a particle (an harmonic oscilator) in the gas, be in a state of energy $E_n$. First it is useful to answer the question, in how many ways $N-$integers ($N-$particles quantum numbers) can be added to give the integer $M$?, the answer is
-                   $${(M+N-1)\over M!(N-1)!}\,. $$
+                   $$\begin{pmatrix}M+N-1 \\ M\end{pmatrix}={(M+N-1)!\over M!(N-1)!}\,. $$
 This is in turn would be the total number of ways the energy could be distributed among the $N$ quantum numbers.
                    <hr>
                    <hr>
@@ -113,25 +113,23 @@ This is in turn would be the total number of ways the energy could be distribute
                    The most probable state for a given particle, or the state in which the number of ways of distributing the energy among all particles is greatest, is one of lower energy.<br><br>
                    Even though we have derived such result for the case of harmonic oscilators particles in a gas, the result is shockingly quite universal for large systems: for large systems of distinguishable particles at temperature $T$, the probability of an individual particle to be at state $n$ with energy $E_n$ is given by the Bolzmann distribution,
                    $$P(E_n)=A\,e^{-E_n\over k_B T}\,,$$
-                   Where the index $n$ stands for the set of all quantum numbers specifying an individual particle energy, and the proportionalit y constant is  determined by imposing the normalization condition
+                   Where the index $n$ stands for the set of all quantum numbers specifying an individual particle energy, and the proportionality constant is  determined by imposing the normalization condition
                    $$\sum P(E_n)=1=\sum_n A\,e^{-E_n\over k_B T} $$ or
-                   $$A={1\over\sum_ne^{-E_n\over k_B T}} $$
+                   $$A={1\over\sum_ne^{-E_n\over k_B T}}\,. $$
+                   In other words, the Boltzman distribution is given by,
+                   $$P(E_n)={e^{-E_n\over k_B T}\over \sum_n A\,e^{-E_n\over k_B T} }\,.$$ 
                    <center> <img src="{% static "img/pnvsbol.png" %}" width="800"></center><br><br>
-                   Let us try a simplified derivation. We need to maximize the entropy of the system subject to the constraint that the total energy of the system is fixed. The entropy of the system is given by:
+                   Let us try a more general derivation. We need to maximize the entropy of the system subject to the constraint that the total energy and total number of particles are both fixed:
+                   $$\sum_i n_i=N,\qquad \sum_i\epsilon_iN_i=E\,. $$
+                   Using lagrange multipliers, we are looking of the maximun,
 
-                  $$ S = -k \sum(P_i\,\ln(P_i))$$
+                   $$ \Phi(n_i)=\log W+\alpha N+\beta\,,$$or
+                   $$\Phi(n_i)=\sum_i\left( \log W_i+ n_i+\epsilon_i\,n_i\right)\,.$$
 
-                   where the sum is over all possible energy levels. Using the constraint that the total energy of the system is fixed, we have:
+                   where the sum is over all possible energy levels. 
+                   Using the Stirling approximation and after taking derivatives with respect to $n_i$, we get:
 
-                 $$ E = \sum(P_i\, E_i)$$
-
-                   Taking the partial derivative of $S$ with respect to $P_i$ and setting it equal to zero, we get:
-
-                  $$ dS/dP_i = -k\, \ln(P_i) - k - k\,\ln(Z) + E_i/kT = 0$$
-
-                   Rearranging, we get:
-
-                  $$ P_i = e^{-E_i/kT} / Z$$
+                   $$ n_i = e^{\alpha-1}\,e^{-\beta E_i}=A\,e^{-\beta E_i} $$
 
                    which is the Boltzmann distribution.
 
