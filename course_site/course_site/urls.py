@@ -37,4 +37,5 @@ urlpatterns = [
     path("multi_electron/",  multi_electron, name="multi_electron"),
     path("simple_thermo/",  simple_thermo, name="simple_thermo"),
     path("boltzmann/",  boltzmann, name="boltzmann"),
+    path("boltzmann2/",  boltzmann2, name="boltzmann2"),
 ]
