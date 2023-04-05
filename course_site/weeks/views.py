@@ -67,6 +67,9 @@ def boltzmann(request):
 def boltzmann2(request):
      return TemplateResponse( request, "weeks/boltzmann2.html",)
 
+def maxwell(request):
+     return TemplateResponse( request, "weeks/maxwell.html",)
+
 # def simple_thermo(request):
 #     if request.method == 'POST':
 #         Nt = request.POST.get('textfield', None)
