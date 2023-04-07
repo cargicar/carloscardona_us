@@ -106,7 +106,7 @@
                     <br><br>
                     <!-- <center>   <img src="{% static "img/boltz_diff_temps.png" %}" width="600"></center><br><br> -->
                     <h2>Maxwell Speed Distribution</h2>
-                    By now you should have already noticed that one of the main concerns of statistical mechanics is the computation of probability distributions. So far we have seen position distributions and energy distributions (in a semiclassical tratment).  There is yet another important distribution that we need to consider, which is the speed distributions on a system of many particles. For this case, it is enough to consider the energy due to translation kinetic energy only, i.e
+                    By now you should have already noticed that one of the main concerns of statistical mechanics is the computation of probability distributions, from which we can get averages. So far we have seen position distributions and energy distributions (in a semiclassical tratment).  There is yet another important distribution that we need to consider, which is the speed distributions on a system of many particles. For this case, it is enough to consider the energy due to translation kinetic energy only, i.e
                     $$ E={1\over 2}m\vec{v}^2\,.$$
                     Since we are interested in averaging the speed, we just need to integrate over velocity (or equivalently, the integration over positions cancels), explicitly,
                     $$\bar{v}={\int v e^{-{m v^2\over 2 k_B T}}d\vec{v}\over \int e^{-{m v^2\over 2 k_B T}}d\vec{v}}\,, $$
@@ -121,7 +121,7 @@
                     Often the number per unit volume per unit speed is of greater interest, which follows simply by multiplying the probability per unit speed by $N/V$, which lead us to the <b>Maxwell speed distribution</b>,
                     $$\boxed{n(v)_{\rm Maxwell}={N\over V}\sqrt{2\over\pi}\left({m\over k_BT}\right)^{3/2}v^2 e^{-{m v^2\over 2 k_B T}}}$$
                     <center>   <img src="{% static "img/maxwell_diff_vs.png" %}" width="600"></center><br><br>
-                    From this plot we can see that higher temperatures favor higher velocities. Equivalently, higher temperatures are associated to higher average internal energies. See a little simulation   <a href="https://www.thephysicsaviary.com/Physics/Programs/Labs/MaxwellDistribution/" target="_blank">here.</a>
+                    From this plot we can see that higher temperatures favor higher average velocities. Equivalently, higher temperatures are associated to higher average internal energies. See a little simulation   <a href="https://www.thephysicsaviary.com/Physics/Programs/Labs/MaxwellDistribution/" target="_blank">here.</a>
                     <br><br><br>
                 </div>
             </div>

@@ -39,4 +39,5 @@ urlpatterns = [
     path("boltzmann/",  boltzmann, name="boltzmann"),
     path("boltzmann2/",  boltzmann2, name="boltzmann2"),
     path("maxwell/",  maxwell, name="maxwell"),
+    path("quantum_distros/",  quantum_distros, name="quantum_distros"),
 ]
