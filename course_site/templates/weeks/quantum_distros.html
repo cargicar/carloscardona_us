@@ -116,14 +116,18 @@
                     $$\bar{n_i}=\mathcal{N}(E_i)=\sum_in_i P(E_i)\,, $$
                     we need to carry over the sum.  This can be done easily, as we have seen in previous classes, by using the geometric series, leading us to an unifiying expression for the three energy distributions we have learn so far:
                     $$ \mathcal{N}(E_i)={1\over B e^{E_i/k_B T}-\epsilon}$$
-                    with $\epsilon=1$ for boson,  $\epsilon=-1$ for fermions, and  $\epsilon=0$ for classical/semiclassical particles!. $B$ is a normalization constant that can be computed from the requierement of total probability equal to one:
-                    $$B_{bosons}={1\over 1-e} $$
-
-                    <!-- <center>   <img src="{% static "img/boltz_diff_temps.png" %}" width="600"></center><br><br> -->
-                    <h2>Maxwell Speed Distribution</h2>
-                    <!-- <center>   <img src="{% static "img/maxwell_diff_vs.png" %}" width="600"></center><br><br>
-                         <a href="https://www.thephysicsaviary.com/Physics/Programs/Labs/MaxwellDistribution/" target="_blank">here.</a>
-                    -->    <br><br><br>
+                    with $\epsilon=1$ for boson,  $\epsilon=-1$ for fermions, and  $\epsilon=0$ for classical/semiclassical particles!.
+                    Lets plot and compare them at a given temperature. At low temperatures we have,
+                    <center>   <img src="{% static "img/bolt_bose_ferm.png" %}" width="600"></center><br><br>
+                    where they look very differently. While for high energies we have
+                    <center>   <img src="{% static "img/bolt_bose_ferm_high.png" %}" width="600"></center><br><br>
+                    they converge to each other, or in other words, they all become the Boltzmann distribution. Quantum behaviour is relevant at low temperatures, while at high energies, a classical approximation is a good enough description.
+                    <h2>The Fermi Distribution</h2>
+                    The Fermi distribution is particularly important due to its large departure from Bose and Boltzmann. At low enough energy, it looks like
+                    <center>   <img src="{% static "img/ferm.png" %}" width="600"></center><br><br>
+                    At low enough energies, the occupation number is  one,  at some point, called the Fermi Energy $E_F$, the ocupation number is $1/2$, where if sharply drops to zero, implying that for small temperatures all  states with $ E< E_F$ are occupied, while (almost) none state with $E > E_F$ are empty!.   
+                    <!-- <a href="https://www.thephysicsaviary.com/Physics/Programs/Labs/MaxwellDistribution/" target="_blank">here.</a>
+                    -->     <br><br><br>
                 </div>
             </div>
         </div>
