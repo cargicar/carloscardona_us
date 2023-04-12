@@ -73,6 +73,11 @@ def maxwell(request):
 def quantum_distros(request):
      return TemplateResponse( request, "weeks/quantum_distros.html",)
 
+def quantum_distros2(request):
+     return TemplateResponse( request, "weeks/quantum_distros2.html",)
+def brownian(request):
+     return TemplateResponse( request, "weeks/brownian.html",)
+
 
 # def simple_thermo(request):
 #     if request.method == 'POST':

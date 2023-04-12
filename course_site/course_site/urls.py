@@ -40,4 +40,6 @@ urlpatterns = [
     path("boltzmann2/",  boltzmann2, name="boltzmann2"),
     path("maxwell/",  maxwell, name="maxwell"),
     path("quantum_distros/",  quantum_distros, name="quantum_distros"),
+    path("quantum_distros2/",  quantum_distros2, name="quantum_distros2"),
+    path("brownian/", brownian, name="brownian"),
 ]

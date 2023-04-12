@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Brownian motion</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/Langevin0.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Week 12</h1>
+                        <hr class="small">
+                        <h2>Equipartition theorem and Brownian Motion</h2>
+                        <h3>PHYS-221 April 11 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <br><br>
+An introduction to statistical mechanics will be largely incomplete without discussing the equipartition theorem and brownian motion. Before moving into applications of quantum probalility distributions, we will spend some time looking a bit into those two important topics.
+                    <h2>The equipartition theorem</h2>
+                    The equipartition theorem is a fundamental principle in statistical (classical) mechanics that relates the energy of a system to its temperature. It states that in thermal equilibrium, each degree of freedom of a system (i.e., each independent way in which the system can store energy) will, on average, have an energy equal to
+                    $$\overline{E\over dof}= {k_B T\over 2},$$ where $T$ is the temperature of the system in Kelvin.
+
+                    The equipartition theorem is a powerful tool for predicting the behavior of complex systems, such as gases and liquids. It however led us to the ultraviolet catastrophe which in turn starts the quantum revolution. <br><br>
+                    What one can provide a simplified proof by using the Maxwell speed distribution, as follows. Recall,
+                    $$P_{\rm Maxwell}(v)={dP(v)\over dv}=\sqrt{2\over\pi}\left({m\over k_BT}\right)^{3/2}v^2 e^{-{m v^2\over 2 k_B T}}\,.$$
+                    In order to check the equipartition theorem, we need to compute $\bar{E}$.  For the sake of simplicity, let us consider a system with only translational energy, i.e, we want:
+                    $$\bar{E}={1\over 2}m \overline{v^2},$$ 
+                    $$ \overline{v^2}=\int_0^{\infty}v^2 P_{\rm Maxwell}(v) dv,$$ which gives:
+                    $$ \overline{v^2}={3 k_B T\over m}\,, $$
+                    from where we get d, wirectly,
+                    $$\bar{E}={1\over 2}m \overline{v^2}={3\over 2}{ k_B T},$$
+                    since we have 3 degress of freedom for the speed, we conclude, that per degree of freedom
+                    $$\bar{E\over dof}={1\over 2}{ k_B T},$$
+                    <h2>Brownian motion</h2>
+                    Brownian motion is the random motion of particles suspended in a medium (a liquid or a gas). The observation that, when suspended in water, small pollen grains are found to be in a very animated and irregular state of motion, was first systematically investigated by Robert Brown in 1827, and the observed phenomenon took the name Brownian Motion because of his fundamental pioneering work. Brown was a botanist, and he was testing whether this motion was in some way a manifestation of life. By showing that the motion was present in any suspension of fine particles: glass, minerals and others, he ruled out any specifically organic origin of this motion. <br><br>
+                    <center>   <img src="{% static "img/brownian.gif" %}" width="500"></center><br><br>
+                    In 1905, Einstein derived the diferential equation describing  the density probability of finding a particle in brownian motion at time $t$ a distance $x$ from its initial position $\rho(x, t)$ (in 1D), obtaining what is today know as the <b>diffusion equation</b>
+                    $${d\rho\over dt}=D{\partial^2 \rho\over dx^2}\,. $$ The solution to this equation is very well known,
+                    $$\rho(x, t)\sim {1\over \sqrt{4\pi D\, t }}e^{-{x^2\over 4}D\,t}  $$
+                    which corresponds to a Gaussian with mean zero and variance
+                    $\sigma_x=\sqrt{2\,D\,t}$. Einstein original derivation is a bit confusing, at least when compared with Langevin, which is the one we are going to review.<br><br>
+                    From the equipartition theorem, we know that in one dimension,
+                    $${1\over 2}m \bar{v^2}={1\over 2}{ k_b T},$$
+                    Additionally, acting on the particle, of mass $m$ there should be two forces:
+                    <ul>
+                        <li> a viscous drag: assuming this is given by the same formula as in macroscopic hydrodynamics, this is -6rna dx|dt, n being the viscosity and a the diameter of the particle, assumed spherical</li>
+                        <li> another fluctuating force $X$ which represents the incessant impacts of the molecules of the liquid on the Brownian particle. All that is known about it is that fact, and that it should be positive and negative with equal probability. Thus, the equation of motion for the position of the particle is given by Newton's law as,</li>
+                    </ul>
+                    $$m\,a=-\nu v+ X\,.$$
+                    Multiplying by $x$ and averanging over a large number of particles, we get,
+                    $${ d\overline{x^2}\over dt}={2 k_B T\over \nu}+C e^{-\nu t\over m}\,,$$
+                   Where we have used $\overline{(x X)}=0$, due to the fact that $x$ and $X$ are independent random variables. Langevin estimated that the decaying exponential approaches zero with a time constant of the order of $10^{-8}$, which for any practical observation at that time, was essentially immediately. Thus, for practical purposes, we can neglect this term and integrate once more to get
+                    $$\overline{x^2}-\overline{x_0^2}=\sigma_x^2={2k_B T\over \nu}t\,, $$
+                    which by taking $D={2k_B T\over \nu}$, recovers Einstein's result.
+                    <center>   <img src="{% static "img/sigma_brown.svg.png" %}" width="600"></center><br><br>
+                                       <!-- <a href="https://www.thephysicsaviary.com/Physics/Programs/Labs/MaxwellDistribution/" target="_blank">here.</a>
+                    -->     <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
