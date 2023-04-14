@@ -78,6 +78,9 @@ def quantum_distros2(request):
 def brownian(request):
      return TemplateResponse( request, "weeks/brownian.html",)
 
+def photon_gas(request):
+     return TemplateResponse( request, "weeks/photon_gas.html",)
+
 
 # def simple_thermo(request):
 #     if request.method == 'POST':

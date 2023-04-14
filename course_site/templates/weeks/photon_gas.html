@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Photon gas</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/Schawlow.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Week 12</h1>
+                        <hr class="small">
+                        <h2>Equipartition theorem and Brownian Motion</h2>
+                        <h3>PHYS-221 April 11 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <br><br>
+                    <h2>Brownian motion</h2>
+                   Let me spent few minutes re-deriving the variance for a brownian particle. Last class we have argue that Newton's law can be writen in this case as,
+                    $$m\,a=-\nu v+ X\,.$$
+                    Multiplying by $x$ and averanging over a large number of particles, we get,
+                    $${ d\overline{x^2}\over dt}={2 k_B T\over \nu}+C e^{-\nu t\over m}\,,$$
+                   Where we have used $\overline{(x X)}=0$, due to the fact that $x$ and $X$ are independent random variables. Langevin estimated that the decaying exponential approaches zero with a time constant of the order of $10^{-8}$, which for any practical observation at that time, was essentially immediately. Thus, for practical purposes, we can neglect this term and integrate once more to get
+                    $$\overline{x^2}-\overline{x_0^2}=\sigma_x^2={2k_B T\over \nu}t\,, $$
+                    which by taking $D={2k_B T\over \nu}$, recovers Einstein's result.
+                    <center>   <img src="{% static "img/sigma_brown.svg.png" %}" width="600"></center><br><br>
+                    <h2>Massless Bosons: The Photon Gas</h2>
+                    Photons being spin one particles obey Bose statistics. In other words, we would like to compute,
+                    $$\overline{E}={\int E\mathcal{N}(E)D(E)dE\over\int \mathcal{N}(E)D(E)dE}={1\over N}\int E\mathcal{N}(E)D(E)dE\,,$$
+                    with 
+                    $$ \mathcal{N}(E)={1\over B e^{E/k_B T}-1}\,.$$ For the sake of simplicitly, lets take the constant $B=1$. In the case of photons, the density of states is given by $$D(E)={8\pi V\over h^3 c^3}E^2\,. $$ Finally, using the fact that $E=h f$ for a photon, we end up with the following expresion:
+                    $$\bar{E}_{\rm photon_gas}={8\pi V\over N c^3}\int_0^{\infty}{h f^3\over e^{hf/k_B T}-1}df\,. $$
+                    Once more we have derived the black body radiation spectral density (integrand above), but this by considering the energy distribution of a gas of photons.  In hindsight, black body radiation is nothing else but a gas of photons are thermal equilibrium.
+                    <h2>The Laser</h2>
+                    As an important application of the above gas of photons, let us quickly review the laser. <br><br>
+                    Quite probably, from all the modern scientific discoveries of the last century, the laser is the most important and disrupting technology.  With applications ranging from eye surgery, communication devices, nuclear fusion, information storage and retrieval, barcode readers, precision measurement devices, holography, among many others. <br><br>
+                    The key aspect to create laser light  is to produce coherent light,  which can be roughly defined as light traveling the same direction with the same  phase. By contrast ordinary light is im no directions on a broad spectrum of wavelengths. Light from ordinary sources is produced mostly by<b> spontaneous emission</b>, meaning from  photons coming from electrons falling lower energy states,  However there are other interactions between photons and atoms that can be exploited to produce coherent light, namely <b>absorption</b> and <b>stimulated emission.</b><br>
+                    <center>   <img src="{% static "img/laser0.png" %}" width="600"></center><br><br>
+                    Lets assume our system to be a gas of atoms and photons. Let's call $R_{sp}$, $R_a$, and $R_{st}$ the rate of spontaneous emission, abosorption and stimulated emission respectively, also $N_1$ and $N_2$ the number of atoms at the lower and upper level. Then we should have,
+                    $$R_{sp}= L_{sp}\,N_2\,,$$ with $A_{sp}$ a constant. Similarly, if we requiere an energy $\Delta E=E_2-E_1$ to excite an atom at level  the lower level $E_1$ to the upper level $E_2$,  and we have $Y(\Delta E)$ photons available within the gas with such energy, then we have,
+                    $$R_{a}=G_{a}\, N_1\, Y(\Delta E)\,, $$
+                    and similarly,
+                    $$R_{st}=L_{st}\, N_2\, Y(\Delta E)\,. $$
+                    Now, if the system is at equilibrium, we should expect that the energy being released by an atom is equivalent to the energy being gain, otherwise the atom will be giving energy to the environment by losing internal energy lowering its temperature. In other words, at equilibrium, the so called "principle of detail balance" should be satisfied,
+                    $$L_{sp}\,N_2+L_{st}\,N_2 Y(\Delta E)=G_{a}\,N_1 Y(\Delta E)\,. $$ Noticing that $${N_1\over N_2}=e^{\Delta E\over k_B T} $$ and solving for $Y$, we get,
+                    $$Y(\Delta E)={ {L_{sp}\over G_{a}}\over e^{\Delta E\over k_B T}-{L_{st}\over G_{a}} }\,. $$
+                    However, $Y(\Delta E)$ is the number of photons with the energy $\Delta E$, or in other words, the Bose occupation number at the given energy, so comparing side by side, both expressions agree if ${L_{st}\over G_{a}}=1$ ( up to a normalization constant).<br><br>
+                    Now rather obvious what should we do in order to produce a large number of coherent photons from the system: simply by making $N_2 >> N_1$, we will induce  $R_{st}>> R_{a}$. It is equally obvious that such situation will not occur naturally and we need to take the system out equilibrium. Such overpopulation of higher levels is known as <b>population inversion</b>.<br><br>
+                    Unfortunately, since physical systems will prefer to stay at the lowest energy levels, we need to play tricks in order to produce population inversion, even if only for a fraction of time. One such a trick, is done by the three-level laser.  In such a system we have a very cold ($k_B T< \Delta E$) gas of atom with three-energy levels, as shown below. At equilibrium the system is basically in the ground state. When energy is pump into the system  some electrons move upwards to higher energy levels.  Once the pump is stopped spontaneous emission occurs. 
+                    The key aspect is that spontaneous emissions times between levels are several orders of magnitude different, say electrons leave $E_3$ at a rate $\Delta t\sim 10^{-8}$s but $E_2$ at a rate $\Delta t\sim 10^{-3}$s, and therefore, once $E_3$ has been depopulated, we have $10^{-3}$ seconds of population inversion.<br><br>
+                    In practice pumping need not be stop and we can get a continuous output as long as pumping keeps ahead of stimulated emission by keeping $E_2$ occupied.<br><br>
+The basics elements of a laser can be described by the following cartoon:
+                    <center>   <img src="{% static "img/laser1.gif" %}" width="600"></center><br><br>
+                   
+
+                    <br><br><br>
+                    <!-- <a href="https://www.thephysicsaviary.com/Physics/Programs/Labs/MaxwellDistribution/" target="_blank">here.</a>
+                    -->     <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
