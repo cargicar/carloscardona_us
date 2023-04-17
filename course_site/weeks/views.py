@@ -81,6 +81,9 @@ def brownian(request):
 def photon_gas(request):
      return TemplateResponse( request, "weeks/photon_gas.html",)
 
+def molecules1(request):
+     return TemplateResponse( request, "weeks/molecules1.html",)
+
 
 # def simple_thermo(request):
 #     if request.method == 'POST':
