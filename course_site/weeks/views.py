@@ -84,6 +84,9 @@ def photon_gas(request):
 def molecules1(request):
      return TemplateResponse( request, "weeks/molecules1.html",)
 
+def molecules2(request):
+     return TemplateResponse( request, "weeks/molecules2.html",)
+
 
 # def simple_thermo(request):
 #     if request.method == 'POST':
