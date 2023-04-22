@@ -45,4 +45,5 @@ urlpatterns = [
     path("photon_gas/", photon_gas, name="photon_gas"),
     path("molecules1/", molecules1, name="molecules1"),
     path("molecules2/", molecules2, name="molecules2"),
+    path("solids/", solids, name="solids"),
 ]

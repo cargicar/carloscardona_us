@@ -87,6 +87,9 @@ def molecules1(request):
 def molecules2(request):
      return TemplateResponse( request, "weeks/molecules2.html",)
 
+def solids(request):
+     return TemplateResponse( request, "weeks/solids.html",)
+
 
 # def simple_thermo(request):
 #     if request.method == 'POST':

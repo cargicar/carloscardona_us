@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Solids</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/solid.png' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Week 13</h1>
+                        <hr class="small">
+                        <h2>Solids</h2>
+                        <h3>PHYS-221 April 21 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <br><br>
+                    <h2>Crystalline Solids (and some nomenclature)</h2>
+                    Armed with the undertanding of atomic bounds, the next logical step is to study (or better, discuss), molecular bounds, or in other words, materials built out from molecules.<br><br>
+                    At very low temperatures or very high presure, all elements in nature become solid. In the vast mayority of cases, cristal are formed with a very ordered and symmetrical structure.
+                    <h3>Experimental evidence of the lattice structure of matter, back to Bragg Law</h3>
+                    Previously we have seen (though within a different context) Davisson & Germer experiment of scattering electrons off a Nickel cristal, where they observe the following a periodic pattern on a film placed to detect the scattered electrons,<br><br>
+                    <center>   <img src="{% static "img/electron_inter.jpeg" %}" alt="double_slit" width="500"></center><br><br>
+                    Such pattern is well explained by the interference of electrons from a crystal structure, given by the Bragg's law
+
+                    $$2d {\rm sin}(\theta)=\lambda\,.$$
+                    Such formula, allow us to measure the crystal inter-atomic spacing. Additionally, it shows the periodical crystalline structure of crystal solids.<br><br>
+                    Atoms and molecules sit on the lattice's sites, but what is formally a lattice?.  In  $d$ dimensions, a lattice is defined by  $d-$independent vectors, such us the lattice is the space spanned by integer linear combinations of such vectors, i.e. in 3D, we have $\{\vec{a}_i\}$ with $i=1,2,3$, then any lattice point can be reached from any other point at $\vec{r}_0$ by,
+                    $$\vec{r}=\vec{r}_0+\sum_{i=1}^3n_i\vec{a}_i\,, $$
+                    with $n_i\in \mathcal{Z}$. This in turn implies that the minimal bulding block of the lattice is given by the triplet  $\{\vec{a}_i\}$, or equivalently,  the smaller volume in the lattice is the "cell" fromed by the vectors $\{\vec{a}_i\}$, called the <b>primitive cell</b>, which is a parallelepiped of volume
+                    $$V_{c}=|\vec{a}_1\cdot\vec{a}_2\times\vec{a}_3|\,, $$
+                    which in turn is the minimal volume of a crystal solid.<br><br>   <center> 
+                        <img src="{% static "img/lattice.png" %}" width="700"></center><br><br>
+
+                        <h3>Fundamental Types of Lattices</h3>
+                        As a corollary of the lattice formal definition, we can see that they can be mapped to themseleves by performing integer translations along the vectors of the primitive cell. lattices of molecules (and/or atoms), create different geometrical structures, which are classified according to their rotational and translational symmetries (about a lattice point). It turns out that in three dimensions, we can only be  14 unequivalent lattices. This is in part a consequence of the <b>Crystallographic restriction theorem, </b> which stablish that lattices can be found to be invariant by rotations ${2\pi\over n}$ with $n=1,2,3,4,6,$ and not more.
+                    <br><br>
+                    We cannot find a lattice that goes into itself under other rotations, such as by ${2\pi\over 7}$  or ${2\pi\over 5}$. A single molecule, properly designed can have any degree of rotational symmetry, but an infinite periodic lattice cannot. For example, is imposible to fill up all space using a five-fold rotational invariant molecule <br><br> 
+                    <center>   <img src="{% static "img/pentagon_tiling.svg" %}" width="500"></center><br><br>
+                    <br><br>
+                    Let me provide a simple proof of the crystallographic restriction theorem on the black board. <br><br>
+                    Finally, there are three conventional cells, called <b>simple cubic (sc), body-centered cubic (bcc), face-centered cubic (fcc)</b>
+                    <em>Nomenclature for 14 different geometrical lattices in three dimensions</em><br><br>
+                    <center>   <img src="{% static "img/bravais.png" %}" width="600"></center><br><br>
+                    <h3>Some Additional Nomenclature</h3>
+                    <ul><li>Covalent Solids, also called network solids, are solids that are held together by covalent bonds Covalent solids. As such, they have localized electrons (shared between the atoms) and the atoms are arranged in fixed geometries. Distortion away from this geometry can only occur through a breaking of covalent sigma bonds.</li>
+                        <li>Ionic solids—Made up of positive and negative ions and held together by electrostatic attractions. They're characterized by very high melting points and brittleness and are poor conductors in the solid state. An example of an ionic solid is table salt, NaCl.
+                        </li>
+                        <li> Metallic solids are materials that consist of metal atoms exclusively, giving them a unique set of properties. They are held together by a special type of bond called metallic bonding. This occurs when a lattice of positively charged metal ions is surrounded by a sea of delocalized electrons.</li>
+                        <li>A molecular solid is composed of molecules held together by van der Waals forces. Its properties are dictated by the weak nature of these intermolecular forces. Molecular solids are soft, often volatile, have low melting temperatures, and are electrical insulators.</li></ul>
+                    <!-- <a href="https://www.thephysicsaviary.com/Physics/Programs/Labs/MaxwellDistribution/" target="_blank">here.</a>
+                    -->     <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
