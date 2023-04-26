@@ -90,6 +90,12 @@ def molecules2(request):
 def solids(request):
      return TemplateResponse( request, "weeks/solids.html",)
 
+def conduction(request):
+     return TemplateResponse( request, "weeks/conduction.html",)
+
+def semiconduc(request):
+     return TemplateResponse( request, "weeks/semiconduc.html",)
+
 
 # def simple_thermo(request):
 #     if request.method == 'POST':

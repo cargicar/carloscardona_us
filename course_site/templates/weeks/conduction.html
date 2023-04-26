@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Conduction</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/conductivity.png' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Week 14</h1>
+                        <hr class="small">
+                        <h2>Electrical Conduction</h2>
+                        <h3>PHYS-221 April 24 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <br><br>
+                    <h2>Electrical Conduction</h2>
+                    After having gained an idea of crystal solids, we can start discussing several properties of solids and their applications. Due to time constraints, we are only going to look into electrical conduction, among other reasons, because is perhaps the most studied and used property of solids. For that let us start reviewing classical electrical conduction.
+                    <h3>Classical Electrical Conduction</h3>
+                    Classically electrons are free to move in a conductor, but nonetheless will suffer collisions with the atoms sitting at the lattice positions.  A typical electron would move randomly with average speed $\bar{v}$,  similar to the one given by Maxwell's speed distribution.  Eventually, the electron collide with an atom and it's just as likely to be moving in any direction. If there is no additional force, this implies that the average speed would be zero. However if an electric field is apply the electrons will feel a force pulling them towards the opposite direction of the field, henceforth gaining a net average speed opposite to the electric field.<br><br>
+                    Let us call $\tau$ the average time between collisions or <b>collision time</b>. This means electrons are not accelerated the whole time but just for a small interval of time $\tau$, during which they acquired a velocity component of magnitude ${e E\over m_e}\tau$, known as <b>drift velocity</b>. In turns, this net effect, would produce a current of moving charges given by:
+                    $$j=\sigma E\,, $$
+                    where $\sigma={e^2\eta\tau\over m_e}$, with $\eta=$Number of free charges per Volume. Equation above is know as <b>Ohm's law</b>. $\sigma$  is known as the  <b>conductivity</b> and is also the inverse of the <b>resistivity</b> $\rho={1\over\sigma}$. <br><br>
+                    We can see that conductivity is proportional to $\tau$. This can be understood by taking into account that when the temperature increases, the molecular vibrations of the lattice would also increase, leading to a higher probability of collisions and hence reducing the collision time. On the opposite end, conductivity will increase if the temperature decreases. An equivalent way to put it is that the resistivity increases with temperature. Another source of resistance in a material are lattice imperfections, which become more predominant at low temperatures when vibrational motion can be neglected. This type of resistant is characteristic of the material <br><br>
+
+                    <h3>Band Theory</h3>
+                    Much of the above classical treatment remains valid quantum mechanically, the difference come from the band energy structure in conjuction with Pauli exclusion principle. Let us know quiclky review the energy bands we have seen few classes ago.<br><br>
+                    <center>   <img src="{% static "img/well_bands.png" %}" alt="double_slit" width="700"></center><br><br>
+                    The combination of single atom energy levels produce energy bands that are filled according to Pauli's principle,  starting from the lower energies towards the higher energies. It is natural to expect that the conduction electrons would be living at the top most layers of a top band. Notice that there is a large gap between bands, called an <b>energy gap</b> or <b>band gap</b>, which would need to be overcome before start filling an upper band from a lower band.<br><br>
+                    The key factor making a material conductor or insulator, is whether the highest band is completely occupied or only partially full. In the latest, electrons will have empty energy spaces to occupy, available to them by only a small increase in energy. In other words, it's very easy for them to move inside their band, almost freely. In the former the electrons don't have available space to move, since all states are occuppied within their band, and the only option would be to overcome the energy gap between bands, which in general will require a lot more energy than moving inside the same band. Overcoming this gap will make the material conductor.<br><br>
+                    <center>  <img src="{% static "img/conduction_band.png" %}" width="500"></center><br><br>  </center> 
+                    In general, due to the complex interplay between single atom energy levels and multi-atom band gaps,  bands corresponding to different single automatic levels will overlap.  An atom having the top most energy level completely full, still can become a conductor within a material due to the overlapping of higher and lower energy bands, providing available states at higher energy that electrons can occupy now to move. This overlapping is a particular characteristic of conductors. The highest energy band that would be completely full at zero temperature is defined as the <b>valence band</b> and the band just about it is the <b> conduction band</b>.
+                        <center>             <img src="{% static "img/insulator_semi_cond.png" %}" width="700"></center><br><br>  </center><br><br>
+
+
+                    A slightly more realistic picture of the band structure in a solid is given the picture below.
+                    <center>             <img src="{% static "img/ion_bands.png" %}" width="700"></center><br><br>  </center>
+                    <br><br>
+                    <!-- <a href="https://www.thephysicsaviary.com/Physics/Programs/Labs/MaxwellDistribution/" target="_blank">here.</a>
+                    -->     <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
