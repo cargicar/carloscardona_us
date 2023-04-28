@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SuperConductors</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/superconductor.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Week 14</h1>
+                        <hr class="small">
+                        <h2>Semi and Super Conductors</h2>
+                        <h3>PHYS-221 April 27 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <br><br>
+                    Announcement: Not class on Monday. Optional Homework/Problem review on Wednesday, same time.  
+                    <h3>Semiconductor Devices</h3>
+                    So far we have discussed intrinsic semiconductors, in other words, those  created by nature like Silicon or Germanium, which sits right below Carbon. We can however, modify them to create new materials and new devices by adding impurities.<br><br> 
+                    <b>Doping</b> of materials has a different meaning than in sports, (like the tour of france), even thought it share s some similarities.  We can discuss two types of doping <b>n-type</b>  and <b>p-type</b>  which is stand for negative and positive, respectively. <br><br>
+                    On an <b>n-type</b>, we want to add an additional electron per every $10^5$ atoms to the valence band, by plugging a small fraction of atoms with similar characteristics as semiconductors, but one additional electron, like phosphorus or arsenic, which stand at the right hand side in the periodic table from the semiconductors mentioned above. The valence band in an instrinsic semiconductor is completely full, so each extra electron has no room to stay and effectively will seat on top of the valence band and below the conduction band, in a newly created state known as a <b>donor state</b>, which is typically  0.05 electron volts below of the conduction band.
+                    <br><br>
+                    <center>  <img src="{% static "img/ntype.png" %}" width="600"></center><br><br>
+                    Accordingly, it would be fairly easy to excite electrons from a donor state to the conduction band.  However, it's important to notice that due to the sparsity of donors, they wont form a band, and even though a hole is left behind an excited donor, this hole cannot move because is stuck to its place, unlike the electron being excited from the donor band to the conduction band, which is free to move inside an actual band or the conduction band. All in all, in a n-type semiconductor, there are far more free negative charge carriers than electron hole pairs.<br><br>
+                    Similarly  <b>p-type</b> semiconductors add a similar element bit with one less electron in the valence shell than those in the intrinsic semiconductor, such as Aluminum or Gallium, which seats to the left hand side in the periodic table to the intrinsic semiconductors mentioned above. p-type impurities create holes in new states inside the conductivity gap, there are known as <b>acceptor states</b>, which can take elctrons from the valance band, produccing effectively a surpplus of holes moving in the valence band, or positive charge carriers.
+                    <h3>The diode</h3>
+                    In short,  a diode  is an electronic device that allows current flow in only one direction. This is achieve by joining an n-type to a p-type semiconductor. The joining area is known as a <b>p-n junction</b>. If a apply a potential in the forward direction is applied, free holes in the p-type are occupied by free electrons in the conduction band, and flow in one direction occurs by the <b>recombination</b> at the junction. By applying an opposite potential the inverse behavior occurs. Electrons and holes  move away from the junction.  This is due to the difference in potential energy in the two regions of the junction as charm in the picture below<br><br>
+                    Electrons falling from the conduction band to fill the holes in the valence band release energy by crossing the gap which can go to heat or can produce light. This is the technique used to to produce a light-emitting diode.                    <center>  <img src="{% static "img/diode.png" %}" width="600"></center><br><br>
+                    <h3>Applications</h3>
+                    Besides a use as a electric rectifier the diet find multiple applications.  Some worth mentioning are: The light-emmiting Led, which transform electrical current into light, and its complementary the photovoltaic sell which transform light into electricity (one type of solar cell).
+                    Electrons falling from the conduction band to fill the holes in the valence band release energy by crossing the gap which can go to heat or can produce light. This is the technique used to to produce a light-emitting diode. The inverse process will produce electricity by applying light.<br><br>
+                    <center>  <img src="{% static "img/solar_cell.png" %}" width="380"></center><br><br>
+                    Finally, we can mention the diode laser, which follows the same principle as the original laser, but can achieve better efficiencies.
+                    <h3>Transistor</h3>
+                    Although the diode is an important and useful device, it was the transistor that took electronics to new highest. However being just an extension of the diode idea.  A transistor  is roughly speaking  three joint semiconductors,  which can be the npn or pnp. In an npn, the middle region p is called the <b>base</b> and the outer n regions are called the <b>emitter</b> and the <b>collector</b>. <br><br>
+                    The main idea is that the base is a small and have very little doping, so electrons coming from the emmiter to the base do not have enought holes to occupy and as a result a small current will flow from the base. However the collector is made bigger and with more doping, so in practice,  putting the collector on a deeper potential will encourage electrons from the emmiter to go all the wy down the potential to the colllector where they will merge to the abudant free charges there at the same time that are discouraged to pass through the base. Equivalently: for a small current flowing from the emmiter to the base, there is a correponding (100 times!!) bigger current flowing out from the emmiter to the collector. This is the essence of amplification. For example, a small input current from, said, a microphone, flowing  from the emmiter to  the base, will correspond to a  two orders of magnitude  bigger current flowing from the emitter to the collector, as shown in the picture below. <br><br> 
+                    <center>  <img src="{% static "img/transistor.png" %}" width="600"></center><br><br>
+                    <h3>Superconductors</h3>
+                    Superconductors are a very special type of materials that at certain (low) temperature  exhibit zero resistivity. Not only that, it has been observed, since they were discovered, that they also exhibit perfect diamagnetism, i.e, they are repelled by an external magnetic field. Another striking characteristic of some super conductors is that they are very good insulators at high temperatures but a low temperatures become superconductors. For example, high temperature superconductors like YBCO ($YBa_2Cu_3O_7$, $T_c=92$K) found in 1987,  are actually ceramics!.
+                    <h3>Superconductors are not Conductors &#129327;</h3>
+                    <em>A normal conductor will not achieve zero resistivity</em><br>
+                        Few classes ago, we have derived the current density in a material due to an external electric field, or the Ohm's law: $$j=\sigma E\,, $$
+                    where $\sigma={e^2\eta\tau\over m_e}$, where we additionally argued that $\tau\sim 1/T$, or equivalently, that the conductivity increases when the temperature decreases, in any conductor, i.e, all conductors become very good conductors at low temperatures (that is why we want to cold down our computers). However we shouldn't expect the resistivity to fall to zero just by lowering the temperature as much as possible,  so in order to accomplish zero resistivity some other effect should taking place.<br><br>
+                    <em>Zero resistivity does not imply  perfect diamagnetism</em><br>
+                    Ohm's law can be rewritten $E=\rho j$, with $\rho$ the resistivity. So taking the limit of resistivity going to zero implies $E\to 0$. On the other hand, from Maxwell equations we know $$\nabla\times E=-{\partial B\over\partial t}$$ but ${\partial B\over\partial t}=0$ does not imply $B=0$ but $B$ a constant. Henceforth, zero resistivity alone cannot explain the diamagnetism,  which occurs if $B=0$ not if $B$ to a constant.<br><br>
+                    <em>An insulator cannot become conductor only by lowering the temperature</em><br>
+                    As mentioned previously, some of the superconductors discovered so far, behave as insulators at room temperature.  However being an insulator determined by the band structure of the given material which is actually defined a $T= 0$. So if anything we should expect is that it becomes a little bit of a conductor at higher energy not the other way around.
+                    <h3>BCS Theory</h3>
+                    The propagation of electrons in a lattice produces small perturbations in the lattice that can be thought as waves propagating on top of the lattice. These vibrations are known as phonons.  Reciprocally, this vibrations interact with the electrons modifying their dynamics.  When the coexistence between phonons and electrons becomes harmonious (or less  chaotic) bound states of pairs of electrons are formed, which are known as copper pairs <br><br> 
+                    <center>  <img src="{% static "img/cooper.png" %}" width="600"></center><br><br>
+                    These harmonious coexistence between lattice vibrations and electron propagation, produces an ordered motion which reduced to zero the scattering of electrons off the lattice lattice (either by the same vibrations and imperfections).  It has actually been shown by BCS Theory (Barden, Cooper and Schrieffer, Nobel 1972), that in order to disrupt this collective ordered movement, requires breaking apart the copper pairs. BCS Theory also shows that an overall state of lowest energy occurs when the most energetic electrons, or those close to $E_F$ form opposite  spin Copper Pairs.
+                    <br><br><br>
+                    <a href="https://www.youtube.com/watch?v=O6sukIs0ozk"   target="_blank">Here is a clip done in honor of the 100th anniversary of the discovery of the phenomenon of superconductivity</a>
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

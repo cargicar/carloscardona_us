@@ -96,6 +96,9 @@ def conduction(request):
 def semiconduc(request):
      return TemplateResponse( request, "weeks/semiconduc.html",)
 
+def superconduc(request):
+     return TemplateResponse( request, "weeks/superconduc.html",)
+
 
 # def simple_thermo(request):
 #     if request.method == 'POST':

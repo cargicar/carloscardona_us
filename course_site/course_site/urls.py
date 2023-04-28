@@ -48,4 +48,5 @@ urlpatterns = [
     path("solids/", solids, name="solids"),
     path("conduction/", conduction, name="conduction"),
     path("semiconduc/", semiconduc, name="semiconduc"),
+    path("superconduc/", superconduc, name="superconduc"),
 ]
