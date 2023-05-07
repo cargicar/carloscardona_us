@@ -97,16 +97,16 @@
                     <center>   <img src="{% static "img/boltz_diff_temps.png" %}" width="600"></center><br><br>
                     We can see that for higher temperatures, we have a bigger probabilities of higher energy levels to be occupied, which is absolutely reasonable due to the fact that we have the more total energy is available, the more can be distributed among all the particles.<br><br>
                     A fact that we have used while deriving to Boltzmann distribution is that the average number of particles at a given energy level is proportional to the probability of a particle to be at such given energy level. Of course the proportionallity constant is the total number of particles. In other words, the <b>occupation number</b> is defined by
-                    $$\mathcal{N}(E_n)=N\,A\,e^{-E_n\over k_B T}={N\,e^{-E_n\over k_B T}\over \sum_n\, e^{-E_n\over k_B T}}\,, $$
+                    $$\boxed{\mathcal{N}(E_n)=N\,A\,e^{-E_n\over k_B T}={N\,e^{-E_n\over k_B T}\over \sum_n\, e^{-E_n\over k_B T}}\,,} $$
                     Obviously the occupation number over all states, gives the total number of particles, as expected,
-                    $$\sum_n\mathcal{N}(E_n)=N\,\sum_n\, Ae^{-E_n\over k_B T}=N\,. $$
+                    $$\boxed{\sum_n\mathcal{N}(E_n)=N\,\sum_n\, Ae^{-E_n\over k_B T}=N\,.} $$
                     Let's now apply the Boltzmann distribution to our first example: a gas of harmonic oscilators. We can obtain the average energy of such gas by computing,
-                    $$\bar{E}=\sum_n E_n\, P(E_n)={\sum_n\, n\hbar \omega\,e^{-n\hbar\omega\over k_B T}\over\sum_n\,e^{-n\hbar\omega\over k_B T} }  $$
+                    $$\boxed{\bar{E}=\sum_n E_n\, P(E_n)={\sum_n\, n\hbar \omega\,e^{-n\hbar\omega\over k_B T}\over\sum_n\,e^{-n\hbar\omega\over k_B T} } } $$
                     which can be rapidly computed by using the geometric series to give,
-                    $$\bar{E}={\hbar\omega\over e^{\hbar\omega\over k_B T}-1} $$
+                    $$\boxed{\bar{E}={\hbar\omega\over e^{\hbar\omega\over k_B T}-1}} $$
                     this looks similar to a distribution you all already know! and of course is not a coincidence. <br><br>
                     One can similarly write such expectation value in terms of occupacy number as,
-                    $$\bar{E}={\sum_n\, E_n\, \mathcal{N}(E_n)\over\sum_n\, \mathcal{N}(E_n) }\,, $$
+                    $$\boxed{\bar{E}={\sum_n\, E_n\, \mathcal{N}(E_n)\over\sum_n\, \mathcal{N}(E_n) }\,,} $$
                     This says that the average energy is the energy $E_n$ of a given state times the number of particles in that state, summed over all the states and then divided by the total number of particles in all states.
                     <h2>From states to energies </h2>
                     Notice that in the sums above, $n$ represents (in a compact form) <b>all state</b> labels. Since degeneracy will introduce some over counting, we would like to have a representation that sums over energies instead of individual states. To see why and how, suppose we have a gas of hydrogen atoms, then we can change the sum from states to energies as follows,
@@ -117,9 +117,9 @@
                     $$ \sum_{E_n}\, E_n\, \mathcal{N}(E_n)\,({\rm number\,\,of\,\,states\,\,of\,\,energy}\,\, E_n)$$
                     $$ =\int\, E_n\, \mathcal{N}(E_n)\,({\rm number\,\,of\,\,states\,\,of\,\,energy}\,\, E_n+dE_n){dE_n\over dE_n}$$
                     and we can defined the <b>density of states</b> as
-                    $$D(E_n)= { ({\rm number\,\,of\,\,states\,\,of\,\,energy}\,\, E_n+dE_n)\over dE_n}$$
+                    $$\boxed{D(E_n)= { ({\rm number\,\,of\,\,states\,\,of\,\,energy}\,\, E_n+dE_n)\over dE_n}}$$
                     which allow us to write:
-                    $$\bar{E} ={\int\, E\, \mathcal{N}(E)\,D(E)dE\over \int\mathcal{N}(E)\,D(E)dE}\,.$$
+                    $$\boxed{\bar{E} ={\int\, E\, \mathcal{N}(E)\,D(E)dE\over \int\mathcal{N}(E)\,D(E)dE}\,.}$$
                     As an example, let us consider again the harmonic oscilator in the ``continuous'' limit. For that we need to change summation over $n$ to $E_n$. We have $E_n=n\hbar\omega$, then
                     $$dn=d\left({E\over\hbar\omega}\right)={dE\over \hbar\omega}\,,$$from which we can read $D(E)={1\over\hbar\omega}$.
                     <hr>

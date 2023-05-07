@@ -91,21 +91,12 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
                     <br><br>
-                    <h2>Brownian motion</h2>
-                   Let me spent few minutes re-deriving the variance for a brownian particle. Last class we have argue that Newton's law can be writen in this case as,
-                    $$m\,a=-\nu v+ X\,.$$
-                    Multiplying by $x$ and averanging over a large number of particles, we get,
-                    $${ d\overline{x^2}\over dt}={2 k_B T\over \nu}+C e^{-\nu t\over m}\,,$$
-                   Where we have used $\overline{(x X)}=0$, due to the fact that $x$ and $X$ are independent random variables. Langevin estimated that the decaying exponential approaches zero with a time constant of the order of $10^{-8}$, which for any practical observation at that time, was essentially immediately. Thus, for practical purposes, we can neglect this term and integrate once more to get
-                    $$\overline{x^2}-\overline{x_0^2}=\sigma_x^2={2k_B T\over \nu}t\,, $$
-                    which by taking $D={2k_B T\over \nu}$, recovers Einstein's result.
-                    <center>   <img src="{% static "img/sigma_brown.svg.png" %}" width="600"></center><br><br>
                     <h2>Massless Bosons: The Photon Gas</h2>
                     Photons being spin one particles obey Bose statistics. In other words, we would like to compute,
-                    $$\overline{E}={\int E\mathcal{N}(E)D(E)dE\over\int \mathcal{N}(E)D(E)dE}={1\over N}\int E\mathcal{N}(E)D(E)dE\,,$$
+                    $$\boxed{\overline{E}={\int E\mathcal{N}(E)D(E)dE\over\int \mathcal{N}(E)D(E)dE}={1\over N}\int E\mathcal{N}(E)D(E)dE\,,}$$
                     with 
-                    $$ \mathcal{N}(E)={1\over B e^{E/k_B T}-1}\,.$$ For the sake of simplicitly, lets take the constant $B=1$. In the case of photons, the density of states is given by $$D(E)={8\pi V\over h^3 c^3}E^2\,. $$ Finally, using the fact that $E=h f$ for a photon, we end up with the following expresion:
-                    $$\bar{E}_{\rm photon_gas}={8\pi V\over N c^3}\int_0^{\infty}{h f^3\over e^{hf/k_B T}-1}df\,. $$
+                    $$ \boxed{\mathcal{N}(E)={1\over B e^{E/k_B T}-1}\,.}$$ For the sake of simplicitly, lets take the constant $B=1$. In the case of photons, the density of states is given by $$D(E)={8\pi V\over h^3 c^3}E^2\,. $$ Finally, using the fact that $E=h f$ for a photon, we end up with the following expresion:
+                    $$\boxed{\bar{E}_{\rm photon~~ gas}={8\pi V\over N c^3}\int_0^{\infty}{h f^3\over e^{hf/k_B T}-1}df\,.} $$
                     Once more we have derived the black body radiation spectral density (integrand above), but this by considering the energy distribution of a gas of photons.  In hindsight, black body radiation is nothing else but a gas of photons are thermal equilibrium.
                     <h2>The Laser</h2>
                     As an important application of the above gas of photons, let us quickly review the laser. <br><br>

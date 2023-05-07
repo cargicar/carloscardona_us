@@ -98,7 +98,7 @@ An introduction to statistical mechanics will be largely incomplete without disc
 
                     The equipartition theorem is a powerful tool for predicting the behavior of complex systems, such as gases and liquids. It however led us to the ultraviolet catastrophe which in turn starts the quantum revolution. <br><br>
                     What one can provide a simplified proof by using the Maxwell speed distribution, as follows. Recall,
-                    $$P_{\rm Maxwell}(v)={dP(v)\over dv}=\sqrt{2\over\pi}\left({m\over k_BT}\right)^{3/2}v^2 e^{-{m v^2\over 2 k_B T}}\,.$$
+                    $$\boxed{P_{\rm Maxwell}(v)={dP(v)\over dv}=\sqrt{2\over\pi}\left({m\over k_BT}\right)^{3/2}v^2 e^{-{m v^2\over 2 k_B T}}\,.}$$
                     In order to check the equipartition theorem, we need to compute $\bar{E}$.  For the sake of simplicity, let us consider a system with only translational energy, i.e, we want:
                     $$\bar{E}={1\over 2}m \overline{v^2},$$ 
                     $$ \overline{v^2}=\int_0^{\infty}v^2 P_{\rm Maxwell}(v) dv,$$ which gives:
@@ -112,7 +112,7 @@ An introduction to statistical mechanics will be largely incomplete without disc
                     <center>   <img src="{% static "img/brownian.gif" %}" width="500"></center><br><br>
                     In 1905, Einstein derived the diferential equation describing  the density probability of finding a particle in brownian motion at time $t$ a distance $x$ from its initial position $\rho(x, t)$ (in 1D), obtaining what is today know as the <b>diffusion equation</b>
                     $${d\rho\over dt}=D{\partial^2 \rho\over dx^2}\,. $$ The solution to this equation is very well known,
-                    $$\rho(x, t)\sim {1\over \sqrt{4\pi D\, t }}e^{-{x^2\over 4}D\,t}  $$
+                    $$\boxed{\rho(x, t)\sim {1\over \sqrt{4\pi D\, t }}e^{-{x^2\over 4}D\,t} } $$
                     which corresponds to a Gaussian with mean zero and variance
                     $\sigma_x=\sqrt{2\,D\,t}$. Einstein original derivation is a bit confusing, at least when compared with Langevin, which is the one we are going to review.<br><br>
                     From the equipartition theorem, we know that in one dimension,
