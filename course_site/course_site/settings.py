@@ -11,11 +11,13 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-STATIC_DIR = BASE_DIR / "static"
+# STATIC_DIR = BASE_DIR / "static"
+STATIC_DIR= os.path.join(BASE_DIR, "static")
 TEMPLATE_DIR = BASE_DIR / "templates"
 
 STATIC_URL = "static/"
@@ -34,7 +36,7 @@ SECRET_KEY = 'django-insecure-r+*(=ck#z2wqikty-kn7uyddax716e4n!*qdexwy71$u+=t^x3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','ec2-54-174-155-225.compute-1.amazonaws.com']
+ALLOWED_HOSTS = ['localhost','cargicar.pythonanywhere.com']
 
 
 # Application definition
