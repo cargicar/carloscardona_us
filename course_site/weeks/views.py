@@ -5,7 +5,9 @@ from django.template.response import TemplateResponse
 # Create your views here.
 def home(request):
     return TemplateResponse(request,"weeks/home.html",)
-    #return (request, 'homeApp/home.html')
+
+def home_modern_phys(request):
+    return TemplateResponse(request,"weeks/home_modern_phys.html",)
 
 def syllabus(request):
     return TemplateResponse(request,"weeks/syllabus.html",)
