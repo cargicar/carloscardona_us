@@ -6,6 +6,12 @@ from django.template.response import TemplateResponse
 def home(request):
     return TemplateResponse(request,"weeks/home.html",)
 
+def about(request):
+    return TemplateResponse(request,"weeks/about.html",)
+
+
+#######################################################
+#### Modern Physics Site #############################
 def home_modern_phys(request):
     return TemplateResponse(request,"weeks/home_modern_phys.html",)
 

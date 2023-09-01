@@ -19,6 +19,7 @@ from weeks.views import *  # home, class*, syllabus
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", home, name="home"),
+    path("about/", about, name="about"),
     path("syllabus/", syllabus, name="syllabus"),
     path("home_modern_phys/",home_modern_phys, name="home_modern_phys"),
     path("class01/", class01, name="class01"),
