@@ -9,6 +9,9 @@ def home(request):
 def about(request):
     return TemplateResponse(request,"weeks/about.html",)
 
+def contact(request):
+    return TemplateResponse(request,"weeks/contact.html",)
+
 
 #######################################################
 #### Modern Physics Site #############################
