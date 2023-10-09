@@ -1,0 +1,287 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Expectation Values</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/planck.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Wave Functions</h1>
+                        <hr class="small">
+                        <span class="subheading">=== </span>
+                        <span class="subheading">=== </span>
+                        <h2>Expectations Values and Uncertanty in QM</h2>
+                        <h3>PHYS-221 Sep 14 and 21 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <h2>Some quick reminder: Statistical central values</h2>
+                    Say we are interested in a quantity $Q$, which has three possible values $Q_1,\,Q_2,\,Q_3$, each with probability of occur  $P_1,\,P_2,\,P_3$, in other words: if we perform a large $N$ of tries, we will have 
+                    \begin{equation}
+                   P_i={N_i/N}
+                    \end{equation}
+Obviously, $N_i< N$ and therefore 
+
+                    \begin{equation}
+                   \sum_i P_i \leq 1
+                    \end{equation}
+When all possible values of $Q$ are considered, then the sum above becomes  one. <br><br>
+                    The mean value of a (random) variable, is defined as,
+                    \begin{equation}
+\bar{Q}=\sum_iQ_i P_i
+                    \end{equation}
+and similarly, the mean value of a function of the given variable is given by
+                    \begin{equation}
+                   \overline{f(Q)}=\sum_if(Q_i)P_i\,.
+                    \end{equation}
+
+The standard deviation quantify how much the values taken by a (random) variable deviates from the mean $Q_i-\bar{Q}$, however, since some deviations are positive and other negatives, it does not make sense to average over the distance, but its more meaninful to average over the square distances:
+                    \begin{equation}
+                   \sigma_Q=\sqrt{\sum(Q_i-\bar{Q})^2P_i}
+                    \end{equation}
+If the random variable being considered takes continuos values, the sums become integrals.
+		 <br><br><br><br>
+		 <p style="font-size:30px;">
+		 A quantum particle has a wave function given by
+<br><br>
+		 \begin{equation}
+		 \psi(x,t)=A \sin(kx-\omega t)
+		 \end{equation}
+At $t=0$, we can say the position of the particle is,<br><br>
+</p>
+		 <ol type="A" style="color:blue;font-size:30px;">
+		   <li> $x= 0$</li>
+		   <li> $x= \frac{1}{k}$</li>
+		   <li> $x=$ Everywhere</li>
+		 </ol>
+		 
+		 <br><br>
+                    <h2>Expectation Values, Uncertainties and Operators in QM</h2>
+                    <mark> The <b>expectation value</b> of a variable $x$ is defined as that quantum mean value of such quantity</mark>:
+                    \begin{equation}
+       \boxed{             \bar{x}=\langle x\rangle=\int_{-\infty}^{\infty}xP(x)dx=\int_{-\infty}^{\infty}x|\psi(x)|^2dx}
+                    \end{equation}
+		    Or equivalently,  the <b>expectation value on the interval $[a,b]$</b> of a variable $x$ (say the position coordinate) is defined as that quantum mean value of such quantity</mark>:
+                    \begin{equation}
+       \boxed{             \bar{x}=\langle x\rangle=\int_a^b xP(x)dx=\int_a^bx|\psi(x)|^2dx}
+                    \end{equation}
+                    The <b>uncertainty</b> of a variable $x$ is given by the quantum standard deviation:
+                    \begin{equation}
+                   \boxed{ \sigma_x=\sqrt{\int_a^b(x-\bar{x})^2|\psi(x)|^2dx} }
+                    \end{equation}
+                    With some algebra, the uncertainty can be written in the following more convenient form:
+                    \begin{equation}
+                   \sigma_x=\sqrt{\overline{x^2}-\bar{x}^2}
+                    \end{equation}
+                   The <b>expectation value of a function</b> of a variable $x$ in an interval $[a,b]$, is given by:
+                    \begin{equation}
+\overline{f(x)}=\langle f(x)\rangle=\int_a^bf(x)|\psi(x)|^2dx\,.
+                    \end{equation}
+                    More generally, in QM we define <b>observable</b> as the quantities that can be measure. Mathematically, those observables are represented by operators action on the wave function of the particle, such as momentum, which is defined by the following differential operator:
+                    \begin{equation}
+                    \hat{p}=-i\hbar {\partial\over\partial_x}\,.
+                    \end{equation}
+Operators are usually denoted by a hat. Once an operator is determined in its mathematical form, we can compute its associated statistical central values by the obvious generalizations, such us, expectation value of operator $\hat{Q}$ is given by:
+                    \begin{equation}
+\overline{Q}=\langle Q\rangle=\int_a^b\Psi^*(x,t)\hat{
+                    Q}\Psi(x,t) dx
+                    \end{equation}
+                    and its uncertainty by
+                    \begin{equation}
+                    \sigma_Q=\sqrt{\overline{Q}^2-\bar{Q}^2}\,.
+                    \end{equation}
+for example
+         \begin{equation}
+\langle p\rangle=\int_a^b\Psi^*(x,t)\hat{
+                    p}\Psi(x,t) dx=\int_a^b\Psi^*(x,t)\left(-i\hbar {\partial\over\partial_x}\right)\Psi(x,t) dx
+                 
+                    \end{equation}
+<br><br><br>
+The normalized wave function of a particle in one dimension looks like the following plot: 
+<center>   <img src="{% static "img/gaussian.png" %}" width="500"></center><br><br>
+What is the position where such particle is expected to be found?
+<br><br>
+<ol type="A">
+  <li>$\langle x \rangle= 1/2$</li>
+  <li>$\langle x \rangle=  (0.40)^2$</li>
+  <li>$\langle x \rangle= 0 $</li>
+</ol>
+<br><br>
+<h2>A particle in a Box</h2>
+
+<h2>Expectation Values for Some Important Solutions to the Schrödinger Eq.</h2>
+For a particle in a 1-D box of size $L$, the solutions to the SE are stationary, and hence given by the time independent SE,
+\begin{equation}
+-\frac{\hbar}{2m}\frac{d^2\psi(x)}{dx^2}=E\psi(x),\quad {\rm for}\quad 0\leq x\leq L\,.
+\end{equation}
+More generally, bound systems under time independent potentials have stationary solutions (JFYOI).
+<br><br><br>
+<center>   <img src="{% static "img/clicker_slides_intro_schrodinger_022.jpeg" %}" width="900"></center><br><br>
+<br><br><br>
+Explicit solutions for the 1-D box can be easily computed,
+\begin{equation}
+\psi_n(x)=\sqrt{2\over L}{\rm sin}\left(\frac{n\pi\,x}{L}\right)\,,
+\end{equation}
+
+<br><br><br>
+		 <p style="font-size:30px;">
+
+For $n$ even ($n=2,4,6,\cdots$), what is the probability of finding a particle at the middle of the box.
+<br><br>
+<ol type="A">
+  <li>$P_n\left(x={L\over 2}\right)= 1/2$</li><br>
+  <li>$P_n\left(x={L\over 2}\right)= 0$</li><br>
+  <li>$P_n\left(x={L\over 2}\right)= \sqrt{2\over L} $</li>
+</ol>
+</p>
+		 <br><br>
+		 However, the expectation value for a particle in a box of size $L$ is, 
+		 \begin{equation}\langle x\rangle=\frac{L}{2},\quad \langle p \rangle=0\,.\end{equation}
+
+                    <h2>Particle-Wave duality: A closer look</h2>
+                    So far we have considered either the wave or particle nature of an object separatly, but a more realistic picture, which represent both at once, is given by a <b>wave package</b>, or pulse, which corresponds to a linear combination of plane waves.
+
+                    <center>   <img src="{% static "img/wave_pack.png" %}" width="400"></center><br><br>
+                    The most simple example:
+                    \begin{equation}
+                    \Psi(x,t)=A e^{i(k_1 x-\omega_1 t)}+A e^{i(k_2 x-\omega_2 t)}
+                    \end{equation}
+                    such us there is only a small deviation between them two, i.e $k_1=k_0+dk$ and  $k_2=k_0-dk$, similarly  $\omega_1=\omega_0+d\omega$ and  $\omega_2=\omega_0-d\omega$.
+                    Replacing this values back, and simplifying a bit, we arrive to,
+
+                    \begin{equation}
+\Psi(x,t)=2Ae^{i(k_0x-\omega_0 t)}~{\rm cos}[x dk-td\omega]\,.
+                    \end{equation}
+
+                    <center>   <img src="{% static "img/simple_pack.png" %}" width="400"></center><br><br>
+
+                    <h3>Particlelike waves: Fourier expansion</h3>
+                    In general, any wave function can be written in terms of a Fourier expansion (or transform) as,
+
+                    \begin{equation}
+                   \boxed{ \Psi(x,t)=\int_{-\infty}^{\infty}A(k)e^{i(kx-\omega t)}dk }
+                    \end{equation}
+                    Let us recall what $\omega$ is: The Schroedinger equation for a free particle is given by:
+
+                    \begin{equation}
+                    -{\hbar^2\over 2m}{\partial^2\Psi(x,t)\over \partial x}=i\hbar{\partial\Psi(x,t)\over\partial t}\,.
+                    \end{equation}
+                    Applying it on a single plane wave component, we get ${\hbar^2 k^2\over 2m}=\hbar \omega$, or equivalently 
+
+                    \begin{equation}
+                 \boxed{   \omega(k)={\hbar k^2\over 2 m} }
+                    \end{equation}
+                    The relantionship between frecuency and wave number is know as a <b>dispersion relation</b>. For comparison purposes, let us recall  that for a massless  particle $E=cp$, therefore 
+                    \begin{equation}
+                    \omega_{\rm photon}(k)=ck
+                    \end{equation}
+                    We still have an answer question what is the speed of a wave?. On the one hand, we can computed by dimensional analysis $[l]/[t]\quad\rightarrow\quad \lambda f$, which is defined as the <b>phase velocity</b>:
+
+                    \begin{equation}
+                    v_{\rm phase}={\omega\over k}\,.
+                    \end{equation}
+                    Then we have, for the photon $v_{\rm phase}=c$ but for a massive particle $v_{\rm phase}={\hbar k\over 2 m}$. Whereas EM waves move at $v_{\rm phase}=c$ matter waves can move faster than light?? &#128552;. Yes, they might, but remember, the wave function is a convenient description, and the actual physical quantities are the probabilities. Take for example the simpler linear combination of two planes waves having wave number centered around $k_0$.
+                    \begin{equation}
+                    |\Psi(x,t)|^2=4A^2~{\rm cos}^2[x dk-td\omega]\,.
+                    \end{equation}
+
+                    We can see that in $|\Psi(x,t)|^2$ both $\omega_0$ and $k_0$ are cancelled, so there is not phase velocity associated to such probability, however, there is still a velocity we can associated to it ${d\omega\over dk}$, which is known as the group velocity. Hencefort, in QM mechanics we are not concerned with the phase velocity but with the <b>group velocity</b>
+                    \begin{equation}
+                   \boxed{ v_{g}={d\omega(k)\over dk}(k_0)}
+                    \end{equation}
+                    where $k_0$ is the one related to the speed of the particle, in other words, if the speed of the particle is $v_0=p_0/m=\hbar k_0/m$ (which is obviously less that $c$ &#128517; ). Also notice that the group velocity for a photon
+                    \begin{equation}
+                    v_{g}={d\omega(k)\over dk}(k_0)={d(c k)\over dk}(k_0)=c
+                    \end{equation}
+                    and is still equal to $c$. 
+                    <br><br>
+                   <mark> <em>No matter what is the phase velocity of the individual plane waves composing a wave function, the probability will move at the speed associated to the particle</em> &#129327;
+                </mark>
+                   
+                    <br><br><br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

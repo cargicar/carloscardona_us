@@ -1,0 +1,20 @@
+--2023-09-24 16:50:35--  https://www.dropbox.com/scl/fi/zq505875kjuj6zypfyjzn/HO.png?rlkey=8ck2ayjywatq7xcdar415fipg
+Resolving www.dropbox.com (www.dropbox.com)... 162.125.6.18, 2620:100:601c:18::a27d:612
+Connecting to www.dropbox.com (www.dropbox.com)|162.125.6.18|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://www.dropbox.com/e/scl/fi/zq505875kjuj6zypfyjzn/HO.png?rlkey=8ck2ayjywatq7xcdar415fipg [following]
+--2023-09-24 16:50:36--  https://www.dropbox.com/e/scl/fi/zq505875kjuj6zypfyjzn/HO.png?rlkey=8ck2ayjywatq7xcdar415fipg
+Reusing existing connection to www.dropbox.com:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://uc94189d2251a4070ab80d79f44f.dl.dropboxusercontent.com/cd/0/inline/CEWffmta_h_ENWtjGoOrkCb6KLoVXblFV4C6DLsKqLtDsbynGq7Zr3tHLGpVUOzOOF2BD6p1saoq28srqINYk0ZN6ucbcwVnDTho6jOMHzVulK_JcmsFVG3M3DwP1D3S7lg/file# [following]
+--2023-09-24 16:50:37--  https://uc94189d2251a4070ab80d79f44f.dl.dropboxusercontent.com/cd/0/inline/CEWffmta_h_ENWtjGoOrkCb6KLoVXblFV4C6DLsKqLtDsbynGq7Zr3tHLGpVUOzOOF2BD6p1saoq28srqINYk0ZN6ucbcwVnDTho6jOMHzVulK_JcmsFVG3M3DwP1D3S7lg/file
+Resolving uc94189d2251a4070ab80d79f44f.dl.dropboxusercontent.com (uc94189d2251a4070ab80d79f44f.dl.dropboxusercontent.com)... 162.125.6.15, 2620:100:601c:15::a27d:60f
+Connecting to uc94189d2251a4070ab80d79f44f.dl.dropboxusercontent.com (uc94189d2251a4070ab80d79f44f.dl.dropboxusercontent.com)|162.125.6.15|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 226746 (221K) [image/png]
+Saving to: ‘HO.png?rlkey=8ck2ayjywatq7xcdar415fipg’
+
+HO.png?rlkey=8ck2ayjywatq7xcdar415   0%[                                                                ]       0  --.-KB/s               HO.png?rlkey=8ck2ayjywatq7xcdar415 100%[===============================================================>] 221.43K  --.-KB/s    in 0.003s  
+
+2023-09-24 16:50:37 (65.6 MB/s) - ‘HO.png?rlkey=8ck2ayjywatq7xcdar415fipg’ saved [226746/226746]
+

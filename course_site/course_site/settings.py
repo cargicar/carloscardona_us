@@ -16,7 +16,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_DIR = BASE_DIR / "static"
-STATIC_ROOT= "/home/cargicar/modern_phys_repo/course_site/statics"
+STATIC_ROOT= "/home/cargicar/carloscardona_us/course_site/statics"
 TEMPLATE_DIR = BASE_DIR / "templates"
 
 STATIC_URL = "static/"

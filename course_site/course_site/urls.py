@@ -26,7 +26,12 @@ urlpatterns = [
     path("class01/", class01, name="class01"),
     path("class00/", class00, name="class00"),
     path("qm2/", qm2, name="qm2"),
-    path("qm3/", qm3, name="qm3"),
+    path("expectation_values/", expectation_values, name="expectation_values"),
+    path("infinite_well/", infinite_well, name="infinite_well"),
+    path("harmonic/", harmonic, name="harmonic"),
+    path("hydrogen_atom/", hydrogen_atom, name="hydrogen_atom"),
+
+    ############ Current 2023 content #######################
     path("bohr_model/", bohr_model , name="bohr_model"),
     path("bound_states/", bound_states , name="bound_states"),
     path("tunneling/", tunneling , name="tunneling"),

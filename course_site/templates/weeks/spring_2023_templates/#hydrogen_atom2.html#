@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>3D QM</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/hydrogen-atom.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Week 7 </h1>
+                        <hr class="small">
+                        <h2>The Hydrogen Atom Revisited </h2>
+                        <h3>PHYS-221 March 1 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    Announcement: Tomorrow we will have recitation only in the afternoon session.<br><br>
+                    A small edit has been done on problem number of HW 05. 
+                    <h2>Hydrogen Spectral Lines</h2>
+                    Last time, we wrote the Schrodinger equation for a system with a central potential in Spherical coordinates, and use separation of variables to get a system of three independent differential equations, one per spherical coordinate:
+                    <br><br>
+                    The radial equation:
+                    $$-{\partial\over \partial r}\left(r^2{\partial\over \partial r}\right)R(r)-{2mr^2\over \hbar^2}(E-U(r))R(r)=C\,R(r)$$
+                    <hr>
+                    The polar equation:
+                    $$ {\rm sin}(\theta){\partial\over \partial\theta}\left({\rm sin}(\theta){\partial\over\partial\theta}\right)\Theta(\theta)  -C\,{\rm sin}^2(\theta)=D\Theta(\theta)$$
+                    <hr>
+                    The azimuthal equation:
+                    $$ {\partial^2\Phi(\phi)\over \partial\phi^2}=-D\Phi(\phi)$$
+                    <hr>
+                   
+                    With potential energy is given by,
+                    \begin{equation}
+                    U(r)=-{1\over4\pi \epsilon_0}{e^2\over r}\,
+                    \end{equation}
+                    <h3>The Azimuthal equation</h3>
+                    Let's start with the simplest of them all, the azimuthal equation. We already know the solution of such equation $$\Phi(\phi)=A e^{+i\sqrt{D}\phi}+B e^{-i\sqrt{D}\phi} $$. No we don't have a potential barrier in this direction that will bounce the wavefuntion, so we can only have a wave moving in either direction. Let us pick up: $$\Phi(\phi)=A e^{+i\sqrt{D}\phi}$$
+                    Imposing continuity of the wavefunction we conclude that $$\Phi(\phi)=A e^{i m_{\ell}\,\phi}$$ with $m_{\ell}=0, \pm 1, \pm 2,\cdots$.
+                    <h3>The Polar equation</h3>
+                    The polar equation is a challenging equation, but perhaps the most challenging part of this equation is the computation of the constant $C$, it turns out that in order to satisfy our physical conditions, the constant of the polar equation are,
+                    $$C=-\ell(\ell+1) $$ $$\sqrt{D}= \boxed{ m_{\ell}=0,\pm 1, \pm 2,\cdots,\pm\ell\,}.$$
+                    This has to do with the fact that the combined polar and azimuthal equations are the square of the angular momentum operator, and which is quantized by the integer $\ell$, whereas the integer $m_{\ell}$ corresponds to the quantization of projection of angular momenta in the $z$ direction:<br><br> <center> $ \boxed{L_z=\hbar m_{\ell}} $ and $ \boxed{|L|=\hbar\sqrt{\ell(\ell+1)}}$.</center>
+                    <br>
+                    <em>Remember that the angular momentum $L={\bf p}\times {\bf r}$  is a vector perpendicular to the orbital plane</em><br><br>
+                    <center>   <img src="{% static "img/spin_quant.png" %}" width="500"></center>
+                    <br>
+                    What about the classical limit?<br><br>
+                    After some algebra, we can rewrite the polar equation in the form,
+                    $$                   (1+x^2){\partial\Theta(x)\over \partial x^2}-2 x { \partial\Theta(x)\over  \partial x}+\ell(\ell+1)\Theta(x)-{m_{x}^2\over (1-x^2)}\Theta(x)$$ with $x={\rm cos}(\theta)$.
+                    This equation is known in the mathematical literature as the                         <a href="https://en.wikipedia.org/wiki/Associated_Legendre_polynomials">associated Legendre equation</a>, which defined the associated Legendre polynomials.<br><br>
+
+˙                    The combine solutions $\Theta_{\ell, m_{\ell}}\Phi_{m_{\ell}}$ are known as the <b>spherical harmonics</b>
+                    <center>   <img src="{% static "img/spherical_harm.png" %}" width="800"></center><br>
+                    <h3>Angular probabilities</h3>
+                    Even though we are considering a system with spherical symmetry, and at a given angular momentum $\ell$ the total probability would be angular independent, as it should be for a spherical symmetric system, it is important to have understand the angular dependence in order to gain a better understanding of the total wavefunction (among other things, in practical experiments, we are able to distinguish diferent angular components, by sort of breaking the spherical symmetry by applying an interaction).
+                    <center>   <img src="{% static "img/angular_prob1.png" %}" width="350"> <img src="{% static "img/angular_prob2.png" %}" width="370"></center>
+
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

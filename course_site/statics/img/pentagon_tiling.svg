@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2940"
+   height="2800"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="pentagon_tiling_diagram.svg"
+   style="display:inline">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.15197078"
+     inkscape:cx="1280.6003"
+     inkscape:cy="1215.8775"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:object-nodes="true"
+     inkscape:snap-center="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(4017.6392,590.92111)"
+     style="display:inline">
+    <use
+       height="1052.3622"
+       width="744.09448"
+       transform="translate(-179.99543,-553.96842)"
+       id="use3918"
+       xlink:href="#path3902"
+       y="0"
+       x="0"
+       inkscape:transform-center-x="179.99507"
+       inkscape:transform-center-y="-954.82382" />
+    <path
+       transform="matrix(0.49411106,0,0,0.49411106,-1872.4059,787.28583)"
+       inkscape:transform-center-y="112.70162"
+       d="m -777.14287,441.10415 -364.28103,-264.66561 139.143,-428.23797 450.27603,-1e-5 139.14296,428.23796 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="2.1991149"
+       sodipodi:arg1="1.5707963"
+       sodipodi:r2="309.87589"
+       sodipodi:r1="383.02768"
+       sodipodi:cy="58.076469"
+       sodipodi:cx="-777.14288"
+       sodipodi:sides="5"
+       id="use2997"
+       style="fill:#32cd32;fill-rule:evenodd;stroke:#000000;stroke-width:20.23836517;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       sodipodi:type="star"
+       inkscape:transform-center-x="-291.2384" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2997"
+       inkscape:transform-center-x="-179.9952"
+       inkscape:transform-center-y="-229.66965"
+       id="use3001"
+       transform="matrix(0.30901699,-0.95105652,0.95105652,0.30901699,-2446.4229,-1924.5062)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2997"
+       inkscape:transform-center-x="179.99529"
+       inkscape:transform-center-y="-229.66961"
+       id="use3003"
+       transform="matrix(-0.809017,-0.58778525,0.58778525,-0.809017,-5032.7233,-192.52489)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2997"
+       inkscape:transform-center-x="291.23841"
+       inkscape:transform-center-y="112.70172"
+       id="use3005"
+       transform="matrix(-0.80901699,0.58778526,-0.58778526,-0.80901699,-4184.7219,2802.4046)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2997"
+       inkscape:transform-center-x="-8.2397248e-05"
+       inkscape:transform-center-y="324.29877"
+       id="use3007"
+       transform="matrix(0.309017,0.95105651,-0.95105651,0.309017,-1074.3278,2921.3915)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       height="1052.3622"
+       width="744.09448"
+       transform="matrix(0.309017,-0.95105651,-0.95105651,-0.309017,-603.09425,-830.08802)"
+       id="use3009"
+       inkscape:transform-center-y="-324.29877"
+       inkscape:transform-center-x="-8.2397248e-05"
+       xlink:href="#use2997"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2997"
+       inkscape:transform-center-x="-471.23369"
+       inkscape:transform-center-y="-360.44385"
+       id="use3011"
+       transform="matrix(-0.80901699,-0.58778526,-0.58778526,0.80901699,-3422.2498,-1607.4408)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2997"
+       inkscape:transform-center-x="179.99519"
+       inkscape:transform-center-y="-572.04098"
+       id="use3013"
+       transform="matrix(-0.809017,0.58778525,0.58778525,0.809017,-5032.7232,833.52027)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2997"
+       inkscape:transform-center-x="582.4769"
+       inkscape:transform-center-y="-18.072577"
+       id="use3015"
+       transform="matrix(0.30901699,0.95105652,0.95105652,-0.30901699,-3208.895,3119.4699)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-x="179.99525"
+       inkscape:transform-center-y="40.411458"
+       id="use3017"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(0.309017,0.95105651,-0.95105651,0.309017,-1074.3278,2921.3915)" />
+    <use
+       transform="matrix(-0.309017,0.95105651,0.95105651,0.309017,-4020.9504,2921.3915)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3019"
+       inkscape:transform-center-y="40.411458"
+       inkscape:transform-center-x="-179.99529"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-x="-582.47688"
+       inkscape:transform-center-y="-18.072581"
+       id="use3021"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(0.80901699,0.58778526,0.58778526,-0.80901699,-910.55627,2802.4045)" />
+    <use
+       transform="matrix(-1,0,0,1,-5095.2783,4.3304512e-6)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3023"
+       inkscape:transform-center-y="324.29874"
+       inkscape:transform-center-x="471.23369"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-x="-179.99522"
+       inkscape:transform-center-y="-572.04098"
+       id="use3025"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(0.809017,-0.58778525,-0.58778525,-0.809017,-62.555031,-192.52494)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-x="471.23368"
+       inkscape:transform-center-y="-360.44386"
+       id="use3027"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(-0.30901699,-0.95105652,-0.95105652,0.30901699,-2648.8554,-1924.5062)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-x="-471.23376"
+       inkscape:transform-center-y="666.67009"
+       id="use3029"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(-0.309017,-0.95105651,0.95105651,-0.309017,-3729.712,-276.11955)" />
+    <use
+       transform="matrix(-1,0,0,-1,-3861.5726,1537.335)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3031"
+       inkscape:transform-center-y="-229.66967"
+       inkscape:transform-center-x="-762.47212"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       transform="matrix(0.809017,0.58778525,-0.58778525,0.809017,-1005.0225,833.52033)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3033"
+       inkscape:transform-center-y="-229.6696"
+       inkscape:transform-center-x="762.47213"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       transform="matrix(-0.30901699,0.95105652,-0.95105652,-0.30901699,-2177.6219,2223.1302)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3035"
+       inkscape:transform-center-y="-783.63807"
+       inkscape:transform-center-x="6.6775664e-05"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       transform="matrix(0.80901699,-0.58778526,0.58778526,0.80901699,-1964.267,-711.10101)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3037"
+       inkscape:transform-center-y="666.6701"
+       inkscape:transform-center-x="471.23367"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       transform="matrix(-0.309017,-0.95105651,0.95105651,-0.309017,-4020.9504,-64.522423)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3039"
+       inkscape:transform-center-y="878.26721"
+       inkscape:transform-center-x="-179.99525"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-x="-873.71531"
+       inkscape:transform-center-y="112.70163"
+       id="use3041"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(-1,0,0,-1,-3750.3293,1879.7063)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-x="-359.99042"
+       inkscape:transform-center-y="-783.63807"
+       id="use3043"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(-0.30901699,0.95105652,-0.95105652,-0.30901699,-1817.6313,2223.1302)" />
+    <use
+       transform="matrix(0.809017,0.58778525,-0.58778525,0.809017,-893.77921,491.14903)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3045"
+       inkscape:transform-center-y="-572.0409"
+       inkscape:transform-center-x="651.22896"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       transform="matrix(0.80901699,-0.58778526,0.58778526,0.80901699,-2366.7485,-1265.0695)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3049"
+       inkscape:transform-center-y="455.07307"
+       inkscape:transform-center-x="762.47208"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       transform="matrix(0.80901699,-0.58778526,0.58778526,0.80901699,-2255.5054,-922.69816)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3051"
+       inkscape:transform-center-y="455.07301"
+       inkscape:transform-center-x="762.47208"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       transform="matrix(-0.309017,-0.95105651,0.95105651,-0.309017,-4380.941,-64.522607)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3055"
+       inkscape:transform-center-y="878.26703"
+       inkscape:transform-center-x="179.99523"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-x="-762.47203"
+       inkscape:transform-center-y="455.07293"
+       id="use3057"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(-1,0,0,-1,-3861.5727,2222.0776)" />
+    <use
+       transform="matrix(-0.30901699,0.95105652,-0.95105652,-0.30901699,-1526.393,2434.7274)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3059"
+       inkscape:transform-center-y="-572.04087"
+       inkscape:transform-center-x="-651.22884"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-x="359.99044"
+       inkscape:transform-center-y="-783.63796"
+       id="use3061"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(0.809017,0.58778525,-0.58778525,0.809017,-602.54081,279.55197)" />
+    <use
+       transform="matrix(0.809017,-0.58778525,-0.58778525,-0.809017,-242.55043,-746.49334)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3063"
+       inkscape:transform-center-y="-1126.0094"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-y="-360.44388"
+       id="use3073"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(-0.30901699,-0.95105652,-0.95105652,0.30901699,-3231.3325,-1924.5062)"
+       inkscape:transform-center-x="1053.7106" />
+    <use
+       inkscape:transform-center-x="651.22901"
+       transform="matrix(-1,0,0,1,-5275.2738,553.96849)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3094"
+       inkscape:transform-center-y="878.26721"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-y="878.26724"
+       id="use3096"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(-0.30901699,0.95105652,0.95105652,0.30901699,-3549.7169,3263.7629)"
+       inkscape:transform-center-x="-651.22891" />
+    <use
+       inkscape:transform-center-x="-1053.7106"
+       transform="matrix(0.809017,0.58778525,0.58778525,-0.809017,-439.32271,2460.0333)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3098"
+       inkscape:transform-center-y="-360.44379"
+       xlink:href="#use3009"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-y="1089.8642"
+       id="use3100"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(-0.309017,0.95105651,0.95105651,0.309017,-4200.9457,3475.3598)" />
+    <use
+       transform="matrix(0.80901699,0.58778526,0.58778526,-0.80901699,-439.32274,3144.7758)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3102"
+       inkscape:transform-center-y="324.29873"
+       xlink:href="#use3009"
+       y="0"
+       x="0"
+       inkscape:transform-center-x="-1053.7105" />
+    <use
+       inkscape:transform-center-x="-651.22889"
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-y="-914.41223"
+       id="use3104"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(0.809017,-0.58778525,-0.58778525,-0.809017,408.67854,-534.8962)" />
+    <use
+       transform="matrix(-0.30901699,-0.95105652,-0.95105652,0.30901699,-2828.8507,-2478.4746)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3106"
+       inkscape:transform-center-y="-914.41225"
+       xlink:href="#use3009"
+       y="0"
+       x="0"
+       inkscape:transform-center-x="651.22888" />
+    <use
+       inkscape:transform-center-x="1053.7105"
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-y="324.29871"
+       id="use3108"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(-1,0,0,1,-5677.7552,-4.4669549e-5)" />
+    <use
+       transform="matrix(-0.309017,0.95105651,0.95105651,0.309017,-4560.9364,3475.3599)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3878"
+       inkscape:transform-center-y="1089.8643"
+       xlink:href="#use3009"
+       y="0"
+       x="0"
+       inkscape:transform-center-x="359.99064" />
+    <use
+       inkscape:transform-center-x="-942.46733"
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-y="666.67023"
+       id="use3884"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(0.80901699,0.58778526,0.58778526,-0.80901699,-550.56593,3487.1473)" />
+    <use
+       transform="matrix(0.809017,-0.58778525,-0.58778525,-0.809017,699.91713,-323.29905)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3886"
+       inkscape:transform-center-y="-702.81508"
+       xlink:href="#use3009"
+       y="0"
+       x="0"
+       inkscape:transform-center-x="-942.4675" />
+    <use
+       inkscape:transform-center-x="359.99036"
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-y="-1126.0094"
+       id="use3888"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(-0.30901699,-0.95105652,-0.95105652,0.30901699,-2537.6122,-2690.0718)" />
+    <use
+       transform="matrix(-1,0,0,1,-5788.9984,-342.3715)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3890"
+       inkscape:transform-center-y="-18.0727"
+       xlink:href="#use3009"
+       y="0"
+       x="0"
+       inkscape:transform-center-x="1164.9537" />
+    <use
+       inkscape:transform-center-x="-359.99046"
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-y="1089.8644"
+       id="use3892"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(-0.309017,0.95105651,0.95105651,0.309017,-3840.9553,3475.36)" />
+    <use
+       transform="matrix(0.80901699,0.58778526,0.58778526,-0.80901699,-328.07944,2802.4046)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3894"
+       inkscape:transform-center-y="-18.072471"
+       xlink:href="#use3009"
+       y="0"
+       x="0"
+       inkscape:transform-center-x="-1164.9538" />
+    <use
+       inkscape:transform-center-x="-359.9906"
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-y="-1126.0094"
+       id="use3896"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(0.809017,-0.58778525,-0.58778525,-0.809017,117.44025,-746.49339)" />
+    <use
+       transform="matrix(-0.30901699,-0.95105652,-0.95105652,0.30901699,-3120.0892,-2266.8776)"
+       height="1052.3622"
+       width="744.09448"
+       id="use3898"
+       inkscape:transform-center-y="-702.81523"
+       xlink:href="#use3009"
+       y="0"
+       x="0"
+       inkscape:transform-center-x="942.46738" />
+    <use
+       inkscape:transform-center-x="942.46739"
+       x="0"
+       y="0"
+       xlink:href="#use3009"
+       inkscape:transform-center-y="666.67005"
+       id="use3900"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(-1,0,0,1,-5566.5121,342.37128)" />
+    <path
+       style="color:#000000;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#060000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -2547.6391,108.90055 -68.7521,211.59712 68.752,211.5971 68.7522,-211.5971 z"
+       id="path3902"
+       inkscape:connector-curvature="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2997"
+       inkscape:transform-center-x="-291.2384"
+       inkscape:transform-center-y="-112.70159"
+       id="use3906"
+       transform="matrix(1,0,0,-1,-291.23838,1537.3351)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3908"
+       inkscape:transform-center-y="-123.87108"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(0.30901699,-0.95105652,0.95105652,0.30901699,-2446.4228,-1924.5061)"
+       inkscape:transform-center-x="381.23606" />
+    <use
+       inkscape:transform-center-x="235.61683"
+       transform="matrix(-0.809017,-0.58778525,0.58778525,-0.809017,-5032.7231,-192.52486)"
+       height="1052.3622"
+       width="744.09448"
+       inkscape:transform-center-y="324.29878"
+       id="use3910"
+       xlink:href="#path3902"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3912"
+       inkscape:transform-center-y="324.29875"
+       width="744.09448"
+       height="1052.3622"
+       transform="matrix(-0.80901699,0.58778526,-0.58778526,-0.80901699,-4184.7217,2802.4045)"
+       inkscape:transform-center-x="-235.61689" />
+    <use
+       inkscape:transform-center-x="-381.23604"
+       transform="matrix(0.309017,0.95105651,-0.95105651,0.309017,-1074.3278,2921.3914)"
+       height="1052.3622"
+       width="744.09448"
+       inkscape:transform-center-y="-123.87107"
+       id="use3914"
+       xlink:href="#path3902"
+       y="0"
+       x="0" />
+    <use
+       inkscape:transform-center-y="-123.87128"
+       inkscape:transform-center-x="963.71297"
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3920"
+       transform="matrix(0.30901699,-0.95105652,0.95105652,0.30901699,-3028.8998,-1924.5063)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       height="1052.3622"
+       width="744.09448"
+       transform="matrix(-0.809017,-0.58778525,0.58778525,-0.809017,-5212.7186,361.44354)"
+       id="use3922"
+       xlink:href="#path3902"
+       y="0"
+       x="0"
+       inkscape:transform-center-x="415.61224"
+       inkscape:transform-center-y="878.26718" />
+    <use
+       inkscape:transform-center-y="666.67025"
+       inkscape:transform-center-x="-706.85048"
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3924"
+       transform="matrix(-0.80901699,0.58778526,-0.58778526,-0.80901699,-3713.4882,3144.776)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       height="1052.3622"
+       width="744.09448"
+       transform="matrix(0.309017,0.95105651,-0.95105651,0.309017,-603.09405,2579.0202)"
+       id="use3926"
+       xlink:href="#path3902"
+       y="0"
+       x="0"
+       inkscape:transform-center-x="-852.46991"
+       inkscape:transform-center-y="-466.24227" />
+    <use
+       inkscape:transform-center-y="-954.82374"
+       inkscape:transform-center-x="-179.99523"
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3928"
+       transform="translate(179.99514,-553.96841)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       height="1052.3622"
+       width="744.09448"
+       transform="matrix(0.30901699,-0.95105652,0.95105652,0.30901699,-2917.6566,-2266.8774)"
+       id="use3930"
+       xlink:href="#path3902"
+       y="0"
+       x="0"
+       inkscape:transform-center-x="852.46977"
+       inkscape:transform-center-y="-466.24238" />
+    <use
+       inkscape:transform-center-y="666.67012"
+       inkscape:transform-center-x="706.85044"
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3932"
+       transform="matrix(-0.809017,-0.58778525,0.58778525,-0.809017,-5503.9568,149.84648)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       height="1052.3622"
+       width="744.09448"
+       transform="matrix(-0.80901699,0.58778526,-0.58778526,-0.80901699,-4004.7265,3356.3729)"
+       id="use3934"
+       xlink:href="#path3902"
+       y="0"
+       x="0"
+       inkscape:transform-center-x="-415.61218"
+       inkscape:transform-center-y="878.26715" />
+    <use
+       inkscape:transform-center-y="-123.87117"
+       inkscape:transform-center-x="-963.71294"
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3936"
+       transform="matrix(0.309017,0.95105651,-0.95105651,0.309017,-491.85102,2921.3913)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3938"
+       transform="translate(2.4075428e-5,1107.9367)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       inkscape:transform-center-y="218.50022"
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3942"
+       transform="matrix(0.30901699,-0.95105652,0.95105652,0.30901699,-1392.7124,-1582.1348)"
+       width="744.09448"
+       height="1052.3622"
+       inkscape:transform-center-x="-672.47432" />
+    <use
+       inkscape:transform-center-x="-415.61205"
+       height="1052.3622"
+       width="744.09448"
+       transform="matrix(-0.809017,-0.58778525,0.58778525,-0.809017,-4381.4942,-1088.8644)"
+       id="use3944"
+       xlink:href="#path3902"
+       y="0"
+       x="0"
+       inkscape:transform-center-y="-572.04078" />
+    <use
+       inkscape:transform-center-y="-572.04085"
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3946"
+       transform="matrix(-0.80901699,0.58778526,-0.58778526,-0.80901699,-4835.9505,1906.0649)"
+       width="744.09448"
+       height="1052.3622"
+       inkscape:transform-center-x="415.61193" />
+    <use
+       inkscape:transform-center-x="672.47428"
+       height="1052.3622"
+       width="744.09448"
+       transform="matrix(0.309017,0.95105651,-0.95105651,0.309017,-2128.0381,3263.7626)"
+       id="use3948"
+       xlink:href="#path3902"
+       y="0"
+       x="0"
+       inkscape:transform-center-y="218.50013" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3952"
+       transform="translate(-179.99544,1661.9053)"
+       width="2694.5969"
+       height="2562.7148"
+       inkscape:transform-center-x="179.99535"
+       inkscape:transform-center-y="1261.05" />
+    <use
+       inkscape:transform-center-y="560.87165"
+       inkscape:transform-center-x="-1143.7082"
+       height="2562.7148"
+       width="2694.5969"
+       transform="matrix(0.30901699,-0.95105652,0.95105652,0.30901699,-921.47857,-1239.7634)"
+       id="use3958"
+       xlink:href="#path3902"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3960"
+       transform="matrix(-0.809017,-0.58778525,0.58778525,-0.809017,-3910.2604,-1431.2359)"
+       width="2694.5969"
+       height="2562.7148"
+       inkscape:transform-center-x="-886.84597"
+       inkscape:transform-center-y="-914.41225" />
+    <use
+       inkscape:transform-center-y="-1126.0096"
+       inkscape:transform-center-x="595.60731"
+       height="2562.7148"
+       width="2694.5969"
+       transform="matrix(-0.80901699,0.58778526,-0.58778526,-0.80901699,-5015.946,1352.0961)"
+       id="use3962"
+       xlink:href="#path3902"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3964"
+       transform="matrix(0.309017,0.95105651,-0.95105651,0.309017,-2710.5155,3263.7626)"
+       width="2694.5969"
+       height="2562.7148"
+       inkscape:transform-center-x="1254.9516"
+       inkscape:transform-center-y="218.50018" />
+    <use
+       inkscape:transform-center-y="1261.0501"
+       inkscape:transform-center-x="-179.99518"
+       height="2562.7148"
+       width="2694.5969"
+       transform="translate(179.99509,1661.9054)"
+       id="use3966"
+       xlink:href="#path3902"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3968"
+       transform="matrix(0.30901699,-0.95105652,0.95105652,0.30901699,-810.23528,-1582.1347)"
+       width="2694.5969"
+       height="2562.7148"
+       inkscape:transform-center-x="-1254.9515"
+       inkscape:transform-center-y="218.50035" />
+    <use
+       inkscape:transform-center-y="-1126.0095"
+       inkscape:transform-center-x="-595.60758"
+       height="2562.7148"
+       width="2694.5969"
+       transform="matrix(-0.809017,-0.58778525,0.58778525,-0.809017,-4201.4988,-1642.8331)"
+       id="use3970"
+       xlink:href="#path3902"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path3902"
+       id="use3972"
+       transform="matrix(-0.80901699,0.58778526,-0.58778526,-0.80901699,-5307.1845,1563.6932)"
+       width="2694.5969"
+       height="2562.7148"
+       inkscape:transform-center-x="886.8458"
+       inkscape:transform-center-y="-914.41257" />
+    <use
+       inkscape:transform-center-y="560.87151"
+       inkscape:transform-center-x="1143.7085"
+       height="2562.7148"
+       width="2694.5969"
+       transform="matrix(0.309017,0.95105651,-0.95105651,0.309017,-2599.2724,3606.134)"
+       id="use3974"
+       xlink:href="#path3902"
+       y="0"
+       x="0" />
+  </g>
+</svg>

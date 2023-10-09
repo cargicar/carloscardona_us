@@ -32,10 +32,20 @@ def class00(request):
 def qm2(request):
      return TemplateResponse( request,"weeks/qm2.html",)
 
-def qm3(request):
-     return TemplateResponse( request,"weeks/qm3.html",)
+def expectation_values(request):
+     return TemplateResponse( request,"weeks/expectation_values.html",)
 
+def infinite_well(request):
+     return TemplateResponse( request,"weeks/infinite_well.html",)
 
+def harmonic(request):
+     return TemplateResponse( request,"weeks/harmonic.html",)
+
+def hydrogen_atom(request):
+     return TemplateResponse( request,"weeks/hydrogen_atom.html",)
+
+######## Up to here is Fall 2023 content ##########
+###################################################
 def bohr_model(request):
      return TemplateResponse( request, "weeks/bohr_model.html",)
 
