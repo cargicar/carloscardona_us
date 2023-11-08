@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Spin</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/espin.gif' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h2>Spin </h2>
+                        <h3>PHYS-221 Oct 19 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                   
+                    <h2>Experimental Evidence of Angular Momentum Quantization</h2>
+		    Bohr's model and the full quantum treatment of the hydrogen atom, led us to unavoidably consider the idea of angular momentum quatization. So now we will look into the experiment confirming this claim.<br>
+		    Before moving into that, we need to remember few basic facts about rotating charge particles.
+                    <br><br>
+                    <!-- <a href="https://en.wikipedia.org/wiki/Laguerre_polynomials">associated Laguerre equation</a>, which defined the associated Laguerre polynomials.<br><br>
+                         <br>
+                         <center>   <img src="{% static "img/spherical_harm.png" %}" width="800"></center><br> -->
+                    <h3>Angular momentum and magnetic dipole</h3>
+                    Lets again imagine the electron orbiting a proton.
+		    <hr>
+                    <center>   <img src="{% static "img/dipole.jpg" %}" width="800"></center>
+		    Given a loop of electrical current $I$ enclosing an area $A$. What is the expression describing the magnetic dipole moment?
+
+		    <ol type = "A">
+		      <li> $\mu= I A$. </li>
+		      
+		      <li> $\mu= I^2 A$. </li>
+		      
+		       <li> $\mu= I A^2$. </li>
+		      </ol>
+<br><br>
+<hr>
+
+Magnetic dipole moment $\mu= I A$.
+<hr>
+Assuming a single charged particle orbiting across a circular loop of radius $r$ at (linear) speed $v$. How much time does this particle takes on a single orbit?
+<hr>
+<hr>
+Which can be used to write $$\vec{\mu}=-{e\over 2 m_e}\vec{ L}.$$ The minus sign is a convention.
+<br>
+When a magnetic dipole moment experiences an external magnetic field, it precess due to torque $\mu\times B$.   
+
+         <center>   <img src="{% static "img/precess.gif" %}" width="450"></center>
+With this, we can measure the force felt by a charged particle under the influence of a magnetic field: $\vec{F}=-\vec{\nabla} U$, with, $$ U=-\vec{\mu}\cdot\vec{B}\,,$$ then by using the relation between magnetic dipole moment and angular momenta, we should see a quantization of force by passing atoms through a magnetic field,
+                    <h3>The Stern-Gerlach Experiment</h3>
+                    Assuming the magnetic field is oriented in the $z$ direction, we have,
+                    $$\vec{F}=-{e\over 2 m_e}m_{\ell}\,\hbar\, \partial_z B_z \hat{z},\qquad \boxed{-\ell\leq m_{\ell}\leq \ell} $$
+                    <center>   <img src="{% static "img/stern_gerl.png" %}" width="450"></center>
+                    <a href="https://en.wikipedia.org/wiki/Stern–Gerlach_experiment">Stern-Gerlach  experiment.</a><br><br>
+
+                    The experiment confirm sucesfully the quantization of angular momenta in atoms, seeing discrete splitings along the z-axis of the screen for $\ell=1,2,\cdots$, but it found an incredible surprise.
+                    <h3>Spin</h3>
+                    When $\ell=0$ we know that $m_{\ell}=0$, and we should see a single small cloud right in the middle of the screen. But the Stern-Gerlach experiment produces something like the second box below: 
+                    <center>   <img src="{% static "img/espin.png" %}" width="400"></center><br>
+                    It was an indication of the intrinsic magnetic dipole moment of the electron! or the  <b>Spin</b>, which satsifies the following,
+                    <ul>
+                        <li>Similarly as orbital angular momenta, spin is quantized in terms of a discrete, but not neccesarilly integer $s$ by can be semi-integer,
+                            $$ \boxed{|S|=\hbar\sqrt{s(s+1)}}.$$ Also, similarly to $L_z$, we have
+                            $$ \boxed{S_z=\hbar m_s\,\quad m_{s}= -s,-s+1,\cdots,s} $$
+                       </li>
+
+                        <li>Unlike $\ell$, $s$ is not a quantum number that can be changed by say, excite an state, but is number that depends on the fundamental particle we are considering. An electron for example has $s=1/2$, whereas a photon has $s=1$. </li>
+                        <li>The intrinsic magnetic dipole $\mu_S=g{q\over 2m}S$, where $g$ is known as the <b>gyromagnetic radius</b> $$</li>
+                    </ul>
+                    Returning to the Stern-Gerlach experiment, what they really observed at $\ell=0$ was,
+                    $$\vec{F}=-{e\over m_e}m_{s}\,\hbar\, \partial_z B_z \hat{z},\qquad-s \leq m_{\ell}\leq s, $$
+                    since for the electron $s=1/2$, then $m_s=\pm {1\over 2}$
+                    <h3>Spin ad Wave funtions</h3>
+                    All in all, we have just found that in our description of the wave function for an electron in an hyrogen atom, we are missing one quantum number, i.e, each state should be labeled by the quantum numbers $(n,\ell,m_{\ell},m_{s})$. Fortunately, for the case of the electron, only two values of $m_s$ are allowed, and we can just split our wave functions as,
+                    $$
+                    \boxed{ \psi_{n,\ell,m_{\ell}}^{+}\qquad {\rm spin\,\,up}\,\qquad                    \psi_{n,\ell,m_{\ell}}^{-}\qquad {\rm spin\,\,down}}
+                    $$
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

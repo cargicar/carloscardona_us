@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Exclusion</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/pauli.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <!-- <h1>Week 8 </h1> -->
+                        <!-- <hr class="small"> -->
+                        <br><br><br>                        <br>
+                        <h2>Pauli Exclusion Principle </h2>
+                        <h3>PHYS-221 March 8 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    Announcement:
+                    <h2>Indistinguishability</h2>
+                    What is the wave function of a two-particle system?. We need to solve the Schrodinger equation for it.
+                    $$-{\hbar\over 2m}\left({\partial^2\over\partial x_1^2}+{\partial^2\over\partial x_1^2}\right)\Psi(x_1,x_2)+U(x_1,x_2)\Psi(x_1,x_2)= E\Psi(x_1,x_2) $$
+                    Lets apply this to a infinite well. By doing the very crude
+                    approximation $U(x_1,x_2)\sim U(x_1)+U(x_2)$, we get:
+                    $$\psi_{n_i}=\sqrt{2\over L}{\rm sin}{n_i\pi\,x_i\over L} $$
+                    with $i=1,2$. Which corresponds to the solution $$\Psi(x_1, x_2)=\psi(x_1)_{n_1}\psi(x_2)_{n_2} $$ and
+                    $$E={n_1^2\pi^2\hbar^2\over 2 m L}+{n_2^2\pi^2\hbar^2\over 2 m L} $$
+                    <h3>What about probability?</h3>
+                    Fundamental particles are indistinguishable. Every electron in the universe is identical to every other electron.<br>
+		    Say we have two electrons in a box, label 1 and 2. Then we measure that one of them is at level $n=3$. Which is it at that level, 1 or 2?.<br> since we can't distinguish them,  we don't know, i.e, we can't compute the probability as a sum of two independent probabilities $P_1+P_2$. We should be free to swap particle 1 and 2 without changing the total probability.<br>
+                    We then need to define a symmetric probability, that does not change when we swap 1 and 2. It turns out, there are two ways of doing that:
+                    <br> <br>
+                    $$ \boxed{\Psi_S(x_1, x_2)=\psi_{n_1}(x_1)\psi_{n_2}(x_2)+\psi_{n_1}(x_2)\psi_{n_2}(x_1)\,\qquad{\rm Symmetric}} $$
+                    $$ \boxed{\Psi_A(x_1, x_2)=\psi_{n_1}(x_1)\psi_{n_2}(x_2)-\psi_{n_1}(x_2)\psi_{n_2}(x_1)\,\qquad{\rm Anti-symmetric} }$$
+                    which produce probabilites:
+                    $$P_S(x_1,x_2)=\psi_S^2(x_1,x_2)=(\psi_{n_1}(x_1)\psi_{n_2}(x_2))^2+(\psi_{n_1}(x_2)\psi_{n_2}(x_1))^2 $$
+                    $$+2\psi_{n_1}(x_1)\psi_{n_2}(x_2)\psi_{n_1}(x_2)\psi_{n_2}(x_1) $$
+                    and
+                    $$P_A(x_1,x_2)=\psi_A^2(x_1,x_2)=(\psi_{n_1}(x_1)\psi_{n_2}(x_2))^2+(\psi_{n_1}(x_2)\psi_{n_2}(x_1))^2 $$
+                    $$-2\psi_{n_1}(x_1)\psi_{n_2}(x_2)\psi_{n_1}(x_2)\psi_{n_2}(x_1) $$
+                    <!-- <a href="https://en.wikipedia.org/wiki/Laguerre_polynomials">associated Laguerre equation</a>, which defined the associated Laguerre polynomials.<br><br>
+                         <br>
+                         <center>   <img src="{% static "img/spherical_harm.png" %}" width="800"></center><br> -->
+                    <br>
+                    <center>   <img src="{% static "img/sym_anti_sym.png" %}" width="800"></center><br><br>
+                    <hr>
+                    --------------------------------------------------------------------------
+                    <h3>Spin-Statistics Theorem</h3>
+                    <div class="boxed"> The theorem states that:
+                    <ul>
+                        <li> The wave function of a system of identical integer-spin particles has the same value when the positions of any two particles are swapped. Particles with wave functions symmetric under exchange are called <b>bosons</b>.
+                    </li>
+                    <li>   The wave function of a system of identical half-integer–spin particles changes sign when two particles are swapped. Particles with wave functions antisymmetric under exchange are called <b>fermions</b>.
+                     </li>
+                    </ul>
+                    <h3>Pauli Exclusion Principle</h3>
+                    Consider a system of two fermions occupying states $n_1$ and $n_2$. If $n_1=n_2$:
+                    $$\Psi_A(x_1, x_2)=\psi_{n_1}(x_1)\psi_{n_1}(x_2)-\psi_{n_1}(x_2)\psi_{n_1}(x_1)=0. $$
+                    <b>Exclusion principle:</b> No two indistinguishable fermions may occupy the same individual-particle state.<br>
+                    -                    Wolfgang Pauli (Nobel 1945).
+                    <br>
+                    <hr>
+                    --------------------------------------------------------------------------
+                    <h3>Composite particles</h3>
+                    We can combine fundamental particles in order to form composite particles. which satisfies the following ``logic'' table, for positive intenger $n$:<br><br>
+                    $(n)-$Bosons  &#8611;   Composite  Boson <br>
+                    $(2n)-$Fermions  &#8611;   Composite  Boson <br>
+                    $(2n+1)-$Fermions  &#8611;   Composite  Fermion <br>
+                    <br>
+                    Examples include the proton (1/2), the neutron (1/2), Bose-Einstein (1). Several composite particles, have powerful (potential) technological applications. 
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

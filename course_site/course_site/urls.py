@@ -30,7 +30,11 @@ urlpatterns = [
     path("infinite_well/", infinite_well, name="infinite_well"),
     path("harmonic/", harmonic, name="harmonic"),
     path("hydrogen_atom/", hydrogen_atom, name="hydrogen_atom"),
-
+    path("exclusion/", exclusion, name="exclusion"),
+    path("spin/", spin, name="spin"),
+    path("multielectron/", multielectron, name="multielectron"),
+    path("sr_muon/", sr_muon, name="sr_muon"),
+    
     ############ Current 2023 content #######################
     path("bohr_model/", bohr_model , name="bohr_model"),
     path("bound_states/", bound_states , name="bound_states"),

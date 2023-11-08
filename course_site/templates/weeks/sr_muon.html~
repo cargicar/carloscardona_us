@@ -1,0 +1,214 @@
+{% load static %}
+<!DOCTYPE html>
+<Html Lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Special Relativity</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/Einstein01.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Special Relativity</h1>
+                        <h3>PHYS-221 November 9 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+
+		  <!-- Learning objectives and concepts to learn -->
+		  <h2>Learning Objectives</h2>
+		  <ol>
+		    <li>Identify which frame of reference measures the proper time</li>
+		    <li>Identify which frame of reference measure the proper lenght</li>
+		    <li>Identify which observer measure a lenght contracted</li>
+		    <li>Identify which observer measure a time dilated</li>
+		  </ol>
+		  
+		  <!-- background knowledge -->
+                  <h2>Lets recall some concepts </h2>
+		  <em> Fill in the blancks</em> <br>
+		  <b> Rules</b>: those than know what to fill in =<b> shout it out</b>. Those that does not =  <b> raise your hand</b>.
+		  <br>
+		  <br>
+                  Anything that occurs in a specific location at an specific time is called an _____  .<br><br>
+		 The time interval between two events occurring at the same location in a given frame of reference is called  ______  time. <br><br>
+		  The lenght of an object in a frame where the object is at rest is called the __________ .<br><br>
+		  Two events that are simultaneous in one frame are ____ simultaneous in another frame different to the first.<br><br>
+
+		  <em>Conceptual questions: </em>
+
+		  <br><strong>Rules for voting from now on:</strong> Voting is simultaneous (and mostly anonymous)<br><br>
+		  
+		  The time interval $\Delta t_A$ between two events in a frame (A), is __________ than the time interval $\Delta t_B$ in a different frame (B) where the events occur at the same time:
+		  <br>
+		  <br>
+		  <ol type="A">
+		     <!-- longer -->
+			  <li>Shorter</li>
+			  <li>Equal</li>
+			  <li>Longer</li>
+			</ol>
+		  <br><br><br><br>
+		  
+					  The distance interval $\Delta l_A$ between two events in a frame (A), is _________________ than the distance interval $\Delta l_B$ in a different frame (B) where the events are at rest:
+		  <br>
+		  <bray>
+		    <em>Mathematical Description</em><br>
+		    $$\Delta t=gamma \Delta t_0 $$˙
+		    
+		    
+		  <ol type="A">
+		    <!-- shorter -->
+			  <li>Shorter</li>
+			  <li>Equal</li>
+			  <li>Longer</li>
+			</ol>
+<br><br><br>
+                        <h2>Now think about it</h2>
+                        <p></p>
+                            <center>   <img src="{% static "img/double_slit2.png" %}" alt="double_slit" width="1000"></center> 
+
+                        </br></br>
+                    <p>    Solving the geometrical problem represented in figure above, we can see that if an interference pattern is observed, bright (constructive) spots will be located at the screen location:</br></br> $\boxed{y_{bright}={\lambda L\over d}m}$  with  $m\in \mathbb{Z}$.</br></br>
+                        Similarly, darks spots will be at,
+                        </br></br> $\boxed{y_{dark}={\lambda L\over d}(m+1/2)}$  with  $m\in \mathbb{Z}$.</br></br>
+                    </p>
+
+                        <h2>Bragg Law</h2>
+                        <p>
+                        In 1927, Davisson & Germer from Bell labs were studying scattering of electrons off a Nickel cristal, and they observe the following pattern on a film placed to detect the scattered electrons,
+                        <center>   <img src="{% static "img/electron_inter.jpeg" %}" alt="double_slit" width="500"></center>
+
+                        Which is nothing else but an interference pattern <span style='font-size:30px;'>&#128563;</span>.  What  Davisson & Germer had performed inadvertently, was a sort of double slit experiment using electrons instead of light, but instead of a double slit, they use the crystal structure of Nickel, whose atomic interspace is in the order of nm. <br><br>
+
+			Let us derive a quantitative representation of such difraction experiment:
+			<br><br><br><br>
+			<b>Clicker / In class problem</b>
+			A schematic representation of Davisson & Gerber experiment is given below, guided by it, derive the condition for constructive interference of wave difracted by the cristal structure.
+                        <center>   <img src="{% static "img/bragg.png" %}" alt="double_slit" width="500"></center>
+			<br><br><br>
+<center>
+			<ol type="A">
+			  <li>$2~d~ {\rm sin}(\theta)=m\lambda$</li>
+			  <li>$d~ {\rm sin}(\theta)=m\lambda$</li>
+			  <li>$d~ {\rm sin}(\theta)/2=m\lambda$</li>
+			</ol>
+</center>
+			 with $m\in \mathbb{Z}$.<br><br><br><br>
+                        For this, Davisson & Germer won the 1937 Nobel Prize in Physics.
+                        <br><br>
+                        By performing similar gymnastics used for the double-slit configuration, we arrive to the answer <b>A</b>, or better known as  <b>Bragg Law</b> for the father-son team.
+                        For which the family duo, won the Noble prize in 1915 ( in reality, they came out with this formula while studying X-ray difraction on cystals, but the same applies for electrons, which are also a wave ).
+
+                        <br><br>
+ Davisson & Germer experiment, provides convincing evidence of the wave nature of electrons, which is a fundamental massive particle!. In turn, suggesting that all matter should exhibit some sort of wave behaviour!
+                        <h2>Matter Waves</h2>
+<!-- Now suppose we perform a truly double slit experiments with electron, what would we see? -->
+<!--                        <br><br> -->
+<!--                        <center>   <img src="{% static "img/bragg.gif" %}" alt="double_slit" width="500"></center><br><br> -->
+<!--                        From the statistical point of view, the "amoung" of electrons on different regions of the screens should be associated with the probability of finding an electron in such region (i.e, the more electrons in a region after a millions of electrons being fired, the more the probability of finding an electron there). From the wave point of view, the "intensity" of a region is given by the square of the amplitude of the resulting wave, and such, the natural conclusion to make is: <br><br> -->
+<!--                        <center> <em>The probability of finding a particle in a region is proportional to the square of the  wave function associated to that particle in that region.</em></center> <br><br> -->
+<!--                        Or in mathematical terms:<br><br> -->
+<!--                        <center>$P(e^{-},x)=|\Psi(x,t)|^2$</center> <br><br> -->
+<!--                        This lead us to the ask: In a EM wave, the stuff oscilatting are the E & M fields. What is then oscillating in a Matter wave?. R:  The probability of finding the particle is the oscillating phenomena &#129327; -->
+
+                       An important observation to make is that, a neccesary requirement for creating a wave interference pattern, is that both interfering waves need to be coherent and have equal amplitudes. This implies that a given electron, similarly as a wave, need to pass through both slits AT THE SAME TIME! &#129327; &#129327;. (it is what it is).
+
+                       <br><br>
+                       The wavelenght for matter carries an special name, is it called <b>de Broglie wavelength</b> and is given simple by adopting the same relation as the photon $\lambda={h\over p}$. This relation is <b>universal</b>- true for all phenomena. <br><br>
+                       Similarly, the frequency of a wave of matter is given by $E= h f $ or $f={E\over h}$. <br><br>Now the fundamental difference between radiation waves and matter wwaves is that matter wavelength varies inversily with the mass. Thats the reason why we humans don't see our wave;.
+		       Luckily, the crystal atomic interspace is small enought to be of the order of an electron de Broglie wavelength. Subsequently, difraction patterns are observed using much heavier particles, such neutrons or even atoms. <br>
+                       Similarly to the case of light, the wave or particle behaviour depends on the size of $\lambda$ wrt relevant scales (draw the double slit situation).
+                        </p>
+
+                        <!-- <h2>The Schrödinger equation</h2> -->
+
+                        <!-- The wave equation for matter fields is given by the Schrödinger Equation -->
+
+                        <!-- \begin{equation} -->
+                        <!-- -{\hbar\over 2 m}{\partial^2\Psi(x,t)\over\partial x^2}=i\hbar{\partial\Psi(x,t)\over\partial t}\,, -->
+                        <!-- \end{equation} -->
+                        <!-- where $\hbar=h/2\pi$. -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

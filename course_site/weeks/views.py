@@ -44,6 +44,19 @@ def harmonic(request):
 def hydrogen_atom(request):
      return TemplateResponse( request,"weeks/hydrogen_atom.html",)
 
+def exclusion(request):
+     return TemplateResponse( request,"weeks/exclusion.html",)
+
+def spin(request):
+     return TemplateResponse( request,"weeks/spin.html",)
+
+ 
+def multielectron(request):
+     return TemplateResponse( request,"weeks/multielectron.html",)
+
+def sr_muon(request):
+     return TemplateResponse( request,"weeks/sr_muon.html",)
+
 ######## Up to here is Fall 2023 content ##########
 ###################################################
 def bohr_model(request):
