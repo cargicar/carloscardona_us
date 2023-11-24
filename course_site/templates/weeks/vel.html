@@ -1,0 +1,232 @@
+{% load static %}
+<!DOCTYPE html>
+<Html Lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Velocity Transformations</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/Einstein01.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Special Relativity: Velocity Transformations</h1>
+                        <h3>PHYS-221 November 16 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+
+		  <!-- Learning objectives and concepts to learn -->
+		  <h2>Learning Objectives</h2>
+		  <ol>
+		    <li>Identify relativistic from non-relativistic problems</li>
+		    <li>Identify the proper velocity transformations between inertial frames</li>
+				  </ol>
+		  
+		  <!-- background knowledge -->
+                  <h2>Lets recall some concepts </h2>
+		  <!-- <em> Fill in the blancks</em> <br> -->
+		  <!-- <b> Rules</b>: If you know =<b> shout it out</b>. If you doesn't =  <b> raise your hand</b>. -->
+		  <!-- <br> -->
+		  <!-- <br> -->
+		  Suppose a frame $S'$ is moving at constant speed $v\ll c$ in the $+x$ direction with respect  to  frame $S$. A particle is traveling at speed $u_{s'} \ll c$, also in the $x$ direction, as measure by someone moving with $S' $.
+                  The speed $u_s$ of the particle measured from somebody standing on frame $S$ is:
+ <br>
+		  <br>
+		  <ol type="A">
+		     <!-- longer -->
+			  <li> $u_s=u_{s'}-v$</li>
+			  <li> $u_s= u_{s'}+v$</li>
+			  <li> $u_s=u_{s'} $</li>
+			</ol>
+		  <br><br>
+Is this expresion exact or an approximation ? (exact, approximation) ____.
+		  <br><br>
+		 If we want to go in the oposite way, we just need to solve for $u_{s'}$, or equivalently change the sign of $v$ and exchange prime and unprime.   
+		  <br>
+		  <br>
+		  <br>
+		    Suppose a frame $S'$ is moving at constant speed $v\sim c$ in the $+x$ direction with respect  to frame $S$. A particle is traveling at speed $u_{s'} \sim c$, also in the $x$ direction, as measure by someone moving with $S'$.
+                  The speed $u_x$ of the particle measured from somebody standing on frame $S$ is: <a id="vel_tran"></a>
+  <br>
+		  <ol type="A">
+		     <!-- longer -->
+			  <li> $u_x=\gamma_{x'}(u_{x'}-v)$</li>
+			  <li> $u_x=\gamma_{x'}(u_{x'}+v)$</li>
+		     <li> $u_x=\gamma_{x'}(u_{x'}) $</li>
+		      <li> $u_x=\gamma(u_{x'}-v)$</li>
+			  <li> $u_x=\gamma(u_{x'}+v)$</li>
+		 		      <li> $u_x=\gamma(u_{x'}) $</li>
+		  </ol>
+		  Where $\gamma_{x'}\equiv\frac{1}{1+\frac{v}{c^2}u_{x'}}$ and  $\gamma\equiv\frac{1}{\sqrt{1+{v^2\over c^2}} }$
+		  <br><br><br><br>
+		  
+  Suppose a frame $S'$ is moving at constant speed $v\sim c$ in the $+x$ direction with respect  to frame $S$. A particle is traveling at speed $u_{s'} \sim c$, also in the $x$ direction, as measure by someone moving with $S'$.
+                  The speed $u_y$ in the $y$ direction of the particle measured from somebody standing on frame $S$ is:
+  <br>
+		  <ol type="A">
+		    <!-- longer -->
+		    <li>$u_y=u_y'$</li>
+			  <li> $u_y=\gamma_{x'}(u_{y'}+v)$</li>
+		    <li> $u_y=\gamma_{y'}(u_{x'}+v)$</li>
+		    <li> $u_y=\gamma_{y'}(u_{y'})$</li>
+		    <li> $u_y=\gamma_{x'}(u_{y'}) $</li>
+		     <li> $u_y=\frac{\gamma_{x'}}{\gamma}(u_{y'}) $</li>
+		  </ol>
+		  Where $\gamma_{x'}\equiv\frac{1}{1+\frac{v}{c^2}u_{x'}}$,  $\gamma_{y'}\equiv\frac{1}{1+\frac{v}{c^2}u_{y'}}$ and  $\gamma\equiv\frac{1}{\sqrt{1+{v^2\over c^2}} }$.
+		  <br><br><br>
+		  Let's review:
+
+                    <center>   <img src="{% static "img/vel_trans.png" %}" width="900"></center><br><br>
+
+		    <h2>Lets use it</h2>
+
+<em>Problem 5.47 from HW</em>.
+		    Two planets are on a collision course, heading directly toward each other at 0.250c. A spaceship sent from one planet approaches the second at 0.750c as seen by the second planet. What is the velocity of the ship relative to the first planet?
+<br><br>
+<b> Pair up and work on it</b>.<br><br>
+
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/1dnmMmKmaxM?si=cevFJn3WPNqZ5u-t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				  <br><br><br><br>
+
+		 <b> Poll: </b> Say Planet 1 is to the left of planet 2. If we identify  planet 1 with the frame $S$? 
+		 <!-- Use printed cards -->
+		 <br>(A) v= 0.250 c
+		 <br>(B) v= -0.250 c
+		 <br>(C) v= 0.750 c
+		 <br>(D) v= -0.750 c 
+    		 <br><br><br><br>
+
+		 <strong>Poll: </strong> 
+		 <br> (A) $u_{x'}= 0.750 c$
+		 <br> (B) $u_{x'}=- 0.750 c$
+		 <br> (C) $u_{x}= 0.750 c$
+		  <br> (D) $u_{x}=- 0.750 c$
+		 <br><!-- Open to the whole class -->
+		 
+		 <br><br><br><br>
+		 <strong>Poll:</strong> If the speeds were not-relativistic (say  $v\ll c$):  The speed $u_x$ of the ship measured from somebody standing on planet 1 ($S$) is:
+
+
+ <br>
+		  <ol type="A">
+		     <!-- longer -->
+			  <li> $u_x=(u_{x'}-0.250)$</li>
+			  <li> $u_x=(u_{x'}+0.250)$</li>
+		     <li> $u_x=u_{x'} $</li>
+			  </ol>
+
+		 	 <br><br><br><br>
+		 <strong>Poll:</strong> If the speeds were relativistic:  The speed $u_x$ of the ship measured from somebody standing on planet 1 ($S$) is:
+
+  <br>
+		  <ol type="A">
+		     <!-- longer -->
+			  <li> $u_x=\gamma_{x'}(u_{x'}-0.250)$</li>
+			  <li> $u_x=\gamma_{x'}(u_{x'}+0.250)$</li>
+		     <li> $u_x=\gamma_{x'}(u_{x'}) $</li>
+		      <li> $u_x=\gamma(u_{x'}-0.250)$</li>
+			  <li> $u_x=\gamma(u_{x'}+0.250)$</li>
+		 		      <li> $u_x=\gamma(u_{x'}) $</li>
+		  </ol>
+		  Where $\gamma_{x'}\equiv\frac{1}{1-\frac{0.250}{c^2}u_{x'}}$ and  $\gamma\equiv\frac{1}{\sqrt{1+{v^2\over c^2}} }$
+		  <br><br><br><br>
+		  Compare with previous <a href="#vel_tran"> transformations</a>. what changes?<br><br><br>
+		  Let's put some numbers,<br><br>
+		   $u_x=\gamma_{x'}(u_{x'}-0.250)=\frac{0.750 c - 0.250 c}{1-0.250\times0.750\times c^2/c^2}=0.6154\,c$.
+		  
+		  <br><br><br>
+		  Now problem 5.39 is just a piece of cake:
+		  A man standing still at a train station watches two boys throwing a baseball in a moving train. Suppose the train is moving east with a constant speed of 20 m/s and one of the boys throws the ball with a speed of 5 m/s with respect to himself toward the other boy, who is 5 m west from him. What is the velocity of the ball as observed by the man on the station?<br><br>
+		  <strong>Pair up:</strong>
+		  <br><br>
+		  		 <iframe width="560" height="315" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br><br>
+		  Is it a relativistic problem?  (yes, no) ____.<br><br><br>
+	Let's consider it relativistic any way:	  
+		   $$u_x=\gamma_{x'}(u_{x'}+v)=\frac{-5 m/s + 20 m/s}{1-20(m/s)\times5(m/s)/c^2}$$
+	          <em></em><br><br>
+		
+
+		  <br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

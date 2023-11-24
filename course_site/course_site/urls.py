@@ -34,6 +34,7 @@ urlpatterns = [
     path("spin/", spin, name="spin"),
     path("multielectron/", multielectron, name="multielectron"),
     path("sr_muon/", sr_muon, name="sr_muon"),
+    path("vel/", vel, name="vel"),
     
     ############ Current 2023 content #######################
     path("bohr_model/", bohr_model , name="bohr_model"),

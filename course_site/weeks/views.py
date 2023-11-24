@@ -57,6 +57,9 @@ def multielectron(request):
 def sr_muon(request):
      return TemplateResponse( request,"weeks/sr_muon.html",)
 
+def vel(request):
+    return TemplateResponse( request,"weeks/vel.html",)
+
 ######## Up to here is Fall 2023 content ##########
 ###################################################
 def bohr_model(request):
