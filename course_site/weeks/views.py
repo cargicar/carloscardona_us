@@ -60,6 +60,9 @@ def sr_muon(request):
 def vel(request):
     return TemplateResponse( request,"weeks/vel.html",)
 
+def boltzmann(request):
+    return TemplateResponse( request,"weeks/boltzmann.html",)
+
 ######## Up to here is Fall 2023 content ##########
 ###################################################
 def bohr_model(request):
