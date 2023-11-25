@@ -63,6 +63,9 @@ def vel(request):
 def boltzmann(request):
     return TemplateResponse( request,"weeks/boltzmann.html",)
 
+def simple_thermo(request):
+    return TemplateResponse( request,"weeks/simple_thermo.html",)
+
 ######## Up to here is Fall 2023 content ##########
 ###################################################
 def bohr_model(request):
