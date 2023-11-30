@@ -37,6 +37,7 @@ urlpatterns = [
     path("vel/", vel, name="vel"),
     path("boltzmann/", boltzmann, name="boltzmann"),
     path("simple_thermo/", simple_thermo, name="simple_thermo"),
+    path("thermo_rec/", thermo_rec, name="thermo-rec"),
     
     ############ Current 2023 content #######################
     path("bohr_model/", bohr_model , name="bohr_model"),
