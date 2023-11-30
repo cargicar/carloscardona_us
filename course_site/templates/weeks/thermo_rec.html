@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Statistical Mechanics</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/gas.jpeg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <!-- <h1 style="color:black;">Week 8</h1> -->
+                        <!-- <hr class="small"> -->
+                        <h2  style="color:black;">Introduction to Statistical Mechanics <br>
+                        Quick Thermodynamics Review.</h2>
+                        <h3  style="color:black;">PHYS-221 Nov 27 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    		  <!-- Learning objectives and concepts to learn -->
+		  <h2>Learning Objectives</h2>
+		  <ol>
+		    <li>Identify macro and micro states for simple systems </li> 
+		    <li> Compute Entropy by counting microstates  </li>
+		     <li> Compute Entropy from Energy  </li>
+		  </ol>
+
+		  <h2> Conceptual</h2>
+		 9.2.  What information would you need in order to specify the macrostate of the air in a room? What information would you need to specify the microstate?<br>
+		  <br>
+		  9.3  Given an arbitrary thermodynamic system, which is larger: the number of possible macrostates, or the number of possible microstates, or is it impossible to say?<br>
+		  <br>
+		  9.5  Defend or refute the following claim: An energy distribution, such as the Boltzmann distribution, specifies the microstate of a thermodynamic system.<br><br>
+		  9.6 Not surprisingly, in a collection of oscillators, as in other thermodynamic systems, raising the temperature causes particles’ energies to increase. Why shouldn’t a point be reached where there are more particles in some high energy state than in a lower energy state? (The fundamental idea, not a formula that might arise from it).<br><br>
+		  <h2>Problem 9.20</h2>	  
+ A two-sided room contains six particles, a, b, c, d, e,
+		  and f, with two on the left and four on the right.
+		 <ol type="A"> 
+		   <li> Describe the macrostate.</li>
+		   <li> Identify the possible microstates.</li>
+		 </ol>
+		 
+				  <b> Pair up and work on it</b>.
+				 
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				  <br><br><br><br>
+				   <ol type="A"> 
+		
+				     <li>				 $ N_L =2,\quad N_R =4$</li>
+				     <li> [ab | cdef], [ac | bdef], [ad | bcef], [ae | bcdf], [af | bcde],<br>
+				       [bc | adef], [bd | acef], [be | acdf], [bf | acde],<br>
+				       [cd | abef], [ce | abdf], [cf | abde],<br>
+				       [de | abcf], [df | abce],<br>
+				       [ef | abcd]</li></ol><br><br>
+ <h2>Problem 9.23</h2>	  
+The entropy of an ideal monatomic gas is $(3/2)N\,k_B \ln E + N\,k_B \ln V - N\,k_B \ln N$, to within an additive constant.
+Show that this implies the correct relationship between internal energy E and temperature.
+<br>   		 
+				  <b> Pair up and work on it</b>.
+				 
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		 <br><br><br><br>
+		 <h2>Problem 9.27</h2>
+Four distinguishable harmonic oscillators $a, b, c$, and $d$ may exchange energy. The energies allowed for particle $a$ are
+		 $E_a=n_a\hbar\omega_0$ and so on.
+		 Consider an overall state (macrostate) in which
+the total energy is $3\hbar\omega_0$. One possible microstate would have particles a, b, and c in their $n=0$ states and particle d in its $n = 3$ state; that is, $(n_a, n_b, n_c, n_d) = (0, 0, 0, 3)$.
+ <ol type="A"> 
+		   <li>  List all possible microstates.</li>
+		   <li>  What is the probability
+		     that a given particle will be in its $n= 0$ state?</li>
+		   <li> Answer part (b) for all other possible values of $n$.</li>
+		   <li> Plot the probability versus $n$.</li></ol>
+
+<br>   		 
+				  <b> Pair up and work on it</b>.
+				 
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				  <br><br><br><br>
+				  
+ <ol type="A"> 
+   <li>  (3,0,0,0), (0,3,0,0), (0,0,3,0), (0,0,0,3),<br>
+     (2,1,0,0), (2,0,1,0), (2,0,0,1),<br> (1,2,0,0), (1,0,2,0), (1,0,0,2),<br>
+     (0,2,1,0), (0,2,0,1), (0,1,2,0), (0,1,0,2), (0,0,2,1), (0,0,1,2),<br>
+     (1,1,1,0), (1,1,0,1), (1,0,1,1), (0,1,1,1).</li>
+   <li> $n = 0$ appears 10 times out of a total of 20 quantum numbers, for a probability of 0.5.</li>
+		   <li> $n = 1$ appears 6 times; 6/20 = 0.3. $n = 2$ appears 3 times; 3/20 = 0.15. $n = 3$ appears 1 time; 1/20 = 0.05.</li>
+		   <li> Plot the probability versus $n$.</li></ol>
+
+<br><br>   		 
+                  <h2> Problem A.</h2>
+		  Consider a gas with $N=10^{23}$  molecules. Initially, the gas is contained in one half of a box, but eventually it is allowed to fill the remaining half.
+<ol>
+  <li> Compute the change of entropy by counting the number of micro-states.</li>
+
+  <li> Use the Stirling Approximation Links to an external site. to rewrite the computation above for very large N </li>
+
+  <li> Compute the change of entropy again, but now use the heat transfer formula.</li>
+ 
+  <br>
+
+				  <b> Pair up and work on it</b>.
+				 
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		 <br><br><br><br>
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
