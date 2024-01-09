@@ -12,9 +12,17 @@ def about(request):
 def contact(request):
     return TemplateResponse(request,"weeks/contact.html",)
 
+#######################################################
+#### Phys 221 Fall 2023 Site #############################
+def home_modern_phys_spring_2024(request):
+    return TemplateResponse(request,"weeks/home_modern_phys_spring_2024.html",)
+
+def welcome(request):
+    return TemplateResponse(request,"weeks/phys221_spring2024/welcome.html",)
+
 
 #######################################################
-#### Modern Physics Site #############################
+#### Phys 221 Fall 2023 Site #############################
 def home_modern_phys(request):
     return TemplateResponse(request,"weeks/home_modern_phys.html",)
 

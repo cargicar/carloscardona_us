@@ -21,6 +21,14 @@ urlpatterns = [
     path("", home, name="home"),
     path("about/", about, name="about"),
     path("contact/", contact, name="contact"),
+
+    
+    ############ phys 221 Spring 2024 ##############################
+    #path("syllabus/", syllabus, name="syllabus"),
+    path("home_modern_phys_spring_2024/",home_modern_phys_spring_2024, name="home_modern_phys_spring_2024"),
+    path("phys221_spring2024/welcome/", welcome, name="welcome"),
+
+    ############ phys 221 Fall 2023 ##############################
     path("syllabus/", syllabus, name="syllabus"),
     path("home_modern_phys/",home_modern_phys, name="home_modern_phys"),
     path("class01/", class01, name="class01"),
@@ -39,7 +47,7 @@ urlpatterns = [
     path("simple_thermo/", simple_thermo, name="simple_thermo"),
     path("thermo_rec/", thermo_rec, name="thermo-rec"),
     
-    ############ Current 2023 content #######################
+    #########################################
     path("bohr_model/", bohr_model , name="bohr_model"),
     path("bound_states/", bound_states , name="bound_states"),
     path("tunneling/", tunneling , name="tunneling"),

@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Welcome_day</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/photovoltaic_cells.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Quantum Nature of Light</h1>
+                        <hr class="small">
+                        <span class="subheading">=== </span>
+                        <span class="subheading">=== </span>
+                        <h2>Photoelectric Effect</h2>
+                        <h3>PHYS-221 August 31/2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                  <p>
+		    Few comments:
+		    <ul style="list-style-type square">
+		      <li> Who I am?: (he/his) <b> Carlos Cardona </b> (Giraldo is my second last name). I am VAP at Case. I do Quantum Field Theory and (getting into) Physical Inspired Deep Learning Research.</li>
+		      <li>Where you can find me?<b> cac316@case.edu </b>, Office: <b> Rock 222B</b>. Office hours: TBD, tentatively Monday 16:00-17:00 </li>
+		      <li>You can call me Carlos, Professor, Cardona, Professor Carlos, Professor Cardona.</li>
+		      <li> I have been the principal lecturer of this course before, but this time I will be leading the recitations (mostly). </li>
+		      <li> Recitations are mostly about homework discussions, but we are also going to cover content during it (lecturing). </li>
+		      <li>Style would be a combination of slides, clicker, blackboard. In general, not additional reading would be required.</li>
+		      <li>There would not be aditional notes other than the book (UP3) content, and maybe some pdf version of this weblike-slides.</li>
+                        </ul>
+
+		    <h2>Some Quotes to Begin With</h2>
+		    
+		    Albert Einstein brilliantly retorted, 
+</br></br>
+<em>It is not so very important for a person to learn facts. For that he does not really need a college. He can learn them from books. The value of an education in a liberal arts college is not the learning of many facts but the training of the mind to think...</em>
+</br></br>
+                        If you were a physicist living during the end of 19th century, you probably would have heard Albert Michelson (of the Michelson-Morley Experiment performed RIGHT HERE at Case Western Reserve U) stating: </br></br>
+                        "<em>While it is never safe to affirm that the future of Physical Science has no marvels in store even more astonishing than those of the past, it seems probable that most of the grand underlying principles have been firmly established and that further advances are to be sought chiefly in the rigorous application of these principles to all the phenomena which come under our notice. It is here that the science of measurement shows its importance — where quantitative work is more to be desired than qualitative work. An eminent physicist remarked that the future truths of physical science are to be looked for in the sixth place of decimals.</em>" </br></br>
+                        (This quote has been often missatributed to Lord Kelvin.)
+                  <h2>Photoelectric Effect</h2>
+		</br><br><br>
+<p style="font-size:160%;">
+  Clicker test:</p>
+<br><br>
+		  <ol type="A">
+		    <p style="font-size:160%;">  In the interpretation of the photoelectric effect, how is it known that an electron does not absorb more than one photon? </p>
+		   
+		    <li> <p style="font-size:160%;">Its energy depends on photon speed.</p> </li>
+		    <li><p style="font-size:160%;"> Its energy depends on photon frequency. </p></li>
+		    <li><p style="font-size:160%;"> on the intensity of the radiation. </p></li>
+		  </ol>
+		 <br><br><br><br><br>
+		  <center>   <img src="{% static "img/photo_electric.png" %}" alt="photo_electric" width="500"></center>
+		  Let me run a little video, which you can find in canvas, under "Pages"
+		  <iframe id="embed-iframe" allowTransparency="true" allow="encrypted-media *" allowfullscreen height="415" width="460" border="0" scrolling="no" frameborder="0" marginwheight="0" marginwidth="0" src="https://app.jove.com/embed/player?id=11297&access=b71850354d&t=1&s=1&fpv=1"><p>Photoelectric effect</p></iframe>
+
+		     <h2>Clicker Photoelectric Effect</h2>
+		  <!-- <a href="https://www.youtube.com/watch?v=jjDWzlCHQc4" target="_blank"> -->
+		    	  <center>   <img src="{% static "img/clicker_photoe.png" %}" alt="_clicker_photoelectric" width="1200"></center>
+		   
+		  </br></br></br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
