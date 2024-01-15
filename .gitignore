@@ -5,6 +5,7 @@ __pycache__/
 
 #particular files
 settings.py
+course_site/course_site/settings.py
 
 # C extensions
 *.so
