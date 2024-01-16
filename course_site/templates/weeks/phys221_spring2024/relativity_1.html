@@ -1,0 +1,219 @@
+{% load static %}
+<!DOCTYPE html>
+<Html Lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Special Relativity Intro</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/Einstein01.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Special Relativity</h1>
+                        <h3>PHYS-221 Jan 17 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+
+		  <!-- Learning objectives and concepts to learn -->
+		  <h2>Learning Objectives</h2>
+		  <ol>
+		    <li>Learn what is an inertial frame.</li>
+		    <li>Learn Einstein's special relativity postulates.</li>
+		    <li>Learn definition of an Event</li>
+		  </ol>
+
+		  <h3>A little survey </h3>
+		  		  How much background do you have in relativity?
+		  <br><br>
+		  <ol  style="line-height:200%" type="A">
+		     <!-- longer -->
+		   
+		     <li> None </li>
+		     <li> I have read popular books and articles on the subject?</li>
+		     <li> I have studied it in physics class before.</li>
+		     <li> I could be teaching this class</li>
+		     <li> I have built a working time machine </li>
+		  </ol>
+		  <br><br> 
+
+		  <!-- background knowledge -->
+                  <h2>Lets recall some concepts </h2>
+		  <em> Fill in the blancks</em> <br>
+		  <b> Rules</b>: those than know what to fill in =<b> shout it out</b>. Those that does not =  <b> raise your hand</b>.
+		  <br>
+		  <br>
+		  Lets practice first:<br>
+		  Special Relativity was proposed and developed by A_____________.
+		  <br>
+		  <br><br>
+                  An object experiencing zero net force is know as a  f___ object.<br><br>
+		  A free object moves with c______ velocity  <br><br>
+		  An free observer is said to be on an i______  frame.<br><br>
+
+		  <h2>Conceptual questions: </h2>
+
+		  <br><strong>Rules for voting from now on:</strong> Voting is simultaneous (and mostly anonymous)<br><br>
+Let's think a bit: Which are good approximation to an inertial frame of reference?
+
+		  <br>
+		  <br>
+		  <ol  style="line-height:200%" type="A">
+		     <!-- longer -->
+		     <li>A train coasting at constant speed on a level track.</li>
+		     <li> A train rolling down a steep hill with constant acceleration.</li>
+		     <li> Your bedroom.</li>
+		     <li> All of the above. </li>
+			</ol>
+		  <br><br>
+		  <em>Think-Pair-Share (TPS).</em> Pair and share with your neighbor. Vote after I tell you so.
+		  <hr>
+		  <hr>
+		  <br><br>
+<!-- Inertial frame of reference is one moving with constant  -->
+<!-- velocity (no acceleration) so answer  is <b> A</b>. -->
+ 		  First Einstein’s fundamental postulate of special relativity can be stated as:
+		  <br>
+		  <br>
+		  <ol  style="line-height:200%" type="A">
+		     <!-- longer -->
+			  <li>The form of each physical law is different in all inertial frames.</li>
+		     <li> The form of each physical law is the same in all inertial frames</li>
+		     <li>Only the form of the laws of mechanics are the same in all inertial frames.  </li>
+		     <li> All velocities are relative to the speed of light.</li>
+			</ol>
+		  <br><br>
+		 <hr>
+		  <hr>
+		 
+		  <br><br>
+
+      A light bulb puts out a pulse of light that spreads out
+in all directions.  According to Einstein the speed at which the light moves to the right is
+<br><br>
+		  <ol  style="line-height:200%" type="A">
+		     <!-- longer -->
+<li> slower for an observer moving to the right than for an 
+  observer sitting with the light bulb.</li>		
+		     <li> the same speed for both observers.</li>
+		    <li> faster for the observer moving to the right than for an
+		      observer sitting with the light bulb.  </li>
+		   	</ol>
+		  <br><br>  <em>Think-Pair-Share (TPS).</em> Pair and share with your neighbor. Vote after I tell you so.
+ <hr>
+		  <hr>
+		 
+		  <br><br>
+		 <em> Let's recap</em>: Einstein’s fundamental postulates of special relativity can be stated as follows:<br>
+		  <div class="box">
+		    
+		    1. The form of each physical law is the same in all inertial frames.<br>
+		    2. Light moves at the same speed relative to all observers.</div>
+		  <br><br>
+		  <hr><hr>
+		  Which of the following examples can be cosidered as an Event in special relativity:
+		  <ol  style="line-height:200%" type="A">
+		     <!-- longer -->
+		     <li> A plane passing by. </li>
+		     <li> A lightning. </li>
+		     <li> A hand catching a ball.</li>
+		    <li> None of the above  </li>
+		   	</ol>
+		  <br><br>  <em>Think-Pair-Share (TPS).</em> Pair and share with your neighbor. Vote after I tell you so.
+ <hr>
+		  <hr>
+		  In few words: <em>An Event is a anything with a single localtion and a single given time. A single coordinate in space time $(t,x)$.</em>
+
+                  <h2>Consequences of Einstein's Postulates</h2>
+		  <b>Consequence I: Relative Simultaneity</b>
+		  
+                  <br><br><br>
+		  <ol type = "A">
+		    <li>The proper time is also smaller. </li>
+		    <li>From the muon perspective, it wont reach the surface. </li>
+		    <li>The distance traveled by the muon is smaller from the Earth's reference frame. </li>
+		    <li>$\gamma$ does not change. </li>
+		  </ol>
+		  <br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

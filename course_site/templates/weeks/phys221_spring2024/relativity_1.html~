@@ -1,0 +1,250 @@
+{% load static %}
+<!DOCTYPE html>
+<Html Lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Special Relativity Intro</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/Einstein01.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Special Relativity</h1>
+                        <h3>PHYS-221 Jan 17 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+
+		  <!-- Learning objectives and concepts to learn -->
+		  <h2>Learning Objectives</h2>
+		  <ol>
+		    <li>Learn what is an inertial frame.</li>
+		    <li>Learn Einstein's special relativity postulates.</li>
+		    <li>Learn definition of an Event</li>
+		  </ol>
+		  
+		  <!-- background knowledge -->
+                  <h2>Lets recall some concepts </h2>
+		  <em> Fill in the blancks</em> <br>
+		  <b> Rules</b>: those than know what to fill in =<b> shout it out</b>. Those that does not =  <b> raise your hand</b>.
+		  <br>
+		  <br>
+		  Lets practice first:<br>
+		  Special Relativity was proposed and developed by ____________.
+		  <br>
+		  <br><br>
+                  An object experiencing zero net force is know as a  f_____ object.<br><br>
+		  A free object moves with c_________ velocity  <br><br>
+		  An free observer is said to be on an i ____  frame.<br><br>
+
+		  <h2>Conceptual questions: </h2>
+
+		  <br><strong>Rules for voting from now on:</strong> Voting is simultaneous (and mostly anonymous)<br><br>
+Let's think a bit: Which are good approximation to an inertial frame of reference?
+
+		  <br>
+		  <br>
+		  <ol  style="line-height:200%" type="A">
+		     <!-- longer -->
+		     <li>A train coasting at constant speed on a level track.</li>
+		     <li> A train rolling down a steep hill with constant acceleration.</li>
+		     <li> Your bedroom.</li>
+		     <li> All of the above. </li>
+			</ol>
+		  <br><br>
+		  <em>Think-Pair-Share (TPS).</em> Pair and share with your neighbor. Vote after I tell you so.
+		  <hr>
+		  <hr>
+		  <br><br>
+<!-- Inertial frame of reference is one moving with constant  -->
+<!-- velocity (no acceleration) so answer  is <b> A</b>. -->
+ 		  First Einstein’s fundamental postulate of special relativity can be stated as:
+		  <br>
+		  <br>
+		  <ol  style="line-height:200%" type="A">
+		     <!-- longer -->
+			  <li>The form of each physical law is different in all inertial frames.</li>
+		     <li> The form of each physical law is the same in all inertial frames</li>
+		     <li>Only the form of the laws of mechanics are the same in all inertial frames.  </li>
+		     <li> All velocities are relative to the speed of light.</li>
+			</ol>
+		  <br><br>
+		 <hr>
+		  <hr>
+		 
+		  <br><br>
+
+      A light bulb puts out a pulse of light that spreads out
+in all directions.  According to Einstein the speed at which the light moves to the right is
+<br><br>
+		  <ol  style="line-height:200%" type="A">
+		     <!-- longer -->
+<li> slower for an observer moving to the right than for an 
+  observer sitting with the light bulb.</li>		
+		     <li> the same speed for both observers.</li>
+		    <li> faster for the observer moving to the right than for an
+		      observer sitting with the light bulb.  </li>
+		   	</ol>
+		  <br><br>  <em>Think-Pair-Share (TPS).</em> Pair and share with your neighbor. Vote after I tell you so.
+ <hr>
+		  <hr>
+		 
+		  <br><br>
+
+		  How much background do you have in relativity?
+		  <br><br>
+		  <ol  style="line-height:200%" type="A">
+		     <!-- longer -->
+		   
+		     <li> None </li>
+		     <li> I have read popular books and articles on the subject?</li>
+		     <li> I have studied it in physics class before.</li>
+		     <li> I could be teaching this class</li>
+		     <li> I have built a working time machine </li>
+		  </ol>
+		  <br><br> 
+		  <br><br>
+		  
+<em>Mathematical Descr.iption</em><br>
+Notation: $t_0=$ <strong>Propert time</strong> and $\ell_0=$ <strong>Proper lenght</strong>. <br><br>
+		    Time Dilation:
+		    $$\Delta t=\gamma\, \Delta t_0 $$
+		    Length Contraction
+		    $$\Delta \ell=\frac{\ell_0}{\gamma}\,.$$
+
+                    <h2>Now lets use it</h2>
+                  <p>A muon is created in the atmosphere 3 km above Earth's surface, heading downward at speed $0.98c$. It survives $2.2\mu s$ in its own frame of reference before decaying.<br>
+		    (a) If the muon would have not been relativistic, how far would the muon travel before decaying?, and how much longer than $2.2 \mu s$ would it have to survive to reach the surface?<br>
+		    <!-- TPS -->
+		    <b> Pair up and work on it. </b>
+		    <iframe width="560" height="315" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+		    		  <br><br><br>
+		  (b) Relativistically, according to an observer on Earth, how long will the muon survive before decaying? Will it reach the surface?<br>
+		  <!-- TPS -->
+				  <b> Pair up and work on it</b>.
+				  <em>Another new rule:</em> If at some point I think I want your atention, I will raise my hand and once you notice it, please raise your hand as well.
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		 <br><br><br><br>
+
+		 <b> Poll: </b> Who measures the proper time?
+		 <!-- Use printed cards -->
+		 <br>(A) Muon 
+		 <br>(B) Earthling
+    		 <br><br><br><br>
+
+		 <strong>Poll: </strong> According to an Earthling, what's the distance traveled by the muon?
+		 <br> (A) $0.98 c\times \Delta t$
+		 <br> (B) $0.98 c\times \Delta t_0$
+		 <br><!-- Open to the whole class -->
+		 Let's revisit item (b), answers? 
+ 		 
+		 <br><br><br><br>
+		 (c) Relativistically, according to the muon, what is the dis­tance from the point in the atmosphere where the muon is created to Earth's surface, and how much time will it take this distance to pass the muon?
+		 <br>
+		 <!-- TPS -->
+		 <strong>Pair up and work on it</strong>
+		 <iframe width="560" height="315" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		 <!-- Use printed cards -->
+		 <br><br><br>
+		 <strong>Poll: </strong> Considering the distance between the location at which the muon is created and Earth's surface. Does it corresponds to a proper lenght?
+		 <br>(A) Yes
+		 <br>(B) Not		 
+		 <br><br><br><br>
+		 <strong>Poll: </strong> According to the muon, how much time will requiere to reach Earth's surface?
+		 <br> (A) $\frac{\ell_0}{0.98\, c}$
+		 <br> (B) $\frac{\ell}{0.98\, c}$<br><br>
+		  </p>
+		  <br><br><br><br>
+                  <em>Final Clicker</em><br><br>
+		  We have seen that from the observer point of view, the muon reach Earth's surface because in Earth's frame the muon survives $11\mu s$, or $8.8\mu s$ more than from muon's reference frame. Suppose the time for available for the muon to reach the surface is slightly smaller than $11 \mu s$, but just enough to still reach the surface. Which of the following is a false statement:
+		  <br><br><br>
+		  <ol type = "A">
+		    <li>The proper time is also smaller. </li>
+		    <li>From the muon perspective, it wont reach the surface. </li>
+		    <li>The distance traveled by the muon is smaller from the Earth's reference frame. </li>
+		    <li>$\gamma$ does not change. </li>
+		  </ol>
+		  <br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Statistical Mechanics  I</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/gas.jpeg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <!-- <h1 style="color:black;">Week 8</h1> -->
+                        <!-- <hr class="small"> -->
+                        <h2  style="color:black;">Introduction to Statistical Mechanics <br>
+                        Quick Thermodynamics Review.</h2>
+                        <h3  style="color:black;">PHYS-221 Nov 27 / 2023 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    		  <!-- Learning objectives and concepts to learn -->
+		  <h2>Learning Objectives</h2>
+		  <ol>
+		    <li>Compute State Probabilities for simple systems of many particles  </li>
+		    <li>Identify Microstates from Macrostates</li>
+		    <li>Identify equilibrium states</li>
+		    <li>Learn the concept of Entropy and the Second Law of Thermodynamics  </li>
+				  </ol>
+ 
+                  <h2>Simple Multi-particle System</h2>
+        Think about a classical system with billions of particles interacting. We know very well the laws and principles describing the behaviour of such system: we only need to solve the Newton's equation for EACH particle. However, it is almost obvious that approach is close to imposible, when the number of particles is about $ 6.022140857\times 10^{23}=$<b>Avogadro number</b>$\equiv AN$. Just to have a rough idea of how large this number is, Avogadro's number is the approximate number of milliliters of water in the Pacific Ocean.<br><br> In such situation we need to developed a more useful formalism, one in which we describe the macroscopic physics, regardles of the microscopic individual state of each particle. <br><br>
+                    Lets start with a very simple system: A chamber with some gas of free particles, and let's imagine we split it in two half, without any physical separation,
+                    <br><br>
+                    <center>   <img src="{% static "img/gas1.gif" %}" width="400"></center><br><br>
+             
+		  Lets start with the end of last (video) lesson.
+<br>		  		  <em> Fill in the blancks</em> <br>
+		  <b> Rules</b>: If you know =<b> shout it out</b>. If you doesn't =  <b> raise your hand</b>.
+		  <br><br><br>
+		  Here is a question we can answer using only our intuition.
+		  <br>
+		  Suppose we have a gas in a box with $ 6.022140857\times 10^{23}$ particles,  and draw an imaginary wall splitting the box in two halves.  Approximately, what proportion of particles will be at the left hand half of the chamber at a given time? ____. <br><br>
+		         Certainly, provided we have the proper technology, we can answer this question by solving the Newtonian mechanical problem, but there is a simpler approach which will also answer the question within a very good approximation. Before moving into such approach, we need to remember a basic concept<br><br>
+		  Suppose that now the gas is composed by only four distinguishable particles (say each of has a different color)  and again draw an imaginary wall splitting the box in two halves. <br><br> The <em>number of ways</em>, $W$, of having four particles in the left half is equal to ____.  <br><br> The <em>number of ways</em> ($W$) of having three particles in the left half is equal to ___. <br><br>
+		  The <em>number of ways</em> ($W$) of having two particles in the left half is equal to ____.<br><br>
+		  The <em>number of ways</em> ($W$) of having one particle in the left half is equal to ____.<br><br>
+		  The counting above can be easily generalized mathematically to any number of particles by using some math definitions. 
+
+                  <ul>
+                        <li>$N!=$ Number of different ways of arranging $N$ distinguishable objects.(Think of say 3 colors, there is 6 ways of arranging them in a row.) </li>
+                        <li>(Simpler case: two categories), i.e, $n$ objects in one category and the remaining $N-n$ in the other,
+                            $$W(n)=\begin{pmatrix}N \\ n\end{pmatrix}= {N!\over n! (N-n)!}$$ has a special name, the <b>binomial coefficient</b> .</li>
+                    </ul><br>
+                    Now lets go back to the gas in a box and start simple: If we have $N=4$ particles, how many arrangements have  4 particles to the left half? ${4!\over 0! 4!}=1$  what about 3 to the left?  ${4!\over 1! 3!}=4$  and  2?  ${4!\over 2! 2!}=6$. <br>
+                    <br> An important fact from stastistics, is that, as long as all the arrangements are independent, each different way of arranging is equally probable. Henceforth, the more arrangments a given configurations has, the higher the probability.
+What is the total number of arragements? We have $2^N$, and so $$P(n_L)={W(n_L)\over 2^N }$$
+                    Let's see the distributions of probabilities for different $N$ with a simple script.
+
+		    <a href="http://localhost:8888/notebooks/PHYS_221_Carlos_material/Plots.ipynb"> Notebook </a>
+		   <br><br>
+                    <!-- <center>   <img src="{% static "img/binomial.png" %}" width="600"></center><br><br> -->
+                   We can see that the simpler statistical analysis tell us that the highest probability occurs when half particles are to the left and half to the right of the chamber, which agrees with our intuition.
+
+		   <br><br><br>
+		    <strong>Poll:</strong> If $N\sim 10^{23}$. What is the probability of finding the state of the box in which all particles are at the left? 
+
+  <br>
+		  <ol type="A">
+		     <!-- longer -->
+			  <li> $\frac{1}{2^{23}}$</li>
+			  <li> $\frac{1}{2}$</li>
+		     <li> $\frac{1}{2^{10^{23}}}$</li>
+		      <li> $W(1)$</li>
+			
+		  </ol>
+
+		  Just for comparison, the universe is estimated to be $5\times 10^{17}$ seconds old. 
+A gas spontaneously filling only a half of the available space has a probability of occurring incredible small. We call this phenomena an <b>irreversible process</b>.
+                   <h3>Macro- and Micro-states</h3>
+                   Say again  we have $N=4$ particles in the chamber, how many arrangments give a configuration with half of the particles to the left? ____. <br><br><br><br>
+		   
+		   Each of the configurations _6_ configurations is called a ______.<br><br>
+		   All _6_ configurations belong to the same  ______, i.e, to the a configuration with 2 particles to the left. 
+
+		  <br><br>
+		    
+		    Each individual arrangement, corresponds to a different <em>microscopic</em> configuration, which we call a <b>microstate</b>= state of the system in which we have complete knowledge of the physical state of each independent particle. Known such microstate is not only realistically impossible, but unnecessary, since even though we were able to know all those  $2^{10^{23}}$, they all correspond to the same <b>macrostate</b>, with the same macroscopic overall description with the same values of temperature, pressure, volumen, etc.  In systems with billions and up particles, we are interested in the macroscopic description, and that is the goal of statistical mechanics.<br><br>
+                  <h3>Equilibrium</h3>
+
+		  Say we initially have a wall separating the two halves (we are still thinking about a gas in a box), such us only the left half contain (all) particles. Now we remove the wall, what happens to the gas immediately after we remove the wall? The particles start moving towards the ______. <br><br>
+		  Until _________. ?<br><br>
+		  We then say that the system reached the <b>Equilibrium</b> state.   Additionally, we have seen that is indeed the highest probability macrostate <br><br>
+		  Henceforth, the <b>Equilibrum</b> macrostate correspond to the configurations with the ______ probability.
+<br><br>                    At the microscopic level, the system ``oscillates'' around the equilibrium state, or in other words, the microscopic state still changes, but the deviations are so tiny that the value of the macroscopic variables, such temperature, pressure, volume, do not change in appreciable manner, when this happend we say we have <b>reached equilibrium</b>.
+
+                    <h2>Entropy and Temperature</h2>
+
+		    Consider the <b>The Second Law of Thermodynamics</b> establishing that in an isolated system, the entropy will not decrease. <br>
+		    Based on our discussion(s) above (A system evolves towards equilibrium=greatest probability=greatest number microscopic configurations) .<br><br>
+		    		 <strong>Poll:</strong> Which of the following will NOT be an acceptable definition of entropy $S$?<br><br> 
+
+		  <ol type="A">
+		     <!-- longer -->
+			  <li> $\Delta S=S_f-S_i=W_f-W_i$</li>
+			  <li>  $\Delta S=S_f-S_i=\frac{1}{W_f}-\frac{1}{W_i}$</li>
+		     <li> $\Delta S=S_f-S_i=\log W_f-\log W_i$</li>
+		      <li>  $\Delta S=S_f-S_i=\sqrt{W_f}-\sqrt{W_i}$</li>		
+		  </ol>
+<br><br><br>
+Entropy is a measure of disorder but  in more accurate mathematical terms, it measures the number of ways a given macroscopic state can be achieve, or equivalently to the probability of a given macrostate. It is defined as,$$\boxed{S=k_B\log W\,,} $$ where $k_B=1.380649\times10^{-23} J⋅K^{-1}$ is the Boltzman constant and $W$ is the number of microscopic configurations giving the same macroscopic state. Since the equilibrium state is the one with the greatest probability, it also is the state with the greatest entropy.
+<br><br>
+The definition  in terms of a $\log$ is a matter of convenience:
+<ol>
+  <li>usually the amount of microscopic ways of attain an equilibrium state is of several orders of magnitude, and the $log$ of a large number is more manageable.</li>
+  <li> The number of ways is a multiplicative quantity, whereas we want the entropy to be an additive quantity.</li>
+  <li>We want to define the a state with zero entropy, as such that can only be obtained by a singe microscopic configuration $W=1$ (In te case of the gas in the box, this will happend at $n_R=0$.)</li></ol> 
+                    <br><br>
+                    Let's once again use our intuition to define a useful quantity. Imagine again a gas in a box splited in half, this time by a membrane that allows to transfer energy from one side to the other by collisions of particles on the membrane.  If one portion of the gas is heated, we expect the temperature of such side (as measure by a thermometer) to rise: <em> Heat is defined as the transfer of energy across the boundary of a system due to a temperature difference between the system and its surroundings</em>.  From the microscopic point of view, this increase in temperature is due to the increase of the overall kinetic energy of the constituent particles. If left alone, particles hitting the membrane will transfer part of its kinetic energy to the some particles at the other side, until we reached again the equilibrum state at both sides. By the Second Law, this new equilibium state must have a higher entropy that the previous equilibrium state, and since the new state is an equilibrium state, the temperature of both sides must be the same now and the entropy should have increased.<br><br>
+                    With this intuitive picture in mind, we can associate the heat to the entropy change,or equivalently, the energy transfer from one side of the box to the other, can be measured by the change of entropy from the previous state to the new equilibrium state at temperature $T$.<br><br><br>
+		 <strong>Poll:</strong> Which of the following should be correct at equilibrium?  <br><br> 
+
+		  <ol type="A">
+		     <!-- longer -->
+		     <li> $T_{\rm left} > T_{\rm right}$ </li>
+		     <li> $T_{\rm left} < T_{\rm right}$ </li>
+		     <li> $T_{\rm left} = T_{\rm right}$ </li>
+		  </ol>
+<br><br><br>
+	    	    <strong>Poll:</strong> Lets denote by $\frac{\Delta S}{\Delta E}=$ change of entropy due to energy exchanged. Which of the following should be correct at equilibrium?  <br><br> 
+
+		  <ol type="A">
+		     <!-- longer -->
+			  <li> $\frac{\Delta S}{\Delta E}_{\rm left}>\frac{\Delta S}{\Delta E}_{\rm right}$</li>
+		     <li> $\frac{\Delta S}{\Delta E}_{\rm left}<\frac{\Delta S}{\Delta E}_{\rm right}$</li>
+		      <li> $\frac{\Delta S}{\Delta E}_{\rm left}=\frac{\Delta S}{\Delta E}_{\rm right}$</li>
+		  </ol>
+<br><br><br>
+
+When the energy being exchanged is thermal, we called <em>Heat= </em>$Q$. Recalling that the units of $S$ are the units of $k_{B}$,  is only natural to define:  $$\frac{\Delta S}{\Delta Q}=\frac{1}{T}. $$ With this definition, we can compute changes in entropy by knowing the amount of energy transfered in form of heat,
+                    $$\Delta S=\int_i^f{dQ\over T}. $$
+
+                    <hr>
+                    <b> Example</b>: Consider a gas with $N=10^{23}$ molecules. Initially, the gas is contained in one half of a box, but eventually it is allowed to fill the remaining half. Compute the change of entropy using both formulas for $\Delta S$ we have seen, i,e, by counting the number of microstates, and by heat transfer.
+                    <hr>
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

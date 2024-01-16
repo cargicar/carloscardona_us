@@ -20,6 +20,9 @@ def home_modern_phys_spring_2024(request):
 def welcome(request):
     return TemplateResponse(request,"weeks/phys221_spring2024/welcome.html",)
 
+def relativity_1(request):
+    return TemplateResponse(request,"weeks/phys221_spring2024/relativity_1.html",)
+
 
 #######################################################
 #### Phys 221 Fall 2023 Site #############################

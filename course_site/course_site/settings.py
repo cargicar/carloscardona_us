@@ -16,7 +16,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_DIR = BASE_DIR / "static"
-STATIC_ROOT= "/home/carlos/carloscardona_us/course_site/statics"
+#STATIC_ROOT= "/home/carlos/carloscardona_us/course_site/statics" #### Ubuntu office
+STATIC_ROOT= "/Users/carloscardona/Dropbox (Personal)/carloscardona_us/carloscardona_us/course_site/statics"
 TEMPLATE_DIR = BASE_DIR / "templates"
 
 STATIC_URL = "static/"
@@ -33,7 +34,7 @@ TEMPLATEFILES_DIR=[TEMPLATE_DIR,]
 SECRET_KEY = 'django-insecure-r+*(=ck#z2wqikty-kn7uyddax716e4n!*qdexwy71$u+=t^x3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['www.carloscardona.us' , 'localhost','cargicar.pythonanywhere.com']
 
