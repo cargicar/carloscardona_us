@@ -16,8 +16,9 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_DIR = BASE_DIR / "static"
-#STATIC_ROOT= "/home/carlos/carloscardona_us/course_site/statics" #### Ubuntu office
-STATIC_ROOT= "/Users/carloscardona/Dropbox (Personal)/carloscardona_us/carloscardona_us/course_site/statics"
+STATIC_ROOT= "/home/carlos/carloscardona_us/course_site/statics" #### Ubuntu office
+#STATIC_ROOT= "/Users/carloscardona/Dropbox (Personal)/carloscardona_us/carloscardona_us/course_site/statics"
+#STATIC_ROOT= "home/cargicar/carloscardona_us/course_site/statics" ##### Python Anywhere
 TEMPLATE_DIR = BASE_DIR / "templates"
 
 STATIC_URL = "static/"
