@@ -1,0 +1,231 @@
+{% load static %}
+<!DOCTYPE html>
+<Html Lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Special Relativity Intro</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/Einstein01.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Special Relativity</h1>
+                        <h3>PHYS-221 Jan 22 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+
+		  <!-- Learning objectives and concepts to learn -->
+		  <h2>Learning Objectives</h2>
+		  <ol>		    
+		    <li>Relative Simultaneity</li>
+		    <li>Time Dilation</li>
+		    <li>Lenght Contraction</li>
+		  
+		  </ol>
+		  <br><br>
+		       <h2>Lets recall some previous concepts </h2>
+		  <em> Fill in the blancks</em> <br>
+		  <b> Rules</b>: those than know what to fill in =<b> shout it out</b>. Those that does not =  <b> raise your hand</b>.
+		  <br>
+		  <br>
+		 
+                  An inertial frame is associate to an observer that moves at a _________ velocity.<br><br>
+		  An event is anything with an specific s____-t___ location.<br><br>
+		  The form of each physical law is the same in all i____ frames.<br><br>
+		  The speed of light is the s___ for all inertial observers. <br><br>
+		  <b> Notation:</b> From now on we will denote the speed of light by $c$.<br><br> 
+
+		  <h2>Ether</h2>
+		  Einstein's postulates are quite reasonable when applied to simple mechanical examples, but can be troubling when applied to light, since light is a wave, and previous to the development of Special relativity, it was believe that all waves needed a medium to propagate, and henceforth, if according to Maxwell equations the speed of light is constant, it should be for a given medium which in turns would define a special inertial frame. This medium was thermed "Ether" but it was disproved by Michelson-Morley experiment, then implying that light does not need a medium to propagate, unlike mechanical wave phenomena.  
+<br><br><hr>
+		  Before looking into the mathematical description of the consequenses of special relativity, let us gain some intuition by performing some mental experiments.
+		  Remeber that I told you that if we were as smart as Einstein, we will be able to work out the special theory of special relativity on our own. Today I am gonna show, we indeed are as smart!
+		  <br><br>
+		  <hr>
+		     <h3>Relative Simultaneity</h3>
+		  A train moving at constant speed $v$, has a light bulb right in the middle, which flashes a quick light signal that moves in every direction. Bob is standing on the ground observing the train pass by.
+		   <center>   <img src="{% static "img/train_side_view.png" %}" width="500"></center><br>
+Consider the following two events: L: The light signal reaches the left end of the train. R: The light signal reaches the right end of the train. A passenger on the train observes:
+		 <ol style="line-height:200%" type="A">
+		   <li> L occurs first than R</li>
+		   <li> R occurs first than L</li>
+		    <li> L and R occur at the same time</li>
+		   <li>I don't know</li>
+		 </ol>
+		 <br><br>
+		 What about Bob?
+ <ol style="line-height:200%" type="A">
+		   <li> L occurs first than R</li>
+		   <li> R occurs first than L</li>
+		    <li> L and R occur at the same time</li>
+		   <li>I don't know</li>
+		   </ol>
+
+ <br><br><hr>
+ <b>Two events at different locations that are simultaneous in one frame
+of reference will not be simultaneous in a frame of reference moving
+relative to the first.</b>
+
+		  <!-- background knowledge -->
+	 
+ <h3>Time Dilation</h3>
+ Same train but now we have installed a mirror on the floor right below the light bulb. The distance from the train's roof to the floor is equal to $H$. A passenger in the train observes the light bouncing off the mirror and going back to the light bulb. What is the time between this two events (light flashed by the bulb and returning back) as measured by the passenger's watch?  
+	 <ol style="line-height:200%" type="A">
+		   <li> 2 H/c </li>
+		   <li> H/c </li>
+		    <li> H/(2 c)</li>
+		   <li>I don't know</li>
+		 </ol>
+		 <br><br>
+		 What about Bob on the ground?. Well, first we need the distance between this two events according to Bob, let's do this one together.
+ <!-- <center>   <img src="{% static "img/pulse_motion_observer.gif" %}" width="500"></center><br> -->
+<br><br><br>
+		 $$t_B=\gamma_v t_P $$ with $\gamma_v=\frac{1}{\sqrt{1-(v/c)^2}}$ and
+$B=$Bob, $P=$Passenger.	 <br><br>
+Inadvertently, we have discovered a particular version of the "Lorentz transformations" of time between two inertial frames.
+<br><br>
+
+Think about the function we have just define $\gamma_v=\frac{1}{\sqrt{1-(v/c)^2}}$:
+	 <ol style="line-height:200%" type="A">
+		   <li> Is it smaller than one? </li>
+		   <li> Is it equal to one? </li>
+		   <li> Is it greater than one? </li>
+		   <li>I don't know</li>
+	 </ol>
+	  <em>Think-Pair-Share (TPS).</em> Pair and share with your neighbor. Vote after I tell you so.
+		 <br><br>
+<b>Two events occurring at the same location in one frame will be separated by a longer time interval in a frame moving relative to the first.</b><br><br>		 
+<h3>Lenght Contraction</h3>
+In turns out that Bob is extending his arms out in the direction in which the train is moving.  
+ One way a passenger in the train can measure Bob's arms length is to take the time difference between the time when it pass the left arm and when it pass the right arm. Let us call this difference $\Delta t_P$. Then Bobs arms length measured by the passenger is simply $L_{P}=v \Delta t_P$, where $L_{P}$ denotes the Bobs arms length as measured by the passenger. <br><br>
+ Similarly, Bob can measure its arms length, by taking the time between the same two events. Let us called such time difference $ \Delta t_B$, therefore Bob measure it's arms to be $L_{B}=v \Delta t_B$ apart. Then we can write the speed of the train as  $$v= {L_{P}\over  \Delta t_P}= {L_{B}\over  \Delta t_B}$$.
+
+ <br>
+  But remember we have already seen how the time measurements between the passenger and Bob are related to each other, namely  $\Delta t_B=\gamma_v \Delta t_P $. What is the transformation between the length measures by the two observers? 
+  <ol style="line-height:200%" type="A">
+		   <li> $L_{P}=\gamma_v L_{B}$ </li>
+		   <li> $L_{P}={ L_{B}\over \gamma_v}$ </li>
+		   <li> $L_{P}= L_{B}$ </li>
+		   <li>I don't know </li>
+	 </ol>
+  <br><br>
+  and...
+   <ol style="line-height:200%" type="A">
+		   <li> $L_{P}< L_{B}$ </li>
+		   <li> $L_{P}> L_{B}$ </li>
+		   <li>I don't know </li>
+	 </ol>
+
+ 
+		  <h2>Conceptual questions: </h2>
+
+Let's think a bit: Which are good approximation to an inertial frame of reference?
+
+		  <br>
+		  <br>
+		  <ol  style="line-height:200%" type="A">
+		     <!-- longer -->
+		     <li>A.</li>
+		     <li> B.</li>
+		     <li> C.</li>
+		     <li> D. </li>
+			</ol>
+		  <br><br>
+		  <em>Think-Pair-Share (TPS).</em> Pair and share with your neighbor. Vote after I tell you so.
+		  <hr>
+		  <hr>
+		  <br><br>
+                  <h2>Next: Lorentz Transformations</h2>
+		 
+		  
+                  <br><br><br>
+		  <!-- <ol type = "A"> -->
+		  <!--   <li>The proper time is also smaller. </li> -->
+		  <!--   <li>From the muon perspective, it wont reach the surface. </li> -->
+		  <!--   <li>The distance traveled by the muon is smaller from the Earth's reference frame. </li> -->
+		  <!--   <li>$\gamma$ does not change. </li> -->
+		  <!-- </ol> -->
+		  <br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
