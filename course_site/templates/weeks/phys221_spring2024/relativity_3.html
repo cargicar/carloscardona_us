@@ -1,0 +1,217 @@
+{% load static %}
+<!DOCTYPE html>
+<Html Lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Special Relativity Intro</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/lorentz.png' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Special Relativity: Lorentz Transformations</h1>
+                        <h3>PHYS-221 Jan 26 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+
+		  <!-- Learning objectives and concepts to learn -->
+		  <h2>Learning Objectives</h2>
+		  <ol>		    
+		    <li>Review of Galilean Transformations</li>
+		    <li>Learn Special Relativity/ Lorentz Transformations</li>
+		    <li>Learn to derive consequences of Einstein's postulates using the Lorentz transformations </li>
+		  
+		  </ol>
+		  <br><br>
+		       <h2>Lets recall some previous concepts </h2>
+		  <em> Fill in the blancks</em> <br>
+		  <b> Rules</b>: those than know what to fill in =<b> shout it out</b>. Those that does not =  <b> raise your hand</b>.
+		  <br>
+		  <br>
+		 
+                 Two events at different locations that are simultaneous in one frame
+of reference will ___ be simultaneous in a frame of reference moving
+		  relative to the first.<br><br>
+		  Two events occurring at the same location in one frame will be separated by a _____(longer, shorter, equal) time interval in a frame moving relative to the first.<br><br>
+The length of an object in a frame through which the object moves is
+_____(larges, smaller, equal) than its length in the frame in which it is at rest.<br><br>
+
+		  <b>Quick observation:</b> Why we don't perceive time-dilation and length-contraction in our everyday life?<br><br>
+		Times and length changes from observer to observer, yet I don't see smaller humans through the window when riding a train (or bus). Recalling <br> <center>
+		    $t_B=\gamma_v t_P,\quad  L_{P}={ L_{B}\over \gamma_v} $  with  $ \gamma_v=\frac{1}{\sqrt{1-(v/c)^2}}$ </center><br>
+		  
+		  What happens to $\gamma_v$ when $v$ is too small in comparison to $c$,
+		 <ol style="line-height:200%" type="A">
+		   <li>  $\gamma_v\to 1$</li>
+		   <li>  $\gamma_v\to 0$</li>
+		    <li>  $\gamma_v\to \infty$</li>
+		   <li>I don't know</li>
+		 </ol>
+		 <br><br>
+	  <em>Think-Pair-Share (TPS).</em> Pair and share with your neighbor. Vote after I tell you so.<br><br>
+		  A quick analysis shows $\lim_{v\to 0}\gamma_v\to 1 $.
+		  <h2>Galilean Transformations</h2>
+		  Lets us ignore Einstein's postulates for a couple of minutes, that is to say, our train is now moving very slow in comparison to the speed of light. For the sake of comparison, everything with a sub label $T$ are in-the-train-coordinates
+		  and everything with a $B$ sub label refers to ground-coordinates.
+		  <br><br>
+		  
+		  The passenger moving inside the train at constant speed $v$ throws a ball at speed $u_T$, so after a time interval $t$ the ball is at position $x_T=u_T\,t$, but according to Bob, the speed of the ball is
+		  	 <ol style="line-height:200%" type="A">
+		   <li>  $u_B=u_T+v$</li>
+		   <li>  $u_B=u_T$</li>
+		   <li>I don't know</li>
+		 </ol>
+		 <br><br>
+	
+		According to Bob, after some time $t_B$, the position of the ball is,
+		  $$x_B=u_B t_B=(u_t+v)t_B=x_T+v\, t $$ where we have used that for very low speeds $t_B=t_T=t$.<br><br> 
+		  The relations above are the one-dimensional version of <em>Galilean Transformations.</em> They however, clearly can't satisfy Einstein's postulates, because if we change the ball by a light signal, Bob will observe $c=u_T+v > c$!
+		  <br><br>
+		  <hr>
+		  <h3>Lorentz Transformations (quick derivation)</h3>
+		 
+		  With the goal of moving towards more general situations, lets think our Passenger-Bob system in terms of slightly more abstract entities. Consider the following two inertial frames $S$ and $S'$:
+		  <center>   <img src="{% static "img/two_frames.png" %}" width="700"></center><br>
+		  You can think $S$ as the train and $S'$ as Bob. Let us think first the Event with coordinate $x'$ as being Bob arms length and remember that  
+		  $L_{P}={ L_{B}\over \gamma_v}$. 
+		  Now, the Event is also moving with respect to the train, so the coordinates of the Event as measure by the passenger ($S'$) are
+		  $$x_P=v\,t+{x_B \over \gamma_v},\quad {\rm or}\quad x=v\,t+{x' \over \gamma_v}$$
+		  or in other words,
+		  $$x'=(x-v\,t)\gamma_v =\frac{x-v\,t}{\sqrt{1-{(v/c)^2}}}$$ 
+		  
+		  Now, this change of coordinates should remain valid regardless the speed of the object (as long as $v< c $, of course). Say the Event is instead a light signal (kinda Bob arms are stretching at the speed of light, if you which). The coordinates of the Event in both frames are respectively $x'=c t'$ and  $x=c t$. Using the (old) trick ($0=0$) $$x^2-c^2 t^2=x'^2-c^2 t'^2\,,$$ inserting $x'=\frac{x-v\,t}{\sqrt{1-{(v/c)^2}}}$ and solving for $t'$, <a href="https://www.wolframalpha.com/input?i=Solve%5Bx%5E2-c%5E2+t%5E2%3D%3D%28x-v+t%29%5E2%2F%281-v%5E2%2Fc%5E2%29-c%5E2+b%5E2%2C+b%5D"> we get</a>
+		  $$ t'=\frac{t-v\,x/c^2}{\sqrt{1-(v/c)^2}}\,.$$
+<br><br>
+All in all the Lorentz transformations in one dimension are:<br>
+ $$ t'=\frac{t-v\,x/c^2}{\sqrt{1-(v/c)^2}}\,.$$
+$$x'=\frac{x-v\,t}{\sqrt{1-{(v/c)^2}}}$$
+$$y'=y$$
+$$z'=z$$
+or equivalently if we want to go from Bob's frame $S'$ to the passenger frame $S$, we only need to flip the sign of the relative speed:
+$$ t=\frac{t'+v\,x'/c^2}{\sqrt{1-(v/c)^2}}\,.$$
+$$x=\frac{x'+v\,t'}{\sqrt{1-{(v/c)^2}}}$$
+$$y=y'$$
+$$z=z'$$
+
+Notices that distances perpendicular to the direction of relative motion are not subject to length contraction.
+<h2>Revisiting Consequences </h2>
+Now that we have the full transformations at hand, let's us revisit the consequences of Einstein's postulates using them.<br><br>
+<h3>Simultaneity</h3>
+A passenger is on a train moving east at 0.6c relative to Bob, as shown in figure below. She
+observes two light flashbulb at each end of the train which flash simultaneously. The flashbulb are
+are 10 m apart. According to
+Bob, which flashbulb flashes first and by how much?
+<center>   <img src="{% static "img/train_bob.jpg" %}" width="700"></center><br>
+
+		  <h2>Conceptual questions: </h2>
+
+None.
+
+		  <br>
+		  <br>
+		  <ol  style="line-height:200%" type="A">
+		     <!-- longer -->
+		     <li>A.</li>
+		     <li> B.</li>
+		     <li> C.</li>
+		     <li> D. </li>
+			</ol>
+		  <br><br>
+		  <!-- <em>Think-Pair-Share (TPS).</em> Pair and share with your neighbor. Vote after I tell you so. -->
+		  <hr>
+		  <hr>
+		  <br><br>
+                  <h2>Next: Putting all together </h2>
+		 
+		  
+                  <br><br><br>
+		  <!-- <ol type = "A"> -->
+		  <!--   <li>The proper time is also smaller. </li> -->
+		  <!--   <li>From the muon perspective, it wont reach the surface. </li> -->
+		  <!--   <li>The distance traveled by the muon is smaller from the Earth's reference frame. </li> -->
+		  <!--   <li>$\gamma$ does not change. </li> -->
+		  <!-- </ol> -->
+		  <br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

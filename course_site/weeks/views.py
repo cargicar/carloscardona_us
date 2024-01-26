@@ -26,6 +26,9 @@ def relativity_1(request):
 def relativity_2(request):
     return TemplateResponse(request,"weeks/phys221_spring2024/relativity_2.html",)
 
+def relativity_3(request):
+    return TemplateResponse(request,"weeks/phys221_spring2024/relativity_3.html",)
+
 
 #######################################################
 #### Phys 221 Fall 2023 Site #############################
