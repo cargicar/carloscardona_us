@@ -1,0 +1,234 @@
+{% load static %}
+<!DOCTYPE html>
+<Html Lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Special Relativity</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/lorentz.png' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Special Relativity: Consequences Revisited</h1>
+                        <h3>PHYS-221 Jan 29 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+
+		  <!-- Learning objectives and concepts to learn -->
+		  <h2>Learning Objectives</h2>
+		  <ol>		    
+		   <li>Learn to identify proper time and proper length.</li>
+		    <li>Learn to use Lorentz Transformations</li>
+		   
+		  
+		  </ol>
+		  <br><br>
+		       <h2>Lets recap last concepts </h2>
+<!-- 		  <em> Fill in the blancks</em> <br> -->
+<!-- 		  <b> Rules</b>: those than know what to fill in =<b> shout it out</b>. Those that does not =  <b> raise your hand</b>. -->
+<!-- 		  <br> -->
+<!-- 		  <br> -->
+		 
+<!--                  Two events at different locations that are simultaneous in one frame -->
+<!-- of reference will ___ be simultaneous in a frame of reference moving -->
+<!-- 		  relative to the first.<br><br> -->
+<!-- 		  Two events occurring at the same location in one frame will be separated by a _____(longer, shorter, equal) time interval in a frame moving relative to the first.<br><br> -->
+<!-- The length of an object in a frame through which the object moves is -->
+<!-- _____(larges, smaller, equal) than its length in the frame in which it is at rest.<br><br> -->
+
+ Consider the following two inertial frames $S$ and $S'$:
+		       <center>   <img src="{% static "img/two_frames.png" %}" width="700"></center><br>
+		       If the observer in frame $S'$ measures the location of the Event to be $x'$, what is the transformation to the location $x$ seen from $S$?<br> 
+		        <img src="{% static "img/iclicker.jpeg" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+		   <li>$x=\frac{x'-v\,t'}{\sqrt{1-{(v/c)^2}}}$</li>
+		   <li>$x=\frac{x'+v\,t'}{\sqrt{1+{(v/c)^2}}}$</li>
+		   <li>$ t=\frac{t'-v\,x'/c^2}{\sqrt{1-(v/c)^2}}$</li>
+		   <li>$ t=\frac{t'+v\,x'/c^2}{\sqrt{1-(v/c)^2}}$</li>
+		 </ol>
+		 <br><br>
+		 Mnemonic: $\gamma_v=\frac{1}{\sqrt{1-{(v/c)^2}}}$ approach 1 for relative slow speeds.
+		 <br><br>
+		 Equivalent we have the transformations from $S$ to $S'$:
+	
+ $$ t'=\frac{t-v\,x/c^2}{\sqrt{1-(v/c)^2}}=\gamma_v\,(t-v\,x/c^2).$$
+$$x'=\frac{x-v\,t}{\sqrt{1-{(v/c)^2}}}=\gamma_v\,(x-v\,t).$$
+$$y'=y$$
+		 $$z'=z$$
+		 <h2>Simultaneity</h2>
+		 By definition, $t_1=t_2$ or  $\quad t_2-t_1=0$  (in one of the frames, here lets choose $S$). What is the time difference in frame $S'$?
+		 $$t_2'-t_1'=\gamma_v\left((t_2-t_1-{v\over c^2}(x_2-x_1))\right) $$ but  $\quad t_2-t_1=0$, then:
+		 	 $$t_2'-t_1'=\gamma_v\left((-{v\over c^2}(x_2-x_1))\right) $$ or in more compact form 		 	 $$\Delta t'=\gamma_v\left((-{v\over c^2}(\Delta x))\right) $$
+		 
+		 <h2>Time Dilation</h2>
+		       <center>   <img src="{% static "img/time_dilation.png" %}" width="700"></center><br>
+		 Say passenger (Alice) is in frame $S'$, and look at her watch before passing in front of Bob (Event 1). Then she look her watch again some time after passing in front of Bob (event 2). Then we know that $x'_1=x'_2$, let's see how much time passed between the two events as seeing from Bobs frame ($S$). 
+		       $$ t_2-t_1=\gamma_v\left( t'_2-t'_1+{v\over c^2}(x'_2-x'_1)\right)=\gamma_v \Delta t'. $$ We see time dilated in Bobs frame relative to the Alice frame. But wait, this is essentially the same equation we used in simultaneity... what changes?. <br><br>
+		       <em>Think-Pair-Share (TPS).</em> Pair and share with your neighbor. Vote after I tell you so.<br>
+		       		        <img src="{% static "img/iclicker.jpeg" %}" width="100"> <br><br>
+		       From the statements below, which one applies to our time dilation example but does not apply to our simultaneity example? 
+		 <ol style="line-height:300%" type="A">
+		   <li> Event 1 and Event  2 took place in the same reference frame. </li>
+		   <li> Event 1 and Event  2 took place at the same time. </li>
+		   <li> Event 1 and Event  2 took place at the same location. </li>
+		   <li> Event 1 and Event  2 have different time distances in each frame. </li>
+
+		 </ol>
+		 <br><br>
+		 <br><br>
+		 $$ t_2-t_1=\gamma_v \Delta t'\equiv =\gamma_v \Delta t_0  $$ where $\Delta t_0$ is known as <b>proper time</b>, which refers to the time that elapses between events in the frame in which events all occur at the
+		 same location. In the case we have considered here, that frame is $S'$. <br>
+		 
+		  <h2>Length Contraction </h2>
+     <center>   <img src="{% static "img/length_contraction.png" %}" width="700"></center><br>
+     Consider Alice is holding a stick of length $L_0$ in her frame $S'$. In order to measure the length of the stick in her frame, we define Event 1 and Event two as being the ends of the stick, i.e,
+     $x'_2-x'_1=L_0$. To see what is the length of the stick as seen by Bob, we apply the Lorentz transformations  $x'=\gamma_v\,(x-v\,t)$:
+     $$x'_2-x'_1=\gamma_v(x_2-x_1-v(t_2-t_1)).$$ There is an important observation here: In order for a length measure to make sense, it need to be taken at a specific time. Think Bob has another stick (ruler) of exactly the same size as the observed length of the stick in his frame. Bob can only say they are the same size in his frame, right at the time when this two sticks match. This implies,
+     $$x'_2-x'_1=\gamma_v(x_2-x_1)$$ or $$L_B={L_0\over\gamma_v}.$$ Therefore, Bob perceived a smaller stick, or a <em>contracted</em> stick. <br><br> More generally,
+     The length of an object in the frame in which it is at rest —its rest frame— is given the symbol $L_0$ and is known as <b>proper length</b>.
+     <br><br>
+     <h2>Light-year</h2>
+     Now that we know that the speed of light (in vacuum) is the same regardless of who is observing it, added to the fact that the speed of light is very large, is an ideal candidate to define a length distance, in particular regarding far away objects or very large objects. <br><br>
+     How much is the speed of light?. In SI units
+     $$c= 299792458 m/s .$$ However, for all intents and  purposes in this course we will accept the very good approximation $$c=3\times 10^{8} m/s .$$
+     So what is a light-year?. A light-year is the distance light travels in one year. Mathematically established is just $$ly=1\,year\times c$$ (with $c$ in units of $m/year$). 
+     One light-year is about 6 trillion miles (9 trillion km), or more precisely $1 ly=9.5\times 10^{15}m.$. Since light is finite, it might take years for the light produced by very distant objects to reach us, so every time we see something very far we are actually looking at its past. <br><br>
+     <iframe width="800" height="600" src="https://www.youtube.com/embed/MX3PIkbTQwQ?si=f5INdQGgAN0KG1E-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br>
+		  <h2>Exercise: </h2>
+		  Over the year, Nasa has found several "habitable" planets "near by", for example <a href="https://www.engadget.com/2017-02-22-nasa-we-found-7-earth-sized-planets-just-40-light-years-away.html"> this 7 earth-size planets </a>, just 40 light-years away from Earth. Let us call one of them Planet-X <br><br>
+Imagine we have developed a space-ship able to reach speeds very close to the speed of light. How many years a person traveling in this ship will live inside the ship during the trip to Planet-X?
+		 <br>   <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
+		  <ol  style="line-height:300%" type="A">
+		     <!-- longer -->
+		     <li>Less than 40 years? </li>
+		     <li> 40 Years</li>
+		     <li> More than 40 years</li>
+		     <li> Who knows?? </li>
+			</ol>
+		  <br><br>
+		  
+		  Alice has just been born. Can she get to Planet-X by the time she is 30 years old? If so,
+what speed is required?.  Bob stays on Earth observing Alice's trip.
+		  <br><br>
+		  Nasa told us that Planet-X is 40 light-years away. In which frame this is a proper length? _______  (Spaceship, Earth).
+		  <br><br>
+		  Who measures the proper time of the trip? ________ (Bob, Alice).
+		  <br><br><br>
+		  Since proper length is measured by Earth's frame, the length Earth-PlanetX as seeing by Alice is $$L_A={40\,ly\over \gamma_v}.$$  Notice that as $v$ of the ship approaches the speed of light, $L_A\to 0$, so it will take a lot less that 30 years for Alice to reach Planet-X, as long as she can achieve larger speeds.<br> Let us first answer the question relating to the requiered speed:
+		  $$v={L_A\over t_A}$$ so if Alice wanted to reach Planet-X as she turns 30 years old:
+		  $${v\over c}={40\over 30\,\gamma_v}=0.8$$
+		  But how can Anna reach Planet X in 30 years when it takes light 40 years?<br><br>
+		  
+		  According to Bob, how long this trip takes?
+		  
+		  <ol  style="line-height:300%" type="A">
+		     <!-- longer -->
+		     <li>40 years</li>
+		     <li>30 years</li>
+		     <li>50 years</li>
+		     <li>Who knows!? </li>
+			</ol>
+		  <br><br>
+		  $$0.8 c={40\, ly/t_B}$$ or in other words $t_B=50$ years. How come according to Bob Alice should be 50 years old when she reaches Planet-X but she is actually only 30 yo?<br><br>
+
+		  <br>
+		  <em>Think-Pair-Share (TPS).</em> Pair and share with your neighbor.<br><br>
+		  Well, if Bob could possibly see Alice, he will see that his time is dilated qith respect to hers :
+		  $$ t_B=\gamma_v\, t_A={5\over 3} \, t_A= 50 years$$ ot $t_A= 30 years$.
+		  <hr>
+		  <hr>
+		  <br><br>
+                  <h2>Next: Putting all together </h2>
+		 
+		  
+                  <br><br><br>
+		  <!-- <ol type = "A"> -->
+		  <!--   <li>The proper time is also smaller. </li> -->
+		  <!--   <li>From the muon perspective, it wont reach the surface. </li> -->
+		  <!--   <li>The distance traveled by the muon is smaller from the Earth's reference frame. </li> -->
+		  <!--   <li>$\gamma$ does not change. </li> -->
+		  <!-- </ol> -->
+		  <br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
