@@ -75,7 +75,7 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
                         <h1>Special Relativity: Velocity Transformations</h1>
-                        <h3>PHYS-221 November 16 / 2023 </h3>
+                        <h3>PHYS-221 February  2/ 2024 </h3>
                     </div>
                 </div>
             </div>
@@ -105,24 +105,46 @@
                   Then the speed $u_s'$ of the particle measured from somebody standing on frame $S'$ is:
  <br>
 		  <br>
-		  <ol type="A">
-		     <!-- longer -->
+	
+	  <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+	
+		    <!-- longer -->
 			  <li> $u_s'=u_{s}-v$</li>
 			  <li> $u_s'= u_{s}+v$</li>
-			  <li> $u_s'=u_{s'} $</li>
+		    <li> $u_s'=u_{s'} $</li>
+		    <li> I don't know </li>
 			</ol>
 		  <br><br>
 
 		 If we want to go in the oposite way, we just need to solve for $u_{s'}$, or equivalently change the sign of $v$ and exchange prime and unprime.   
 		  <br>
+		  <center>		    <img src="{% static "img/rel_vel.png" %}" width="400"> <br></center>
 		  <br>
+		  A spaceship is traveling away from Earth at 0.8c, as shown in Figure 25. Farther
+out, a meteorite is traveling toward Earth at 0.6c. Both velocities are according to an
+observer on Earth. According to an observer on the spaceship, what is the velocity of
+		  the meteorite (relative to herself)?<br><br>
+If you need to answer this question right now and in 10 seconds, what would be your answer?
+		  <br>
+		  <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+	
+		    <!-- longer -->
+			  <li>1.4 c </li>
+			  <li> 0.2 c</li>
+		    <li> -1.4 c</li>
+		    <li> -0.2 c</li>
+			</ol>
+		  <br><br>
+		  
 		  Now lets include relativistic effects, to do that, we need to recall Lorentz transformations:<br><br>
  $$ t'=\frac{t-v\,x/c^2}{\sqrt{1-(v/c)^2}}=\gamma_v\,(t-v\,x/c^2).$$
 $$x'=\frac{x-v\,t}{\sqrt{1-{(v/c)^2}}}=\gamma_v\,(x-v\,t).$$
 $$y'=y$$
 		 $$z'=z$$
 		  <br><br>
-		  And le us recall the differential defition of speed on a given reference frame, say $S'$:
+		  And let us recall the differential defition of speed on a given reference frame, say $S'$:
 		  $$u'={dx'\over dt'} $$
 
 		  So in order to relate $u'$ to $u$ we need:
@@ -140,32 +162,36 @@ $$y'=y$$
 		  $$ dt'=\frac{dt-v\,dx/c^2}{\sqrt{1-(v/c)^2}}.$$
 		  The speed $u_x$ of the particle measured from somebody standing on frame $S$ is
   <br>
-		  <ol type="A">
-		     <!-- longer -->
+		  <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+		    <!-- longer -->
 			  <li> $u_x'=\gamma_{x}(u_{x}-v)$</li>
 			  <li> $u_x'=\gamma_{x}(u_{x}+v)$</li>
 		     <li> $u_x'=\gamma_{x}(u_{x}) $</li>
-		      <li> $u_x'=\gamma(u_{x}-v)$</li>
-			  <li> $u_x'=\gamma(u_{x}+v)$</li>
+		      <li> $u_x'=\gamma_v(u_{x}-v)$</li>
+			  <li> $u_x'=\gamma_v(u_{x}+v)$</li>
 		 		      <li> $u_x'=\gamma(u_{x}) $</li>
 		  </ol>
-		  Where $\gamma_{x'}\equiv\frac{1}{1-\frac{v}{c^2}u_{x'}}$ and  $\gamma\equiv\frac{1}{\sqrt{1+{v^2\over c^2}} }$
+		  Where $\gamma_{x}\equiv\frac{1}{1-\frac{v}{c^2}u_{x}}$ and  $\gamma_v\equiv\frac{1}{\sqrt{1-{v^2\over c^2}} }$
 		  <br><br>
 
 		  <br><br>
-		  What about $$u_y'={dy'\over dt'}$?
-                  The speed $u_y$ in the $y$ direction of the particle measured from somebody standing on frame $S$ is:
+		  What about $$u_y'={dy'\over dt'}?$$
+                  The speed $u_y'$ in the $y'$ direction of the particle measured from somebody standing on frame $S'$ is:
   <br>
-		  <ol type="A">
+ 		  <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
 		    <!-- longer -->
 		    <li>$u_y'=u_y$</li>
 			  <li> $u_y'=\gamma_{x}(u_{y}+v)$</li>
-		    <li> $u_y'=\gamma_{y}(u_{x}+v)$</li>
+		    <li> $u_y'=\gamma_{y}(u_{y}-v)$</li>
 		    <li> $u_y'=\gamma_{y}(u_{y})$</li>
 		    <li> $u_y'=\gamma_{x}(u_{y}) $</li>
-		     <li> $u_y'=\frac{\gamma_{x}}{\gamma}(u_{y}) $</li>
+		     <li> $u_y'=\frac{\gamma_{x}}{\gamma_v}(u_{y}) $</li>
 		  </ol>
-		  Where $\gamma_{x'}\equiv\frac{1}{1-\frac{v}{c^2}u_{x'}}$,  $\gamma_{y'}\equiv\frac{1}{1-\frac{v}{c^2}u_{y'}}$ and  $\gamma\equiv\frac{1}{\sqrt{1+{v^2\over c^2}} }$.
+		  Where $\gamma_{x}\equiv\frac{1}{1-\frac{v}{c^2}u_{x}}$,  $\gamma_{y}\equiv\frac{1}{1-\frac{v}{c^2}u_{y}}$ and  $\gamma_v\equiv\frac{1}{\sqrt{1-{v^2\over c^2}} }$.
 		  <br><br><br>
 		  Let's review:
 
@@ -173,34 +199,39 @@ $$y'=y$$
 
 		    <h2>Lets use it</h2>
 
-<em>Problem 5.47 from HW</em>.
-		    Two planets are on a collision course, heading directly toward each other at 0.250c. A spaceship sent from one planet approaches the second at 0.750c as seen by the second planet. What is the velocity of the ship relative to the first planet?
+		    Two planets, planet$_1$ and planet$_2$ are on a collision course, heading directly toward each other at 0.250c. A spaceship sent from planet$_1$ approaches planet$_2$ at 0.750c as seen by  planet$_2$. What is the velocity of the ship relative to the planet$_1$?
 <br><br>
 <b> Pair up and work on it</b>.<br><br>
 
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/1dnmMmKmaxM?si=cevFJn3WPNqZ5u-t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				  <iframe width="200" height="100" src="https://www.youtube.com/embed/1dnmMmKmaxM?si=cevFJn3WPNqZ5u-t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				  <br><br><br><br>
 
-		 <b> Poll: </b> Say Planet 1 is to the left of planet 2. If we identify  planet 1 with the frame $S$? 
-		 <!-- Use printed cards -->
-		 <br>(A) v= 0.250 c
-		 <br>(B) v= -0.250 c
-		 <br>(C) v= 0.750 c
-		 <br>(D) v= -0.750 c 
-    		 <br><br><br><br>
+				   Say Planet$_1$ is to the left of planet$_2$. If we identify  planet$_1$ with the frame $S$, what is the relative speed of the planets as seen by planet$_ 1$?<br>
+				   <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
 
-		 <strong>Poll: </strong> 
-		 <br> (A) $u_{x'}= 0.750 c$
-		 <br> (B) $u_{x'}=- 0.750 c$
-		 <br> (C) $u_{x}= 0.750 c$
-		  <br> (D) $u_{x}=- 0.750 c$
-		 <br><!-- Open to the whole class -->
+		 <!-- Use printed cards -->
+		 <li> v= 0.250 c</li>
+		 <li> v= -0.250 c</li>
+		 <li> v= 0.750 c</li>
+		 <li> v= -0.750 c </li>
+		 </ol>
+    		 <br><br><br><br>
+		 What about speed the speed of the meteorite as seen by planet$_2$<br>
+ <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+		   <li>  $u_{2}= 0.750 c$</li>
+		   <li> $u_{2}=- 0.750 c$</li>
+		   <li> $u_{2}= 0.750 c$</li>
+		   <li> $u_{2}=- 0.750 c$</li>
+		 </ol>
 		 
 		 <br><br><br><br>
 		 <strong>Poll:</strong> If the speeds were not-relativistic (say  $v\ll c$):  The speed $u_x$ of the ship measured from somebody standing on planet 1 ($S$) is:
 
 
- <br>
+ <br> <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
 		  <ol type="A">
 		     <!-- longer -->
 			  <li> $u_x=(u_{x'}-0.250)$</li>
@@ -211,35 +242,32 @@ $$y'=y$$
 		 	 <br><br><br><br>
 		 <strong>Poll:</strong> If the speeds were relativistic:  The speed $u_x$ of the ship measured from somebody standing on planet 1 ($S$) is:
 
-  <br>
+  <br>  <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
 		  <ol type="A">
 		     <!-- longer -->
 			  <li> $u_x=\gamma_{x'}(u_{x'}-0.250)$</li>
 			  <li> $u_x=\gamma_{x'}(u_{x'}+0.250)$</li>
 		     <li> $u_x=\gamma_{x'}(u_{x'}) $</li>
-		      <li> $u_x=\gamma(u_{x'}-0.250)$</li>
-			  <li> $u_x=\gamma(u_{x'}+0.250)$</li>
-		 		      <li> $u_x=\gamma(u_{x'}) $</li>
-		  </ol>
-		  Where $\gamma_{x'}\equiv\frac{1}{1-\frac{0.250}{c^2}u_{x'}}$ and  $\gamma\equiv\frac{1}{\sqrt{1+{v^2\over c^2}} }$
+		     </ol>
+		  Where $\gamma_{x'}\equiv\frac{1}{1-\frac{0.250}{c^2}u_{x'}}$.
 		  <br><br><br><br>
-		  Compare with previous <a href="#vel_tran"> transformations</a>. what changes?<br><br><br>
+
 		  Let's put some numbers,<br><br>
 		   $u_x=\gamma_{x'}(u_{x'}-0.250)=\frac{0.750 c - 0.250 c}{1-0.250\times0.750\times c^2/c^2}=0.6154\,c$.
 		  
 		  <br><br><br>
-		  Now problem 5.39 is just a piece of cake:
+
 		  A man standing still at a train station watches two boys throwing a baseball in a moving train. Suppose the train is moving east with a constant speed of 20 m/s and one of the boys throws the ball with a speed of 5 m/s with respect to himself toward the other boy, who is 5 m west from him. What is the velocity of the ball as observed by the man on the station?<br><br>
 		  <strong>Pair up:</strong>
 		  <br><br>
-		  		 <iframe width="560" height="315" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		  		 <iframe width="200" height="100" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br><br>
 		  Is it a relativistic problem?  (yes, no) ____.<br><br><br>
 	Let's consider it relativistic any way:	  
 		   $$u_x=\gamma_{x'}(u_{x'}+v)=\frac{-5 m/s + 20 m/s}{1-20(m/s)\times5(m/s)/c^2}$$
 	          <em></em><br><br>
 		
-
+                  <h2>Next: Relativistic Momentum and Energy</h2>
 		  <br><br><br><br>
                 </div>
             </div>
