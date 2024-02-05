@@ -33,6 +33,7 @@ urlpatterns = [
     path("phys221_spring2024/relativity_4/", relativity_4, name="relativity_4"),
     path("phys221_spring2024/relativity_5/", relativity_5, name="relativity_5"),
     path("phys221_spring2024/relativity_6/", relativity_6, name="relativity_6"),
+    path("phys221_spring2024/relativity_7/", relativity_7, name="relativity_7"),
     
     ############ phys 221 Fall 2023 ##############################
     path("syllabus/", syllabus, name="syllabus"),

@@ -1,0 +1,282 @@
+{% load static %}
+<!DOCTYPE html>
+<Html Lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Special Relativity</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/emc2.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Special Relativity: Momentum and Energy</h1>
+                        <h3>PHYS-221 February 5 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+
+		  <!-- Learning objectives and concepts to learn -->
+		  <h2>Learning Objectives</h2>
+		  <ol>		    
+		    <li>Learning momentum definition in relativistic physics</li>
+		    <li>Learn relativistic implications to the energy </li>
+		    <li>Learn momentum and energy  conservation in relativistic systems</li>
+		  
+		  </ol>
+		  <br><br>
+		  <h2>Lets recap last concepts </h2>
+
+		  <!-- <em> Fill in the blancks</em> <br> -->
+		  <!-- <b> Rules</b>: those than know what to fill in =<b> shout it out</b>. Those that does not =  <b> raise your hand</b>. -->
+		  <!-- <br> -->
+		  <br>
+		  Recall the velocity transformation:
+		  $$u_x'=\frac{u_{x}-v}{1-\frac{v}{c^2}u_{x}}$$
+		  $$u_y'=\frac{u_{y}}{\gamma_v(1-\frac{v}{c^2}u_{x})} $$
+		     $$u_z'=\frac{u_{z}}{\gamma_v(1-\frac{v}{c^2}u_{x})} $$
+		 
+		 
+		  Let's practice velocity transformation in two scenarios: One call Before and the other call after. In a given reference frame, namely $S$, this two scenarios are represented by:
+		  <br><center>   <img src="{% static "img/colision_before_s.png" %}" width="300"></center> <br>
+		   <br><center>   <img src="{% static "img/colision_after_s.png" %}" width="300"></center> <br>
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		  <ol  style="line-height:300%" type="A">
+		     <!-- longer -->
+		     <li>Less than 40 years? </li>
+		     <li> 40 Years</li>
+		     <li> More than 40 years</li>
+		     <li> Who knows?? </li>
+			</ol>
+		  <br><br>
+		  
+		  Alice has just been born. Can she get to Planet-X by the time she is 30 years old? If so,
+what speed is required?.  Bob stays on Earth observing Alice's trip.
+		  <br><br>
+		  Nasa told us that Planet-X is 40 light-years away. In which frame this is a proper length? _______  (Spaceship, Earth).
+		  <br><br>
+		  Who measures the proper time of the trip? ________ (Bob, Alice).
+		  <br><br><br>
+		  Since proper length is measured by Earth's frame, the length Earth-PlanetX as seeing by Alice is
+		  <br>   <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
+	  <ol  style="line-height:300%" type="A">
+		  <li>$L_A={40\,ly\times \gamma_v}.$</li>
+		  <li>$L_A={40\,ly\over \gamma_v}.$</li>
+		  <li>$L_A={40}.$</li>
+		  <li>I don't know </li>
+	  </ol>
+		  <br><br><br>
+		 Answer is $L_A={40\,ly\over \gamma_v}$.  Notice that as $v$ of the ship approaches the speed of light, $L_A\to 0$, Alice can be as closer to Planet-X as the allowed speed,and henceforth reach it in a lot less than 30 years.<br><br> However, she want to reach Planet-X around her 30th birthday, then what is the requiered speed?
+		  $$v={L_A\over t_A}$$
+		  Remember, as long as you are using all quantities as measure in a single reference frame, you don't need special relativity. Special relativity only plays a role when you need to compare quantities acroos different reference frames. <br><br>
+
+		  So if Alice wanted to reach Planet-X as she turns 30 years old  ${v\over c}={L_A\over c\, t_A}$, implies:
+		  		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+ <ol  style="line-height:300%" type="A">
+   <li> ${v\over c}=0.6$</li>
+   <li> ${v\over c}=0.8$</li>
+    <li> ${v\over c}=1$</li>
+
+		  <li>I don't know </li>
+ </ol>
+ <em>Think-Pair-Share (TPS).</em> Think, Pair and share with your neighbor. Vote when I tell you so.<br><br>
+  <iframe width="200" height="100" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		  <br><br><br>
+	
+		 
+		  But how can Anna reach Planet X in 30 years when it takes light 40 years?<br><br>
+		  
+		  According to Bob, how long this trip takes?
+		  		  <br>   <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
+		  <ol  style="line-height:300%" type="A">
+		     <!-- longer -->
+		     <li>40 years</li>
+		     <li>30 years</li>
+		     <li>50 years</li>
+		     <li>Who knows!? </li>
+		  </ol>
+		     <em>Think-Pair-Share (TPS).</em> Think, Pair and share with your neighbor. Vote when I tell you so.<br><br>
+		  <iframe width="200" height="100" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ <br><br>
+		  $$0.8 c={L_B/t_B} ={40\, ly/t_B}$$ or in other words $t_B=50$ years. <br><br>How come according to Bob Alice should be 50 years old when she reaches Planet-X but she is actually only 30 yo?<br><br>
+
+		  <br>
+		  <em>Think-Pair-Share (TPS).</em> Pair and share with your neighbor.<br><br>
+		  Well, if Bob could possibly see Alice, he will see that his time is dilated with respect to hers :
+		  $$ t_B=\gamma_v\, t_A={5\over 3} \, t_A= 50 years$$ ot $t_A= 30 years$.
+		  <hr>
+		 
+		  <br>
+		  <h2>A Real Life Scenario</h2> 
+                  <p>A muon is created in the atmosphere 3 km above Earth's surface, heading downward at speed $0.98c$. It survives $2.2\mu s$ in its own frame of reference before decaying.<br>
+		    (a) If the muon would have not been relativistic, how far would the muon travel before decaying?, and how much longer than $2.2 \mu s$ would it have to survive to reach the surface?<br>
+		    		  		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+ <ol  style="line-height:300%" type="A">
+   <li> $d=520m$</li>
+   <li> $d=647m$</li>
+   <li> $d= 1km$</li>
+     <li> $d= 3km$</li>
+
+		  <li>I don't know </li>
+ </ol>
+
+		    <!-- TPS -->
+		    <b> Pair up and work on it. </b>
+		    <iframe width="200" height="100" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+		    		  <br><br><br>
+		  (b) Relativistically, according to an observer on Earth, how long will the muon survive before decaying?<br>
+		    		  		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+ <ol  style="line-height:300%" type="A">
+   <li> $ t_E=10.2\mu s$</li>
+   <li> $ t_E=8.2\mu s$</li>
+   <li> $ t_E= 11.1\mu s$</li>
+   		  <li>I don't know </li>
+ </ol>
+
+		 Who measures the proper time? _________  (Muon, Earth) <br><br>
+		  <!-- TPS -->
+				  <b> Pair up and work on it</b>.
+				 
+				  <iframe width="200" height="100" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		 <br><br><br><br>
+ Will it reach the surface?<br>
+    Knowing the result above $t_E$, how far the muon could travel according to Earth? 		 
+		 <br>
+		 		    		  		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+ <ol  style="line-height:300%" type="A">
+   <li> $d_E=3.25 km$</li>
+   <li> $d_E=2.25 km$</li>
+   <li> $d_E=1.25 km$</li>
+   		  <li>I don't know </li>
+ </ol>
+
+		 (c) Relativistically, according to the muon, what is the distance from the point in the atmosphere where the muon is created to Earth's surface?		 		    		  		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+ <ol  style="line-height:300%" type="A">
+   <li> $d_{\mu}=647 m$</li>
+   <li> $d_{\mu}=597 m$</li>
+   <li> $d_{\mu}=1 km$</li>
+   		  <li>I don't know </li>
+ </ol>
+
+		 <!-- TPS -->
+		 <strong>Pair up and work on it</strong>
+		 <iframe width="200" height="100" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		 
+		 <br>
+		  Considering the distance between the location at which the muon is created and Earth's surface. Who measures the proper lenght? _______ (Earth, Muon)
+		
+		 <br><br><br><br>
+		  How much time will it take this distance to pass the muon? we know that $v_{\mu}={d_{\mu}\over t_{\mu}}$.
+	    		  		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+ <ol  style="line-height:300%" type="A">
+   <li> $ t_{\mu}=647 m$</li>
+   <li> $ d_{\mu}=597 m$</li>
+   <li> $ t_{\mu}=1 km$</li>
+   		  <li>I don't know </li>
+ </ol>
+		  </p>
+		  <br><br><br><br>
+                  <em>Final Clicker</em><br><br>
+		  We have seen that from the observer point of view, the muon reach Earth's surface because in Earth's frame the muon survives $11\mu s$, or $8.8\mu s$ more than from muon's reference frame. Suppose the time for available for the muon to reach the surface is slightly smaller than $11 \mu s$, but just enough to still reach the surface. Which of the following is a false statement:
+		  <br><br><br>
+		  <ol type = "A">
+		    <li>The proper time is also smaller. </li>
+		    <li>From the muon perspective, it wont reach the surface. </li>
+		    <li>The distance traveled by the muon is smaller from the Earth's reference frame. </li>
+		    <li>$\gamma$ does not change. </li>
+		  </ol>
+		  <br><br><br><br>
+
+                  <h2>Next: Velocity Transformations </h2>
+		 
+		  
+                  <br><br><br>
+		  <!-- <ol type = "A"> -->
+		  <!--   <li>The proper time is also smaller. </li> -->
+		  <!--   <li>From the muon perspective, it wont reach the surface. </li> -->
+		  <!--   <li>The distance traveled by the muon is smaller from the Earth's reference frame. </li> -->
+		  <!--   <li>$\gamma$ does not change. </li> -->
+		  <!-- </ol> -->
+		  <br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
