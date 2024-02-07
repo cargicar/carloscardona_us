@@ -74,8 +74,8 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Special Relativity: Momentum and Energy</h1>
-                        <h3>PHYS-221 February 5 / 2024 </h3>
+                        <h1>Special Relativity: Mass and Energy</h1>
+                        <h3>PHYS-221 February 7 / 2024 </h3>
                     </div>
                 </div>
             </div>
@@ -91,11 +91,11 @@
 		  <!-- Learning objectives and concepts to learn -->
 		  <h2>Learning Objectives</h2>
 		  <ol>		    
-		    <li>Learning momentum definition in relativistic physics</li>
-		    <li>Learn relativistic implications to the energy </li>
-		    <li>What $$E=m\, c^2$$ has to do to with nuclear energy? </li>		  
+		    <li>Learn of Energy and Momentum change as a function of speed</li>
+		    <li>Learn implications of Mass and Energy relation </li>
+		    <li>What $E=m\, c^2$ has to do to with nuclear energy? </li>		  
 		  </ol>
-		Last session we learnt that Mass and Energy are related by the famous formula:												       $$E_{internal}=m\,c^2\,.$$
+		Last session we learnt that Mass and Energy are related by the famous formula:												       $$E_{internal}=\gamma_{u}\,m\,c^2\,.$$
 														       
 		  This is a most striking relation: mass measures energy.  This includes all internal energy in whatever form it might take. We will talk about more about this in the next class. <br><br>
 		  It is a direct consequence of Einsteins postulates.<br><br>
@@ -131,8 +131,77 @@ possible to accelerate a massive object to the speed of light. Infinite energy
 		     <li>  $p_A < p_B$</li>
 		     <li> I dont know </li>
 		  </ol>
+<h2>Clarifications on Mass and Energy Relation</h2>
+According to equation  $$E_{internal}=\gamma_{u}\,m\,c^2\,.$$, the energy of an object at rest depends solely on its mass. Adding energy to system at rest increases
+its mass; extracting energy decreases it. These changes are neglectful in ordinary circumstances because $c^2$ is a very large number. A mass change of $1$ kg
+corresponds to an energy difference of
+$$9\times 10^{16} J =2.5\times 10^{10} kWh = 2.9 GW · 1 year$$
+This is a very large amount of energy! (Equivalent to the yearly output of ~3 very large nuclear reactors). Enough to power all the homes in OH for a year! (I think)
+<br><br>
+However, we can not simply make mass disappear arbitrarily. Generally speaking,
+$$\Delta m={F\over a}\,, $$ i.e, exchange of energy requires a force.
+<br><br>
+Chemical reactions involve the electrostatic force, for example, forming a two-hydrogen molecule lowers the electrostatic potential energy
+approximately $7\times 10^{-19} J$. Using $\Delta E=\Delta m c^2$, we see that the mass decreases by about $8\times 10^{-36} kg$.
+<br><br>
+Nuclear reactions however, involved the strongest force known in nature, creatively called <b>the strong force</b>, which keep protons bound to the nucleus. When a proton and neutron fusion to form  deuterium, the lowering of the energy associated with the strong force gives off about $4\times 10^{-13} J$, corresponding to a mass change of is $4\times 10^{-30} kg$, six order of magnitude larger that a typical chemical reaction.
+<br><br>
+It is important to understand that in this discussion of energy we are referring to "systems" of particles, and that the internal energy is measuring the TOTAL energy of the system. Think of heating water, the internal thermal energy will increase and henceforth its mass, however the individual molecules of water not necessarily increased mass, the mass of the water system has increased because its individual molecules gained kinetic energy. Let how all this works with a simple example.
+<br><br>
+<h3>Example </h3>
+<center>   <img src="{% static "img/colision_before_s.png" %}" width="300"> </center><br>
+Object 1, of mass 4 and heading east at 0.6c, collides with object 2, of mass 3
+and moving west at 0.8c. The two stick together after the collision. Find the mass $m_f$ and speed $u_f$ of the
+resulting combined object. (Note: mass are in arbitrary mass units.)<br><br>
 
-                  <h2>Next: Mass and Energy </h2>
+Using momentum conservation, show that $A\,c=\gamma_{u_f}\,m_f\,u_f\,,\quad$ with $A$ equals to
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		  <ol  style="line-height:300%" type="A">
+		     <!-- longer -->
+		     <li> $1$ </li>
+		     <li> $-1$ </li>
+		      <li> $3$ </li>
+		      <li> $-3$ </li>
+		     <li> I dont know </li>
+		  </ol>
+
+		  <br><br>
+		  Using energy conservation, show that $B\,c=\gamma_{u_f}\,m_f\,,\quad$ with $B$ equals to
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		  <ol  style="line-height:300%" type="A">
+		     <!-- longer -->
+		     <li> $10$ </li>
+		     <li> $-10$ </li>
+		      <li> $30$ </li>
+		      <li> $-30$ </li>
+		     <li> I dont know </li>
+		  </ol>
+		 <br> <br><br>
+		 Dividing momentum results over Energy result, we get $u_f=-0.1$ which implies $\gamma_{u_f}=1.00503\sim 1$. Replacing it in Energy results, give us $$\Delta m = 10-7= 3$$
+		 Now let us compute the change in kinetic energy before and after the collision: $E_k=(\gamma_{u}-1)m\, c^2$. <br>
+		 <br>
+		 $\Delta E_k=E_{k_i}-E_{k_f}$ equals
+		  Using energy conservation, show that $B\,=\gamma_{u_f}\,m_f\,,\quad$ with $B$ equals to
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		  <ol  style="line-height:300%" type="A">
+		     <!-- longer -->
+		     <li> $1 c^2$ </li>
+		     <li> $-1 c^2$ </li>
+		      <li> $30 c^2$ </li>
+		      <li> $-30 c^2$ </li>
+		     <li> I dont know </li>
+		  </ol>
+		  <br><br>
+In other words, we have proven that $\Delta E_k=-\Delta m\, c^2$. Kinetic energy is converted into increased thermal energy, which registers as
+		  increased mass. <br><br>
+		  In a nutshell, the reverse process (fission) is the one used in nuclear reactors. We are still trying to achieve fusion process.
+
+		  <h2>Mass and Energy relations for massless particles?</h2>
+		  If $E=\gamma_u\,m\,c^2$ and $p=\gamma_u\,m\,u$, what are those values for a massless particle? undetermined <br><br>
+		  Fortunately there is a more universal relation that can be applied equally to massive and massless particles,
+		  $$E^2=p^2c^2+m^2c^4\,.$$
+		  for a massless particle, we then have $E=p\,c$<br><br>
+                  <h2>Next: Waves and Particles  </h2>
 		 
 		  
                   <br><br><br>
