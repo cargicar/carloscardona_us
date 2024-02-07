@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<Html Lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Special Relativity</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/emc2.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Special Relativity: Momentum and Energy</h1>
+                        <h3>PHYS-221 February 5 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+
+		  <!-- Learning objectives and concepts to learn -->
+		  <h2>Learning Objectives</h2>
+		  <ol>		    
+		    <li>Learning momentum definition in relativistic physics</li>
+		    <li>Learn relativistic implications to the energy </li>
+		    <li>What $$E=m\, c^2$$ has to do to with nuclear energy? </li>		  
+		  </ol>
+		Last session we learnt that Mass and Energy are related by the famous formula:												       $$E_{internal}=m\,c^2\,.$$
+														       
+		  This is a most striking relation: mass measures energy.  This includes all internal energy in whatever form it might take. We will talk about more about this in the next class. <br><br>
+		  It is a direct consequence of Einsteins postulates.<br><br>
+
+														       Finally, defining kinetic energy as the energy associated only to the motion of the particle, i.e, kinetic-energy$\equiv E_k=$(internal Energy)-(Energy at rest), we have:
+														       
+														  
+				<ol  style="line-height:300%" type="A">
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		     <!-- longer -->
+		     <li> ${1\over 2}m v^2$ </li>
+		     <li> $\gamma_u m c^2$</li>
+		     <li> $(\gamma_u -1)m c^2$</li>
+		     <li> I don't know </li>
+		  </ol>
+				<br><br>
+				<br>
+				 $E_K=(\gamma_u -1)m c^2\quad$  looks very different to the non-relativistic counter-part, but is easy to see that a low speeds, this can be approximated by,
+				$$\lim_{v<< c}E_K\sim\left(1+{1\over 2}{v^2\over c^2}-1\right)m\,c^2={1\over 2}m\, v^2\,.$$
+												       How this Energy behaves as a function of the particle speed?. We can <a style="color: navy;"  href="https://www.wolframalpha.com/input?i=Plot%5Bu%2FSqrt%5B1-u%5E2%5D%2C%7Bu%2C0%2C1%7D%5D"> plot the Energy as a function of speed</a>. <br><br>
+	The momentum formula agrees with the non-relativistic one at low speeds as we have argued previously, but diverges as $u$ approaches $c$. In this limit, the total energy diverge. For this reason alone, it should not be
+possible to accelerate a massive object to the speed of light. Infinite energy
+														       would be required.<br><br>
+		  <center>			   <img src="{% static "img/evsu.png" %}" width="850"></center> <br><br>
+		  Let us think a bit harder. 
+		  <center>			   <img src="{% static "img/momentumab.png" %}" width="350"></center> <br><br>
+		  Particle A has half the mass but twice the speed of particle B.  If the particles’ momenta are $p_A$ and $p_B$, then
+				<ol  style="line-height:300%" type="A">
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		     <!-- longer -->
+		     <li> $p_A > p_B$ </li>
+		     <li> $p_A = p_B$</li>
+		     <li>  $p_A < p_B$</li>
+		     <li> I dont know </li>
+		  </ol>
+
+                  <h2>Next: Mass and Energy </h2>
+		 
+		  
+                  <br><br><br>
+		  <!-- <ol type = "A"> -->
+		  <!--   <li>The proper time is also smaller. </li> -->
+		  <!--   <li>From the muon perspective, it wont reach the surface. </li> -->
+		  <!--   <li>The distance traveled by the muon is smaller from the Earth's reference frame. </li> -->
+		  <!--   <li>$\gamma$ does not change. </li> -->
+		  <!-- </ol> -->
+		  <br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

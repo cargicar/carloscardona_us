@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<Html Lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Special Relativity</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/emc2.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Special Relativity: Momentum and Energy</h1>
+                        <h3>PHYS-221 February 5 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+
+		  <!-- Learning objectives and concepts to learn -->
+		  <h2>Learning Objectives</h2>
+		  <ol>		    
+		    <li>Learning momentum definition in relativistic physics</li>
+		    <li>Learn relativistic implications to the energy </li>
+		    <li>Learn momentum and energy  conservation in relativistic systems</li>		  
+		  </ol>
+		  <br><br>
+		  <h2>Lets recap last concepts </h2>
+
+		  <!-- <em> Fill in the blancks</em> <br> -->
+		  <!-- <b> Rules</b>: those than know what to fill in =<b> shout it out</b>. Those that does not =  <b> raise your hand</b>. -->
+		  <!-- <br> -->
+		  <br>
+		  Recall the velocity transformation:
+		  $$u_x'=\frac{u_{x}-v}{1-\frac{v}{c^2}u_{x}}$$
+		  $$u_y'=\frac{u_{y}}{\gamma_v(1-\frac{v}{c^2}u_{x})} $$
+		     $$u_z'=\frac{u_{z}}{\gamma_v(1-\frac{v}{c^2}u_{x})} $$
+		 
+		 
+		  Let's practice velocity transformation in two scenarios: One called <em>Before</em> and the other called <em> after</em>. In a given reference frame, namely $S$, this two scenarios looks like:
+		  <br><center>   <img src="{% static "img/colision_before_s.png" %}" width="300"></center> <br>
+		  <br><center>   <img src="{% static "img/colision_after_s.png" %}" width="300"></center> <br>
+		  The number inside each circle is the mass of each particle in arbitrary units. Now, let us transform to a new frame $S'$, moving at $v=0.6c$ with respect to the $S$.<br><br> If we apply velocity transformations to transform the speed of particle of mass 3 to $S'$ <em>before</em>, which of the following is the right expression 
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		  <ol  style="line-height:300%" type="A">
+		     <!-- longer -->
+		     <li> $\frac{0.8c-0.6 c}{1-{0.8c\,0.6c\over c^2}}$ </li>
+		     <li> $\frac{-0.8c-0.6 c}{1+{0.8c\,0.6c\over c^2}}$</li>
+		     <li> $\frac{0.8c-0.6 c}{1+{0.8c\,0.6c\over c^2}}$</li>
+		     <li>$\frac{-0.8c-0.6 c}{1-{0.8c\,0.6c\over c^2}}$</li>
+		     <li> I don't know </li>
+		  </ol>
+	
+		  <br><br>
+		  Performing the transformation for all the remaining speeds we have:
+		  <br><center>   <img src="{% static "img/relat_collision.png" %}" width="600"></center> <br>
+		  <br>
+		  Lets ignore relativistic effects for a couple of minutes. In non-relativistic physics, the momentum of a particle is defined as:
+		  $$p=m\, u\,, $$ and in an isolated system (no forces acting upon it) the total momentum (sum of all momentums involved) is conserved. 
+		  <br><br>
+		  Ignoring special relativity, what is the total momentum of the <em>before</em> scenario?
+		 <br>   <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
+		  <ol  style="line-height:300%" type="A">
+		     <!-- longer -->
+		     <li>$p_{total}=0$ </li>
+		     <li>$p_{total}=4.8 c$ </li>
+		     <li> I don't know </li>
+		  </ol>
+
+		  <br><br>
+		  Before the collision $p_{total}=0$ which equals after the collision, henceforth, momentum is conserved. <br><br>
+		  What if relativistic effects are now being considered? In frame $S$ things are exactly the same, so we know transform all the momentums to the frame $S'$. Recalling,
+		  <br><center>   <img src="{% static "img/relat_collision.png" %}" width="600"></center> <br>
+		  the total momentum before and after the collision in frame $S'$ is:
+
+
+		  $${\rm Before\quad}4\times 0+3\times (-0.94 c)=-2.84c $$
+		  $${\rm After\quad}4\times (-0.882c)+3\times (0.385 c)=-2.38c $$
+
+		  Momentum <b>is not conserved</b> in frame $S'$ &#128562; <br>
+		  However, according to Einstein's postulates, the laws of physics should hold in all inertial frames, which suggest that the definition of momentum as $p=m\,u$ does not hold at high speeds, and need to me modified. To get the correct definition, we can make an educated guess and then try to see if such guess works or not. <br><br>
+		  Our guess is to choose the relativistic momentum to be proportional to the non-relativistic definition by a function of the speed of the particle:
+		  $$p=f(u)\, m\, u\,, $$ but we know that, for slow particles, $p=m\, u$, or in other words: when $u<< c$, then $$ f(u)=?.$$<br><br>
+		But we already know a function that satisfy this property,
+	$$\gamma_u=\frac{1}{\sqrt{1-({u\over c})^2}}\,.$$
+	Lets try this candidate  $$p=\frac{ m\, u}{\sqrt{1-({u\over c})^2}}\,. $$												   Very important observation, $\gamma_u$ depends on the speed of the particle, not the speed of a given reference frame.<br>   If we then go ahead and use this definition in frame $S$, and transform to prime frame, we will get after some boring algebra,
+																																																    $$ \gamma_{u'}m\, u'=\gamma_v\left(\gamma_u m\, u-v\gamma_u m\right)\,.$$ or
+																																																			$$ p_{u'}=\gamma_v\left( p_u-v\gamma_u\,m\right)\,.$$
+																																																				If we insist that $p_{u'}$ needs to be a constant in time (i.e conserved), the additional term $\gamma_u\,m$ needs to be a conserved quantity as well. What could it be?<br><br>
+														       There is one other quantity that is conserved in an isolated system: Energy. 														       Einstein suggested that this terms should correspond to the total internal Energy of the particle:												       $$E_{internal}=\gamma_u\,m\,c^2\,.$$ Several experiments had confirmed this formula with great accuracy, but let us talk about its significance. First, notice that it is a direct consequence of Einsteins postulates. Second, in the case of a stationary particle, $u=0$, such particle will still have energy given by:
+														       $$E_{internal}=m\,c^2\,.$$
+														       
+														       This is a most striking relation: mass measures energy. If an object. This includes all internal energy in whatever form it might take. We will talk about more about this in the next class. <br><br>
+														       How this Energy behaves as a function of the particle speed?. We can <a href="https://www.wolframalpha.com/input?i=Plot%5Bu%2FSqrt%5B1-u%5E2%5D%2C%7Bu%2C0%2C1%7D%5D"> plot the Energy as a function of speed</a>. <br><br>
+	The momentum formula agrees with the non-relativistic one at low speeds as we have argued previously, but diverges as $u$ approaches $c$. In this limit, the total energy diverge. For this reason alone, it should not be
+possible to accelerate a massive object to the speed of light. Infinite energy
+														       would be required.<br><br>
+														       Finally, defining kinetic energy as the energy associated only to the motion of the particle, i.e, kinetic-energy$\equiv E_k=$(internal Energy)-(Energy at rest), we have:
+														       
+														  
+				<ol  style="line-height:300%" type="A">
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		     <!-- longer -->
+		     <li> ${1\over 2}m v^2$ </li>
+		     <li> $\gamma_u m c^2$</li>
+		     <li> $(\gamma_u -1)m c^2$</li>
+		     <li> I don't know </li>
+		  </ol>
+		  <br><br><br>
+	
+		 
+                  <h2>Next: Mass and Energy </h2>
+		 
+		  
+                  <br><br><br>
+		  <!-- <ol type = "A"> -->
+		  <!--   <li>The proper time is also smaller. </li> -->
+		  <!--   <li>From the muon perspective, it wont reach the surface. </li> -->
+		  <!--   <li>The distance traveled by the muon is smaller from the Earth's reference frame. </li> -->
+		  <!--   <li>$\gamma$ does not change. </li> -->
+		  <!-- </ol> -->
+		  <br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
