@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<Html Lang="en">
+<html lang="en">
 
 <head>
 
@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Matter Waves</title>
+    <title>Pre- Quantum Mechanics</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -69,13 +69,17 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url({% static 'img/planck.jpg' %})">
+    <header class="intro-header" style="background-image: url({% static 'img/maxwell.jpeg' %})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Matter Waves</h1>
-                        <h3>PHYS-221 September 7 / 2023 </h3>
+                        <h1>Pre - Quantum Mechanics</h1>
+                        <hr class="small">
+                        <span class="subheading">=== </span>
+                        <span class="subheading">=== </span>
+                        <h2>Electromagnetic Waves </h2>
+                        <h3>PHYS-221 Feb 9 / 2024 </h3>
                     </div>
                 </div>
             </div>
@@ -87,13 +91,38 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
-          
+                   		  <h2>Learning Objectives</h2>
+		  <ol>		    
+		    <li>Recall wave description of light</li>
+		    <li> </li>
+		    <li> </li>		  
+		  </ol>
+
+                    <h3 class="post-title">
+                        Quick review on Electromagnetic Waves
+                        </h3><br><br>
+                    <center>   <img src="{% static "img/feynman_quote.png" %}" alt="double_slit" width="800"></center>        <br><br>
+		    <center>   <img src="{% static "img/Maxwell_diff_form.png" %}" alt="double_slit" width="800"></center>        <br><br>
+		    <center>   <img src="{% static "img/1DME_diff_form.png" %}" alt="double_slit" width="800"></center>        <br><br>
+		    <center>   <img src="{% static "img/1DMaxwell_sols.png" %}" alt="double_slit" width="800"></center>        <br><br>
+		     <center>   <img src="{% static "img/EM_wave.png" %}" alt="double_slit" width="800"></center>        <br><br>	    
+How do you generate light (electromagnetic radiation)?
+
+
+			  
+                            We have seen in last class that, guiden by experiments such a Blackbody Radiation, <br><br>
+                            $$\boxed{{dU\over df}={8\pi~ V~h~f^3/c^3\over e^{h f/k_B T}-1} }$$
+
+                            Photoelectric Effect and Comptom Effect (among others), Electromagnetic waves exhibit particle behavior, and as such we have associated a name to that particle: <b>The Photon</b>. Such particle is massless and is characterized by a momentum $\boxed{p=h/\lambda}$ and Energy $\boxed{E=h f}$. Such behaviour lead us to the discovery of the <em>Wave-Particle duality</em> of light.
+                        </br>
+                        Today we are gonna see that this <em>Dual</em> behaviour is not unique of light, but is sort of universal, in the sense that even matter exhibit such strange behavior.</p>
+
                         <h2>Is it a wave or a particle? </h2>
-                        <p>Well, is both, but it depends on how the size of the corresponding wave compares with the size of the "relevant dimensions" of the phenomena at hand. When the wavelength $\lambda\sim D$ then we will be able to perceive the wave nature. When however $\lambda<< D$ we will perceive it as a particle (c.c. make a drawing) </p>
+                        <p>Well, is both, but it depends on how the size of the corresponding wave compares with the size of the "relevant dimensions" of the phenomena at hand. When the wavelenght $\lambda\sim D$ then we will be able to percieve the wave nature. When however $\lambda<< D$ we will perceive it as a particle (c.c. make a drawing) </p>
 
                         <h2>Double Slit Experiment</h2>
-                        <p> One easy an classical experiment to distinguish a wave from a particle is the double slit experiment, in which a "beam" is passed through two small slits of size comparable to $\lambda$. If the "beam" is truly a wave, then one should observe an interference pattern at the screen.</p>
-                            <center>   <img src="{% static "img/double_slit2.png" %}" alt="double_slit" width="1000"></center> 
+                        <p> One easy an classical experiment to distinguish a wave from a particle is the double slit experiment, in which a "beam" is passed through a two small slits of size comparable to $\lambda$. If the "beam" is truly a wave, then one should observe an interference pattern at the screen.</p>
+                
 
                         </br></br>
                     <p>    Solving the geometrical problem represented in figure above, we can see that if an interference pattern is observed, bright (constructive) spots will be located at the screen location:</br></br> $\boxed{y_{bright}={\lambda L\over d}m}$  with  $m\in \mathbb{Z}$.</br></br>
@@ -106,34 +135,29 @@
                         In 1927, Davisson & Germer from Bell labs were studying scattering of electrons off a Nickel cristal, and they observe the following pattern on a film placed to detect the scattered electrons,
                         <center>   <img src="{% static "img/electron_inter.jpeg" %}" alt="double_slit" width="500"></center>
 
-                        Which is nothing else but an interference pattern <span style='font-size:30px;'>&#128563;</span>.  What  Davisson & Germer had performed inadvertently, was a sort of double slit experiment using electrons instead of light, but instead of a double slit, they use the crystal structure of Nickel, whose atomic interspace is in the order of nm. <br><br>
+                        Which is nothing else but an interference pattern <span style='font-size:30px;'>&#128563;</span>.  What  Davisson & Germer had performed inadvertently, was a sort of double slit experiment using electrons instead of light, but instead of a double slit, they use the crystal structure of Nickel, whose atomic interspace is in the order of nm. <br><br> Let us see an schematic representation of such "double slit":
 
-			Let us derive a quantitative representation of such difraction experiment:
-			<br><br>
-			<b>Clicker / In class problem</b>
-			A schematic representation of Davisson & Gerber experiment is given below, guided by it, derive the condition for constructive interference of wave difracted by the cristal structure.
-                        <center>   <img src="{% static "img/bragg.png" %}" alt="double_slit" width="500"></center>
-
+                        <center>   <img src="{% static "img/bragg.gif" %}" alt="double_slit" width="500"></center>
                         For this, Davisson & Germer won the 1937 Nobel Prize in Physics.
                         <br><br>
                         By performing the same gymnastics used for the double-slit configuration, we arrive to the <b>Bragg Law</b>
                         <br><br>
-                        $2d {\rm sin}(\theta)=m\lambda$. with $m\in \mathbb{Z}$<br><br>
+                        $2d {\rm sin}(\theta)=\lambda$.<br><br>
                         For which the family duo, won the Noble prize in 1915 ( in reality, they came out with this formula while studying X-ray difraction on cystals, but the same applies for electrons, which are also a wave ).
 
                         <br><br>
  Davisson & Germer experiment, provides convincing evidence of the wave nature of electrons, which is a fundamental massive particle!. In turn, suggesting that all matter should exhibit some sort of wave behaviour!
                         <h2>Matter Waves</h2>
-<!-- Now suppose we perform a truly double slit experiments with electron, what would we see? -->
-<!--                        <br><br> -->
-<!--                        <center>   <img src="{% static "img/bragg.gif" %}" alt="double_slit" width="500"></center><br><br> -->
-<!--                        From the statistical point of view, the "amoung" of electrons on different regions of the screens should be associated with the probability of finding an electron in such region (i.e, the more electrons in a region after a millions of electrons being fired, the more the probability of finding an electron there). From the wave point of view, the "intensity" of a region is given by the square of the amplitude of the resulting wave, and such, the natural conclusion to make is: <br><br> -->
-<!--                        <center> <em>The probability of finding a particle in a region is proportional to the square of the  wave function associated to that particle in that region.</em></center> <br><br> -->
-<!--                        Or in mathematical terms:<br><br> -->
-<!--                        <center>$P(e^{-},x)=|\Psi(x,t)|^2$</center> <br><br> -->
-<!--                        This lead us to the ask: In a EM wave, the stuff oscilatting are the E & M fields. What is then oscillating in a Matter wave?. R:  The probability of finding the particle is the oscillating phenomena &#129327; -->
+Now suppose we perform a truly double slit experiments with electron, what would we see?
+                       <br><br>
+                       <center>   <img src="{% static "img/bragg.gif" %}" alt="double_slit" width="500"></center><br><br>
+                       From the statistical point of view, the "amoung" of electrons on different regions of the screens should be associated with the probability of finding an electron in such region (i.e, the more electrons in a region after a millions of electrons being fired, the more the probability of finding an electron there). From the wave point of view, the "intensity" of a region is given by the square of the amplitude of the resulting wave, and such, the natural conclusion to make is: <br><br>
+                       <center> <em>The probability of finding a particle in a region is proportional to the square of the  wave function associated to that particle in that region.</em></center> <br><br>
+                       Or in mathematical terms:<br><br>
+                       <center>$P(e^{-},x)=|\Psi(x,t)|^2$</center> <br><br>
+                       This lead us to the ask: In a EM wave, the stuff oscilatting are the E & M fields. What is then oscillating in a Matter wave?. R:  The probability of finding the particle is the oscillating phenomena &#129327;
 
-                       An important observation to make is that, a neccesary requirement for creating a wave interference pattern, is that both interfering waves need to be coherent and have equal amplitudes. This implies that a given electron, similarly as a wave, need to pass through both slits AT THE SAME TIME! &#129327; &#129327;. (it is what it is).
+                       Another important observation to make is that, a neccesary requirement for creating a wave interference pattern, is that both interfering waves need to be coherent and have equal amplitudes. This implies that a given electron, similarly as a wave, need to pass through both slits AT THE SAME TIME! &#129327; &#129327;. (it is what it is).
 
                        <br><br>
                        The wavelenght for matter carries an special name, is it called <b>de Broglie wavelength</b> and is given simple by adopting the same relation as the photon $\lambda={h\over p}$. This relation is <b>universal</b>- true for all phenomena. <br><br>
