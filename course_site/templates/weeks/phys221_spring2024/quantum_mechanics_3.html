@@ -218,8 +218,63 @@ temperature of the Sun:
                         <!-- </br> -->
                         <!-- Today we are gonna see that this <em>Dual</em> behaviour is not unique of light, but is sort of universal, in the sense that even matter exhibit such strange behavior.</p> -->
 
-                        <h2>Next: Photoelectric Effect </h2>
-                       <br><br><br>
+                        <h2>Is it a wave or a particle? </h2>
+                        <p>Well, is both, but it depends on how the size of the corresponding wave compares with the size of the "relevant dimensions" of the phenomena at hand. When the wavelenght $\lambda\sim D$ then we will be able to percieve the wave nature. When however $\lambda<< D$ we will perceive it as a particle (c.c. make a drawing) </p>
+
+                        <h2>Double Slit Experiment</h2>
+                        <p> One easy an classical experiment to distinguish a wave from a particle is the double slit experiment, in which a "beam" is passed through a two small slits of size comparable to $\lambda$. If the "beam" is truly a wave, then one should observe an interference pattern at the screen.</p>
+                
+
+                        </br></br>
+                    <p>    Solving the geometrical problem represented in figure above, we can see that if an interference pattern is observed, bright (constructive) spots will be located at the screen location:</br></br> $\boxed{y_{bright}={\lambda L\over d}m}$  with  $m\in \mathbb{Z}$.</br></br>
+                        Similarly, darks spots will be at,
+                        </br></br> $\boxed{y_{dark}={\lambda L\over d}(m+1/2)}$  with  $m\in \mathbb{Z}$.</br></br>
+                    </p>
+
+                        <h2>Bragg Law</h2>
+                        <p>
+                        In 1927, Davisson & Germer from Bell labs were studying scattering of electrons off a Nickel cristal, and they observe the following pattern on a film placed to detect the scattered electrons,
+                        <center>   <img src="{% static "img/electron_inter.jpeg" %}" alt="double_slit" width="500"></center>
+
+                        Which is nothing else but an interference pattern <span style='font-size:30px;'>&#128563;</span>.  What  Davisson & Germer had performed inadvertently, was a sort of double slit experiment using electrons instead of light, but instead of a double slit, they use the crystal structure of Nickel, whose atomic interspace is in the order of nm. <br><br> Let us see an schematic representation of such "double slit":
+
+                        <center>   <img src="{% static "img/bragg.gif" %}" alt="double_slit" width="500"></center>
+                        For this, Davisson & Germer won the 1937 Nobel Prize in Physics.
+                        <br><br>
+                        By performing the same gymnastics used for the double-slit configuration, we arrive to the <b>Bragg Law</b>
+                        <br><br>
+                        $2d {\rm sin}(\theta)=\lambda$.<br><br>
+                        For which the family duo, won the Noble prize in 1915 ( in reality, they came out with this formula while studying X-ray difraction on cystals, but the same applies for electrons, which are also a wave ).
+
+                        <br><br>
+ Davisson & Germer experiment, provides convincing evidence of the wave nature of electrons, which is a fundamental massive particle!. In turn, suggesting that all matter should exhibit some sort of wave behaviour!
+                        <h2>Matter Waves</h2>
+Now suppose we perform a truly double slit experiments with electron, what would we see?
+                       <br><br>
+                       <center>   <img src="{% static "img/bragg.gif" %}" alt="double_slit" width="500"></center><br><br>
+                       From the statistical point of view, the "amoung" of electrons on different regions of the screens should be associated with the probability of finding an electron in such region (i.e, the more electrons in a region after a millions of electrons being fired, the more the probability of finding an electron there). From the wave point of view, the "intensity" of a region is given by the square of the amplitude of the resulting wave, and such, the natural conclusion to make is: <br><br>
+                       <center> <em>The probability of finding a particle in a region is proportional to the square of the  wave function associated to that particle in that region.</em></center> <br><br>
+                       Or in mathematical terms:<br><br>
+                       <center>$P(e^{-},x)=|\Psi(x,t)|^2$</center> <br><br>
+                       This lead us to the ask: In a EM wave, the stuff oscilatting are the E & M fields. What is then oscillating in a Matter wave?. R:  The probability of finding the particle is the oscillating phenomena &#129327;
+
+                       Another important observation to make is that, a neccesary requirement for creating a wave interference pattern, is that both interfering waves need to be coherent and have equal amplitudes. This implies that a given electron, similarly as a wave, need to pass through both slits AT THE SAME TIME! &#129327; &#129327;. (it is what it is).
+
+                       <br><br>
+                       The wavelenght for matter carries an special name, is it called <b>de Broglie wavelength</b> and is given simple by adopting the same relation as the photon $\lambda={h\over p}$. This relation is <b>universal</b>- true for all phenomena. <br><br>
+                       Similarly, the frequency of a wave of matter is given by $E= h f $ or $f={E\over h}$. <br><br>Now the fundamental difference between radiation waves and matter wwaves is that matter wavelength varies inversily with the mass. Thats the reason why we humans don't see our wave &#128546;. Luckily, the crystal atomic interspace is small enought to be of the order of an electron de Broglie wavelength. Subsequently, difraction patterns are observed using much heavier particles, such neutrons or even atoms. <br>
+                       Similarly to the case of light, the wave or particle behaviour depends on the size of $\lambda$ wrt relevant scales (draw the double slit situation).
+                        </p>
+
+                        <h2>The Schrödinger equation</h2>
+
+                        The wave equation for matter fields is given by the Schrödinger Equation
+
+                        \begin{equation}
+                        -{\hbar\over 2 m}{\partial^2\Psi(x,t)\over\partial x^2}=i\hbar{\partial\Psi(x,t)\over\partial t}\,,
+                        \end{equation}
+                        where $\hbar=h/2\pi$.
+
                 </div>
             </div>
         </div>
