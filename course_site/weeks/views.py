@@ -47,6 +47,9 @@ def relativity_8(request):
 def quantum_mechanics_1(request):
     return TemplateResponse(request,"weeks/phys221_spring2024/quantum_mechanics_1.html",)
 
+def quantum_mechanics_2(request):
+    return TemplateResponse(request,"weeks/phys221_spring2024/quantum_mechanics_2.html",)
+
 
 #######################################################
 #### Phys 221 Fall 2023 Site #############################

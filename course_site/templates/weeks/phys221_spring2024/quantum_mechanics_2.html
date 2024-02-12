@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Pre- Quantum Mechanics</title>
+    <title>Quantum Mechanics</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -69,17 +69,17 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url({% static 'img/maxwell.jpeg' %})">
+    <header class="intro-header" style="background-image: url({% static 'img/planck.jpg' %})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Pre - Quantum Mechanics</h1>
+                        <h1>Quantum Mechanics</h1>
                         <hr class="small">
                         <span class="subheading">=== </span>
                         <span class="subheading">=== </span>
-                        <h2>Electromagnetic Waves </h2>
-                        <h3>PHYS-221 Feb 9 / 2024 </h3>
+                        <h2>Experimental Indications  </h2>
+                        <h3>PHYS-221 Feb 12 / 2024 </h3>
                     </div>
                 </div>
             </div>
@@ -93,116 +93,72 @@
                 <div class="post-preview">
                    		  <h2>Learning Objectives</h2>
 		  <ol>		    
-		    <li>Review wave description of light</li>
-		    <li>Review waves definitions and properties </li>
+		    <li>Learn what is Blackbody radiation and it's implications for the development of Quantum Mechanics</li>
+		    <li>Learn the Photoelectric Effect and and it's implications for the development of Quantum Mechanics </li>
 		  </ol>
+                    <!-- <center>   <img src="{% static "img/feynman_quote.png" %}"  width="600"></center>        <br><br> -->
+		    <!-- <center>   <img src="{% static "img/Maxwell_diff_form.png" %}"  width="600"></center>        <br><br> -->
+                  <h2>The Ultraviolet Catastrophe </h2>
 
-                    <h3 class="post-title">
-                        Quick review on Electromagnetic Waves
-                        </h3><br><br>
-                    <center>   <img src="{% static "img/feynman_quote.png" %}"  width="600"></center>        <br><br>
-		    <center>   <img src="{% static "img/Maxwell_diff_form.png" %}"  width="600"></center>        <br><br>
-		    <center>   <img src="{% static "img/1DME_diff_form.png" %}"  width="600"></center>        <br><br>
-In general, the wave equation looks like $${\partial^2 D\over \partial^2 x}={1\over v^2}{\partial^2 D\over \partial^2 t}\,,$$ with $v=$speed of propagation. Henceforth, for an electromagnetic wave $v=c$ !!<br><br>  
-		    Do you remember the solutions to this equation? <br><br>
-		    
-		    <center>   <img src="{% static "img/1DMaxwell_sols.png" %}" width="600"></center>        <br><br>
-		    This is known as a <em>plane wave</em>.  
-		     Other definitions to remember:
-		    $\lambda=$<em>wave length </em>, $T=$<em>wave period</em>, $k=$<em>wave number</em>, $w=$<em>angular frequency</em>.<br><br>
+		  		       <h3>Lets recap last concepts </h3>
+		  <em> Fill in the blancks</em> <br>
+		  <b> Rules</b>: those than know what to fill in =<b> shout it out</b>. Those that does not =  <b> raise your hand</b>.
+		  <br>
+		  <br>
+Classically, electromagnetic radiation is a w____.<br><br>		 
+		  Classically, light is generated when charged particles are a________.<br><br>
+		 
+		 <br><br>
 
-		    A representation of an electromagnetic wave:
-		    <center>   <img src="{% static "img/EM_wave.png" %}"  width="600"></center>        <br><br>
-		    or a <a  style="color: navy;"  target="_blank" href="https://www.walter-fendt.de/html5/phen/electromagneticwave_en.htm"> more dynamic picture </a><br><br>
-A way to think about this picture, is to remember that Faraday discovered that a changing magnetic field creates an induce electric field, and Maxwell showed than a changing e electric current creates an induce magnetic field. The idea behind electromagnetic waves, is that the fields can co-exits in a self-sustained way. 
-				     <br><br>
+		 <h3>Thermal radiation</h3>
+		 Think heating up a solid, as much as you want as long it remains a solid. Microscopically, what do you think happens to the independent molecules of the solid?
+		 		        <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+		   <li>Get detached from the solid. </li>
+		   <li>Increase their temperature. </li>
+		    <li>Vibrate faster. </li>
+		   <li> Collide with each other </li>
+		   <li>I don't know</li>
+		 </ol>
+		 <br><br>
 
-				     <center>   <img src="{% static "img/sinosoidal_wave.png" %}" width="600"></center>        <br><br>
+		 All materials emit electromagnetic radiation, because they contain charged particles that jiggle around, and an accelerating charge radiates electromagnetic energy. This particular radiation is termed <em>Thermal Radiation</em>.<br><br>
+		 What other radiation can a body "emit"? 
+		 <br><br>
+		 Well, they can reflect radiation, much as a mirror reflect visible radiation. <br><br>
 
-				     Consider the wave function $\cos(k x+\omega t)$. The wave is traveling... 														  
-				<ol  style="line-height:300%" type="A">
-		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
-		     <!-- longer -->
-		     <li> ... to the right </li>
-		     <li> ... to the left </li>
-		     <li> ...stationary</li>
-		     <li> I don't know </li>
-		  </ol>
-				<br><br>
+		 An object from which electromagnetic radiation emanates solely due to the thermal motion of its charges is known as a <b>Blackbody</b>. Any radiation that strikes it must be absorbed rather than reflected, hence the name.
 
-				It turns out to be more convenient to pack the two terms of a plane wave, into a single one by using Euler's formula $$ e^{i X}=\cos(X)+i\sin(X)$$<br><br>
- $|e^{i X}|^2$ equals:
-				<ol  style="line-height:300%" type="A">
-		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
-		     <!-- longer -->
-		     <li> $1$ </li>
-		     <li> $|e^{2\,i X}|$ </li>
-		     <li> $\cos(X)^2+2i\sin(X)\cos(x)-\sin(X)^2$</li>
-		     <li> I don't know </li>
-		  </ol>
-				<br><br>
-			Remember complex number multiplication.	From now on, we write a plane wave as
-				$$E= A\,e^{i(k x-\omega t)}$$ <br> <br>
-				If we include all thew other dimensions, the plane wave looks like
-				$$ \vec{E}(x,y,z,t)=\vec{E}(\vec{r},t)=\vec{E}_0\,e^{i(\vec{k}\cdot \vec{r}-\omega t)}\,,$$ the <em>wave vector</em> $\vec{k}$  tells you the direction of....
-				
-				<ol  style="line-height:300%" type="A">
-		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
-		     <!-- longer -->
-		     <li>the electric field vector  </li>
-		     <li> the magnetic field vector </li>
-		     <li> the plane wave propagation</li>
-		     <li> None of the above </li>
-		  </ol>
-				<br><br>
-				<center>   <img src="{% static "img/sinosoidal_wave_2.png" %}" width="600"></center>        <br><br>
-What stuff is moving in space as an electromagnetic wave passes? 
 
-				<ol  style="line-height:300%" type="A">
-		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
-		     <!-- longer -->
-		     <li>the electric field vector  </li>
-		     <li> the magnetic field vector </li>
-		     <li> the air molecules</li>
-		     <li> Nothing </li>
-		  </ol>
-			<br>	<br><br>
-			How do we generate light (electromagnetic radiation)?
-			
-				<ol  style="line-height:300%" type="A">
-		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
-		     <!-- longer -->
-		     <li>stationary charges  </li>
-		     <li> charges moving at constant speed </li>
-		     <li> accelerating charges</li>
-		     <li> None of the above </li>
-		  </ol>
-			<br>	<br><br>  
-								 
-			<center>   <img src="{% static "img/sunlight.png" %}" width="600"></center>        <br><br>
-			Radio waves are generated by oscillating an electron on a wire. When the wave reach an antenna, the electric field interact with the electrons on it and produce an electrica current that is transformed in a signal (...say a Shakira's song... )<br><br>
- <center>   <img src="{% static "img/antenna.png" %}" width="600"></center>        <br><br>
-				 <br><br>		
+		 <br><br>
+		 Based in such definition, which of the following is a blackbody
+	<br>	 		 		        <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+		   <li>The Sun </li>
+		   <li>A piece of charcoal </li>
+		  
+		    <li>A piece of Glass </li>
+		   <li> A Black-hole </li>
+		   <li>A planet</li>
+		   <li>None of the above</li>
+		 </ol>
+		 <br><br>
 
-				 <center>   <img src="{% static "img/EM_spectrum.png" %}" width="700"></center>        <br><br>
-
-				 Take away message(s):
-				 		<ul>
-	
-		   		     <li>Electromagnetic radiation (light), is a wave  </li>
-		     <li> To create light, we need both E and B fields. We can only do this with accelerating charges </li>
-		     <li> Light interact with matter by means of electro-magnetic interactions with the electrons (and sometimes protons) in the material</li>
-		   
-		  </ul>
-		<br><br>
-                  <h2>Next: Waves and Particles  </h2>
-				<br><br><br>
-                            We have seen in last class that, guiden by experiments such a Blackbody Radiation, <br><br>
-                            $$\boxed{{dU\over df}={8\pi~ V~h~f^3/c^3\over e^{h f/k_B T}-1} }$$
-
-                            Photoelectric Effect and Comptom Effect (among others), Electromagnetic waves exhibit particle behavior, and as such we have associated a name to that particle: <b>The Photon</b>. Such particle is massless and is characterized by a momentum $\boxed{p=h/\lambda}$ and Energy $\boxed{E=h f}$. Such behaviour lead us to the discovery of the <em>Wave-Particle duality</em> of light.
-                        </br>
-                        Today we are gonna see that this <em>Dual</em> behaviour is not unique of light, but is sort of universal, in the sense that even matter exhibit such strange behavior.</p>
+		 <br><br>
+		 The Sun’s surface, from which reflection is neglectable, is a blackbody.<br><br>
+		 A good approximation to a blackbody can be done from  an object with an interior cavity and a small hole connecting it to the exterior, <br><br> <center>   <img src="{% static "img/blackbody.jpeg" %}"  width="300"></center> <br><br>
+		 An experiment is setup such us we can measure the energy emitted by a blackbody (like the sun). In practice the <b>spectral density</b>$={du\over df}$ is measured: 
+ <br> <center>   <img src="{% static "img/spectral_energy.png" %}"  width="500"></center> <br><br>
+ If the electromagnetic radiation behaves strictly as sinusoidally oscillating waves, the spectral density turns out to be
+ $${dU\over df}=k_b T\times {8\pi V\over c^3}f^2\,. $$ This curve is also shown in the plot above, the black curve shows that as the frequency on the radiated wave increases, the spectral energy density grows (quadratically), leading to a divergence in the energy spectral density: The ultraviolet catastrophe". <br><br>
+ In a desperate attempt to avoid to solve the such catastrophe, Max Planck suggested that the energy at frequency $f$ is somehow restricted to be proportional to an integer times the frequency  $$E=n\,h\,f\,,$$ which leads to following theoretical prediction,
+ <br>
+                            $$\boxed{{dU\over df}={8\pi~ V~h~f^3/c^3\over e^{h f/k_B T}-1} }\,,$$
+ and which perfectly matches the curve seen experimentally.
+ <br><br>
+                        <!--     Photoelectric Effect and Comptom Effect (among others), Electromagnetic waves exhibit particle behavior, and as such we have associated a name to that particle: <b>The Photon</b>. Such particle is massless and is characterized by a momentum $\boxed{p=h/\lambda}$ and Energy $\boxed{E=h f}$. Such behaviour lead us to the discovery of the <em>Wave-Particle duality</em> of light. -->
+                        <!-- </br> -->
+                        <!-- Today we are gonna see that this <em>Dual</em> behaviour is not unique of light, but is sort of universal, in the sense that even matter exhibit such strange behavior.</p> -->
 
                         <h2>Is it a wave or a particle? </h2>
                         <p>Well, is both, but it depends on how the size of the corresponding wave compares with the size of the "relevant dimensions" of the phenomena at hand. When the wavelenght $\lambda\sim D$ then we will be able to percieve the wave nature. When however $\lambda<< D$ we will perceive it as a particle (c.c. make a drawing) </p>
