@@ -205,13 +205,13 @@ description, the kinetic energy of photoelectrons should not depend on the frequ
 		 <h2>What the photoelectric effect is telling us</h2>
 		 	 <center>   <img src="{% static "img/photoelectric_exp.png" %}" width="700"></center>       <br>
 		 <ul>
-		   <li>Stopping voltage does not depend on the intensity of light &#x2192; kinetic energy is independent of the lights intensity.</li>
+		   <li>Stopping voltage does not depend on the intensity of light &#x2192; kinetic energy is independent of light intensity.</li>
 		   <li>For large positive electric potential between the plates and a given light intensity (i.e force pushing electron from the left plate towards the right plate), the current reach a maximum constant value  &#x2192; number of photoelectrons reach a maximum constant number.</li>
 		   <li> There exist a cut-off frequency below which none photoelectrons are observed.</li>
 		     
 		 </ul>
 
-		 This results leads to Einstein in 1905 to consider seriously Planck's hypothesis, that the energy of light depends on it's frequency in a quantized fashion. In Einstein's approach, a beam of monochromatic light of frequency $f$ is made of particles, called <b>photons</b>. A <b> photon</b> is a particle of light and carries an energy $$E_f=h\, f\,.$$
+		 This results leads to Einstein in 1905 to consider seriously Planck's hypothesis, that the energy of light come in integer packets of the frequency $E=n\,h\,f$ (depends on it's frequency in a quantized fashion). In Einstein's approach, a beam of monochromatic light of frequency $f$ is made of particles, called <b>photons</b>. A <b> photon</b> is a particle of light and carries an energy $$E_f=h\, f\,.$$
 		 In Einstein's interpretation, each photon gives away all its energy to only one electron on the metal surface, because only integer numbers of $h\,f$ are available, so the photon can't give away just a fraction. This explains the frequency cut-off, if an photon has energy $E_f=h\,f<\phi $, then there
 is simply insufficient energy in any given photon to free an electron. So none are
 freed, no matter how high the intensity. However, if the
@@ -227,8 +227,8 @@ freed, no matter how high the intensity. However, if the
 		 </ol><br><br>
 		
 		    For higher frequencies, energy conservation tell us:
-		   $$E_f=E_{K_{max}}+\phi\,,\quad{\rm or}\quad E_{K_{max}}=h\,f-\phi$$
-		   The subscript $max$ refers to the fact that the maximum energy an electron can gain is all what is left from overcoming $\phi$.
+		   $$E_f=E_{K_{max}}+\phi\,,\quad{\rm or}\quad\boxed{ E_{K_{max}}=h\,f-\phi}$$
+		   The subscript $max$ refers to the fact that the maximum energy an electron can gain, is all what is left from overcoming $\phi$.
 
 		   <br><br>
 		   Einstein’s interpretation of the photoelectric effect explains not only the
@@ -252,13 +252,15 @@ earned him the 1921 Nobel Prize in physics.
 
 
 			  <h2> The Compton Effect </h2>
-			  Around 1920's, Planck's energy quantization hypothesis was getting traction. Right after Einstein used it to explain the Photo-electric effect, Arthur Holly Compton used it to explain the scattering of light off free electrons. 
+			  Around 1920's, Planck's energy quantization hypothesis was getting traction. Right after Einstein used it to explain the Photo-electric effect, Arthur Holly Compton used it to explain the scattering of light off free electrons. <br><br>
+			  According to the theory of electromagnetism of  Maxwell, the electron getting hit by the incoming X-ray, will oscillate and radiate a wave of approximately the same frequency and in all directions. <br><br>
+			  It was observed that the scattered wave has a significantly longer wavelength and directed in a particular direction. 
 			  <br>
 			    <br> Let us recall that if the two relativistic formulas $E=\gamma_u\,m\,c^2$ and $p=\gamma_u\,m\,u$ are combined, we get a more universal relation between momentum an energy that can be applied equally to massive and massless particles,
 		  $$E^2=p^2c^2+m^2c^4\,.$$
 			    for a massless particle, we then have $E=p\,c$<br><br>
 			    Compton combine this relativistic expression with Planck's hypothesis to define the momentum of a photon to be
-			    $$p={E\over c}={h\, f\over c}={h\over \lambda}\,.$$
+			    $$\boxed{p={E\over c}={h\, f\over c}={h\over \lambda}}\,.$$
 			    To experimentally check the validity of such assumption experimentally, Compton observed the interaction between X-rays and free electrons, and consider it as a collision between two particles, a photon and electron.    
 			    <br><br>
 
@@ -280,9 +282,24 @@ earned him the 1921 Nobel Prize in physics.
 		 and energy conservation implies
 		   $${h\,c\over \lambda}+m_e\,c^2={h\,c\over \lambda'}+\gamma_u m_e\,c^2\,.$$
 		 We then use these equations to eliminate variable $u$, which after some algebra lead us to a relation between the wavelenghts of the light before and after the collision,
-		 $$\lambda'-\lambda={h\over m_e c}(1-cos\theta)\,.$$
+		 $$\boxed{\lambda'-\lambda={h\over m_e c}(1-cos\theta)}\,.$$
 		 Which is known as the <b>Compton effect</b>.<br><br>
-		 The difference in wavelength between the incident and scattered photons depends only on the angle of scatter, a discovery that earned Compton the 1927 Nobel Prize. We see also that the scattered photon is always of longer wavelength than the incident. Its energy is always less, which makes sense, for kinetic energy is given to the electron.
+		 The difference in wavelength between the incident and scattered photons depends only on the angle of scatter, a discovery that earned Compton the 1927 Nobel Prize. We see also that the scattered photon is always of longer wavelength than the incident. Its energy is always less, which makes sense, for kinetic energy is given to the electron.<br><br>
+		 <h2>Pair Production and Antimatter</h2>
+		 The blackbody radiation, photoelectric effect and the Compton effect are three important ways in
+which electromagnetic radiation interacts as a particle with matter. We now
+		 discuss a third. <br><br>
+		 In 1932, a revolutionary new particle was discovered. Carl D. Anderson
+(Nobel Prize, 1936) was studying the effects of cosmic rays, energetic particles bombarding Earth, when he noticed something behaving like an electron
+but of positive charge. It curved the right amount but the “wrong” way in a
+		 magnetic field.
+<br><br>
+			    <center>   <img src="{% static "img/positron.jpg" %}"  width="600"></center>
+<br><br>
+This positively charged electron was termed the <b>positron</b>. The phenomenon of particle creation by pairs, is known as <b>pair production</b>.<br><br>
+The positron is an example of antimatter. Its life is short as it quickly finds an electron to annihilate together: erased, their
+entire energy suddenly transformed to two photons. This process is known as <b>pair annihilation</b>.<br><br><br>
+		 <h2>Next: Matter Waves</h2>
 			  <br><br><br><br>
                 </div>
             </div>
