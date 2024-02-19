@@ -69,7 +69,7 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url({% static 'img/planck.jpg' %})">
+    <header class="intro-header" style="background-image: url({% static 'img/xray_dif.jpeg' %})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -78,8 +78,8 @@
                         <hr class="small">
                         <span class="subheading">=== </span>
                         <span class="subheading">=== </span>
-                        <h2>Experimental Indications  </h2>
-                        <h3>PHYS-221 Feb 14 / 2024 </h3>
+                        <h2>Matter Waves  </h2>
+                        <h3>PHYS-221 Feb 19 / 2024 </h3>
                     </div>
                 </div>
             </div>
@@ -93,170 +93,34 @@
                 <div class="post-preview">
                    		  <h2>Learning Objectives</h2>
 		  <ol>		    
-		    <li>Learn implications for the development of Quantum Mechanics and some uses</li>
-		    <li>Learn the Photoelectric Effect and and it's implications for the development of Quantum Mechanics </li>
+		    <li>Review of Young-Experiment</li>
+		    <li>Learn Wave behaviour of Matter </li>
 		  </ol>
-                    <!-- <center>   <img src="{% static "img/feynman_quote.png" %}"  width="600"></center>        <br><br> -->
-		    <!-- <center>   <img src="{% static "img/Maxwell_diff_form.png" %}"  width="600"></center>        <br><br> -->
-
-		  Lets take a look at the light spectrum <br><br>
- 				 <center>   <img src="{% static "img/EM_spectrum.png" %}" width="700"></center>        <br><br>
-
-Considering only the visible spectrum, what of the following is wrong?:				 
-	<br>	 		 		        <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
-		 <ol style="line-height:300%" type="A">
-		   <li>$E(violet) > E(yellow)$  </li>
-		   <li>$E(green) <  E(orange)$ </li>
-		    <li>$E(yellow) >  E(orange)$ </li>
-   <li>$E(violet) > E(red)$ </li>
-		
-		 </ol>
-
-<br><br>
-		 Lets go back to the blackbody.  Replacing $f={c\over \lambda}$ into the spectral energy density, and after some boring algebra (that will go into HW), we get,
-		 $${dU\over d\lambda}={8\pi V h c\over e^{hc/\lambda k_b T}-1}{1\over \lambda^5}\,. $$ which is a bit more useful. Notice that $dU/ df$ peaks at certain frequency. Computing the maximum in terms of wavelength, we get,
-		 $$ \lambda_{max}T=2.898\times 10^{-3}m\cdot K $$
-		 which is known as the <b>Wien's law</b>.
-		 <br><br>
-Considering that we see sunlight as yellow-ish $\lambda = 570\, nm $, provide an estimated for the
-temperature of the Sun:		 
-	<br>	 		 		        <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
-		 <ol style="line-height:300%" type="A">
-		   <li>$T\approx 5000 K $  </li>
-		   <li>$T\approx 10^{6}K $ </li>		  
-		    <li>$T\approx 10^{6}K $ </li>
-		   <li> $T\approx 500 K $ </li>
-
-		 </ol>
-		 <br><br>
-		 <center>   <img src="{% static "img/spectral_energy_tempt.png" %}" width="700"></center>        <br><br>
-		 
-                        <!--     Photoelectric Effect and Comptom Effect (among others), Electromagnetic waves exhibit particle behavior, and as such we have associated a name to that particle: <b>The Photon</b>. Such particle is massless and is characterized by a momentum $\boxed{p=h/\lambda}$ and Energy $\boxed{E=h f}$. Such behaviour lead us to the discovery of the <em>Wave-Particle duality</em> of light. -->
-                        <!-- </br> -->
-                        <!-- Today we are gonna see that this <em>Dual</em> behaviour is not unique of light, but is sort of universal, in the sense that even matter exhibit such strange behavior.</p> -->
-
-<h2>Photoelectric Effect</h2>
-In the 1880s, Heinrich Hertz
-demonstrated that a light beam directed at the surface of a metal could liberate
-electrons. This is called the <b>photoelectric effect</b> —light producing a flow of
-electricity—and is depicted in Figure
-		</br><br>
-		<center>   <img src="{% static "img/photo_electric.png" %}" alt="photo_electric" width="500"></center> <br><br>
-		<h3>Classical expectation (pre-quantum mechanics)</h3>
-		If light were strictly a wave, we should expect:
-		<ul>
-		  <li> If light of one wavelength is able to eject electrons, then light of any wavelength should be able to do it.</li>
-		    <li>Independent of the wavelength, the rate at
-		      which energy arrives (the intensity)—and therefore the rate at which electrons are ejected—could be made arbitrarily large simply by increasing the intensity </li>
-		 <li>If the intensity is low, then even though electrons might still be ejected, a measurable time lag should arise. Because a wave is diffuse, considerable time
-		   might be needed for enough energy to accumulate in the electron’s vicinity</li>
-<li> Finally, at any given frequency, if the intensity is increased,
-the departing electrons should be more energetic. A stronger electric field
-  should produce a larger acceleration.</li>
-<br><br>
-Let us take a look at the
- <a style="color: navy;" target="blanck_" href="https://applets.kcvs.ca/photoelectricEffect/PhotoElectric.html">  experimental set-up </a>. <br><br>
-
-		  A typical experimental curve for the photoelectric effect is shown below:
-		  		 <center>   <img src="{% static "img/photoelectric_exp.png" %}" width="700"></center>       
-
-				 <br><br>
-				 Some observations:<br><br>
-				 The electron are bound to the metal by some force, and an amount $\phi$ of energy is required to freed an electron. This energy $\phi$ depends on the material and is know as the <b>work function</b> of the given material.<br><br>  Intensity= energy per unit time per unit area= $Energy/(A t)$ and current <br><br>
-				 <center>   <img src="{% static "img/elec_current.png" %}" width="700"></center> <br><br>
-				 the electrical current give us a measure of the number of charges.        
-				 What are we observing?<br><br>
-				 
-				 Say we start with a positive potential difference and increase it until we reach the right flat region.  From the following assertions, what do you think is the right interpretation of that flat region?
-				 
-	<br>	 		 		        <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
-		 <ol style="line-height:300%" type="A">
-		   <li>Intensity of light is larger towards the right of the plot</li>
-		   <li>Area with moving electrons is increasing as we move to the right </li>		  
-		    <li>Number of electrons reaching the right plate stop increasing as me move to the right </li>
-		   <li> I don't know</li>
-
-		 </ol>
-		 <br><br><br>
-		 The flat region indicates that as we increase the potential from negative to positive, the number of electrons quickly reach a maximum and does not change from that.<br><br>
-		 Now lets think about the left end of the curve. First lets us think on the meaning of $\Delta V$: an electron that leaves the surface has kinetic energy $E_K$. It gained this energy from the incident electromagnetic wave. In the space between the electrodes, a photoelectron moves in the electric potential and its energy changes by the amount $-e\,\Delta V$. The stopped voltage $\Delta V_s$ is defined as exactly the value at which not more current, i.e, no more electrons reach the right plate, so in other words, even the electron with the largest kinetic energy is stopped from reaching the right plate, or:
-		 $$E_{K_{max}}=e\,\Delta V_s$$ 
-
-		 What do you think is a right interpretation for the left end of the experimental plot?
-		 <br>
-		 	<br>	 		 		        <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
-		 <ol style="line-height:300%" type="A">
-		   <li>Higher light intensity implies higher (more negative) stopping potential?</li>
-		   <li>Stopping potential is independent of the intensity of light </li>		  
-		    <li>Stopping does not depend on current. </li>
-		   <li> I don't know</li>
-
-		 </ol>
-		 <br><br>
-		 We can see where the classical theory is at odds with the experimental results. In classical theory,
-the photoelectron absorbs electromagnetic energy in a continuous way; this means that when the incident
-radiation has a high intensity, the kinetic energy is expected to be high. But the experiment shows that the
-		 maximum kinetic energy of photoelectrons is independent of the light intensity.<br><br>
-		 <h3>Cut -off frequency</h3>
-		 It was additionally observed, that low-intensity light of $500 nm$ wavelength ejects electrons from sodium, with no time lag, while light of $600 nm$
-wavelength cannot, even at many times the intensity, but according to the classical
-description, the kinetic energy of photoelectrons should not depend on the frequency of incident radiation at
-		 all, and there should be no cut-off frequency.<br><br>
-		 This results leads to Einstein in 1905 to consider seriously Planck's hypothesis, that the energy of light depends on it's frequency in a quantized fashion. In Einstein's approach, a beam of monochromatic light of frequency $f$ is made of particles, called <b>photons</b>. A <b> photon</b> is a particle of light and carries an energy $$E_f=h\, f\,.$$
-		 In Einstein's interpretation, each photon gives away all its energy to only one electron on the metal surface, because only integer numbers of $h\,f$ are available, so the photon can't give away just a fraction. This explains the frequency cut-off, if an photon has energy $E_f=h\,f<\phi $, then there
-is simply insufficient energy in any given photon to free an electron. So none are
-freed, no matter how high the intensity. However, if the
-																																						 frequency is high enough, such that $h\,f>\phi$, then electrons can be ejected,<br><br>
-		   then the cut-off frequency will be given by the condition
- 	<br>	 		 		        <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
-		 <ol style="line-height:300%" type="A">
-		   <li> $f_c={\phi\over h}$</li>
-		   <li> $f_c={\phi}$ </li>		  
-		    <li>$f_c={ h}$ </li>
-		   <li> I don't know</li>
-
-		 </ol><br><br>
-		
-		    For higher frequencies, energy conservation tell us:
-		   $$E_f=E_{K_{max}}+\phi\,,\quad{\rm or}\quad E_{K_{max}}=h\,f-\phi$$
-		   The subscript $max$ refers to the fact that the maximum energy an electron can gain is all what is left from overcoming $\phi$.
-
-		   <br><br>
-		   Einstein’s interpretation of the photoelectric effect explains not only the
-observation that a certain minimum frequency is required but also the other
-classically unexpected results. If a single photon—<em>a particle of concentrated
-energy </em> rather than a diffuse wave—does have enough energy, ejection should
-be immediate, with no time lag. Also, the electron’s kinetic energy should
-depend only on the energy of the single photon—the frequency—not on how
-many strike the metal per unit time (the intensity). In all respects, Einstein’s
-explanation agrees with the experimental evidence, and the achievement
-earned him the 1921 Nobel Prize in physics.
-		 <br><br>
-				
-
-				 
-		  Let us watch a short video that summarize all,<br><br>
-		  <center>		  <iframe id="embed-iframe" allowTransparency="true" allow="encrypted-media *" allowfullscreen height="515" width="560" border="0" scrolling="no" frameborder="0" marginwheight="0" marginwidth="0" src="https://app.jove.com/embed/player?id=11297&access=b71850354d&t=1&s=1&fpv=1"><p>Photoelectric effect</p></iframe></center>
-		     <h2>Clicker Photoelectric Effect</h2>
-		  <!-- <a href="https://www.youtube.com/watch?v=jjDWzlCHQc4" target="_blank"> -->
-		    	  <center>   <img src="{% static "img/clicker_photoe.png" %}" alt="_clicker_photoelectric" width="1200"></center>
-
-
-<h2>Is it a wave or a particle? </h2>
-                        <p>Well, is both, but it depends on how the size of the corresponding wave compares with the size of the "relevant dimensions" of the phenomena at hand. When the wavelenght $\lambda\sim D$ then we will be able to percieve the wave nature. When however $\lambda<< D$ we will perceive it as a particle (c.c. make a drawing) </p>
+                  
+<!-- <h2>Is it a wave or a particle? </h2> -->
+<!--                         <p>Well, is both, but it depends on how the size of the corresponding wave compares with the size of the "relevant dimensions" of the phenomena at hand. When the wavelenght $\lambda\sim D$ then we will be able to percieve the wave nature. When however $\lambda<< D$ we will perceive it as a particle (c.c. make a drawing) </p> -->
 
                         <h2>Double Slit Experiment</h2>
-                        <p> One easy an classical experiment to distinguish a wave from a particle is the double slit experiment, in which a "beam" is passed through a two small slits of size comparable to $\lambda$. If the "beam" is truly a wave, then one should observe an interference pattern at the screen.</p>
-                
+			<center>   <img src="{% static "img/interference1.png" %}"  width="600"></center>        <br><br>
+			<center>   <img src="{% static "img/interference2.png" %}"  width="600"></center>        <br><br>
+			                        <p> One easy an classical experiment to distinguish a wave from a particle is the double slit experiment, in which a "beam" is passed through a two small slits of size comparable to $\lambda$. If the "beam" is truly a wave, then one should observe an interference pattern at the screen.</p>
+
+			<center>   <img src="{% static "img/interference3.png" %}"  width="600"></center>        <br><br>
+			<center>   <img src="{% static "img/interference4.png" %}"  width="600"></center>        <br><br>
+			<center>   <img src="{% static "img/interference5.png" %}"  width="600"></center>        <br><br>
+			<center>   <img src="{% static "img/interference6.png" %}"  width="600"></center>        <br><br>
+			<center>   <img src="{% static "img/interference7.png" %}"  width="600"></center>        <br><br>
+
 
                         </br></br>
-                    <p>    Solving the geometrical problem represented in figure above, we can see that if an interference pattern is observed, bright (constructive) spots will be located at the screen location:</br></br> $\boxed{y_{bright}={\lambda L\over d}m}$  with  $m\in \mathbb{Z}$.</br></br>
+                    <p>   From the geometrical problem above, we can see that if an interference pattern is observed, bright (constructive) spots will be located at the screen location:</br></br> $\boxed{H_{bright}={\lambda L\over d}m}$  with  $m\in \mathbb{Z}$.</br></br>
                         Similarly, darks spots will be at,
-                        </br></br> $\boxed{y_{dark}={\lambda L\over d}(m+1/2)}$  with  $m\in \mathbb{Z}$.</br></br>
+                        </br></br> $\boxed{H_{dark}={\lambda L\over d}(m+1/2)}$  with  $m\in \mathbb{Z}$.</br></br>
                     </p>
 
                         <h2>Bragg Law</h2>
-                        <p>
+				  <p>
+				    
                         In 1927, Davisson & Germer from Bell labs were studying scattering of electrons off a Nickel cristal, and they observe the following pattern on a film placed to detect the scattered electrons,
                         <center>   <img src="{% static "img/electron_inter.jpeg" %}" alt="double_slit" width="500"></center>
 
