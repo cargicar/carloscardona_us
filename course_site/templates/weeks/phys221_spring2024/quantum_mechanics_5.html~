@@ -1,0 +1,215 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quantum Mechanics</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/xray_dif.jpeg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Quantum Mechanics</h1>
+                        <hr class="small">
+                        <span class="subheading">=== </span>
+                        <span class="subheading">=== </span>
+                        <h2>Matter Waves Properties</h2>
+                        <h3>PHYS-221 Feb 21 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                   		  <h2>Learning Objectives</h2>
+		  <ol>		    
+		    <li>Review of Young-Experiment</li>
+		    <li>Learn Wave behaviour of Matter </li>
+		  </ol>
+                  <b>Fill in the blanks</b>: <br><br>
+		  The Davisson & Germer experiment, provided evidence of electrons behaving as a w_______. <br>
+		  <br>
+		  Compton define de momentum of a photon (particle of light) as  given by <br> $h/$(_________)<br><br>
+<!-- <h2>Is it a wave or a particle? </h2> -->
+		  <!--                         <p>Well, is both, but it depends on how the size of the corresponding wave compares with the size of the "relevant dimensions" of the phenomena at hand. When the wavelenght $\lambda\sim D$ then we will be able to percieve the wave nature. When however $\lambda<< D$ we will perceive it as a particle (c.c. make a drawing) </p> -->
+		 
+                        
+			<!-- <center>   <img src="{% static "img/interference1.png" %}"  width="600"></center>        <br><br> -->
+		      <h2> Properties of Matter Waves</h2><br>
+  <center>   <img src="{% static "img/electron_inter.jpeg" %}" alt="double_slit" width="500"></center>
+
+                       <br><br>
+ The angle between the cristal surface and the position of the bright spots on the screen is described by the <b>Bragg Law</b>
+                        
+                       $$2d {\rm sin}(\theta)=m\lambda\,.$$<br><br>
+		       The geometric configuration leading to this formula can be represented by the following figure,<br><br>
+		                              <center>   <img src="{% static "img/bragg.gif" %}" alt="double_slit" width="500"></center><br><br>
+		       What uses can you think of this experiment?
+		       <iframe id="embed-iframe" allowTransparency="true" allow="encrypted-media *" allowfullscreen height="615" width="660" border="0" scrolling="no" frameborder="0" marginwheight="0" marginwidth="0" src="https://app.jove.com/embed/player?id=11300&t=1&s=1&fpv=1"></iframe>
+		       <br>
+		         <center>   <img src="{% static "img/electron_interference2.png" %}" alt="double_slit" width="700"></center><br><br>
+		          <center>   <img src="{% static "img/electron_interference.png" %}" width="700"></center><br><br>
+			  From the statistical point of view, the "amoung" of electrons on different regions of the screens should be associated with the probability of finding an electron in such region (i.e, the more electrons in a region after a millions of electrons being fired, the more the probability of finding an electron there).<br><br>
+			  Let me assess how much we all know about very basic probability.
+		 <br>
+		 We perform a double-slit experiment with 280 electrons, and observe five fringes on the screen. On the central fringe we count 84 electrons, on two sides next to the central fringe we count 56 electrons at each, and in the two last ones we observe 28 on each. The remaining 28 are distributed about other fringes far from the center and we can't see them.   <br>
+<br> What is the probability of finding a particular electron to be detected at the central and next one fringe?	
+
+		    	  <br>	 		 		        <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+		   <li>20% and 20% </li>
+		   <li> 30% and 20% </li>		  
+		   <li>20% and 10%</li>
+		   <li> I don't know</li>
+		
+		 </ol>
+		 <br><br>
+
+
+ Remember that intensity is a measure of the number of particles in a beam, and from the wave point of view, the "intensity" is given by the square of the amplitude of the resulting wave, and such, the natural conclusion to make is: <br><br>
+                       <center> <em>The probability of finding a particle in a region is proportional to the square of the  wave function associated to that particle in that region.</em></center> <br><br>
+                       Or in mathematical terms:<br><br>
+                       <center>$P(e^{-},x)=|\Psi(x,t)|^2$</center> <br><br>
+                       This lead us to the ask: In a EM wave, the stuff oscilatting are the E & M fields. What is then oscillating in a Matter wave?. R:  The probability of finding the particle is the oscillating phenomena &#129327;
+
+                       Another important observation to make is that, a neccesary requirement for creating a wave interference pattern, is that both interfering waves need to be coherent and have equal amplitudes. This implies that a given electron, similarly as a wave, need to pass through both slits AT THE SAME TIME! &#129327; &#129327;. (it is what it is).
+
+                       <br><br>
+                       The wavelenght for matter carries an special name, is it called <b>de Broglie wavelength</b> and is given simple by adopting the same relation as the photon $$\lambda={h\over p}\,.$$ This relation is <b>universal</b>- true for all phenomena. <br><br>
+                       Similarly, the frequency of a wave of matter is given by $$E= h f\quad{\rm or} \quad f={E\over h}\,.$$ Now the fundamental difference between radiation waves and matter waves is that matter wavelength varies inversily with the mass. Thats the reason why we humans don't see our wave &#128546;. Luckily, the crystal atomic interspace is small enought to be of the order of an electron de Broglie wavelength.<br><br>
+		       Subsequently, difraction patterns are observed using much heavier particles, such neutrons or even atoms. <br>
+                       Similarly to the case of light, the wave or particle behaviour depends on the size of $\lambda$ wrt relevant scales.
+		          <center>   <img src="{% static "img/example4_1.png" %}" width="700"></center><br><br>
+In order to observe electron interference, it would be better to perform a double-slit experiment with:
+		    	  <br>	 		 		        <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+		   <li>Lower energy electrons </li>
+		   <li>Higher energy electrons </li>		  
+		    <li>It does not make any difference</li>
+		
+		 </ol>
+		 
+		 <br><br>
+
+		 As we have seen on a review session on EM waves, we often use wave number $k={2\pi\over \lambda}$ and angular frequency $\omega={2\pi\over T}$ to characterize a wave. It is also convenient to introduce:
+		 $$\hbar={h\over 2\pi}=1.0055\times10^{-34}J\,s\,,$$
+		 and to express
+		 $$p={h\over \lambda}=\hbar\,k$$and
+		 $$E=h\,f=\hbar\omega\,.$$<br><br>
+		                     <h2>Some quick reminder: Statistical central values</h2>
+                    Say we are interested in a quantity $Q$, which has three possible values $Q_1,\,Q_2,\,Q_3$, each with probability of occur  $P_1,\,P_2,\,P_3$, in other words: if we perform a large $N$ of tries, we will have 
+                    \begin{equation}
+                   P_i={N_i/N}
+                    \end{equation}
+Obviously, $N_i< N$ and therefore 
+
+                    \begin{equation}
+                   \sum_i P_i \leq 1
+                    \end{equation}
+When all possible values of $Q$ are considered, then the sum above becomes  one. <br><br>
+                    The mean value of a (random) variable, is defined as,
+                    \begin{equation}
+\bar{Q}=\sum_iQ_i P_i
+                    \end{equation}
+and similarly, the mean value of a function of the given variable is given by
+                    \begin{equation}
+                   \overline{f(Q)}=\sum_if(Q_i)P_i\,.
+                    \end{equation}
+
+The standard deviation quantify how much the values taken by a (random) variable deviates from the mean $Q_i-\bar{Q}$, however, since some deviations are positive and other negatives, it does not make sense to average over the distance, but its more meaninful to average over the square distances:
+                    \begin{equation}
+                   \sigma_Q=\sqrt{\sum(Q_i-\bar{Q})^2P_i}
+                    \end{equation}
+If the random variable being considered takes continuos values, the sums become integrals.
+		 <br><br><br><br>
+
+		 <h2>The Schrödinger equation</h2>
+
+                        The wave equation for matter fields is given by the Schrödinger Equation
+
+                        \begin{equation}
+                        -{\hbar\over 2 m}{\partial^2\Psi(x,t)\over\partial x^2}=i\hbar{\partial\Psi(x,t)\over\partial t}\,,
+                        \end{equation}
+                 where $\hbar=h/2\pi$.<br><br>
+		 
+<br><br><br><br>
+		 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
