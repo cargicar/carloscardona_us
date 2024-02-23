@@ -69,17 +69,17 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url({% static 'img/planck.jpg' %})">
+    <header class="intro-header" style="background-image: url({% static 'img/schrodinger.jpg' %})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Week 3: Quantum Mechanics</h1>
+                        <h1>Quantum Mechanics</h1>
                         <hr class="small">
                         <span class="subheading">=== </span>
                         <span class="subheading">=== </span>
-                        <h2>Introduction to Quantum Mechanics (Continuation)</h2>
-                        <h3>PHYS-221 Feb 3 / 2023 </h3>
+                        <h2></h2>
+                        <h3>PHYS-221 Feb 23 / 2023 </h3>
                     </div>
                 </div>
             </div>
@@ -92,83 +92,179 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
 
-                    <h2>The Schrödinger equation</h2>
-                    Every wave obeys a wave equation. We can derive the wave equation of a wave on a string or on a body of water, by using Newton's first and second law (since they are both mechanical waves). Or we can derive the EM wave by combining Maxwells equations into a single equation (sort of). <br><br>
+		                     		  <h2>Learning Objectives</h2>
+		  <ol>		    
+		    <li>Learn the equation obeyed by matter waves </li>
+		    <li>Learn that the wave function of a particle is related to a probability density </li>
+		  </ol>
+                  <h2>The Schrödinger equation</h2>
+                    Every wave obeys a wave equation. We can derive the wave equation of a wave on a string or on a body of water, by using Newton's first and second law (since they are both mechanical waves). Or we can derive the EM wave by combining Maxwells equations. <br><br>
 
                     The wave equation for (free) matter fields is given by the Schrödinger Equation
 
                     \begin{equation}
-                    -{\hbar^2\over 2 m}{\partial^2\Psi(x,t)\over\partial x^2}=i\hbar{\partial\Psi(x,t)\over\partial t}\,,
+                    -{\hbar^2\over 2 m}{\partial^2\Psi(x,t)\over\partial x^2}+U(x)\Psi(x,t)=i\hbar{\partial\Psi(x,t)\over\partial t}\,,
                     \end{equation}
                     where $\hbar=h/2\pi$.,<br><br>
-                    At a first look this equation does not look very intuitive, and a satisfactory derivation probably does not exist. However, let us try to provide some non-rigorous derivation which will allow us to gain some insight into the equation.<br><br>
+                    At a first look this equation does not look very intuitive, and a satisfactory derivation probably does not exist. However, let us perform a non-rigorous derivation, which will allow us to gain some insight into the equation.<br><br>
                     For that, let us consider two things we already know, one about particles and the other about waves. The energy of a particle is given by:
                     \begin{equation}
                     E=K+U ={p^2\over 2m}+u(x)
                     \end{equation}
                     and plane wave moving in direction $x$ is described by the wave equation:
                     \begin{equation}
-                    \psi=A {\rm e}^{i(k x- w t)}
+                    \Psi=A {\rm e}^{i(k x- w t)}
                     \end{equation}
-                    We also need a couple of relations between wave quantities and particle quantities: We have seen that de Broglie relates the momentum of a particle with its wavelenght by $\lambda={h\over p}$ or equivalently $p={h\over\lambda}$. In turn, a wave is characterized by <em>the wave number</em> $k={2\pi\over \lambda}$, which allow us to relate $\fbox{$p=\hbar k$}$. Similarly, the energy of particle quantum is $E=hf$ where the frequency for a wave is given by $f={\omega\over (2\pi)}$ which give us $\fbox{$E=\hbar\omega$}$.
+                    We also need a couple of relations we have seen last session relating wave quantities and particle quantities: Momentum $\fbox{$p=\hbar k$}$ and energy of quantum particle $\fbox{$E=\hbar\omega$}$.
                     <br><br>
-                    From the plane wave, is easy to see that:
+                    Using the plane wave expression, one can see that ${d^2\Psi\over dx^2}$ is equal to: 
+       <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+		   <li>$\quad\left({p^2\over \hbar^2}\right)\Psi$ </li>
+		   <li>$\quad i\left({p^2\over \hbar^2}\right)\Psi$ </li>
+		   <li>$\quad-\left({p^2\over \hbar^2}\right)\Psi$ </li>
+		   <li> I don't know how to take derivatives</li>
+		
+		 </ol>
+		 <br><br><br>
+
+                    ${d^2\Psi\over dx^2}=(ik)^2\Psi=-\left({p^2\over \hbar^2}\right)\Psi$
+                    or equivalently $\fbox{$-\hbar^2 {d^2\Psi\over dx^2}=p^2\Psi$}$.<br><br>
+                    Now, taking the derivative of $\Psi$ wrt time, we get:
                     \begin{equation}
-                    {d^2\psi\over dx^2}=(ik)^2\psi=-\left({p^2\over \hbar^2}\right)\psi
+                    {d\Psi\over dt}=-i\omega\Psi=-{i\over \hbar}E\Psi
                     \end{equation}
-                    or equivalently $\fbox{$-\hbar^2 {d^2\psi\over dx^2}=p^2\psi$}$.<br><br>
-                    Now, taking the derivative of $\psi$ wrt time, we get:
-                    \begin{equation}
-                    {d\psi\over dt}=-i\omega\psi=-{i\over \hbar}E\psi
-                    \end{equation}
-                    What implies $\fbox{$E\psi=i\hbar{d\psi\over dt}$}$.
+                    What implies $\fbox{$E\Psi=i\hbar{d\Psi\over dt}$}$.
                     <br><br>
                     which finally allow us to write:
                     \begin{equation}
-                    E\psi={p^2\over 2m}\psi+u(x)\psi\quad\rightarrow\quad\boxed{-{\hbar^2\over 2m} {d^2\psi\over dx^2}+u(x)\psi=i\hbar{d\psi\over dt} }
+                    E\Psi={p^2\over 2m}\Psi+u(x)\Psi\quad\rightarrow\quad\boxed{-{\hbar^2\over 2m} {d^2\Psi\over dx^2}+u(x)\Psi=i\hbar{d\Psi\over dt} }
                     \end{equation}
-                    <mark> And therefore the  Schrödinger equation is nothing else but the energy of the wave/particle</mark> (I have actually now gave you a more general version of it, including an interaction term) &#128526;.
+                    <mark> And therefore the  Schrödinger equation is nothing else but the energy of the wave/particle</mark> &#128526;.
+		    <br><br>
+		    		         <center>   <img src="{% static "img/EM_vs_Schrodinger.png" %}" alt="double_slit" width="700"></center><br><br>
+                    Few clarifications are in order: Both the wave equation and its solution are complex. On the other end, the things that we measure will be real. The probability density associated to a quantum particle is given by the square of its wave function $|\Psi|^2$, which is real. Remeber the square of a complex number $ |\Psi|^2=({\rm Re}\Psi)^2+({\rm Im}\Psi)^2\,.$
+					 <br><br>
+					 
+					 <hr>
+					 <h2> Wave Normalization, Expectation Values and Uncertainties: formal introduction </h2>
+					 The square modulus of the  wavefunction  is associated to the probability density:<br><br>
+					 <em>probability of finding a particle in a region of space $V$ at time $t$ equals: </em>$ P_{V}(t)=\int |\Psi(\vec{r},t)|^2 dV $
+					 <br><br>or the one dimensional version
+					 <em>probability of finding a particle in an interval of space $[a,b]$ at time $t$ equals: </em>$$ P_{[a,b]}(t)=\int_a^b |\Psi(x,t)|^2 dx\,. $$
+					 <br><br>
+		 A quantum particle has a wave function given by
+		 \begin{equation}
+		 \psi(x,t)=A \,e^{i(kx-\omega t)}
+					 \end{equation} 
+ What is the probable position of the particle?
 
-                    Few clarifications are in order: Both the wave equation and its solution are complex. One one end, that is just a convenient mathematical way to write things, with further physical consecuences. On the other end, the things that we measure will be real. For example, I have mentioned previously that the probability associated to the quantum particle is given by the square of its wave function $|\psi|^2$, which is real.<br><br>
-                    <hr>
-                    Quick reminder: The square of a complex number is given by
+       <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+		   <li> $x= 0$</li>
+		   <li> $x= \frac{1}{k}$</li>
+		   <li> $x=$ Everywhere</li>
+		   <li>I don't know</li>
+		 </ol>
+		 <br><br>
+		 
+		 What is the probability of finding  such particle at the interval $[0,1]$?
+
+       <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+		   <li> $P= 0$</li>
+		   <li> $P=A$</li>
+		   <li> $P=A^2$ </li>
+		   <li>I don't know</li>
+		 </ol>
+		 <br><br>
+		 Remember that a probability needs to satisfy $P_{total}=1$. According to this condition, and considering a one-dimensional universe of size 2, how much $A$ should be equal for the wave function above?
+
+
+       <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+		   <li> $A= 1$</li>
+		   <li> $A=1/2$</li>
+		   <li> $A=1/\sqrt{2}$ </li>
+		   <li>I don't know</li>
+		 </ol>
+		 <br><br>
+                    <h2>Expectation Values, Uncertainties and Operators in QM</h2>
+                    The <b> total expectation value</b> for the position  $x$ of a quantum particle is given by the mean or average value:
                     \begin{equation}
-                    |\psi|^2={\rm Re}(\psi)^2+{\rm Im}(\psi)^2\quad\in\mathbb{R}
+       \boxed{             \bar{x}=\langle x\rangle=\int_{-\infty}^{\infty}xP(x)dx=\int_{-\infty}^{\infty}x|\psi(x)|^2dx}
                     \end{equation}
-                    <hr>
+		    Equivalently, the <b>expectation value on the interval $[a,b]$</b>  is given by the mean value on that interval:
+                    \begin{equation}
+       \boxed{             \bar{x}_{[a,b]}=\langle x\rangle=\int_a^b xP(x)dx=\int_a^bx|\psi(x)|^2dx}
+                    \end{equation}
+		    <br><br>
+		    The normalized wave function of a particle in one dimension looks like the following plot: 
+<center>   <img src="{% static "img/gaussian.png" %}" width="500"></center><br><br>
+What is the position where such particle is expected to be found?
+		    
+       <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+  <li>$\langle x \rangle= 1/2$</li>
+  <li>$\langle x \rangle=  (0.40)$</li>
+  <li>$\langle x \rangle= 0 $</li>
+  <li>I don't know</li>
+</ol>
+<br><br>
+
+		 <br><br>
+
+                    The <b>uncertainty</b> of the position  $x$ in an interval $[a, b]$ is given by the standard deviation:
+                    \begin{equation}
+                   \boxed{ \sigma_{[a,b]}=\sqrt{\int_a^b(x-\bar{x})^2|\psi(x)|^2dx} }
+                    \end{equation}
+                    With some algebra, the uncertainty can be written in the following more convenient form:
+                    \begin{equation}
+                   \sigma_x=\sqrt{\overline{x^2}-\bar{x}^2}
+                    \end{equation}
+                <!--    The <b>expectation value of a function</b> of a variable $x$ in an interval $[a,b]$, is given by: -->
+<!--                     \begin{equation} -->
+<!-- \overline{f(x)}=\langle f(x)\rangle=\int_a^bf(x)|\psi(x)|^2dx\,. -->
+<!--                     \end{equation} -->
+		    <!--                     More generally, -->
+		    In QM we define a <b>observable</b> as a quantity that can be measure. Mathematically, those observables are represented by operators action on the wave function of the particle, such as momentum, which is defined by the following differential operator:
+                    \begin{equation}
+                    \hat{p}=-i\hbar {\partial\over\partial_x}\,.
+                    \end{equation}
+Operators are usually denoted by a hat. Once an operator is determined in its mathematical form, we can compute its associated statistical central values by the obvious generalizations, such us, expectation value of operator $\hat{Q}$ is given by:
+                    \begin{equation}
+\overline{Q}=\langle Q\rangle=\int_a^b\Psi^*(x,t)\hat{
+                    Q}\Psi(x,t) dx
+                    \end{equation}
+                    and its uncertainty by
+                    \begin{equation}
+                    \sigma_Q=\sqrt{\overline{Q}^2-\bar{Q}^2}\,.
+                    \end{equation}
+for example
+         \begin{equation}
+\langle p\rangle=\int_a^b\Psi^*(x,t)\hat{
+                    p}\Psi(x,t) dx=\int_a^b\Psi^*(x,t)\left(-i\hbar {\partial\over\partial_x}\right)\Psi(x,t) dx
+                 
+                    \end{equation}
+<br><br><br>
+
+
+					 
                     <h2>Heisenberg Uncertainty Principle</h2>
-                    In the previous lecture we argue that the square of the wave function is related to the probability of finding the particle in a given region at a given time. However, it is obvious that the probability of finding a particle anywhere in the WHOLE space most be one, i.e:
-                    \begin{equation}
-                  \boxed{ P(t)= \int d P(x,t)=1=C\times\int |\psi(x,t)|^2 dV}
-                    \end{equation}
-                    More precisely, the square of the wave function is related to the probability density (probability per unit of volume). In that sense, the plane wave function we have used to "derive" Schrodinger equation, is quite peculiar,
-                    \begin{equation}
-                    |A {\rm e}^{i(k x- w t)}|^2 = |A|^2 
-                    \end{equation}
-                    And therefore such particle has the same probability of being found anywhere in space. That's certanly not realistic, but is actually a good aproximation in many escenarios (similar as to approximate earth surface as flat in many useful situations, a simple concept that flat earthers find dificult to comprehend.). However, plane waves are not just approximations, in fact, any wave function, regardles how complicated its shape might be, can be written as a sum of plane waves, as:
-                    \begin{equation}
-                    \psi(x,t)=C\int_{-\infty}^{\infty} A(k) {\rm e}^{i(k x- w t)} dk
-                    \end{equation}
-                    The equation above is known as a <em>Fourier transform</em> and is widely used in physics, math and engineering. It is indeed a powerful tool with deep physical implication, such as the <b>Heisenberg Uncertainty Principle</b>, which states that the uncertainty (standard deviation) in the position of a particle times the uncertainty in the  momemtum, is always bigger than half $\hbar$, i.e,
+The <b>Heisenberg Uncertainty Principle</b>, states that the uncertainty (standard deviation) in the position of a particle times the uncertainty in the  momentum, is always bigger than half $\hbar$, i.e,
                     \begin{equation}
 \boxed{                    \sigma_x \sigma_p \geq {\hbar\over 2}}
                     \end{equation}
                     <br><br>
-                    <hr>
-                    Quick reminder: Given the probability $p(x)$ that getting a value $x$, the mean value of $x$, denoted $\bar{x}$ is defined as:
-                    \begin{equation}
-                    \bar{x}=\int_{-\infty}^{\infty}x p(x) dx
-                    \end{equation}
-                    The square of the standard deviation, gives the average squared difference from the mean, or
-                    \begin{equation}
-                    \sigma_x^2=\overline{(x-\bar{x})^2}=\int_{-\infty}^{\infty}(x-\bar{x})^2p(x)dx
-                    \end{equation}
-                    <hr>
-
                     Heisenberg Uncertainty Principle states than, if you know the position with absolute accuracy, you don't know the momentum at all, and the other way around &#x1F92F;, or in other words, it is imposible to know precisely both position and momentum simultaneously: the uncertanty $\sigma_x$ and $\sigma_p$ cannot be zero at the same time. The more we know about one, the less we know about the other &#128561;.<br><br>
                     A good practical example of the uncertaninty principle can be seen from the plane wave. As we saw previously, it has an equal probability to be found anywhere in space, but on the other hand, it has a well determined momentum, given by $p=\hbar k$ (In mathematical terms, the Fourier transform of a plane wave is a Dirac's delta function $\delta(p-p')$).
                     <br><br>
-                    How does the Uncertainty Principle does not contradict the classical laws of Newton?. From a classical perspective, one can us Newton's laws in order to determine, at least theoretically, the exact position and momentum of a body once we know the forces acting on it. The reason this does not contradict the uncertanty principle is because QM applies to physical systems at scales of order $\hbar$, in other words, in tipical macroscopic system the uncertainties in the measurements is way larger that $\hbar$ and effectivelly, we have $\sigma_x\sigma_p\geq0$ (In actuality, there would be always an uncertanty associated to the measurement.)<br>
+                    How does the Uncertainty Principle does not contradict the classical laws of Newton?. From a classical perspective, one can use Newton's laws in order to determine, at least theoretically, the exact position and momentum of a body once we know the forces acting on it.<br><br>
+		    The reason this does not contradict the uncertanty principle is because QM applies to physical systems at scales of order $\hbar$, in other words, in tipical macroscopic system the uncertainties in the measurements is way larger that $\hbar$ and effectivelly, we have $\sigma_x\sigma_p\geq0$ (In actuality, there would be always an uncertanty associated to the measurement.)<br>
                     We say that classical mechanics is deterministic, whereas quantum mechanics is non-deterministic, or more precisely, probabilistic.
 
                     <br><br>
