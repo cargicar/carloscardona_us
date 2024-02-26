@@ -95,7 +95,7 @@
 		                     		  <h2>Learning Objectives</h2>
 		  <ol>		    
 		    <li>Learn Heisenberg Uncertainty Principle </li>
-		    <li> </li>
+		    <li>Learn how to deal with stationary solutions to the Schrödinger equation </li>
 		  </ol><br><br>
                     <h2>Expectation Values, Uncertainties and Operators in QM (Continuation)</h2>
                     The <b> total expectation value</b> for the position  $x$ of a quantum particle is given by the mean or average value:
@@ -210,14 +210,28 @@ Some rare subatomic particles have a very short life span, say $10^{-20}$, givin
                     Imposing such condition reduce the spaces of solutions to a smaller space, however, as we will see in a minute, this space is one of special physical interest (quick comment: The fact that a function is a solution of the SE, does not imply that the function exist in nature!). Replacing the variable separated wave function in the SE we have:
 
                     \begin{equation}
-                    -{\hbar^2\over 2m\psi(x)} {d^2\psi(x)\over dx^2}+u(x)={i\hbar\over \phi(t)}{d\phi(t)\over dt}=C
+                    -{\hbar^2\over 2m\psi(x)} {d^2\psi(x)\over dx^2}+u(x)={i\hbar\over \phi(t)}{d\phi(t)\over dt}
                     \end{equation}
-                    The last equality is just stating that in order to both sides to have different variable dependencies, they need to be equal to a constant $C$. More generally, the potential energy could be a function of time, and hence the previous argument would fail. Therefore, the physical assumption in this particular separation of variables is that the potential only depend on $x$.<br><br>
+
+		    <br>
+		    The fact that each side of this equation depends on different variables  ($x$ and $t$), implies:
+   <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+  <li>The equation is undetermined</li>
+  <li>Each side of the equation is equal to a constant, but different for each variable.</li>
+  <li>Each side of the equation is equal to a constant and the same constant for both</li>
+    <li>Each side of the equation is equal to zero</li>
+
+</ol>
+<br><br>
+		    
+                    It implies that in order to both sides to have different variable dependencies, they need to be equal to a constant $C$. More generally, the potential energy could be a function of time, and hence the previous argument would fail. Therefore, the physical assumption in this particular separation of variables is that the potential only depend on $x$.<br><br>
                     Let's consider the temporal piece:
                     \begin{equation}
                     {i\hbar\over \phi(t)}{d\phi(t)\over dt}=C\quad\rightarrow\quad \phi(t)=e^{-i{C\over\hbar}t}
                     \end{equation}
-                    By using Euler formula we can see that $\omega={C\over\hbar}$. Remembering that $E=\hbar\omega$ we conclude that $E=\hbar\omega=C$ is a constant! <em>Separation of variables, select the space of constant energy wave functions.</em>
+                    By using the plane wave  formula we can see that $\omega={C\over\hbar}$. Remembering that $E=\hbar\omega$ we conclude that $E=\hbar\omega=C$ is a constant! <em>Separation of variables, select the space of constant energy wave functions.</em>
                    Also notice that the temporal component is the same for any energy conserving wave function! <br><br>
                     Without solving the spacial component yet, let us consider <mark>probability density for an stationary state:</mark>:
                     \begin{equation}
