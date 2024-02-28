@@ -79,7 +79,7 @@
                         <span class="subheading">=== </span>
                         <span class="subheading">=== </span>
                         <h2></h2>
-                        <h3>PHYS-221 Feb 26 / 2024 </h3>
+                        <h3>PHYS-221 Feb 28 / 2024 </h3>
                     </div>
                 </div>
             </div>
@@ -94,187 +94,71 @@
 
 		                     		  <h2>Learning Objectives</h2>
 		  <ol>		    
-		    <li>Learn Heisenberg Uncertainty Principle </li>
-		    <li>Learn how to deal with stationary solutions to the Schrödinger equation </li>
+		    <li>Learn Quantum Bound States. </li>
+		    <li>Learn to solve Schrodinger equation for a particle inside an infinite squared potential. </li>
+		     <li>Learn the typical scheme to find the wavefunction.</li>
 		  </ol><br><br>
-                    <h2>Expectation Values, Uncertainties and Operators in QM (Continuation)</h2>
-                    The <b> total expectation value</b> for the position  $x$ of a quantum particle is given by the mean or average value:
-                    \begin{equation}
-       \boxed{             \bar{x}=\langle x\rangle=\int_{-\infty}^{\infty}xP(x)dx=\int_{-\infty}^{\infty}x|\psi(x)|^2dx}
-                    \end{equation}
-		    Equivalently, the <b>expectation value on the interval $[a,b]$</b>  is given by the mean value on that interval:
-                    \begin{equation}
-       \boxed{             \bar{x}_{[a,b]}=\langle x\rangle=\int_a^b xP(x)dx=\int_a^bx|\psi(x)|^2dx}
-                    \end{equation}
-		    <br><br>
-
-                    The <b>uncertainty</b> of the position  $x$ in an interval $[a, b]$ is given by the standard deviation:
-                    \begin{equation}
-                   \boxed{ \sigma_{[a,b]}=\sqrt{\int_a^b(x-\bar{x})^2|\psi(x)|^2dx} }
-                    \end{equation}
-                    With some algebra, the uncertainty can be written in the following more convenient form:
-                    \begin{equation}
-                   \sigma_x=\sqrt{\overline{x^2}-\bar{x}^2}
-                    \end{equation}
-		    <br><br>
-		    The normalized wave function of a particle in one dimension looks like the following plot: 
-<center>   <img src="{% static "img/gaussian.png" %}" width="500"></center><br><br>
-Which of the following values is the closest to the uncertanty in the position of such particle?
-		    
-       <br>	 <img src="{% static "img/voting_cards.png" %}" width="100"> <br>
+		  <b>Fill in the blanks</b><br><br>
+		  Heisenberg uncertainty principle establish that the quantum uncertainty in measuring a quantum particle position, times  the  uncertainty in measuring a quantum particle momentum, is always bigger than ______.<br><br>
+		  
+		  An stationary particle is such that its probability density is independent of _____.<br><br>
+		  
+	Which of the following systems is NOT a bound state? 
+       <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
 		 <ol style="line-height:300%" type="A">
 
-  <li>$\sigma_x= 1/2$</li>
-  <li>$\sigma_x= 1$</li>
-  <li>$\sigma_x= 10$</li>
-  <li>I don't know</li>
-</ol>
-<br><br>
-<br>	<center> <img src="{% static "img/normal_dis.png" %}" width="600"></center> <br>
-                <!--    The <b>expectation value of a function</b> of a variable $x$ in an interval $[a,b]$, is given by: -->
-<!--                     \begin{equation} -->
-<!-- \overline{f(x)}=\langle f(x)\rangle=\int_a^bf(x)|\psi(x)|^2dx\,. -->
-<!--                     \end{equation} -->
-		    <!--                     More generally, -->
-		    In QM we define a <b>observable</b> as a quantity that can be measure. Mathematically, an observable is represented by an operator acting on the wave function of the particle.   For example, momentum is defined by the following differential operator:
-                    \begin{equation}
-                    \hat{p}=-i\hbar {\partial\over\partial_x}\,.
-                    \end{equation}
-Operators are usually denoted by a hat. Once an operator is determined in its mathematical form, we can compute its associated statistical central values by the obvious generalizations, such us, expectation value of operator $\hat{Q}$ is given by:
-                    \begin{equation}
-\overline{Q}=\langle Q\rangle=\int_a^b\Psi^*(x,t)\hat{
-                    Q}\Psi(x,t) dx
-                    \end{equation}
-                    and its uncertainty by
-                    \begin{equation}
-                    \sigma_Q=\sqrt{\overline{Q}^2-\bar{Q}^2}\,.
-                    \end{equation}
-for example
-         \begin{equation}
-\langle p\rangle=\int_a^b\Psi^*(x,t)\hat{
-                    p}\Psi(x,t) dx=\int_a^b\Psi^*(x,t)\left(-i\hbar {\partial\over\partial_x}\right)\Psi(x,t) dx
-                 
-                    \end{equation}
-<br><br><br>Consider a time-independent wave function and recalling the condition $\int_{\rm all\, space}|\psi(x)|^2\,dx=1$.  Which one of the following functions, DOES NOT qualifies to be a wave function of a particle that can move along the entire real axis?
-
-   <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
-		 <ol style="line-height:300%" type="A">
-
-  <li>$\psi(x)= A e^{-x^2}$</li>
-  <li>$\psi(x)= A \tan(x)$</li>
-  <li>$\psi(x)= A{\sin(x)\over x}$</li>
-    <li>$\psi(x)= A e^{-|x|}$</li>
-</ol>
-<br><br>
-
-					 
-<h2>Heisenberg Uncertainty Principle</h2>
-   <br>	 <img src="{% static "img/heisenberg2.jpg" %}" width="500"> <br><br><br>
-The <b>Heisenberg Uncertainty Principle</b>, states that the uncertainty (standard deviation) in the position of a particle times the uncertainty in the  momentum, is always bigger than half $\hbar$, i.e,
-                    \begin{equation}
-\boxed{                    \sigma_x \sigma_p \geq {\hbar\over 2}}
-                    \end{equation}
-                    <br><br>
-                    Heisenberg Uncertainty Principle states than, if you know the position with absolute accuracy, you don't know the momentum at all, and the other way around &#x1F92F;, or in other words, it is imposible to know precisely both position and momentum simultaneously: the uncertanty $\sigma_x$ and $\sigma_p$ cannot be zero at the same time. The more we know about one, the less we know about the other &#128561;.<br><br>
-                    A good practical example of the uncertaninty principle can be seen from the plane wave. As we saw previously, it has an equal probability to be found anywhere in space, but on the other hand, it has a well determined momentum, given by $p=\hbar k$.
-                    <br><br>
-                    How does the Uncertainty Principle does not contradict the classical laws of Newton?. The reason is: QM applies to physical systems at scales of order $\hbar$, in other words, in tipical macroscopic system the uncertainties in the measurements is way larger that $\hbar$ and effectivelly, we have $\sigma_x\sigma_p\geq0$.<br>
-                    We say that classical mechanics is deterministic, whereas quantum mechanics is non-deterministic, or more precisely, probabilistic.
-
-                    <br><br>
-                    <b>Energy-Time Uncertainty Principle</b>
-The uncertainty principle is a bit more general, and involves any conjugate quantities (which can be related by Fourier transforms), such as Energy and time,
-                    \begin{equation}
-\boxed{                    \sigma_E \sigma_t \geq{\hbar\over2}}
-                    \end{equation}
-Some rare subatomic particles have a very short life span, say $10^{-20}$, giving us a quite good idea of its "position" in time, i.e $\sigma_t$ is small. In which case, we will have a large uncertainty in the energy, or equivalently, the mass of such particle. Another example is the change of a quantum state at a given energy level to another. This events are quite fast, having a large uncertainty in the energy "released" from the jump.<br><br>
-                    <h3>On the limitations of knowledge</h3>
-                    The uncertainty principle places limitations on our ability to know, even theoretically, exact quantities: We will never be absolutly certain &#129300;. Even more, the wave nature imposes several limitations beyond (even though related to) the uncertainty principle. Let's go back to the doble slit experiment and think on what we meant by knowing the position of a particle.
-                  <br><br>
-                    What we want to mean by knowing, is that before the given particle hits the screen, we should be able to tell where at the screen the particle is going to hit, but we don't know, we just know the probability of the particle being in X or Y region. Now the particle hits the screen and we have measure it "actual" position. In order for that to happend, the measurment has altered the wave function of the particle, in order to give us "exact" certainty on its position. This is called the collapse of the wave function, and essentially implies that we can't know the location of a particle until we actually look at it, which now changes its wave function, is not the same thing anymore!, our measurement alter the very nature of the thing we were trying to measure  &#129324 . <br><br>
-                    During the early days of QM, many prominent figures, including the Einstein, argued that the wave-particle duality nature must be incomplete, since a way to determine the "real" position, momentum, energy, etc... was lacking. However, the modern consensus asserts that until an observation is done, localizing the particle (or more generally, collapsing its wave function ), a particle simply  does not have a definite location (or momentum, etc..), this is today know as <b>The Copenhagen Interpretation.</b>
-
-                    <h2>Shrödinger Equation and Stationary States</h2>
-                    <em>We now can take for granted all the unintuitive aspects of QM, and just focus into using it to explain and use nature.</em><br><br>
-                    In order to apply quantum mechanics to real problems and applications, we need to developed some techniques in order to solve the Shrödinger Equation.<br><br> In Classical Mechanics, to determine the behaviour of a system, we first try to apply Newtons laws and solve the corresponding equations. Analogously, in QM, in order to understand a quantum system,  we want to solve the Shrödinger Equation for the wave function(s) of the system. Easier said than done, because in the vast majority of cases, the SE can not be solved exactly and we need to use large computers and sofisticated numerical methods in order to solve it.
-                    <br><br>However luckily, there are a few simplified examples that allow an analytical treatment, and serve as an intuitive guide for more realistic yet complex situations. In the remaining of this week and next, we are going to consider some simplified important examples in one dimension, that have served as a stepping stone towards harder problems in QM. <br><br>
-                    <h3>Stationary States</h3>
-                    \begin{equation}
-                    E\Psi\rightarrow-{\hbar^2\over 2m} {d^2\Psi(x,t)\over dx^2}+u(x)\Psi(x,t)=i\hbar{d\Psi(x,t)\over dt}
-                    \end{equation}
-                    A standard method to solve differential equations in more than one variable is by doing <em>separation of variables</em>:
-
-                    \begin{equation}
-                    \Psi(x,t)=\psi(x)\phi(t)
-                    \end{equation}
-                    Imposing such condition reduce the spaces of solutions to a smaller space, however, as we will see in a minute, this space is one of special physical interest (quick comment: The fact that a function is a solution of the SE, does not imply that the function exist in nature!). Replacing the variable separated wave function in the SE we have:
-
-                    \begin{equation}
-                    -{\hbar^2\over 2m\psi(x)} {d^2\psi(x)\over dx^2}+u(x)={i\hbar\over \phi(t)}{d\phi(t)\over dt}
-                    \end{equation}
-
-		    <br>
-		    The fact that each side of this equation depends on different variables  ($x$ and $t$), implies:
-   <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
-		 <ol style="line-height:300%" type="A">
-
-  <li>The equation is undetermined</li>
-  <li>Each side of the equation is equal to a constant, but different for each variable.</li>
-  <li>Each side of the equation is equal to a constant and the same constant for both</li>
-    <li>Each side of the equation is equal to zero</li>
-
-</ol>
-<br><br>
-		    
-                    It implies that in order to both sides to have different variable dependencies, they need to be equal to a constant $C$. More generally, the potential energy could be a function of time, and hence the previous argument would fail. Therefore, the physical assumption in this particular separation of variables is that the potential only depend on $x$.<br><br>
-                    Let's consider the temporal piece:
-                    \begin{equation}
-                    {i\hbar\over \phi(t)}{d\phi(t)\over dt}=C\quad\rightarrow\quad \phi(t)=e^{-i{C\over\hbar}t}
-                    \end{equation}
-                    By using the plane wave  formula we can see that $\omega={C\over\hbar}$. Remembering that $E=\hbar\omega$ we conclude that $E=\hbar\omega=C$ is a constant! <em>Separation of variables, select the space of constant energy wave functions.</em>
-                   Also notice that the temporal component is the same for any energy conserving wave function! <br><br>
-                    Without solving the spacial component yet, let us consider <mark>probability density for an stationary state:</mark>:
-                    \begin{equation}
- \boxed{                   \Psi(x,t)\Psi(x,t)^*=\psi(x)\psi(x)^*=|\psi(x)|^2}
-                    \end{equation}
-                    The spatial probabilities are constant in time, or equivalently, the space of wave functions satisfying the separation of variables condition are <b>stationary states</b>. Giving that, in what follows we only need to be concerned with the spatial piece (and stationary systems):
+  <li> A mass on a spring	  </li>
+  <li> Planet orbiting a star</li>
+  <li> Electron inside an atom</li>
+   <li>Compton scattering </li>
+		    </ol>
+		  <hr><hr>
+We have seen that for a quantum state whose probability does not change in time, or with  <b>stationary states</b>, the time independent Schrodinger equation is all we need,
  \begin{equation}
                    \boxed{ -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}+u(x)\psi(x)=E\psi(x)}\,.
                     \end{equation}
-                    Above equation is also known as the time-independent Schrodinger equation.
-<!--                     <h3>More Physical Conditions</h3> -->
-<!--                     As stated above, not all solutions of SE need to be physical. For one, we need that the square of the function represents a probability, and since the sum of all probabilities should sum to one, we need to additionally impose: -->
-<!--                     \begin{equation} -->
-<!-- \boxed{                    \int_{\rm all~space}|\Psi(x,t)|^2 dV=1}\,. -->
-<!--                     \end{equation} -->
-<!--                     In math terms $\Psi$ must be an <b> square-integrable function</b>.<br><br>  Second, since we want the solutions to be wave functions, we need to requiere that they are smooth and continuous. -->
-<!--                     \begin{equation} -->
-<!--                   \boxed{ |{d\Psi(x,t)\over dx}|<\infty}\,. -->
-<!--                     \end{equation} -->
+
                     <h2>Bound States</h2>
-                    A bound state is one in which a particle's motion is restricted within a finite region by an external force: ex. A mass on a spring, a planet orbiting a star, and electron inside an atom, etc. Take the example of a mass on a spring. The mass is confined to move in a narrow region confined by a parabolic potential (Hooke's potential).
-                    <center>   <img src="{% static "img/spring.png" %}" width="500"></center><br><br>
-                    The total energy of this mass is constant in time and it's potential energy is time-independent. This will be a situation where at the quantum level the separation of variables is suitable. We can just plug in Hooke's potential into SE and consider a wave inside it instead of a particle, but solution in such situation is a bit complicated. Let us do some simplifications that will allow us to solve the SE rapidly and still learn some important lessons for a quantum particle in a infinitly tall potential.<br><br>
-                    <center>   <img src="{% static "img/infi_well.png" %}" width="500"></center><br><br>
+                    A bound state is one in which a particle's motion is restricted within a finite region by an external force: ex. A mass on a spring, a planet orbiting a star, and electron inside an atom, etc. Take the example of a mass on a spring. The mass is confined to move in a narrow region confined by a parabolic potential (Hooke's potential).<br><br>
+		    
+                    <center>   <img src="{% static "img/spring1.png" %}" width="500"></center><br><br>
+
+		    The total energy of this mass is constant in time and it's potential energy is time-independent. This will be a situation where at the quantum level the separation of variables is suitable. We can just plug in Hooke's potential into SE and consider a wave inside it instead of a particle, but the solution in such situation is a bit complicated. Let us do some simplifications that will allow us to solve the SE rapidly and still learn some important lessons for a quantum particle in a infinity tall potential.
+		    <h2>Infinite Well</h2>
+		    Lets consider the following potential energy $$u(x)=0\quad {\rm for}\quad x\quad\in\quad[0,L] $$and$$ u(x)=\infty \quad\rm{ elsewhere. }$$<br><br>
+                    <center>   <img src="{% static "img/infite_well.png" %}" width="600"></center><br><br>
                     Inside the well, $u(x)=0$, and then the time-independent SE simplies to:
                     \begin{equation}
                     -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}=E\psi(x)\quad{\rm or}\quad\, {d^2\psi(x)\over dx^2}=-k^2\psi(x)
                     \end{equation}
                     with $k=\sqrt{2mE\over \hbar^2}$. What solution whould it be?<br><br><br>
                     \begin{equation}
-                    \psi(x)=A~sin(kx)\,.
-                    \end{equation}
-                    What is the value of $\psi$ outside the walls?.<br><br>
-                    $\infty\psi(x<0)=E\psi(x<0)\quad\rightarrow\quad \psi(x<0)\to{1\over \infty}\to 0$ (or we can just think analogously with the classical example, but it does not generalize to finite potentials.)<br><br>
-                    We also need the wavefunction to be continuous, i.e $\psi(0)=0$ and $\psi(L)=0$. The first condition is automatically satisfied, but the second is a bit strange:
+                    \psi(x)=A~e^{i(kx)}=A~cos(kx)+iA~sin(kx)
+                                      \end{equation}
+		    <h3>Boundary conditions</h3>
+                    What is the value of $\psi$ outside the walls?. <br><br><br>
+
+		    
+                    $\infty\psi(x<0)=E\psi(x<0)\quad\rightarrow\quad \psi(x<0)\to{1\over \infty}\to 0$.<br><br>
+We also need the wavefunction to be continuous, i.e $\psi(0)=0$ and $\psi(L)=0$. But why?
+       <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+		   <li> A discontinuous functions is automatically not differentiable. </li>
+		   <li> A discontinuous functions does not solve not the Schrondinger equation. </li>
+		   <li> A discontinuous functions is not physically acceptable.</li>
+		     <li> Who knows! </li>
+		 </ol><br><br>
+		 That eliminates the first term  $A~cos(kx)$. The second is:
                     \begin{equation}
                     A~sin(kL)=0\,.
-                    \end{equation}
+                    \end{equation}<br><br>
                     <center>   <img src="{% static "img/sine.gif" %}" width="500"></center><br><br>
-                    \begin{equation}
+                    Recall  $k=\sqrt{2mE\over \hbar^2}$
+		    \begin{equation}
                     kL=n\pi\quad\rightarrow\quad E={n^2\pi^2\hbar^2\over 2mL}\,.
                     \end{equation}
-                    Just by asking continuity of the wave function, we once more arrive to one of the most fascinating predictions of quantum mechanics, the particle's energy is quantized, it can not take arbitrary continuous values, but the particle need to sit in one of this energy levels. <br><br>
+                    Just by asking continuity of the wave function, we once more arrive to one of the most fascinating predictions of quantum mechanics, the particles energy is quantized, it can not take arbitrary continuous values, but the particle need to sit in one of this energy levels. <br><br>
                     We still have one physical requirement: the sum of all probabilities  should be one:
                     \begin{equation}
                     \int_{\rm all~space}|\Psi(x,t)|^2=\int_{-\infty}^{\infty}|\psi(x)|^2 dx=\int_{0}^{L}|A sin(kx)|^2 dx=1\,,
@@ -284,13 +168,24 @@ Some rare subatomic particles have a very short life span, say $10^{-20}$, givin
                \boxed{     \psi_n(x)=\sqrt{2\over L}sin{n\pi x\over L}}
                     \end{equation}
                     and $ E={n^2\pi^2\hbar^2\over 2mL}$. <br><br>
-                    The solution is the tipical solution of a standing wave, and tipically we encounter that quantum mechanically,<mark> bound states are standing waves</mark>, which gives a more appealing explanation to Bohr postulate.  
-                    <center>   <img src="{% static "img/inf_well_sol.png" %}" width="500"></center><br><br>
-
-                    <center>   <img src="{% static "img/inf_well_prob.png" %}" width="500"></center><br><br>
+                    The solution is the tipical solution of a standing wave, and tipically we encounter that quantum mechanically,<mark> bound states are standing waves</mark>, which gives a more appealing explanation to Bohr postulate.<br><br>
+		    <center>
+ <iframe id="embed-iframe" allowTransparency="true" allow="encrypted-media *" allowfullscreen height="815" width="860" border="0" scrolling="no" frameborder="0" marginwheight="0" marginwidth="0" src="https://en.wikipedia.org/wiki/Particle_in_a_box#/media/File:InfiniteSquareWellAnimation.gif"></iframe>
+		    </center>
+<br><br>
+                    <center>   <img src="{% static "img/infi_well_prob.png" %}" width="500"></center><br><br>
 The nodes of the standing wave corresponds to regions of probability zero of finding the particle, yet the  particle can be at either side of the node, without even crossing it!. <br><br>
-                    Also<mark> notice that a we can't have $E_k=0$ or equivalently $n=0$</mark>, since that implies a particle at rest, but that would violate the uncertanty principle, for having a position uncertanty or order $L$ can not have a zero momentum uncertanty. Therefore,<mark> the lowest energy is attained at $n=1$, it's known as the <b>ground state energy</b>, and the corresponding standing wave with that energy is known as <b>ground state.</mark><br><br>
-                    The classical limit corresponds to large $n$ or very short wave length. 
+                    Also<mark> notice that a we can't have $E_k=0$ or equivalently $n=0$</mark>, since that implies a particle at rest, but that would violate the uncertanty principle, for having a position uncertanty or order $L$ can not have a zero momentum uncertanty. Therefore,<mark> the lowest energy is attained at $n=1$, it's known as the <b>ground state energy</b>, and the corresponding standing wave with that energy is known as <b>ground state.</b></mark><br><br>
+                    The classical limit corresponds to large $n$ or very short wave length.
+		    <h2>Typical Scheme to Find the wavefunction</h2>
+		    <ol>
+		      <li>Divide the space in suitable regions, if possible.</li>
+		      <li> Find the solutions to the Schrodinger equation in each of those regions.</li>
+		      <li>Apply the proper boundary conditions to the solutions on each region.</li>
+		      <li>Apply the proper boundary conditions to the derivative of the solutions on each region.</li>
+		      <li>Solve the conditions imposed by the boundary conditions on each region.</li>
+		     		    </ol>
+		    
                     <br><br><br>
 
 
