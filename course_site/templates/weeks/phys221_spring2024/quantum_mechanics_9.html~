@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quantum Mechanics 8</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/heisenberg.jpg'%})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Quantum Mechanics</h1>
+                        <hr class="small">
+                        <span class="subheading">=== </span>
+                        <span class="subheading">=== </span>
+                        <h2></h2>
+                        <h3>PHYS-221 March 6 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+
+		                     		  <h2>Learning Objectives</h2>
+		  <ol>		    
+		    <li>Learn Wavefunctions describing the Quantum Harmonic Oscillator. </li>
+		    <li>Learn Energy Quantization for the Quantum Harmonic Oscillator </li>
+		  </ol><br><br>
+				  
+		
+                    <h2>Quick refresher: Bound States</h2>
+                    A bound state is one in which a particle's motion is restricted within a finite region by an external force: ex. A mass on a spring, a planet orbiting a star, and electron inside an atom, etc.
+		    
+		    <h3>Infinite Well</h3>
+		    Lets consider the following potential energy $$u(x)=0\quad {\rm for}\quad x\quad\in\quad[0,L] $$and$$ u(x)=\infty \quad\rm{ elsewhere. }$$<br><br>
+                    <center>   <img src="{% static "img/infite_well.png" %}" width="600"></center><br><br>
+                   solution looks like:
+                    \begin{equation}
+               \boxed{     \psi_n(x)=\sqrt{2\over L}sin{n\pi x\over L}}
+                    \end{equation}
+                    and $ E={n^2\pi^2\hbar^2\over 2mL}$. <br><br>
+                    The solution is the tipical solution of a standing wave, and tipically we encounter that quantum mechanically,<mark> bound states are standing waves</mark>.<br><br>
+		    <center>
+ <iframe id="embed-iframe" allowTransparency="true" allow="encrypted-media *" allowfullscreen height="815" width="860" border="0" scrolling="no" frameborder="0" marginwheight="0" marginwidth="0" src="https://en.wikipedia.org/wiki/Particle_in_a_box#/media/File:InfiniteSquareWellAnimation.gif"></iframe>
+		    </center>
+<br><br>
+                    <center>   <img src="{% static "img/infi_well_prob.png" %}" width="500"></center><br><br>
+The nodes of the standing wave corresponds to regions of probability zero of finding the particle, yet the  particle can be at either side of the node, without even crossing it!. <br><br>
+                    Also<mark> notice that a we can't have $E_k=0$ or equivalently $n=0$</mark>, since that implies a particle at rest, but that would violate the uncertanty principle, for having a position uncertanty or order $L$ can not have a zero momentum uncertanty. Therefore,<mark> the lowest energy is attained at $n=1$, it's known as the <b>ground state energy</b>, and the corresponding standing wave with that energy is known as <b>ground state.</b></mark><br><br>
+		    <h2>Quantum Harmonic Oscillator </h2>
+		    <br><br>
+		    <em><b> "Physics is that subset of human experience which can be reduced to coupled harmonic oscillators.</b>"</em> <br><br>
+		    -- Michael Peskin  <br><br>
+		    
+		     The  Harmonic Oscillator is a bounded system with a quadratic potential  $$u(x)=\frac{1}{2}\kappa x^2$$<br>
+                    <center>   <img src="{% static "img/HO1.png" %}" width="800"></center>
+	Since the potential is time-independent, we only need to look into the time-independent Schrodinger equation,
+ \begin{equation}
+                   \boxed{ -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}+u(x)\psi(x)=E\psi(x)}\,.
+                    \end{equation}
+
+                    <h2>HO Solutions</h2>
+		  
+Solutions are given by,
+\begin{equation}
+\psi_n(x)={\cal N}_n\, e^{-\frac{m\omega x^2}{2\hbar}}H_n\left(\sqrt{\frac{m\omega}{\hbar}}\right),\quad n=0,1,2,\cdots.
+\end{equation}
+		    with,
+		    \begin{equation}
+		    H_n(z)=(-1)^n\,e^{z^2}\frac{d^n}{dz^n}\left(e^{-z^2}\right)\,,\quad{\rm and}\quad
+		    {\cal N}_n=\frac{1}{\sqrt{2^n n!}}\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}		    \end{equation}
+
+		    First few Hermite polynomial:
+		    \begin{equation}
+		    H_0(z)=1,\quad H_1(z)=2z,\quad H_2(z)=4z^2-2,\quad
+		    \end{equation}
+<center>   <img src="{% static "img/HO_sols.png" %}" width="700"></center><br><br>
+with corresponding energies given by,
+
+                    \begin{equation}
+                    E_n=\left(n+\frac{1}{2}\right)\hbar \omega\,.\quad  n=0,1,2,\cdots.
+                    \end{equation}
+Notice that in this case $n$ can equal zero.
+<br><br>
+  <center>   <img src="{% static "img/ho_click.png" %}" width="800"></center>
+  Recall that the angular frecuency of a pendulum is given by
+  \begin{equation}
+  \omega_{\rm classi.}=\sqrt{\frac{g}{L}}\,.
+  \end{equation}
+		    
+                    <br><br><br>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
