@@ -44,6 +44,7 @@ urlpatterns = [
     path("phys221_spring2024/quantum_mechanics_7/", quantum_mechanics_7 , name="quantum_mechanics_7"),
     path("phys221_spring2024/quantum_mechanics_8/", quantum_mechanics_8 , name="quantum_mechanics_8"),
     path("phys221_spring2024/quantum_mechanics_9/", quantum_mechanics_9 , name="quantum_mechanics_9"),
+    path("phys221_spring2024/quantum_mechanics_10/", quantum_mechanics_10 , name="quantum_mechanics_10"),
     ############ phys 221 Fall 2023 ##############################
     path("syllabus/", syllabus, name="syllabus"),
     path("home_modern_phys/",home_modern_phys, name="home_modern_phys"),

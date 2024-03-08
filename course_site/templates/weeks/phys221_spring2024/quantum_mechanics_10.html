@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quantum Mechanics 9</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/QHO.jpg'%})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Quantum Mechanics</h1>
+                        <hr class="small">
+                        <span class="subheading">=== </span>
+                        <span class="subheading">=== </span>
+                        <h2></h2>
+                        <h3>PHYS-221 March 8 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+
+		                     		  <h2>Learning Objectives</h2>
+		  <ol>		    
+		    <li> </li>
+		    <li> </li>
+		  </ol><br><br>
+				  
+	 
+		    
+		    <h2>Quantum Harmonic Oscillator </h2>
+		    <br><br>
+		    
+		    The  Harmonic Oscillator is a bounded system with a quadratic potential  $$u(x)=\frac{1}{2}\kappa x^2=\frac{m}{2}\omega^2 x^2\,,$$<br>
+		    where we have used $\omega=\sqrt{k\over m}$.
+                    <center>   <img src="{% static "img/HO1.png" %}" width="800"></center>
+	Since the potential is time-independent, we only need to look into the time-independent Schrodinger equation,
+ \begin{equation}
+                    -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}+\frac{m}{2}\omega^2 x^2\psi(x)=E\psi(x)\,.
+                    \end{equation}
+
+                    <h2>HO Solutions</h2>
+		  
+Solutions are given by,
+\begin{equation}
+\psi_n(x)={\cal N}_n\, e^{-\frac{m\omega x^2}{2\hbar}}H_n\left(x\sqrt{\frac{m\omega}{\hbar}}\right),\quad n=0,1,2,\cdots.
+\end{equation}
+		    with $H_n$ denoting the Hermite polynomials, which lowers orders looks like:
+		    \begin{equation}
+		    H_0(z)=1,\quad H_1(z)=2z,\quad H_2(z)=4z^2-2,\quad H_3(z)=8z^3-12z\,,
+		    \end{equation}
+		    or more generally,
+		     \begin{equation}
+		    H_n(z)=(-1)^n\,e^{z^2}\frac{d^n}{dz^n}\left(e^{-z^2}\right)\,,\quad{\rm and}\quad
+		    {\cal N}_n=\frac{1}{\sqrt{2^n n!}}\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}		    \end{equation}
+
+		    <center>   <img src="{% static "img/HO_sols.png" %}" width="700"></center><br><br>
+		    what about the energies?.
+		    <br><br> At $n=1$, the wave function for the harmonic oscillator is explicitly given by: $$\psi_1(x)=2{\cal N}_1\, e^{-\frac{m\omega x^2}{2\hbar}}x\sqrt{\frac{m\omega}{\hbar}}= A x e^{-\frac{m\omega x^2}{2\hbar}}.$$
+		    <br>
+		 <b>Think-Pair-Share</b>: What is the corresponding energy?<br> Remember that $$    -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}+\frac{m}{2}\omega^2 x^2\psi(x)=E\psi(x)\,.$$ and   (Notice that ${d^2\over dx^2}(x e^{-a x^2}) = 2 a x e^{-a x^2} (2 a x^2 - 3)$)
+		    <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+  <li> $E_1=\hbar\omega$	  </li>
+		   <li> $E_1={1\over 2}\hbar\omega$	  </li>
+		   <li> $E_1={3\over 2}\hbar\omega$	  </li>
+		     <li> $E_1={1\over 2}\hbar\omega$	  </li>
+ 
+		    </ol>
+<br><br>
+		 <hr><hr>
+
+more generally,  the corresponding energies for the harmonic oscillator are given by,
+
+                    \begin{equation}
+                    E_n=\left(n+\frac{1}{2}\right)\hbar \omega\,.\quad  n=0,1,2,\cdots.
+                 \end{equation}
+		 For the infinite well, we have concluded that the Heisenberg uncertanty principle forbid to have $E_n$ with $n=0$. Is the same true for the quantum harmonic oscillator?
+		 		    <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+  <li> Yes	  </li>
+		   <li> No	  </li>
+		   <li> Depends	  </li>
+		     <li> I don't know	  </li>
+ 
+		    </ol>
+
+		 <br><br>
+		 The ground state energy for the quantum harmonic oscillator is given by $$ E_n=\frac{1}{2}\hbar \omega\,. $$ Even thought $n=0$, the lowest possible energy is still not zero, and therefore Heisenberg Uncertainty principle is not violated.
+<br><br>
+  <center>   <img src="{% static "img/ho_click.png" %}" width="800"></center>
+  Recall that the angular frecuency of a pendulum is given by
+  \begin{equation}
+  \omega_{\rm classi.}=\sqrt{\frac{g}{L}}\,.
+  \end{equation}
+		    
+                    <br><br><br>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
