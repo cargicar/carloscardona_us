@@ -1,0 +1,275 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quantum Mechanics 9</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/quantum-corral.jpg'%})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Quantum Mechanics</h1>
+                        <hr class="small">
+                        <span class="subheading">=== </span>
+                        <span class="subheading">=== </span>
+                        <h2></h2>
+                        <h3>PHYS-221 March 18 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+
+		                     		  <h2>Learning Objectives</h2>
+		  <ol>		    
+		    <li>Learn unbounda systems  </li>
+		  
+		  </ol><br><br>
+				  
+	 
+		   		    <h2>Quantum Harmonic Oscillator </h2>
+		    <br><br>
+		   
+                    <h2>Refresher: HO Solutions</h2>
+		  
+Solutions are given by,
+\begin{equation}
+\psi_n(x)={\cal N}_n\, e^{-\frac{m\omega x^2}{2\hbar}}H_n\left(x\sqrt{\frac{m\omega}{\hbar}}\right),\quad n=0,1,2,\cdots.
+\end{equation}
+		    with $H_n$ denoting the Hermite polynomials, which lowers orders looks like:
+		    \begin{equation}
+		    H_0(z)=1,\quad H_1(z)=2z,\quad H_2(z)=4z^2-2,\quad H_3(z)=8z^3-12z\,,
+		    \end{equation}
+		    or more generally,
+		     \begin{equation}
+		    H_n(z)=(-1)^n\,e^{z^2}\frac{d^n}{dz^n}\left(e^{-z^2}\right)\,,\quad{\rm and}\quad
+		    {\cal N}_n=\frac{1}{\sqrt{2^n n!}}\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}		    \end{equation}
+
+		    <center>   <img src="{% static "img/HO_sols.png" %}" width="700"></center><br><br>
+		    The corresponding energies for the harmonic oscillator are given by,
+
+                    \begin{equation}
+                    E_n=\left(n+\frac{1}{2}\right)\hbar \omega\,.\quad  n=0,1,2,\cdots.
+                 \end{equation}
+		 For the infinite well, we have concluded that the Heisenberg uncertanty principle forbid to have $E_n$ with $n=0$. Is the same true for the quantum harmonic oscillator?
+		 The ground state energy for the quantum harmonic oscillator is given by $$ E_n=\frac{1}{2}\hbar \omega\,. $$ Even thought $n=0$, the lowest possible energy is still not zero, and therefore Heisenberg Uncertainty principle is not violated.
+<br><br>
+
+		 <hr><hr>
+
+                        <h2>Unbounded States</h2>
+			So far we have seen solutions to the Schroedinger solutions for bound states. Now we move to the complementary case of <b>unbounded</b> systems.<br><br>
+			Before moving into such system, let us consider the following equation (for the 4th time!).
+		    <!-- 	                    \begin{equation} -->
+                    <!-- -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}=E\psi(x)\quad{\rm or}\quad\, {d^2\psi(x)\over dx^2}=-k^2\psi(x) -->
+                    <!-- \end{equation} -->
+                    <!-- with $k=\sqrt{2mE\over \hbar^2}$. What solution whould it be?<br><br><br> -->
+                    <!-- \begin{equation} -->
+                    <!-- \psi(x)=A~e^{i(kx)}=A~cos(kx)+iA~sin(kx) -->
+                    <!--                   \end{equation} -->
+			                    \begin{equation}
+                    {d^2\psi(x)\over dx^2}=-k^2\psi(x)
+                    \end{equation}
+                     What of the following functions is a solution? <br>                   
+                   
+		 		    <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+  <li> Yes	  </li>
+		   <li> $ \psi(x)=A~e^{\pm (kx)}$	  </li>
+		   <li> $ \psi(x)=A~e^{\pm i(kx)}$	  </li>
+  <li>  $\psi(x)=A~\sin(x)$	  </li>
+  <li> None of the above.</li>
+ 
+		    </ol>
+
+		 <br><br>
+Now let's try again, consider the following equation,			                    \begin{equation}
+                    {d^2\psi(x)\over dx^2}=k^2\psi(x)
+                    \end{equation}
+                     What of the following functions is a solution? <br>                   
+                   
+		 		    <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+  <li> Yes	  </li>
+		   <li> $ \psi(x)=A~e^{\pm (kx)}$	  </li>
+		   <li> $ \psi(x)=A~e^{\pm i(kx)}$	  </li>
+  <li>  $\psi(x)=A~\sin(x)$	  </li>
+  <li> None of the above.</li>
+ 
+		    </ol>
+
+		 <br><br>
+
+		 <h2>The Potential Step</h2>
+			<h2>Potential Barrier</h2>
+We will continue our exploration of one-dimensional solutions of the SE. We still will be considering constant energy solutions (those satisfying separation of variables), but now we will look into unbounded states, i.e those that are not bounded.   <br><br>
+                    <center>   <img src="{% static "img/tunneling.png" %}" width="350"> <img src="{% static "img/barrier.png" %}" width="365"></center><br><br>
+                    Imagine an incoming wave from the left to the right. At $x=0$ the wave meet the barrier (or better, a force $F=-du/dx$ due to the barrier potential), part of the wave is then bounced back and somoe part is transmitted. Our task is to estimate how much cross the barrier and how much is reflected. <br><br>
+                    We have three regions to consider: Region I : $x<0$, Region II : $ 0< x< L $ and Region III : $L< x$, which corresponding SE given by:<br><br>
+                    \begin{equation}
+                   \boxed{ -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}+u(x)\psi(x)=E\psi(x)}\,.
+                    \end{equation}
+
+                    Region I and III:
+                    \begin{equation}
+                    {d^2\psi(x)\over dx^2}\psi(x)=-k^2\psi(x)\,, \quad{\rm with}\quad k=\sqrt{2mE\over\hbar^2}
+                    \end{equation}
+                    Region II:
+                    \begin{equation}
+                    {d^2\psi(x)\over dx^2}\psi(x)=-k'^2\psi(x)\,, \quad{\rm with}\quad k'=\sqrt{2m(E-U_0)\over\hbar^2}
+                    \end{equation}
+
+                    This equations are very similar to that one for the particle inside a box, however we now have a fundamental physical diference: We have a component of the wave moving right (incoming wave) and another component moving left (reflected wave).  In other words, we should have a wave component propagating to the right $e^{i(+kx-\omega t)}$ and other to the left  $e^{i(-kx-\omega t)}$. In other words, we expect that the spatial  wave in region $I$ to take the form:
+                    \begin{equation}
+                   \boxed{ \psi_I(x)= A_Ie^{+ikx} +B_Ie^{-ikx}}\,,
+                    \end{equation}
+                    Similarly for region $II$
+                    \begin{equation}
+\boxed{                    \psi_{II}(x)=A_{II}e^{+ik'x} +B_{II}e^{-ik'x}}\,,
+                    \end{equation}
+                    and finally for region III,
+                    \begin{equation}
+    \boxed{                \psi_{III}(x)= A_{III}e^{+ikx}}\,.
+                    \end{equation}
+                    Now we need to impose the continuity and smoothness conditions at the boundaries:
+                    \begin{equation}
+                    \psi_{I}(0)=\psi_{II}(0) \quad\rightarrow\quad A_I+B_I=A_{II}+B_{II}
+                    \end{equation}
+
+                    \begin{equation}
+                    {d\psi_{I}\over dx}(0)={d\psi_{II}\over dx}(0) \quad\rightarrow\quad k(A_I-B_I)=k'(A_{II}-B_{II})
+                    \end{equation}
+
+                    \begin{equation}
+                    \psi_{II}(L)=\psi_{III}(L) \quad\rightarrow\quad A_{II}e^{ik'L}+B_{II}e^{-ik'L}=A_{III}e^{ikL} 
+                    \end{equation}
+                    \begin{equation}
+                    {d\psi_{II}\over dx}(L)={d\psi_{III}\over dx}(L) \quad\rightarrow\quad ik'(A_{II}e^{ik'L}-B_{II}e^{-ik'L})=ik A_{III}e^{ikL} 
+                    \end{equation}
+                    Reflection probability is given by the ratio between the reflected probability and the incoming probability:
+                    \begin{equation}
+                   \boxed{ R={|B_I|^2\over |A_{I}|^2}}
+                    \end{equation}
+
+                    whereas transmission probability, is related to the ratio between the trasmitted probability and the incoming probability:
+                    \begin{equation}
+\boxed{                    T={|A_{III}|^2\over |A_{I}|^2}}
+                    \end{equation}
+                    From the continuity and smoothness conditions, we can solve all the $B_I$ and $A_{III}$ in terms of $A_I$. The algebra is a little lengthly, but straigthforward. Doing so, and considering first the case $E>U_0$, we obtain:
+                    \begin{equation}
+                    R={sin^2\left[\sqrt{2m(E-U_0)}L/\hbar\right]\over sin^2\left[\sqrt{2m(E-U_0)}L/\hbar\right]+4(E/U_0)\left[(E/U_0)-1 \right]}
+                    \end{equation}
+                    \begin{equation}
+                    T={4(E/U_0)\left[(E/U_0)-1 \right]\over sin^2\left[\sqrt{2m(E-U_0)}L/\hbar\right]+4(E/U_0)\left[(E/U_0)-1 \right]}
+                    \end{equation}
+                    Noticed that $R+T=1$, as they should, since the total probability should sum up to one. <br><br>
+                    The result for the reflection coefficient lead us to an interesting phenomena: it can be zero sometimes!:
+                    \begin{equation}\boxed{ R=0} \quad {\rm if} \quad sin^2\left[\sqrt{2m(E-U_0)}L/\hbar\right]=0\quad\rightarrow \sqrt{2m(E-U_0)}L/\hbar=n\pi
+                    \end{equation}
+                    \begin{equation}
+\boxed{                    E=U_0+{n^2\pi^2\hbar^2\over2mL^2} }
+                    \end{equation}
+                    This is known as <b>resonant transmission</b>, and implies that a particle can cross a barrier complete, unscratched (It is the equivalent of classical resonance).  This does not imply energy quantization, since unlike bound states, unbound states energies can take any value, it just mean that only certain energies can be transmitted entirely. Also observe that in order for this effect to take place, the kinetic energy of the particle should be bigger than the barrier potential. <br><br>
+                    We can now look into the situation where a particle come towars the barrier with kinetic energy smaller than the potential barrier, i.e, $E< U_0$. We can go ahead and repeat the same analysis from top for such case, but is not really necessary:  we just need to use the fact that $sin(i x)=i~ sinh^2(x)$, to get:
+                    \begin{equation}
+                    R={sinh^2\left[\sqrt{2m(E-U_0)}L/\hbar\right]\over sinh^2\left[\sqrt{2m(E-U_0)}L/\hbar\right]+4(E/U_0)\left[(E/U_0)-1 \right]}
+                    \end{equation}
+                    \begin{equation}
+                    T={4(E/U_0)\left[(E/U_0)-1 \right]\over sinh^2\left[\sqrt{2m(E-U_0)}L/\hbar\right]+4(E/U_0)\left[(E/U_0)-1 \right]}
+                    \end{equation}
+                    Even thougt in this case, disappointingly, we dont observer resonant transmission &#128549; ,<mark>we still find a non-zero probability of a particle crossing the barrier</mark>, despite not having enough energy to surmount the potential barrier. This effect is known as <b>tunneling</b>, and has large technological implications. Is important to observe however, that the probability of transmission can be very small, exponentially small:
+                    \begin{equation}
+\boxed{                    T\sim 16{E\over U_0}\left(1-{E\over U_0}\right)e^{-2L\sqrt{2m(U_0-E)}/\hbar}}
+                    \end{equation}
+                    <br><br>
+                    Tunneling has found many technological applications (as well as the explanation of several phenomena, like Radioactive decay and nuclear fusion in starts), to mention a few: Tunnel diode and Tunnel field transistors which are some new type of superconductors, tunnel junction that serve to measure very small magnetic fields such as those produced in our brains and hearts! &#x1F92F; , however the most widely and still growing technology that uses it is the <b>The scanning tunneling microscope</b>, which uses the strong dependence of tunneling on the barrier widht.
+                    <center>   <img src="{% static "img/tunn_mic.png" %}" width="500"></center><br><br>
+                    <br><br><br>
+
+		    
+                    <br><br><br>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

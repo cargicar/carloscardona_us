@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Harmonic Oscilator</title>
+    <title>Quantum Mechanics 9</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -29,7 +29,6 @@
          tex: {
              inlineMath: [['$', '$'], ['\\(', '\\)']]
          }
-
      };
     </script>
     <script id="MathJax-script" async
@@ -70,17 +69,17 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url({% static 'img/quantum-corral.jpg' %})">
+    <header class="intro-header" style="background-image: url({% static 'img/quantum-corral.jpg'%})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Week 4: Quantum Mechanics in One Dimension II</h1>
+                        <h1>Quantum Mechanics</h1>
                         <hr class="small">
                         <span class="subheading">=== </span>
                         <span class="subheading">=== </span>
-                        <h2>Unbounded States</h2>
-                        <h3>PHYS-221 Feb 10 / 2023 </h3>
+                        <h2></h2>
+                        <h3>PHYS-221 March 18 / 2024 </h3>
                     </div>
                 </div>
             </div>
@@ -92,8 +91,94 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
-Announcement: Recitations are gonna be recorded soon.
-                    <h2>Potential Barrier</h2>
+
+		                     		  <h2>Learning Objectives</h2>
+		  <ol>		    
+		    <li>Learn unbounda systems  </li>
+		  
+		  </ol><br><br>
+				  
+	 
+		   		    <h2>Quantum Harmonic Oscillator </h2>
+		    <br><br>
+		   
+                    <h2>Refresher: HO Solutions</h2>
+		  
+Solutions are given by,
+\begin{equation}
+\psi_n(x)={\cal N}_n\, e^{-\frac{m\omega x^2}{2\hbar}}H_n\left(x\sqrt{\frac{m\omega}{\hbar}}\right),\quad n=0,1,2,\cdots.
+\end{equation}
+		    with $H_n$ denoting the Hermite polynomials, which lowers orders looks like:
+		    \begin{equation}
+		    H_0(z)=1,\quad H_1(z)=2z,\quad H_2(z)=4z^2-2,\quad H_3(z)=8z^3-12z\,,
+		    \end{equation}
+		    or more generally,
+		     \begin{equation}
+		    H_n(z)=(-1)^n\,e^{z^2}\frac{d^n}{dz^n}\left(e^{-z^2}\right)\,,\quad{\rm and}\quad
+		    {\cal N}_n=\frac{1}{\sqrt{2^n n!}}\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}		    \end{equation}
+
+		    <center>   <img src="{% static "img/HO_sols.png" %}" width="700"></center><br><br>
+		    The corresponding energies for the harmonic oscillator are given by,
+
+                    \begin{equation}
+                    E_n=\left(n+\frac{1}{2}\right)\hbar \omega\,.\quad  n=0,1,2,\cdots.
+                 \end{equation}
+		 For the infinite well, we have concluded that the Heisenberg uncertanty principle forbid to have $E_n$ with $n=0$. Is the same true for the quantum harmonic oscillator?
+		 The ground state energy for the quantum harmonic oscillator is given by $$ E_n=\frac{1}{2}\hbar \omega\,. $$ Even thought $n=0$, the lowest possible energy is still not zero, and therefore Heisenberg Uncertainty principle is not violated.
+<br><br>
+
+		 <hr><hr>
+
+                        <h2>Unbounded States</h2>
+			So far we have seen solutions to the Schroedinger solutions for bound states. Now we move to the complementary case of <b>unbounded</b> systems.<br><br>
+			Before moving into such system, let us consider the following equation (for the 4th time!).
+		    <!-- 	                    \begin{equation} -->
+                    <!-- -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}=E\psi(x)\quad{\rm or}\quad\, {d^2\psi(x)\over dx^2}=-k^2\psi(x) -->
+                    <!-- \end{equation} -->
+                    <!-- with $k=\sqrt{2mE\over \hbar^2}$. What solution whould it be?<br><br><br> -->
+                    <!-- \begin{equation} -->
+                    <!-- \psi(x)=A~e^{i(kx)}=A~cos(kx)+iA~sin(kx) -->
+                    <!--                   \end{equation} -->
+			                    \begin{equation}
+                    {d^2\psi(x)\over dx^2}=-k^2\psi(x)
+                    \end{equation}
+                     What of the following functions is a solution? <br>                   
+                   
+		 		    <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+  <li> Yes	  </li>
+		   <li> $ \psi(x)=A~e^{\pm (kx)}$	  </li>
+		   <li> $ \psi(x)=A~e^{\pm i(kx)}$	  </li>
+  <li>  $\psi(x)=A~\sin(x)$	  </li>
+  <li> None of the above.</li>
+ 
+		    </ol>
+
+		 <br><br>
+Now let's try again, consider the following equation,			                    \begin{equation}
+                    {d^2\psi(x)\over dx^2}=k^2\psi(x)
+                    \end{equation}
+                     What of the following functions is a solution? <br>                   
+                   
+		 		    <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+  <li> Yes	  </li>
+		   <li> $ \psi(x)=A~e^{\pm (kx)}$	  </li>
+		   <li> $ \psi(x)=A~e^{\pm i(kx)}$	  </li>
+  <li>  $\psi(x)=A~\sin(x)$	  </li>
+  <li> None of the above.</li>
+ 
+		    </ol>
+
+		 <br><br>
+
+		 <h2>The Potential Step</h2>
+		 Consider the following potential energy,<br><br>
+                    <center>  <img src="{% static "img/step_barrier.png" %}" width="465"></center><br><br>
+
+		 <h2>Potential Barrier</h2>
 We will continue our exploration of one-dimensional solutions of the SE. We still will be considering constant energy solutions (those satisfying separation of variables), but now we will look into unbounded states, i.e those that are not bounded.   <br><br>
                     <center>   <img src="{% static "img/tunneling.png" %}" width="350"> <img src="{% static "img/barrier.png" %}" width="365"></center><br><br>
                     Imagine an incoming wave from the left to the right. At $x=0$ the wave meet the barrier (or better, a force $F=-du/dx$ due to the barrier potential), part of the wave is then bounced back and somoe part is transmitted. Our task is to estimate how much cross the barrier and how much is reflected. <br><br>
@@ -169,7 +254,7 @@ We will continue our exploration of one-dimensional solutions of the SE. We stil
                     \begin{equation}
                     T={4(E/U_0)\left[(E/U_0)-1 \right]\over sinh^2\left[\sqrt{2m(E-U_0)}L/\hbar\right]+4(E/U_0)\left[(E/U_0)-1 \right]}
                     \end{equation}
-                    Even thougt in this case, disappointingly, we don't observer resonant transmission &#128549; ,<mark>we still find a non-zero probability of a particle crossing the barrier</mark>, despite not having enough energy to surmount the potential barrier. This effect is known as <b>tunneling</b>, and has large technological implications. Is important to observe however, that the probability of transmission can be very small, exponentially small:
+                    Even thougt in this case, disappointingly, we dont observer resonant transmission &#128549; ,<mark>we still find a non-zero probability of a particle crossing the barrier</mark>, despite not having enough energy to surmount the potential barrier. This effect is known as <b>tunneling</b>, and has large technological implications. Is important to observe however, that the probability of transmission can be very small, exponentially small:
                     \begin{equation}
 \boxed{                    T\sim 16{E\over U_0}\left(1-{E\over U_0}\right)e^{-2L\sqrt{2m(U_0-E)}/\hbar}}
                     \end{equation}
@@ -177,6 +262,11 @@ We will continue our exploration of one-dimensional solutions of the SE. We stil
                     Tunneling has found many technological applications (as well as the explanation of several phenomena, like Radioactive decay and nuclear fusion in starts), to mention a few: Tunnel diode and Tunnel field transistors which are some new type of superconductors, tunnel junction that serve to measure very small magnetic fields such as those produced in our brains and hearts! &#x1F92F; , however the most widely and still growing technology that uses it is the <b>The scanning tunneling microscope</b>, which uses the strong dependence of tunneling on the barrier widht.
                     <center>   <img src="{% static "img/tunn_mic.png" %}" width="500"></center><br><br>
                     <br><br><br>
+
+		    
+                    <br><br><br>
+
+
                 </div>
             </div>
         </div>
