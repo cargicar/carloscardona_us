@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Quantum Mechanics 9</title>
+    <title>Quantum Mechanics 10</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -94,8 +94,10 @@
 
 		                     		  <h2>Learning Objectives</h2>
 		  <ol>		    
-		    <li>Learn unbounda systems  </li>
-		  
+		    <li>Learn what it means to be an unbound system.  </li>
+		    		    <li>Learn how to deal with the Schroedinger equation for a potential step. </li>
+		    <li>Learn how to deal with the Schroedinger equation for a potential barrier. </li>
+		 
 		  </ol><br><br>
 				  
 	 
@@ -127,7 +129,18 @@ Solutions are given by,
 		 The ground state energy for the quantum harmonic oscillator is given by $$ E_n=\frac{1}{2}\hbar \omega\,. $$ Even thought $n=0$, the lowest possible energy is still not zero, and therefore Heisenberg Uncertainty principle is not violated.
 <br><br>
 
-		 <hr><hr>
+<hr><hr>
+		    <h2>Refresher: Typical Scheme to Find the wavefunction</h2>
+		    <ol>
+		      <li>Divide the space in suitable regions, if possible.</li>
+		      <li> Find the solutions to the Schrodinger equation in each of those regions.</li>
+		      <li>Apply the proper boundary conditions to the solutions on each region.</li>
+		      <li>Apply the proper boundary conditions to the derivative of the solutions on each region.</li>
+		      <li>Solve the conditions imposed by the boundary conditions on each region.</li>
+		     		    </ol>
+		    
+                    <br><br><br>
+
 
                         <h2>Unbounded States</h2>
 			So far we have seen solutions to the Schroedinger solutions for bound states. Now we move to the complementary case of <b>unbounded</b> systems.<br><br>
@@ -177,7 +190,92 @@ Now let's try again, consider the following equation,			                    \beg
 		 <h2>The Potential Step</h2>
 		 Consider the following potential energy,<br><br>
                     <center>  <img src="{% static "img/step_barrier.png" %}" width="465"></center><br><br>
+		    Easiest way to picture it, is to think of an incoming wave from the left towards the step, striking the step to then bounce back and/or get transmitted to the region inside the step, pretty much as light striking a glass. It is useful to remember:<br><br>
+		    
+				     Consider the wave function $\Psi(x,t)=A\,e^{i(k x-\omega t)}$. The wave is traveling... 														  
+				<ol  style="line-height:300%" type="A">
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		     <!-- longer -->
+		     <li> ... to the right (positive $x-$direction) </li>
+		     <li> ... to the left  (negative $x-$direction) </li>
+		     <li> ...stationary</li>
+		     <li> I don't know </li>
+		  </ol>
+				<br><br>
+				Since we are considering an stationary problem, where all wave functions solutions will have the same temporal dependence $e^{-i\omega t}$, our main concern is the spatial dependence, $$ e^{i k x}\,\quad{\rm Right\,mover}$$  $$ e^{-i k x }\,\quad{\rm Left\,mover}\,.$$
+				With that we can start looking into the time-independent Schrodinger equation. Let us start considering region $x<0$, the one to the left of the step, i.e $u(x)=0$. 
+		    	                    \begin{equation}
+                    {d^2\psi(x)\over dx^2}=-k^2\psi(x)
+				\end{equation}
+				 with $k=\sqrt{2mE\over \hbar^2}$.
+				As we have seen, solutions are $ \psi(x)=A~e^{\pm i(kx)}\,.$ Or more correctly:
+																		      $$ \psi(x)=A~e^{+i(kx)}+B~e^{- i(kx)}\,.$$<br><br><hr>
+																		      
+				For the region to the right of the step $x > 0$, or $u(x)=U_0$, we have:
+                \begin{equation}
+                    {d^2\psi(x)\over dx^2}=-{2 m (E- U_0)\over \hbar^2}=-k'^2\psi(x)
+				\end{equation}
+				 with $k'=\sqrt{2m(E-U_0)\over \hbar^2}$.
+			
+				 Two possibilities arises:<br><br>
+				$E > U_0$ and 	$E < U_0$.<br><br>
+						     Consider the case $E < U_0$, what of the following is correct?
+						     					  
+				<ol  style="line-height:300%" type="A">
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		     <!-- longer -->
+		     <li> $k'^2>0 $ </li>
+		     <li> $k'^2 <0 $ </li>
+		     <li> $k'^2=0 $</li>
+		     <li> I don't know </li>
+				</ol>
+				
+				<br><br>
+				Therefore, if $E > U_0$, the solutions are as before but with a different constant $k$:
+			 $$ \psi(x)=A'~e^{+i k' x}+B'~e^{- i k' x}\,.$$<br><br>
 
+whereas for the case $E < U_0$, the solutions are bit different:
+			  $$ \psi(x)=C~e^{+k' x}+D~e^{-k' x}\,.$$<br><br>
+							  
+			  In order to find the undetermined constant we need to apply boundary conditions. The boundary conditions at $\,x=\pm\infty\,$ for the potential step are the simplest. Is easier to think first about region $x>0$. There, the wave is transmitted, what does that tell you about $A', B', C, D$?<br><br>
+			   <b>Think-Pair-Share</b><br>
+		<ol  style="line-height:300%" type="A">
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		     <!-- longer -->
+		     <li>  $A'=0, B'= 0, C=0, D=0$ </li>
+		 <li> $A'=0, B'\neq 0, C=0, D\neq 0$ </li>
+		  <li> $A'\neq 0, B'=0, C\neq 0, D= 0$ </li>
+		     <li> $A'\neq 0, B'= 0, C=0, D\neq 0$ </li>
+		     <li> $A'= 0, B'\neq 0, C\neq 0, D= 0$ </li>
+				</ol>
+				
+				<br><br>
+				Whereas for region $x<0$, what can we say about the constants  $A, B$?
+		<ol  style="line-height:300%" type="A">
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		     <!-- longer -->
+		     <li>  $A=0, B= 0$ </li>
+		 <li> $A=0, B\neq 0$ </li>
+		  <li> $A\neq 0, B=0$ </li>
+		 <li> $A\neq 0, B\neq 0$ </li>
+				</ol>
+							  
+		<hr>
+		All in all the final spatial part of the wave function looks like:<br><br>
+		If  $E > U_0$,
+		$$ \psi(x)_{x<0}=A~e^{+i k x}+B~e^{- i k x}\,\quad  \psi(x)_{x>0}=C~e^{+i k x}
+				    ,.$$
+<br><br>
+		If  $E < U_0$,
+		$$ \psi(x)_{x<0}=A~e^{+i k x}+B~e^{- i k x}\,\quad  \psi(x)_{x>0}=C~e^{- k x}
+		  ,.$$ 
+			 <br><br>
+			 The wave function and its derivative must be continuous at the point where the two regions meet. For $\,E>U_0\,$ these conditions are,
+  <br>  		 <br>   <img src="{% static "img/matching_step.png" %}" width="600"> <br><br>
+  We can use this two equations to eliminate two constants (solve for), say $B$, and $C$:
+  $$B={k-k'\over k+k'}A\,\quad{\rm and}\quad C={2k'\over k+k'}A\,.$$
+  
+		Show solutions, transmission and reflection probabilities, ask about how to $k$ compares to $k'$, $v$ to $v'$, $E$ to $E'$ all that.
 		 <h2>Potential Barrier</h2>
 We will continue our exploration of one-dimensional solutions of the SE. We still will be considering constant energy solutions (those satisfying separation of variables), but now we will look into unbounded states, i.e those that are not bounded.   <br><br>
                     <center>   <img src="{% static "img/tunneling.png" %}" width="350"> <img src="{% static "img/barrier.png" %}" width="365"></center><br><br>
