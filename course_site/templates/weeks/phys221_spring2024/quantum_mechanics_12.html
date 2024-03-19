@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Quantum Mechanics 10</title>
+    <title>Quantum Mechanics 11</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -79,7 +79,7 @@
                         <span class="subheading">=== </span>
                         <span class="subheading">=== </span>
                         <h2></h2>
-                        <h3>PHYS-221 March 18 / 2024 </h3>
+                        <h3>PHYS-221 March 20 / 2024 </h3>
                     </div>
                 </div>
             </div>
@@ -94,189 +94,74 @@
 
 		                     		  <h2>Learning Objectives</h2>
 		  <ol>		    
-		    <li>Learn what it means to be an unbound system.  </li>
-		    		    <li>Learn how to deal with the Schroedinger equation for a potential step. </li>
-		    <li>Learn how to deal with the Schroedinger equation for a potential barrier. </li>
+
+		    <li>Learn how to deal with the Schrodinger equation for a potential barrier. </li>
 		 
 		  </ol><br><br>
 				  
-	 
-		   		    <h2>Quantum Harmonic Oscillator </h2>
-		    <br><br>
 		   
-                    <h2>Refresher: HO Solutions</h2>
-		  
-Solutions are given by,
-\begin{equation}
-\psi_n(x)={\cal N}_n\, e^{-\frac{m\omega x^2}{2\hbar}}H_n\left(x\sqrt{\frac{m\omega}{\hbar}}\right),\quad n=0,1,2,\cdots.
-\end{equation}
-		    with $H_n$ denoting the Hermite polynomials, which lowers orders looks like:
-		    \begin{equation}
-		    H_0(z)=1,\quad H_1(z)=2z,\quad H_2(z)=4z^2-2,\quad H_3(z)=8z^3-12z\,,
-		    \end{equation}
-		    or more generally,
-		     \begin{equation}
-		    H_n(z)=(-1)^n\,e^{z^2}\frac{d^n}{dz^n}\left(e^{-z^2}\right)\,,\quad{\rm and}\quad
-		    {\cal N}_n=\frac{1}{\sqrt{2^n n!}}\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}		    \end{equation}
-
-		    <center>   <img src="{% static "img/HO_sols.png" %}" width="700"></center><br><br>
-		    The corresponding energies for the harmonic oscillator are given by,
-
-                    \begin{equation}
-                    E_n=\left(n+\frac{1}{2}\right)\hbar \omega\,.\quad  n=0,1,2,\cdots.
-                 \end{equation}
-		 For the infinite well, we have concluded that the Heisenberg uncertanty principle forbid to have $E_n$ with $n=0$. Is the same true for the quantum harmonic oscillator?
-		 The ground state energy for the quantum harmonic oscillator is given by $$ E_n=\frac{1}{2}\hbar \omega\,. $$ Even thought $n=0$, the lowest possible energy is still not zero, and therefore Heisenberg Uncertainty principle is not violated.
-<br><br>
-
-<hr><hr>
-		    <h2>Refresher: Typical Scheme to Find the wavefunction</h2>
-		    <ol>
-		      <li>Divide the space in suitable regions, if possible.</li>
-		      <li> Find the solutions to the Schrodinger equation in each of those regions.</li>
-		      <li>Apply the proper boundary conditions to the solutions on each region.</li>
-		      <li>Apply the proper boundary conditions to the derivative of the solutions on each region.</li>
-		      <li>Solve the conditions imposed by the boundary conditions on each region.</li>
-		     		    </ol>
-		    
-                    <br><br><br>
-
-
-                        <h2>Unbounded States</h2>
-			So far we have seen solutions to the Schroedinger solutions for bound states. Now we move to the complementary case of <b>unbounded</b> systems.<br><br>
-			Before moving into such system, let us consider the following equation (for the 4th time!).
-		    <!-- 	                    \begin{equation} -->
-                    <!-- -{\hbar^2\over 2m} {d^2\psi(x)\over dx^2}=E\psi(x)\quad{\rm or}\quad\, {d^2\psi(x)\over dx^2}=-k^2\psi(x) -->
-                    <!-- \end{equation} -->
-                    <!-- with $k=\sqrt{2mE\over \hbar^2}$. What solution whould it be?<br><br><br> -->
-                    <!-- \begin{equation} -->
-                    <!-- \psi(x)=A~e^{i(kx)}=A~cos(kx)+iA~sin(kx) -->
-                    <!--                   \end{equation} -->
-			                    \begin{equation}
-                    {d^2\psi(x)\over dx^2}=-k^2\psi(x)
-                    \end{equation}
-                     What of the following functions is a solution? <br>                   
-                   
-		 		    <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
-		 <ol style="line-height:300%" type="A">
-
-  <li> Yes	  </li>
-		   <li> $ \psi(x)=A~e^{\pm (kx)}$	  </li>
-		   <li> $ \psi(x)=A~e^{\pm i(kx)}$	  </li>
-  <li>  $\psi(x)=A~\sin(x)$	  </li>
-  <li> None of the above.</li>
- 
-		    </ol>
-
-		 <br><br>
-Now let's try again, consider the following equation,			                    \begin{equation}
-                    {d^2\psi(x)\over dx^2}=k^2\psi(x)
-                    \end{equation}
-                     What of the following functions is a solution? <br>                   
-                   
-		 		    <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
-		 <ol style="line-height:300%" type="A">
-
-  <li> Yes	  </li>
-		   <li> $ \psi(x)=A~e^{\pm (kx)}$	  </li>
-		   <li> $ \psi(x)=A~e^{\pm i(kx)}$	  </li>
-  <li>  $\psi(x)=A~\sin(x)$	  </li>
-  <li> None of the above.</li>
- 
-		    </ol>
-
-		 <br><br>
-
 		 <h2>The Potential Step</h2>
 		 Consider the following potential energy,<br><br>
                     <center>  <img src="{% static "img/step_barrier.png" %}" width="465"></center><br><br>
-		    Easiest way to picture it, is to think of an incoming wave from the left towards the step, striking the step to then bounce back and/or get transmitted to the region inside the step, pretty much as light striking a glass. It is useful to remember:<br><br>
-		    
-				     Consider the wave function $\Psi(x,t)=A\,e^{i(k x-\omega t)}$. The wave is traveling... 														  
-				<ol  style="line-height:300%" type="A">
-		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
-		     <!-- longer -->
-		     <li> ... to the right (positive $x-$direction) </li>
-		     <li> ... to the left  (negative $x-$direction) </li>
-		     <li> ...stationary</li>
-		     <li> I don't know </li>
-		  </ol>
+				  
+		 <!-- 		<ol  style="line-height:300%" type="A"> -->
+		 <!-- <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br> -->
+		 <!--     <\!-- longer -\-> -->
+		 <!--     <li> ... to the right (positive $x-$direction) </li> -->
+		 <!--     <li> ... to the left  (negative $x-$direction) </li> -->
+		 <!--     <li> ...stationary</li> -->
+		 <!--     <li> I don't know </li> -->
+		 <!--  </ol> -->
+		 <!-- 		<br><br> -->
 				<br><br>
-				Since we are considering an stationary problem, where all wave functions solutions will have the same temporal dependence $e^{-i\omega t}$, our main concern is the spatial dependence, $$ e^{i k x}\,\quad{\rm Right\,mover}$$  $$ e^{-i k x }\,\quad{\rm Left\,mover}\,.$$
-				With that we can start looking into the time-independent Schrodinger equation. Let us start considering region $x<0$, the one to the left of the step, i.e $u(x)=0$. 
-		    	                    \begin{equation}
-                    {d^2\psi(x)\over dx^2}=-k^2\psi(x)
-				\end{equation}
-				 with $k=\sqrt{2mE\over \hbar^2}$.
-				As we have seen, solutions are $ \psi(x)=A~e^{\pm i(kx)}\,.$ Or more correctly:
-																		      $$ \psi(x)=A~e^{+i(kx)}+B~e^{- i(kx)}\,.$$<br><br><hr>
-																		      
-				For the region to the right of the step $x > 0$, or $u(x)=U_0$, we have:
-                \begin{equation}
-                    {d^2\psi(x)\over dx^2}=-{2 m (E- U_0)\over \hbar^2}=-k'^2\psi(x)
-				\end{equation}
-				 with $k'=\sqrt{2m(E-U_0)\over \hbar^2}$.
-			
-				 Two possibilities arises:<br><br>
-				$E > U_0$ and 	$E < U_0$.<br><br>
-						     Consider the case $E < U_0$, what of the following is correct?
-						     					  
-				<ol  style="line-height:300%" type="A">
-		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
-		     <!-- longer -->
-		     <li> $k'^2>0 $ </li>
-		     <li> $k'^2 <0 $ </li>
-		     <li> $k'^2=0 $</li>
-		     <li> I don't know </li>
-				</ol>
-				
-				<br><br>
-				Therefore, if $E > U_0$, the solutions are as before but with a different constant $k$:
-			 $$ \psi(x)=A'~e^{+i k' x}+B'~e^{- i k' x}\,.$$<br><br>
-
-whereas for the case $E < U_0$, the solutions are bit different:
-			  $$ \psi(x)=C~e^{+k' x}+D~e^{-k' x}\,.$$<br><br>
-							  
-			  In order to find the undetermined constant we need to apply boundary conditions. The boundary conditions at $\,x=\pm\infty\,$ for the potential step are the simplest. Is easier to think first about region $x>0$. There, the wave is transmitted, what does that tell you about $A', B', C, D$?<br><br>
-			   <b>Think-Pair-Share</b><br>
-		<ol  style="line-height:300%" type="A">
-		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
-		     <!-- longer -->
-		     <li>  $A'=0, B'= 0, C=0, D=0$ </li>
-		 <li> $A'=0, B'\neq 0, C=0, D\neq 0$ </li>
-		  <li> $A'\neq 0, B'=0, C\neq 0, D= 0$ </li>
-		     <li> $A'\neq 0, B'= 0, C=0, D\neq 0$ </li>
-		     <li> $A'= 0, B'\neq 0, C\neq 0, D= 0$ </li>
-				</ol>
-				
-				<br><br>
-				Whereas for region $x<0$, what can we say about the constants  $A, B$?
-		<ol  style="line-height:300%" type="A">
-		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
-		     <!-- longer -->
-		     <li>  $A=0, B= 0$ </li>
-		 <li> $A=0, B\neq 0$ </li>
-		  <li> $A\neq 0, B=0$ </li>
-		 <li> $A\neq 0, B\neq 0$ </li>
-				</ol>
-							  
-		<hr>
-		All in all the final spatial part of the wave function looks like:<br><br>
+				All in all the final spatial part of the wave function looks like:<br><br>
 		If  $E > U_0$,
-		$$ \psi(x)_{x<0}=A~e^{+i k x}+B~e^{- i k x}\,\quad  \psi(x)_{x>0}=C~e^{+i k x}
-				    ,.$$
+		$$ \psi(x)_{x<0}=A~e^{+i k x}+B~e^{- i k x}\,\quad  \psi(x)_{x>0}=C~e^{+i k' x}
+				    \,,$$
 <br><br>
 		If  $E < U_0$,
-		$$ \psi(x)_{x<0}=A~e^{+i k x}+B~e^{- i k x}\,\quad  \psi(x)_{x>0}=C~e^{- k x}
-		  ,.$$ 
+			 $$ \psi(x)_{x<0}=A~e^{+i k x}+B~e^{- i k x}\,\quad  \psi(x)_{x>0}=C~e^{- |k'| x} \,,$$ <!-- c' -->
+												     corresponding to:
+			 $$\psi(x<0)=\psi_{\rm Incident}+\psi_{\rm Reflected}\,,\quad\psi(x)_{x>0}= \psi_{\rm Transmitted} $$
 			 <br><br>
-			 The wave function and its derivative must be continuous at the point where the two regions meet. For $\,E>U_0\,$ these conditions are,
-  <br>  		 <br>   <img src="{% static "img/matching_step.png" %}" width="600"> <br><br>
-  We can use this two equations to eliminate two constants (solve for), say $B$, and $C$:
+		Let us firs imposing boundary conditions for the case  $E > U_0$, $$ \psi_{x<0}(x=0)= \psi_{x>0}(x=0)\,,\quad  {d\psi_{x<0}(x=0)\over dx}= {d\psi_{x>0}(x=0)\over dx}$$
+Which can be used to eliminate two constants (solve for), say $B$, and $C$:
   $$B={k-k'\over k+k'}A\,\quad{\rm and}\quad C={2k'\over k+k'}A\,.$$
-  
-		Show solutions, transmission and reflection probabilities, ask about how to $k$ compares to $k'$, $v$ to $v'$, $E$ to $E'$ all that.
-		 <h2>Potential Barrier</h2>
+  <br><br>
+  We are concerned here with Reflection and Transmission probabilities<br>
+  $$ T={|\psi_{\rm Incident}|^2 k_{x>0}\over |\psi_{\rm Transmitted}|^2 k_{x<0}}={|C|^2 |k'|\over |A|^2 k}$$ <!-- c' -->											  $$ R={|\psi_{\rm Incident}|^2 k_{x>0}\over |\psi_{\rm Reflected}|^2 k_{x<0}}={|B|^2 \over |A|^2 k}$$  <!-- c' -->
+
+																																				      <br><br>
+																									      Finally, replacing $k'=\sqrt{2m(E-U_0)\over \hbar^2}$ and $k=\sqrt{2mE\over \hbar^2}$, we can write  <!-- <b>Homework</b> '-->
+	$$T=4{\sqrt{E(E-U_0)}\over\left( \sqrt{E}+\sqrt{E-U_0}\right)^2}\,,\quad{\rm and}\quad R={\left( \sqrt{E}-\sqrt{E-U_0}\right)^2\over\left( \sqrt{E}+\sqrt{E-U_0}\right)^2} $$
+	<!-- <b>Homework: Prove that the sum of R and T equals one</b>  -->
+
+	<br><br><hr>
+	If  $E < U_0$ all the steps proceed as in the case $E > U_0$, but now the quantity ${E-U_0}<0$ or $\sqrt{E-U_0}=i\sqrt{U_0-E}$, which lead us to:
+	    $$    R={\left( \sqrt{E}-i\sqrt{U_0-E}\right)^2\over\left( \sqrt{E}+i\sqrt{U_0-E}\right)^2}\,, $$
+												       which equals,
+												       								<ol  style="line-height:300%" type="A">
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		     <!-- longer -->
+		 <li> $ R=e^{\left(2 \sqrt{E}-i\sqrt{U_0-E}\right)}$</li>
+		 <li>  $R=1$ </li>
+		  <li>  $R = 0$ </li>
+		 <li> Dont know  </li>
+				</ol>
+																				<br><br>
+	In turn,
+																				$$T=4{i\sqrt{E(U_0-E)}\over\left( \sqrt{E}+i\sqrt{U_0-E}\right)^2}\,,$$ is complex. Is that ok? ______
+																				<br><br>
+
+																				Once the particle is reflected, it is completly reflected $R=1$, but if gets transmitted it actually decays exponentially $$ \psi(x)_{x>0}=C~e^{- k' x}\,.$$
+							We define the penetration depth to be given by <!-- <b>homework</b> -->
+																				$$\delta={1\over k'}={\hbar\over \sqrt{2m(U_0-E)}}\,. $$
+																				
+		<!-- Show solutions, transmission and reflection probabilities, ask about how to $k$ compares to $k'$, $v$ to $v'$, $E$ to $E'$ all that. -->
+		 <h2>Next: Potential Barrier</h2>
+                    <br><br><br>
+
+		    <h2>Potential Barrier</h2>
 We will continue our exploration of one-dimensional solutions of the SE. We still will be considering constant energy solutions (those satisfying separation of variables), but now we will look into unbounded states, i.e those that are not bounded.   <br><br>
                     <center>   <img src="{% static "img/tunneling.png" %}" width="350"> <img src="{% static "img/barrier.png" %}" width="365"></center><br><br>
                     Imagine an incoming wave from the left to the right. At $x=0$ the wave meet the barrier (or better, a force $F=-du/dx$ due to the barrier potential), part of the wave is then bounced back and somoe part is transmitted. Our task is to estimate how much cross the barrier and how much is reflected. <br><br>

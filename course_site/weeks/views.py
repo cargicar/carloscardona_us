@@ -77,6 +77,9 @@ def quantum_mechanics_10(request):
 def quantum_mechanics_11(request):
     return TemplateResponse(request,"weeks/phys221_spring2024/quantum_mechanics_11.html",)
 
+def quantum_mechanics_12(request):
+    return TemplateResponse(request,"weeks/phys221_spring2024/quantum_mechanics_12.html",)
+
 #######################################################
 #### Phys 221 Fall 2023 Site #############################
 def home_modern_phys(request):
