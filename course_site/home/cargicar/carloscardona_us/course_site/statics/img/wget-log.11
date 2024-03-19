@@ -1,0 +1,16 @@
+--2023-10-25 23:02:55--  https://www.dropbox.com/scl/fi/uaxev4sg6fvxawz2bfgqf/emission.png?rlkey=ba507fsrj44a6wsjoakhaitm1
+Resolving www.dropbox.com (www.dropbox.com)... 162.125.6.18, 2620:100:601c:18::a27d:612
+Connecting to www.dropbox.com (www.dropbox.com)|162.125.6.18|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://uc57c125b912965d253ed197760d.dl.dropboxusercontent.com/cd/0/inline/CGQzMHNOFEvfNqt9CWxLwYFHuJlttnj_EsT6e8y0c6cmBWDfEPzfLIiNTzIaEIRiFq-k1NtDnvXUllfZ-l2yNvFIzHWWAf--0iC293X9mtLnWtpvRW7O9PFB8Tw1aT6o6Go/file# [following]
+--2023-10-25 23:02:55--  https://uc57c125b912965d253ed197760d.dl.dropboxusercontent.com/cd/0/inline/CGQzMHNOFEvfNqt9CWxLwYFHuJlttnj_EsT6e8y0c6cmBWDfEPzfLIiNTzIaEIRiFq-k1NtDnvXUllfZ-l2yNvFIzHWWAf--0iC293X9mtLnWtpvRW7O9PFB8Tw1aT6o6Go/file
+Resolving uc57c125b912965d253ed197760d.dl.dropboxusercontent.com (uc57c125b912965d253ed197760d.dl.dropboxusercontent.com)... 162.125.6.15, 2620:100:601c:15::a27d:60f
+Connecting to uc57c125b912965d253ed197760d.dl.dropboxusercontent.com (uc57c125b912965d253ed197760d.dl.dropboxusercontent.com)|162.125.6.15|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 162835 (159K) [image/png]
+Saving to: ‘emission.png?rlkey=ba507fsrj44a6wsjoakhaitm1’
+
+emission.png?rlkey=ba507fsrj44a6wsjoakhaitm1           0%[                                                                                                                    ]       0  --.-KB/s               emission.png?rlkey=ba507fsrj44a6wsjoakhaitm1         100%[===================================================================================================================>] 159.02K  --.-KB/s    in 0.004s  
+
+2023-10-25 23:02:56 (41.2 MB/s) - ‘emission.png?rlkey=ba507fsrj44a6wsjoakhaitm1’ saved [162835/162835]
+

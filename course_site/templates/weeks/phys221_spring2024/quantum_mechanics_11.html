@@ -180,7 +180,7 @@ Now let's try again, consider the following equation,			                    \beg
 																		      
 				For the region to the right of the step $x > 0$, or $u(x)=U_0$, we have:
                 \begin{equation}
-                    {d^2\psi(x)\over dx^2}=-{2 m (E- U_0)\over \hbar^2}=-k'^2\psi(x)
+                    {d^2\psi(x)\over dx^2}=-{2 m (E- U_0)\over \hbar^2}\psi=-k'^2\psi(x)
 				\end{equation}
 				 with $k'=\sqrt{2m(E-U_0)\over \hbar^2}$.
 			
@@ -202,7 +202,7 @@ Now let's try again, consider the following equation,			                    \beg
 			 $$ \psi_{x>0}(x)=C~e^{+i k' x}+D~e^{- i k' x}\,.$$<br><br>
 
 whereas for the case $E < U_0$, the solutions are bit different:
-			  $$ \psi_{x>0}(x)=C~e^{+k' x}+D~e^{-k' x}\,.$$<br><br>
+			  $$ \psi_{x>0}(x)=C~e^{+k' x}+D~e^{-|k'| x}\,.$$<br><br>
 							  
 			  In order to find the undetermined constant we need to apply boundary conditions. First we apply boundary conditions at $\,x=\pm\infty\,$ for the potential step these are the simplest. Think about the boundary conditions at $\,x=\pm\infty\,$, what does that tell you about $A, B, C, D$?<br><br>
 			   <b>Think-Pair-Share</b><br>
@@ -223,7 +223,7 @@ whereas for the case $E < U_0$, the solutions are bit different:
 				    \,,$$
 <br><br>
 		If  $E < U_0$,
-		$$ \psi(x)_{x<0}=A~e^{+i k x}+B~e^{- i k x}\,\quad  \psi(x)_{x>0}=C~e^{- k' x}
+		$$ \psi(x)_{x<0}=A~e^{+i k x}+B~e^{- i k x}\,\quad  \psi(x)_{x>0}=C~e^{- |k'| x}
 			 \,,$$ corresponding to:
 			 $$\psi(x<0)=\psi_{\rm Incident}+\psi_{\rm Reflected}\,,\quad\psi(x)_{x>0}= \psi_{\rm Transmitted} $$
 			 <br><br>

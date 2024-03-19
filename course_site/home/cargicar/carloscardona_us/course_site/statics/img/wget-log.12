@@ -1,0 +1,16 @@
+--2023-11-16 01:24:26--  https://www.dropbox.com/scl/fi/5xo6fl0z2kgdy52ao8gto/vel_trans.png?rlkey=kja1djoux0dquwmii662stpxe
+Resolving www.dropbox.com (www.dropbox.com)... 162.125.4.18, 2620:100:601c:18::a27d:612
+Connecting to www.dropbox.com (www.dropbox.com)|162.125.4.18|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://uce37375382d05cb5a315e0365be.dl.dropboxusercontent.com/cd/0/inline/CHkwjH35rBjQQhZ7zf7QRY9feB7xYcHT5FpBw4qcUvwIFKxm2qtZRFrKKbFerLdnfnfSiuooxBbIs7jQHv6gdw79veNnojOtj7vQSkSljoyBVsAS_LJ9dvkQYnjv1en_Dbw/file# [following]
+--2023-11-16 01:24:27--  https://uce37375382d05cb5a315e0365be.dl.dropboxusercontent.com/cd/0/inline/CHkwjH35rBjQQhZ7zf7QRY9feB7xYcHT5FpBw4qcUvwIFKxm2qtZRFrKKbFerLdnfnfSiuooxBbIs7jQHv6gdw79veNnojOtj7vQSkSljoyBVsAS_LJ9dvkQYnjv1en_Dbw/file
+Resolving uce37375382d05cb5a315e0365be.dl.dropboxusercontent.com (uce37375382d05cb5a315e0365be.dl.dropboxusercontent.com)... 162.125.4.15, 2620:100:601c:15::a27d:60f
+Connecting to uce37375382d05cb5a315e0365be.dl.dropboxusercontent.com (uce37375382d05cb5a315e0365be.dl.dropboxusercontent.com)|162.125.4.15|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 116590 (114K) [image/png]
+Saving to: ‘vel_trans.png?rlkey=kja1djoux0dquwmii662stpxe’
+
+vel_trans.png?rlkey=kja1djoux0dquwmii662stpxe          0%[                                                                                                                    ]       0  --.-KB/s               vel_trans.png?rlkey=kja1djoux0dquwmii662stpxe        100%[===================================================================================================================>] 113.86K  --.-KB/s    in 0.02s   
+
+2023-11-16 01:24:27 (6.36 MB/s) - ‘vel_trans.png?rlkey=kja1djoux0dquwmii662stpxe’ saved [116590/116590]
+
