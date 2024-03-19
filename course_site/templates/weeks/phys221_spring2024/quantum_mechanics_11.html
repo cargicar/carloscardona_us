@@ -96,7 +96,6 @@
 		  <ol>		    
 		    <li>Learn what it means to be an unbound system.  </li>
 		    		    <li>Learn how to deal with the Schroedinger equation for a potential step. </li>
-		    <li>Learn how to deal with the Schroedinger equation for a potential barrier. </li>
 		 
 		  </ol><br><br>
 				  
@@ -131,7 +130,6 @@
 		 		    <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
 		 <ol style="line-height:300%" type="A">
 
-  <li> Yes	  </li>
 		   <li> $ \psi(x)=A~e^{\pm (kx)}$	  </li>
 		   <li> $ \psi(x)=A~e^{\pm i(kx)}$	  </li>
   <li>  $\psi(x)=A~\sin(x)$	  </li>
@@ -148,7 +146,6 @@ Now let's try again, consider the following equation,			                    \beg
 		 		    <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
 		 <ol style="line-height:300%" type="A">
 
-  <li> Yes	  </li>
 		   <li> $ \psi(x)=A~e^{\pm (kx)}$	  </li>
 		   <li> $ \psi(x)=A~e^{\pm i(kx)}$	  </li>
   <li>  $\psi(x)=A~\sin(x)$	  </li>
@@ -159,7 +156,7 @@ Now let's try again, consider the following equation,			                    \beg
 		 <br><br>
 
 		 <h2>The Potential Step</h2>
-		 Consider the following potential energy,<br><br>
+		 Consider the following potential energy<br> $U(x)=0$ for $x<0$ and $U(x)=e V_0=U_0$ for $x>0$ ,<br><br>
                     <center>  <img src="{% static "img/step_barrier.png" %}" width="465"></center><br><br>
 		    Easiest way to picture it, is to think of an incoming wave from the left towards the step, striking the step to then bounce back and/or get transmitted to the region inside the step, pretty much as light striking a glass. It is useful to remember:<br><br>
 		    
@@ -179,8 +176,7 @@ Now let's try again, consider the following equation,			                    \beg
                     {d^2\psi(x)\over dx^2}=-k^2\psi(x)
 				\end{equation}
 				 with $k=\sqrt{2mE\over \hbar^2}$.
-				As we have seen, solutions are $ \psi(x)=A~e^{\pm i(kx)}\,.$ Or more correctly:
-																		      $$ \psi(x)=A~e^{+i(kx)}+B~e^{- i(kx)}\,.$$<br><br><hr>
+				As we have seen, solutions are $ \psi(x)=A~e^{\pm i(kx)}\,.$ Or more correctly:							      $$ \psi_{x<0}(x)=A~e^{+i(kx)}+B~e^{- i(kx)}\,.$$<br><br><hr>
 																		      
 				For the region to the right of the step $x > 0$, or $u(x)=U_0$, we have:
                 \begin{equation}
@@ -203,36 +199,25 @@ Now let's try again, consider the following equation,			                    \beg
 				
 				<br><br>
 				Therefore, if $E > U_0$, the solutions are as before but with a different constant $k$:
-			 $$ \psi(x)=A~e^{+i k' x}+B~e^{- i k' x}\,.$$<br><br>
+			 $$ \psi_{x>0}(x)=C~e^{+i k' x}+D~e^{- i k' x}\,.$$<br><br>
 
 whereas for the case $E < U_0$, the solutions are bit different:
-			  $$ \psi(x)=C~e^{+k' x}+D~e^{-k' x}\,.$$<br><br>
+			  $$ \psi_{x>0}(x)=C~e^{+k' x}+D~e^{-k' x}\,.$$<br><br>
 							  
-			  In order to find the undetermined constant we need to apply boundary conditions. The boundary conditions at $\,x=\pm\infty\,$ for the potential step are the simplest. Is easier to think first about region $x>0$. There, the wave is transmitted, what does that tell you about $A, B, C, D$?<br><br>
+			  In order to find the undetermined constant we need to apply boundary conditions. First we apply boundary conditions at $\,x=\pm\infty\,$ for the potential step these are the simplest. Think about the boundary conditions at $\,x=\pm\infty\,$, what does that tell you about $A, B, C, D$?<br><br>
 			   <b>Think-Pair-Share</b><br>
 		<ol  style="line-height:300%" type="A">
 		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
 		     <!-- longer -->
 		     <li>  $A=0, B= 0, C=0, D=0$ </li>
 		 <li> $A=0, B\neq 0, C=0, D\neq 0$ </li>
-		  <li> $A\neq 0, B=0, C\neq 0, D= 0$ </li>
-		     <li> $A\neq 0, B= 0, C=0, D\neq 0$ </li>
+		  <li> $A\neq 0, B\neq0, C\neq 0, D= 0$ </li>
+		     <li> $A\neq 0, B\neq 0, C=0, D\neq 0$ </li>
 		     <li> $A= 0, B\neq 0, C\neq 0, D= 0$ </li>
 				</ol>
 				
 				<br><br>
-				Whereas for region $x<0$, what can we say about the constants  $A, B$?
-		<ol  style="line-height:300%" type="A">
-		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
-		     <!-- longer -->
-		     <li>  $A=0, B= 0$ </li>
-		 <li> $A=0, B\neq 0$ </li>
-		  <li> $A\neq 0, B=0$ </li>
-		 <li> $A\neq 0, B\neq 0$ </li>
-				</ol>
-							  
-		<hr>
-		All in all the final spatial part of the wave function looks like:<br><br>
+				All in all the final spatial part of the wave function looks like:<br><br>
 		If  $E > U_0$,
 		$$ \psi(x)_{x<0}=A~e^{+i k x}+B~e^{- i k x}\,\quad  \psi(x)_{x>0}=C~e^{+i k' x}
 				    \,,$$
@@ -300,3 +285,4 @@ Equivalently, we define   $$R={\rm Prob.Reflected\over time}/{\rm Prob.Incident\
 </body>
 
 </html>
+                                                                                                                                                  
