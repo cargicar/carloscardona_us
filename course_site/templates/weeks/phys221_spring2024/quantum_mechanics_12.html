@@ -100,8 +100,8 @@
 		  </ol><br><br>
 				  
 		   
-		 <h2>The Potential Step</h2>
-		 Consider the following potential energy,<br><br>
+		 <h2>Refresh and continuation: The Potential Step</h2>
+		 We have considered the following potential energy,<br><br>
                     <center>  <img src="{% static "img/step_barrier.png" %}" width="465"></center><br><br>
 				  
 		 <!-- 		<ol  style="line-height:300%" type="A"> -->
@@ -129,7 +129,7 @@ Which can be used to eliminate two constants (solve for), say $B$, and $C$:
   $$B={k-k'\over k+k'}A\,\quad{\rm and}\quad C={2k'\over k+k'}A\,.$$
   <br><br>
   We are concerned here with Reflection and Transmission probabilities<br>
-  $$ T={|\psi_{\rm Incident}|^2 k_{x>0}\over |\psi_{\rm Transmitted}|^2 k_{x<0}}={|C|^2 |k'|\over |A|^2 k}$$ <!-- c' -->											  $$ R={|\psi_{\rm Incident}|^2 k_{x>0}\over |\psi_{\rm Reflected}|^2 k_{x<0}}={|B|^2 \over |A|^2 k}$$  <!-- c' -->
+  $$ T={|\psi_{\rm Incident}|^2 k_{x>0}\over |\psi_{\rm Transmitted}|^2 k_{x<0}}={|C|^2 k'\over |A|^2 k}$$ <!-- c' -->											  $$ R={|\psi_{\rm Incident}|^2 k_{x>0}\over |\psi_{\rm Reflected}|^2 k_{x<0}}={|B|^2 \over |A|^2 k}$$  <!-- c' -->
 
 																																				      <br><br>
 																									      Finally, replacing $k'=\sqrt{2m(E-U_0)\over \hbar^2}$ and $k=\sqrt{2mE\over \hbar^2}$, we can write  <!-- <b>Homework</b> '-->
@@ -153,12 +153,15 @@ Which can be used to eliminate two constants (solve for), say $B$, and $C$:
 																				$$T=4{i\sqrt{E(U_0-E)}\over\left( \sqrt{E}+i\sqrt{U_0-E}\right)^2}\,,$$ is complex. Is that ok? ______
 																				<br><br>
 
-																				Once the particle is reflected, it is completly reflected $R=1$, but if gets transmitted it actually decays exponentially $$ \psi(x)_{x>0}=C~e^{- k' x}\,.$$
+																				Once the particle is reflected, it is completly reflected $R=1$, but otherwise we can not say the particle is transmitted, because it does not propagate after crossing the "wall", it stop being a  wave, in the usual sense, and it actually decays exponentially $$ \psi(x)_{x>0}=C~e^{- k' x}\,.$$
 							We define the penetration depth to be given by <!-- <b>homework</b> -->
 																				$$\delta={1\over k'}={\hbar\over \sqrt{2m(U_0-E)}}\,. $$
-																				
+																				Before move on, let me point out a few of important lessons that this example can teach us, for that I am gonna need                                \begin{equation}
+                    {d^2\psi(x)\over dx^2}=-{2 m (E- U_0)\over \hbar^2}\psi=-k'^2\psi(x)
+				\end{equation}
+
 		<!-- Show solutions, transmission and reflection probabilities, ask about how to $k$ compares to $k'$, $v$ to $v'$, $E$ to $E'$ all that. -->
-		 <h2>Next: Potential Barrier</h2>
+	
                     <br><br><br>
 
 		    <h2>Potential Barrier</h2>
