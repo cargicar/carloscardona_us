@@ -1,0 +1,312 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>3D QM</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/quantum-corral.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1 style="color:Moccasin;">Atoms </h1>
+                        <hr class="small">
+                        <h2>Quantum Mechanics in Three Dimensions</h2>
+                        <h3>PHYS-221 March 24 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+
+		                     		  <h2>Learning Objectives</h2>
+		  <ol>		    
+
+		    <li>Learn generalization of Schrodinger equation to three-dimensions </li>
+		    <li> Learn the quantum mechanical description for the three-dimensional infinite well.
+		 
+		  </ol><br><br>
+				  
+
+                    <h2>Schrodinger equation in three dimensions</h2>
+                    We have seen previously that in one dimension, the Schrodinger equation looks like:
+		    
+                    \begin{equation}
+                    -{\hbar^2\over 2 m}{\partial^2\over \partial x^2}\Psi(x,t)+U(x)\Psi(x,t)=i\hbar{\partial\over \partial t}\Psi(x,t)\,,
+                    \end{equation}
+                    and we also argued that this equation is based on energy considerations for a particle-wave object. <br></br>
+                    The generalization to higher dimensions is almost obvious:
+                    \begin{equation}
+                    \boxed{
+                    -{\hbar^2\over 2 m}\left({\partial^2\over \partial x^2}+{\partial^2\over \partial y^2}+{\partial^2\over \partial z^2}\right)\Psi(x,y,z,t)+U(x,y,z,t)\Psi(x,y,z,t)=i\hbar{\partial\over \partial t}\Psi(x,y,z,t)\,,
+                   } \end{equation}
+                    However, higher dimensions introduce some complexities. For example, the SE written in rectangular coordinates as above, does not explote the spatial symmetries of particular problems, for example usual problems with spherical symmetry. Later we are going to use other more convenient coordinate systems, in which the SE adopt slightly diferent forms.
+                    <h3>Probability density</h3>
+                    As in one dimension, the square of the wave function represent the probability density, i.e, Probability per unit of lenght. In three dimensions we say that the square of the wave function represent the probability per unit of volume, or in math form
+                    \begin{equation}
+                  P_x([a,b])= \int_a^b|\Psi(\vec{r},t)|^2 dV\,,\quad                   \int_{\rm all~~space}|\Psi(\vec{r},t)|^2 dV=1\,.
+                    \end{equation}
+                    <h3>3D Infinite Well</h3>
+                    The analogous system to the square potential in three dimensions is the cube potential, or the quantum-dot if an sphere is used. The infinite well,  is represented by a potential that constrain  a particle to live in a cube with  an infinite potential energy:
+                    <center>   <img src="{% static "img/cube0.png" %}" width="400"></center><br><br>
+                    or in mathematical form,
+                    \begin{equation}
+                    U(x,y,z)=0\,\qquad 0 < x < L \,,\qquad 0 < y < L\,,\qquad 0 < z < L\,,
+                    \end{equation}
+                    and $U(x,y,z)=\infty$ otherwise.<br><br>
+                    As in one dimension, this type of potential have constant energy solutions, and therefore we might try to do separation of variables once again, but now in all four variables:
+                    \begin{equation}
+                    \Psi(x,y,z,t)=X(x)Y(y)Z(z)T(t)\,.
+										      \end{equation}
+										      Let us recall that in one-dimension, say $x$, the infinite well have the following solutions,
+										       \begin{equation}
+               \boxed{     X_n(x)=\sqrt{2\over L_x}sin{n_x\pi x\over L_x}}
+										      \end{equation} with corresponding energy,										      $$ E={n_x^2\pi^2\hbar^2\over 2mL_x}\,.$$ <br><br>
+										    Can you guess the solution $Y(y)$?
+ <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+  <li> $   Y_n(y)=\sqrt{2\over L_x}sin{n\pi y\over L_y}$	  </li>
+  <li> $Y_n(y)=\sqrt{2\over L}sin{n_y\pi y\over L}$</li>
+  <li> $Y_n(y)=\sqrt{2\over L_y}sin{n_y\pi y\over L_y}$</li>
+   <li>I dont know </li>
+		    </ol>
+		  <br><br>
+		           with corresponding energy,
+$$ E={n_y^2\pi^2\hbar^2\over 2mL_y}.$$ <br><br>
+Putting all dimensions together, we have,										     
+                    \begin{equation}
+
+		  \boxed{\Psi(\vec{r})=\sqrt{2^3\over L_x\,L_y\,L_z}{\rm sin}{n_{x}\pi x\over L_{x}}{\rm sin}{n_{y}\pi y\over L_{y}}{\rm sin}{n_{z}\pi z\over L_{z}}} \,. 
+                    \end{equation}
+
+
+                    and the total energy is giving by:
+                    \begin{equation}
+                    \boxed{
+                   E_{n_x,n_y,n_z}= \left({n_{x}^2\over L_x^2}+{n_{z}^2\over L_z^2}+{n_{z}^2\pi^2\over L_z^2}\right){\pi^2\hbar^2\over 2 m}}\,,
+                    \end{equation}
+
+
+
+										      
+                    <!-- Replacing that on the 3D SE, we get: -->
+                    <!-- \begin{equation} -->
+                    <!-- \sum_{\Gamma=X(x),Y(y),Z(z)} {1\over \Gamma(\gamma)}{\partial^2\Gamma(\gamma)\over\partial \gamma^2}=-{2m E\over \hbar^2}\,, -->
+                    <!-- \end{equation} -->
+                    <!-- implying that each term should be a constant: -->
+                    <!-- \begin{equation} -->
+                    <!-- {1\over \Gamma(\gamma)}{\partial^2\Gamma(\gamma)\over\partial \gamma^2}=C_{\gamma}\,, -->
+                    <!-- \end{equation} -->
+                  <!-- with $\Gamma=X,Y,Z$ and $\gamma=x,y,z$, -->
+		  Whereas for the temporal piece:
+
+                    \begin{equation}
+                    {i\hbar\over T(t)}{dT(t)\over dt}=C_{t}\quad\rightarrow\quad T(t)=e^{-i{C_{t}\over\hbar}t}
+                    \end{equation}
+                   <!--  We are now in the familiar situation we were in one dimension, just that for two additional coordinates. There we have seen that the solution was of the form: -->
+
+                   <!--  \begin{equation} -->
+                   <!--  \Gamma(\gamma)=A_{\gamma}{\rm sin}{n_{\gamma}\pi\gamma\over L_{\gamma}}\,.  -->
+                   <!--  \end{equation} -->
+                   <!--  Here is worth doing some clarifications that I have ommited during the one dimension discussion. The most general solution to equation above is -->
+
+                   <!--  \begin{equation} -->
+                   <!--  \Gamma(\gamma)=A_{\gamma}e^{ik\gamma}+B_{\gamma}e^{-ik\gamma}\,. -->
+                   <!--  \end{equation} -->
+                   <!--  Since the wave can't penetrate an infinite potential (it would requiere an infinite initial energy), the probability of bounce in the boundary has to be equal to the probability of the incoming wave (in other words, transmision is zero), or $|A_{\gamma}|=|B_{\gamma}|$.  Additionally, we are positioning the cube as shown at the figure above, which in particular  imply that we want $\Gamma(0)=0$, which impose $A_{\gamma}=-B_{\gamma}$, leading us to the result quoted. Expanding back from $\Gamma(\gamma)$ to $X,Y,Z$ we have the total solution to be: <\!-- c' -\-> -->
+
+                   <!--  \begin{equation} -->
+                   <!--           \Psi(\vec{r})=2^3 A_{x}A_{y}A_{z}{\rm sin}{n_{x}\pi x\over L_{x}}{\rm sin}{n_{y}\pi y\over L_{y}}{\rm sin}{n_{z}\pi z\over L_{z}} \,.  -->
+                   <!--  \end{equation} -->
+
+                   <!--  <br><br> -->
+                   <!--  The only actual difference with the case in one dimension, is that now we have three indepent solutions, which give us three contributing quantizations to the energy: -->
+
+                   <!--  \begin{equation} -->
+                   <!--  -{n_{x}^2\pi^2\over L_x^2}-{n_{z}^2\pi^2\over L_z^2}-{n_{z}^2\pi^2\over L_z^2}=-{2m E\over \hbar^2} -->
+                   <!--  \end{equation} -->
+                   <!--  or in slightly better form: -->
+                   <!--  \begin{equation} -->
+                   <!--  \boxed{ -->
+                   <!-- E_{n_x,n_y,n_z}= \left({n_{x}^2\over L_x^2}+{n_{z}^2\over L_z^2}+{n_{z}^2\pi^2\over L_z^2}\right){\pi^2\hbar^2\over 2 m}}\,, -->
+                   <!--  \end{equation} -->
+
+                   <!--  with corresponding wave function: -->
+                   <!--  \begin{equation} -->
+                   <!-- \boxed{ \Psi(\vec{r})= A\,{\rm sin}{n_{x}\pi x\over L_{x}}{\rm sin}{n_{y}\pi y\over L_{y}}{\rm sin}{n_{z}\pi z\over L_{z}}} \,.  -->
+                   <!--  \end{equation} -->
+										      <!--  We can define a single constant $A=2^3A_{x}A_{y}A_{z}$. -->
+										      Each triple $(n_x,n_y,n_z)$ defines a three dimensional standing wave. Each new spatial dimensions leads to a corresponding <b>quantum number</b> contributing to the energy.<br><br>
+										      As in one dimension, none quantum number $n_{\gamma}$ is allowed to become zero, since that will vanish the wave function and will violate the uncertanty principle. Then again, the lowest energy state, or ground state, corresponds to the energy at $(n_x,n_y,n_z)=(1,1,1)$.<br><br>
+										      What are the quantum numbers corresponding to the next energy level,
+ <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+		   <li>  $(n_x,n_y,n_z)=(2,1,1)$	  </li>
+		   <li>  $(n_x,n_y,n_z)=(1,2,1)$	  </li>
+		   <li>  $(n_x,n_y,n_z)=(1,1,2)$	  </li>
+		     <li>  All of the above	  </li>
+		    </ol>
+		  <br><br>
+An electron is in the $(n_x, n_y, n_z)= (1, 2, 1)$ state of a cubic 3D infinite well of side length equal to $L$. Where is the probability of finding the electron the largest?
+		  <b> Think-Pair-Shar</b><br>
+		  <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+		    <li>  $(x,y,z)=(L/2,L/4,L/2)$ and  $(x,y,z)=(L/4,L/2,L/2)$ 	  </li>
+		   <li>  $(x,y,z)=(L/2,L/4,L/2)$ and  $(x,y,z)=(L/2,3L/4,L/2)$ 	  </li>
+	 <li>  $(x,y,z)=(3L/4,L/2,L/2)$ and  $(x,y,z)=(L/2,3L/4,L/2)$ 	  </li>
+		     <li>  None of the above	  </li>
+		    </ol>
+		  <br><br>
+										      
+                    Unlike in one dimension, the state in the next energy level above the ground state is not unique. And for that matter any other state other that the ground state is unique, because there might be multiple states with the same energy! This phenomena is know as <b>degeneracy</b>.<br><br> To illustrate this a bit better, lets simplify things by taking an actual cube $L_{x}=L_y=L_z=L$, then:
+
+                    \begin{equation}
+                    E=(n_x^2+n_y^2+n_z^2){\pi^2\hbar^2\over 2mL^2}
+                    \end{equation}
+                    each triplet that satisfies the following equation
+                    \begin{equation}
+                    (n_x^2+n_y^2+n_z^2)=r^2\,,
+                    \end{equation}
+                  with $r^2$ a constant, defines a family of different wave functions with the same energy.
+		  <br><br>
+		  Say $r^2=6$ and ${\pi^2\hbar^2\over 2mL^2}=1$, or in other words, the energy is given by $E=6$.  How many different states (defined by the quantum numbers $(n_x,n_y,n_z)$) have the same energy? 
+ <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+		   <li>None</li>
+		   <li>  $1$	  </li>
+		   <li>  $2$	  </li>
+		   <li>  $3$	  </li>
+		   <li>  $4$	  </li>
+		   
+		    </ol>
+		  <br><br>
+
+										      
+               
+                    <center>   <img src="{% static "img/degeneracy0.png" %}" width="400"></center><br><br>
+
+                    $$ \Psi_{2,1,1}=\sqrt{2\over L} {\rm sin}{2 \pi x\over L}{\rm sin}
+                    {1\pi y\over L}{\rm sin}{1\pi z\over L}\,, \qquad\Psi_{1,2,1}=\sqrt{2\over L} {\rm sin}{1\pi x\over L}{\rm sin}{2\pi y\over L}{\rm sin}{1\pi z\over L}\,,$$
+                    $$ \Psi_{1,1,2}= \sqrt{2\over L}{\rm sin}{1 \pi x\over L}{\rm sin}
+                    {1\pi y\over L}{\rm sin}{2\pi z\over L}\,.$$
+                    Unlike the pedestrian definition of degeneracy, in quantum mechanics it is an indication of beauty, or more precisely, of symmetry. In the example above, it happens when the cube is a perfect cube, but if we deform it, even just a little, the degeneracy is lifted. For example, for the perfect cube $permutations[(1,1,2)]$ are corresponding to the same energy:
+
+                    \begin{equation}
+                    E_{1,1,2}\sim {(1^2+1^2+2^2)\over L^2}={6\over L^2}
+                    \end{equation}
+                    or more explicitly
+                    $$E_{1,1,2}= E_{1,2,1}= E_{2,1,1}.$$
+                    What if we deform a perfect cube, say we make $L_x=2L$?
+ <br>	 <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <ol style="line-height:300%" type="A">
+
+		   <li>None</li>
+		   <li>  $E_{1,1,2}= E_{1,2,1}= E_{2,1,1}$	  </li>
+		   <li>  $E_{1,1,2}\neq E_{1,2,1}= E_{2,1,1}$	  </li>
+		   <li>  $E_{1,1,2}= E_{1,2,1}\neq E_{2,1,1}$	  </li>
+		   <li>  $E_{1,1,2}\neq E_{1,2,1}\neq E_{2,1,1}$	  </li>
+		   
+		    </ol>
+		  <br><br>
+We will have  $E_{1,1,2}= E_{1,2,1}= {21\over 4 L^2}\,, E_{2,1,1}={3\over L^2}$.	
+		  <br><br>
+		  More generally, any deformation of the length in any direction will <em>lift</em> the energy degeneracy,
+		    
+                    \begin{equation}
+                    E_{1,1,2}= {1^2\over(L+\delta L_{x})^2}+{1^2\over(L+\delta L_{y})^2}+{2^2\over(L+\delta L_{z})^2}
+                    \end{equation}
+                    is different for permutations of $[(1,1,2)]$, as long as $\delta_{x}\neq\delta_{y}\neq \delta_{y}$ (BB):
+                    $$E_{1,1,2}\neq E_{1,2,1}\neq E_{2,1,1}$$
+
+                    <!-- <hr><b>Problem:</b><br> -->
+                    <!-- We have some electrons of the same energy inside an 3D infinite well of side size 1nm. We have measure the energy of one of these electrons to be 2.26 eV<br> (a) How many possible different wave functions we have inside the well?<br> (b) Write down the corresponding wave functions for each electron?<br> (c) Where each of these electrons have the maximum probability to be found? -->
+                    <!-- <hr> -->
+                    <!-- <p>Video Shared by Jack Solomon -->
+                    <!--     <a href="https://www.youtube.com/watch?v=nmC0ygr08tE">pilot-wave dynamics of walking droplets</a> February 24, 2023</p> -->
+		  <h3>Next:  The Schrödinger Equation for a Central Force</h3>
+		  <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
