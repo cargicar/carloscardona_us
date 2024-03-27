@@ -119,21 +119,90 @@ the following spectrum was observed:
                     with $R=1.097\times 10^7m^{-1}=$<b>Rydberg constant</b>, which was adjusted so the formula fit the right observed values. <br><br>
                     Previous to the 1900's, we didn't have a satisfactory model of the atom, and things got worse when the Rutherford experiment in 1909 discovered the atomic nucleus, ruling out the accepted <em> plum pudding</em> model of the time,<br><br>
                     <center>   <img src="{% static "img/pudding.png" %}" width="500"></center><br><br>
-                    We have seen previously that's Bohr's model sucesfully explain Balmer's formula, let's see how:
+                    Later we will see one of the most impressive success of Quantum Mechanics, the theoretical explaination of Balmer's formula. We will see that the Schrodinger equation along side boundary conditions for the wave function on the potential corresponding to the Hydrogen atom, predicts an energy quantized and given by,
                     \begin{equation} \boxed{
-                    E_{Bohr}=-{m e^2\over2 (4\pi\epsilon_0)^2 n^2}={-13.6 eV\over n^2} }
+                    E_{hydrogen}=-{m e^2\over2 (4\pi\epsilon_0)^2 n^2}={-13.6 eV\over n^2} }
                     \end{equation}
                     -13.6 eV =<b>ionization energy</b> of the hydrogen atom.
-                    (BB)<br><br>
+                    <br><br>
+The Balmer series is produced by electrons at energy levels $n>2$ by releasing energy (in form of a photon) to fall at the energy level $n=2$. What is energy corresponding to the least energetic Balmer line?     
+
+			<ol  style="line-height:300%" type="A">
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		     <!-- longer -->
+		 <li> $ -13.6\left({4\over 45}\right)$eV</li>
+		 <li> $ -13.6\left({1\over 6}\right)$eV</li>
+		 <li> $ -13.6\left({5\over 36}\right)$eV</li>
+		 <li> I do not know </li>
+				</ol>
+	<br><br>
+	<!-- 		<ol  style="line-height:300%" type="A"> -->
+	<!-- 	 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br> -->
+	<!-- 	     <\!-- longer -\-> -->
+	<!-- 	 <li> $\lambda = -13.6\,ev\left({4\over 45}\right)$</li> -->
+	<!-- 	 <li> $\lambda = -13.6\,ev\left({1\over 6}\right)$</li> -->
+	<!-- 	 <li> $\lambda = -13.6\,ev\left({5\over 36}\right)$</li> -->
+		 
+	<!-- 	 <li> $x = r\,\sin\theta\cos\phi\,\quad y = r\,\sin\theta\sin\phi\,\quad  y = r\,\cos\phi$</li> -->
+	<!--  	 <li> $x = r\,\sin\theta\cos\phi\,\quad y = r\,\sin\theta\sin\phi\,\quad  y = r\,\sin\phi$</li> -->
+	<!-- 	 <li> I do not remember </li> -->
+	<!-- 			</ol> -->
+	<!-- <br><br> -->
+
+		    
                     <center>   <img src="{% static "img/hydrogen_series0.png" %}" width="500"></center><br><br>
                     We have found the stationary hydrogen's wavefunction solutions, however, in practice, an atom is never absolutely isolated, and interactions with the environment leads to  energy transitions between levels, even quantum fluctuations lead to such transitions.<br><br>
                     Each element in nature have a characteristic spectral emmision decomposition, which is used as a ``fingerprint'' that allow us to determine the chemical content of many substances. This is for example, how we deduce the elemtary content of starts, galaxies, cosmic dust, etc.<br><br> 
-                    Despite Bohr's model provides with a good explanation for the quantization of energy, it still left some things unexplained, like quantization of angular momentum. It's also very limited, since it does not generalize to other atoms and a more rigurous quantum treatment of the hydrogen atom is requiered. Let us recall that the potential energy for the hydrogen atom can be taken to be the electrostatic potential felt by the electron,
+Let's return to the characteristic potential energy for the Hydrogen atom,
                     \begin{equation}
                     U(r)=-{1\over 4\pi\epsilon_0}{e^2\over r}\,.
                     \end{equation}
                     We see that it only depends on the radius (a potential that only depends on the radius, is called a <b>central potential</b>), and henceforth, it would be unconvenient to use cartesian coordinates, and we need to rewrite Schrodinger equation in the more convenient Spherical coordinates,<br><br>
+		    <h2>Quick Review of Spherical Coordinates</h2>
+		    Do you remember the coordinate transformation from spherical coordinates to Cartesian coordinates? 
+
                     <center>   <img src="{% static "img/spherical0.png" %}" width="500"></center><br><br>
+			<ol  style="line-height:300%" type="A">
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		     <!-- longer -->
+		 <li> $x = r\,\cos\theta\cos\phi\,\quad y = r\,\sin\theta\sin\phi\,\quad  y = r\,\cos\phi$</li>
+		 <li> $x = r\,\sin\theta\cos\phi\,\quad y = r\,\sin\theta\sin\phi\,\quad  y = r\,\cos\phi$</li>
+	 	 <li> $x = r\,\sin\theta\cos\phi\,\quad y = r\,\sin\theta\sin\phi\,\quad  y = r\,\sin\phi$</li>
+		 <li> I do not remember </li>
+				</ol>
+	<br><br>
+
+
+<iframe id="embed-iframe" allowTransparency="true" allow="encrypted-media *" allowfullscreen height="615" width="660" border="0" scrolling="no" frameborder="0" marginwheight="0" marginwidth="0" src="https://app.jove.com/embed/player?id=14691&access=151aa96972&t=1&s=1&fpv=1"></iframe>
+<br><br>
+Consider a reference frame with origin where is indicated, the blackboard is in the $x-y$ plane, $x$ is coming out of the backboard towards you. Where is the vector $(r,\theta,\phi)=(r, \pi/4,0)$ pointing to (approximately)?
+
+                    <center>   <img src="{% static "img/spherical0.png" %}" width="500"></center>
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		 <li> One side windows</li>
+		 <li> The side door</li>
+		 <li> The projector</li>
+		 <li> The end of time </li>
+				</ol>
+	<br><br>
+What are the spherical coordinates (approximately) of Carlos' head position? 		    
+
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		   <li> $(r,\theta,\phi)=(2 m, \pi/2,-\pi/2)$</li>
+		   <li> $(r,\theta,\phi)=(-2 m, \pi/2,\pi/2)$</li>
+		    <li> $(r,\theta,\phi)=(2 m, \pi/4,\pi/2)$</li>
+
+		 <li> None of the above </li>
+				</ol>
+	<br><br>
+		    
+
+		    <h2> Schrodinger Equation in Spherical Coordinates</h2>
+		    
                     For the Schrodinger equation we need the operator,
                     \begin{equation}
                     \nabla^2={1\over r^2}\left[{\partial\over \partial r}\left(r^2{\partial\over \partial r}\right)+{1\over {\rm sin}(\theta)}{\partial\over \partial\theta}\left({\rm sin}(\theta){\partial\over\partial\theta}\right)  +{1\over {\rm sin}^2(\theta)}{\partial^2\over \partial\phi^2}\right]
