@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>3D QM</title>
+    <title>Atoms_2</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -99,7 +99,11 @@
 		 
 		  </ol><br><br>
 
-                    <h2>Hydrogen Spectral Lines</h2>
+                  <h2>Hydrogen Spectral Lines</h2>
+		   Previous to the 1900's, an accepted model of the atom was the so-called  <em> plum pudding</em> model,<br>
+		                        <center>   <img src="{% static "img/pudding.png" %}" width="500"></center><br><br>A breakthrough was achieved in 1909 by Rutherford's experiment discovering the atomic nucleus, ruling out the plum pudding model, and leading us to the "planetary" Rutherford's model,  considering a localized positive charge (nucleus) being orbited by many light charges (electrons). However, this model still has important flaws, among then, the electrons will eventually fall into the nucleus due to electromagnetic radiation. <br><br> 
+
+                    In the next few sessions we will see one of the most impressive success of Quantum Mechanics, a satisfactory theoretical description of the Hydrogen atom (and subsequently, all atoms), the explanation of the atomic spectral lines, the periodic table, molecular bonds, among many other interesting things.<br><br>
 In this session we will start our quantum mechanical treatment for the Hydrogen atom. We can start by thinking about it as light negative charged particle (electron) orbiting a heavy (2000 heavier proton)  positively charged particle. With those assumptions, we can think of the electron as moving around the proton under the influence of the central potential
                     \begin{equation}
                     u(r)=-{1\over4\pi \epsilon_0}{e^2\over r}\,
@@ -116,24 +120,22 @@ the following spectrum was observed:
                     \begin{equation}
                     {1\over \lambda}=R\left({1\over 4}-{1\over n^2}\right)\,\qquad n=3,4,5,\cdots.
                     \end{equation}
-                    with $R=1.097\times 10^7m^{-1}=$<b>Rydberg constant</b>, which was adjusted so the formula fit the right observed values. <br><br>
-                    Previous to the 1900's, an accepted model of the atom was the so-called  <em> plum pudding</em> model,<br>
-		                        <center>   <img src="{% static "img/pudding.png" %}" width="500"></center><br><br>A breakthrough was achieved in 1909 by Rutherford's experiment discovering the atomic nucleus, ruling out the plum pudding model, and leading us to the "planetary" Rutherford's model,  considering a localized positive charge (nucleus) being orbited by many light charges (electrons). However, this model still has important flaws, among then, the electrons will eventually fall into the nucleus due to electromagnetic radiation. <br><br> 
-
-                    In the next few sessions we will see one of the most impressive success of Quantum Mechanics, a satisfactory theoretical description of the Hydrogen atom (and subsequently, all atoms) and the explanation of the atomic spectral lines. We will see that the Schrodinger equation along side boundary conditions for the wave function on the potential corresponding to the Hydrogen atom, predicts an energy quantized and given by,
+                    with $R=1.097\times 10^7m^{-1}=$<b>Rydberg constant</b>, which was adjusted so the formula fit the right observed values.  Before the developing of quantum mechanics this observation was puzzling, in part because according to classical mechanics, we should observe a continuous spectrum.  <br><br>
+		    <iframe id="embed-iframe" allowTransparency="true" allow="encrypted-media *" allowfullscreen height="600" width="650" border="0" scrolling="no" frameborder="0" marginwheight="0" marginwidth="0" src="https://app.jove.com/embed/player?id=11299&access=f6b44656f5&t=1&s=1&fpv=1"></iframe><br>
+		    We will see that the Schrodinger equation along side boundary conditions for the wave function on the potential corresponding to the Hydrogen atom, predicts an energy quantized and given by,
                     \begin{equation} \boxed{
                     E_{hydrogen}=-{m e^2\over2 (4\pi\epsilon_0)^2 n^2}={-13.6 eV\over n^2} }
                     \end{equation}
                     -13.6 eV =<b>ionization energy</b> of the hydrogen atom.
                     <br><br>
-The Balmer series is produced by electrons at energy levels $n>2$ by releasing energy (in form of a photon) to fall at the energy level $n=2$. What is energy corresponding to the least energetic Balmer line?     
+The Balmer series is produced by electrons at energy levels $n>3$ by releasing energy (in form of a photon) to fall at the energy level $n=2$. What is energy corresponding to the least energetic Balmer line?     
 
 			<ol  style="line-height:300%" type="A">
 		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
 		     <!-- longer -->
-		 <li> $ -13.6\left({4\over 45}\right)$eV</li>
-		 <li> $ -13.6\left({1\over 6}\right)$eV</li>
-		 <li> $ -13.6\left({5\over 36}\right)$eV</li>
+		 <li> $ \Delta E=-13.6\left({4\over 45}\right)$eV</li>
+		 <li> $ \Delta E= -13.6\left({1\over 6}\right)$eV</li>
+		 <li> $ \Delta E= -13.6\left({5\over 36}\right)$eV</li>
 		 <li> I do not know </li>
 				</ol>
 	<br><br>
@@ -187,7 +189,7 @@ Consider a reference frame with origin where is indicated, the blackboard is in 
 		 <li> The end of time </li>
 				</ol>
 	<br><br>
-What are the spherical coordinates (approximately) of Carlos' head position? 		    
+What are the spherical coordinates of Carlos' head position  (approximately)? 		    
 
 			<ol  style="line-height:300%" type="A">
 		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
@@ -226,6 +228,7 @@ What are the spherical coordinates (approximately) of Carlos' head position?
                     <hr>
                    $$ {\partial^2\Phi(\phi)\over \partial\phi^2}=-D\Phi(\phi)$$
                     <hr>
+		    <h2>Next: "Schrodinger equation solutions for the Hydrogen atom.</h2>
                     <br><br><br>
                 </div>
             </div>
