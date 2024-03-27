@@ -77,8 +77,8 @@
                     <div class="site-heading">
                         <h1>Atoms </h1>
                         <hr class="small">
-                        <h2>The Hydrogen Atom </h2>
-                        <h3>PHYS-221 Feb 24 / 2023 </h3>
+                        <h2>The Hydrogen Spectral Lines and Spherical Coordinates </h2>
+                        <h3>PHYS-221 March 26 / 2024 </h3>
                     </div>
                 </div>
             </div>
@@ -89,15 +89,23 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    Announcement: 
+              <div class="post-preview">
+		
+		                     		  <h2>Learning Objectives</h2>
+		  <ol>		    
+
+		    <li>Learn about the spectral lines of Hydrogen atom. </li>
+		    <li>Remind spherical coordinates. </li>
+		 
+		  </ol><br><br>
+
                     <h2>Hydrogen Spectral Lines</h2>
-                    Let us go back to our old friend the hydrogen atom, and try to do a more accurate Quantum Mechanical treatment. We can start by once again thinking about it as light negative charged particle orbitin a heavy (2000 heavier) positively charged particle. With those assumptions, we can think of the electron as moving around the proton under the influence of the central potential
+In this session we will start our Quantum Mechanical treatment for the Hydrogen atom. We can start by thinking about it as light negative charged particle (electron) orbiting a heavy (2000 heavier proton)  positively charged particle. With those assumptions, we can think of the electron as moving around the proton under the influence of the central potential
                     \begin{equation}
                     u(r)=-{1\over4\pi \epsilon_0}{e^2\over r}\,
                     \end{equation}
                     which looks like
-                    <center>   <img src="{% static "img/hydrogen_potential.png" %}" width="400"></center><br><br>
+                    <center>   <img src="{% static "img/hydrogen_potential0.png" %}" width="400"></center><br><br>
 which pretty much looks like a deep well. But with a non-constant potential energy. We can expect some general features from the well to happen here, like energy quantization and stationary solutions, but in order to ge the actual quantum states, we need to solve the Schrodinger equation for the given potential rigorously. Before doing that, lets look a bit deeper into the experimental observations on the hydrogen atom, previous to its quantum mechanical description.
                     <h3>Balmer Spectral Series</h3>
                     When looking into the spectra decomposition of light emitted by a hydrogen lamp
@@ -117,15 +125,15 @@ the following spectrum was observed:
                     \end{equation}
                     -13.6 eV =<b>ionization energy</b> of the hydrogen atom.
                     (BB)<br><br>
-                    <center>   <img src="{% static "img/hydrogen_series.png" %}" width="500"></center><br><br>
+                    <center>   <img src="{% static "img/hydrogen_series0.png" %}" width="500"></center><br><br>
                     We have found the stationary hydrogen's wavefunction solutions, however, in practice, an atom is never absolutely isolated, and interactions with the environment leads to  energy transitions between levels, even quantum fluctuations lead to such transitions.<br><br>
                     Each element in nature have a characteristic spectral emmision decomposition, which is used as a ``fingerprint'' that allow us to determine the chemical content of many substances. This is for example, how we deduce the elemtary content of starts, galaxies, cosmic dust, etc.<br><br> 
                     Despite Bohr's model provides with a good explanation for the quantization of energy, it still left some things unexplained, like quantization of angular momentum. It's also very limited, since it does not generalize to other atoms and a more rigurous quantum treatment of the hydrogen atom is requiered. Let us recall that the potential energy for the hydrogen atom can be taken to be the electrostatic potential felt by the electron,
                     \begin{equation}
                     U(r)=-{1\over 4\pi\epsilon_0}{e^2\over r}\,.
                     \end{equation}
-                    We see that it only depends on the radius (a potential that only depends on the radius, is called a <b>central potential</b>), and henceforth, it would be unconvenient to use cartesian coordinates, and we need to rewrite Schrodinger equation in the more convenient Spherical coordinates,
-                    <center>   <img src="{% static "img/spherical.png" %}" width="500"></center><br><br>
+                    We see that it only depends on the radius (a potential that only depends on the radius, is called a <b>central potential</b>), and henceforth, it would be unconvenient to use cartesian coordinates, and we need to rewrite Schrodinger equation in the more convenient Spherical coordinates,<br><br>
+                    <center>   <img src="{% static "img/spherical0.png" %}" width="500"></center><br><br>
                     For the Schrodinger equation we need the operator,
                     \begin{equation}
                     \nabla^2={1\over r^2}\left[{\partial\over \partial r}\left(r^2{\partial\over \partial r}\right)+{1\over {\rm sin}(\theta)}{\partial\over \partial\theta}\left({\rm sin}(\theta){\partial\over\partial\theta}\right)  +{1\over {\rm sin}^2(\theta)}{\partial^2\over \partial\phi^2}\right]
