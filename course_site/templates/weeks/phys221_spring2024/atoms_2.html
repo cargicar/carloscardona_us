@@ -100,13 +100,13 @@
 		  </ol><br><br>
 
                     <h2>Hydrogen Spectral Lines</h2>
-In this session we will start our Quantum Mechanical treatment for the Hydrogen atom. We can start by thinking about it as light negative charged particle (electron) orbiting a heavy (2000 heavier proton)  positively charged particle. With those assumptions, we can think of the electron as moving around the proton under the influence of the central potential
+In this session we will start our quantum mechanical treatment for the Hydrogen atom. We can start by thinking about it as light negative charged particle (electron) orbiting a heavy (2000 heavier proton)  positively charged particle. With those assumptions, we can think of the electron as moving around the proton under the influence of the central potential
                     \begin{equation}
                     u(r)=-{1\over4\pi \epsilon_0}{e^2\over r}\,
                     \end{equation}
                     which looks like
                     <center>   <img src="{% static "img/hydrogen_potential0.png" %}" width="400"></center><br><br>
-which pretty much looks like a deep well. But with a non-constant potential energy. We can expect some general features from the well to happen here, like energy quantization and stationary solutions, but in order to ge the actual quantum states, we need to solve the Schrodinger equation for the given potential rigorously. Before doing that, lets look a bit deeper into the experimental observations on the hydrogen atom, previous to its quantum mechanical description.
+which pretty much looks like a deep well, but with a non-constant potential energy. We can expect some general features from the well to happen here, like energy quantization and stationary solutions, but in order to ge the actual quantum states, we need to solve the Schrodinger equation for the given potential rigorously. Before doing that, lets look a bit into the experimental observations on the hydrogen atom, previous to its quantum mechanical description.
                     <h3>Balmer Spectral Series</h3>
                     When looking into the spectra decomposition of light emitted by a hydrogen lamp
                     <center>   <img src="{% static "img/spectral.jpg" %}" width="500"></center><br><br>
@@ -117,9 +117,10 @@ the following spectrum was observed:
                     {1\over \lambda}=R\left({1\over 4}-{1\over n^2}\right)\,\qquad n=3,4,5,\cdots.
                     \end{equation}
                     with $R=1.097\times 10^7m^{-1}=$<b>Rydberg constant</b>, which was adjusted so the formula fit the right observed values. <br><br>
-                    Previous to the 1900's, we didn't have a satisfactory model of the atom, and things got worse when the Rutherford experiment in 1909 discovered the atomic nucleus, ruling out the accepted <em> plum pudding</em> model of the time,<br><br>
-                    <center>   <img src="{% static "img/pudding.png" %}" width="500"></center><br><br>
-                    Later we will see one of the most impressive success of Quantum Mechanics, the theoretical explaination of Balmer's formula. We will see that the Schrodinger equation along side boundary conditions for the wave function on the potential corresponding to the Hydrogen atom, predicts an energy quantized and given by,
+                    Previous to the 1900's, an accepted model of the atom was the so-called  <em> plum pudding</em> model,<br>
+		                        <center>   <img src="{% static "img/pudding.png" %}" width="500"></center><br><br>A breakthrough was achieved in 1909 by Rutherford's experiment discovering the atomic nucleus, ruling out the plum pudding model, and leading us to the "planetary" Rutherford's model,  considering a localized positive charge (nucleus) being orbited by many light charges (electrons). However, this model still has important flaws, among then, the electrons will eventually fall into the nucleus due to electromagnetic radiation. <br><br> 
+
+                    In the next few sessions we will see one of the most impressive success of Quantum Mechanics, a satisfactory theoretical description of the Hydrogen atom (and subsequently, all atoms) and the explanation of the atomic spectral lines. We will see that the Schrodinger equation along side boundary conditions for the wave function on the potential corresponding to the Hydrogen atom, predicts an energy quantized and given by,
                     \begin{equation} \boxed{
                     E_{hydrogen}=-{m e^2\over2 (4\pi\epsilon_0)^2 n^2}={-13.6 eV\over n^2} }
                     \end{equation}
@@ -151,7 +152,6 @@ The Balmer series is produced by electrons at energy levels $n>2$ by releasing e
 
 		    
                     <center>   <img src="{% static "img/hydrogen_series0.png" %}" width="500"></center><br><br>
-                    We have found the stationary hydrogen's wavefunction solutions, however, in practice, an atom is never absolutely isolated, and interactions with the environment leads to  energy transitions between levels, even quantum fluctuations lead to such transitions.<br><br>
                     Each element in nature have a characteristic spectral emmision decomposition, which is used as a ``fingerprint'' that allow us to determine the chemical content of many substances. This is for example, how we deduce the elemtary content of starts, galaxies, cosmic dust, etc.<br><br> 
 Let's return to the characteristic potential energy for the Hydrogen atom,
                     \begin{equation}
