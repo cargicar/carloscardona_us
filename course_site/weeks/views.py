@@ -89,6 +89,9 @@ def atoms_1(request):
 def atoms_2(request):
     return TemplateResponse(request,"weeks/phys221_spring2024/atoms_2.html",)
 
+def atoms_3(request):
+    return TemplateResponse(request,"weeks/phys221_spring2024/atoms_3.html",)
+
 #######################################################
 #### Phys 221 Fall 2023 Site #############################
 def home_modern_phys(request):
