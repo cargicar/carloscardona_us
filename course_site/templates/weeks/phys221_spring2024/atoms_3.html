@@ -221,17 +221,41 @@ Consider the reference frame indicated on the blackboard. The blackboard is in t
 
 		 <li> None of the above </li>
 				</ol>
-	<br><br>
-                  
-		    We already know the solution of such equation $$\Phi(\phi)=A e^{+i\sqrt{D}\phi}+B e^{-i\sqrt{D}\phi} $$. No we don't have a potential barrier in this direction that will bounce the wavefuntion, so we can only have a wave moving in either direction. Let us pick up: $$\Phi(\phi)=A e^{+i\sqrt{D}\phi}$$
-                    Imposing continuity of the wavefunction we conclude that $$\Phi(\phi)=A e^{i m_{\ell}\,\phi}$$ with $m_{\ell}=0, \pm 1, \pm 2,\cdots$.
+			<br><br>
+			As we have seen previously, the most general solutions of such equation is,
+			$$\Phi(\phi)=A e^{+i\sqrt{D}\phi}+B e^{-i\sqrt{D}\phi}\,. $$ 
+        Now we need to impose boundary conditions. Notice that this is a plane-wave moving clock-wise plus a plane-wave moving in the oposite way. Why can be wrong with this picture?
+
+<br><br>
+	
+	Notice that we don't a boundary or a potential "barrier" in this direction that will bounce the wavefuntion, so we can only have a wave moving in either direction. Let us pick up: $$\Phi(\phi)=A e^{+i\sqrt{D}\phi}$$
+Imposing continuity of the wavefunction, it needs to satisfy $$\Phi(0)=\Phi(2\pi)\,, $$
+What does imply?
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		   <li> $A=1 $</li>
+		   <li> $D= m $ with $m$ an integer</li>
+		   <li> $D= m^2 $ with $m$ an integer</li>
+		   <li> $D = m/2 $ with $m$ an integer</li>
+		    <li> $D= (m/2)^2 $ with $m$ an integer</li>
+
+				</ol>
+			<br><br>
+
+
+
+			Or more explicitly, $$\Phi(\phi)=A e^{i m_{\ell}\,\phi}$$ with $m_{\ell}=0, \pm 1, \pm 2,\cdots$. The meaning of the sublabel $\ell$  is coming up.
+			             <center>   <img src="{% static "img/phi_standing_wave.png" %}" width="500"></center>
+
                     <h3>The Polar equation</h3>
-                    The polar equation is a challenging equation, but perhaps the most challenging part of this equation is the computation of the constant $C$, it turns out that in order to satisfy our physical conditions, the constant of the polar equation are,
-                    $$C=-\ell(\ell+1) $$ $$\sqrt{D}= \boxed{ m_{\ell}=0,\pm 1, \pm 2,\cdots,\pm\ell\,}.$$
+                    The polar equation is a challenging equation, but perhaps we have some intuition on what can of functions will be the building blocks. Also, since the polar coordinate is also an angle, boundary conditions will tell us that the constant $C$ should be related to some integer quantity. It turns out that to be,
+                    $$C=-\ell(\ell+1) $$
+		    <!-- $$\sqrt{D}= \boxed{ m_{\ell}=0,\pm 1, \pm 2,\cdots,\pm\ell\,}.$$ -->
                     This has to do with the fact that the combined polar and azimuthal equations are the square of the angular momentum operator, and which is quantized by the integer $\ell$, whereas the integer $m_{\ell}$ corresponds to the quantization of projection of angular momenta in the $z$ direction:<br><br> <center> $ \boxed{L_z=\hbar m_{\ell}} $ and $ \boxed{|L|=\hbar\sqrt{\ell(\ell+1)}}$.</center>
                     <br>
                     <em>Remember that the angular momentum $L={\bf p}\times {\bf r}$  is a vector perpendicular to the orbital plane</em><br><br>
-                    <center>   <img src="{% static "img/spin_quant.png" %}" width="500"></center>
+                    <center>   <img src="{% static "img/spin_quant0.png" %}" width="500"></center>
                     <br>
                     What about the classical limit?<br><br>
                     After some algebra, we can rewrite the polar equation in the form,
@@ -239,12 +263,12 @@ Consider the reference frame indicated on the blackboard. The blackboard is in t
                     This equation is known in the mathematical literature as the                         <a href="https://en.wikipedia.org/wiki/Associated_Legendre_polynomials">associated Legendre equation</a>, which defined the associated Legendre polynomials.<br><br>
 
                     The combine solutions $\Theta_{\ell, m_{\ell}}\Phi_{m_{\ell}}$ are known as the <b>spherical harmonics</b>
-                    <center>   <img src="{% static "img/spherical_harm.png" %}" width="800"></center><br>
+                    <center>   <img src="{% static "img/spherical_harm0.png" %}" width="800"></center><br>
                     <h3>Angular probabilities</h3>
                     Even though we are considering a system with spherical symmetry, and at a given angular momentum $\ell$ the total probability would be angular independent, as it should be for a spherical symmetric system, it is important to have understand the angular dependence in order to gain a better understanding of the total wavefunction (among other things, in practical experiments, we are able to distinguish diferent angular components, by sort of breaking the spherical symmetry by applying an interaction).
-                    <center>   <img src="{% static "img/angular_prob1.png" %}" width="350"> <img src="{% static "img/angular_prob2.png" %}" width="370"></center>
+                    <center>   <img src="{% static "img/angular_prob1_0.png" %}" width="350"> <img src="{% static "img/angular_prob2_0.png" %}" width="370"></center>
 
-		    <h2>Next: "Schrodinger equation solutions for the Hydrogen atom.</h2>
+		    <h2>Next: "Radial solutions for the Hydrogen atom.</h2>
                     <br><br><br>
                 </div>
             </div>
