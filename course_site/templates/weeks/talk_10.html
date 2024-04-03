@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>A hike in two landscapes</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/landscape.jpeg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>A 10 minutes hike through two Landscapes </h1>
+                        <hr class="small">
+                        <h2>DOE Site Visit </h2>
+                        <h3>April 5 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-preview">
+
+
+<center>   <img src="{% static "img/water_phase.png" %}" width="400"> <img src="{% static "img/ising_phase.svg" %}" width="300"></center><br><br>
+As we approach a critical point in a phase diagram, say for both water and/or ferromagnets, correlation lengths diverge, implying scale-invariance. Such scale invariance is believe to get enhanced to Conformal Invariance.    <br><br>
+<!-- <a href="https://www.wolframalpha.com/input?i=PolarPlot%5B3+cos%28theta%29%5E2-1%5D" target="_blank" style="color:blue;">  $\Theta_{\ell=2, m_{\ell}=0}$. </a> -->
+<center>   <img src="{% static "img/ConformalTrans.svg" %}" width="800"></center><br>
+		    
+		    <h3>Conformal Field Theory (CFT) and Quantum Field Theory (QFT)</h3>
+ It seems that a large number of QFTs can be viewed as points along an RG Flow (this
+is the name we give to the scaling process) from a ‘UV’ CFT to another ‘IR’ CFT.<br><br>
+ Well-defined QFTs can be viewed as either CFTs or as RG flows between CFTs. We can
+remove the UV cutoff from a QFT (send it to infinite energy) if it can be
+interpreted as an RG flow from the vicinity of a CFT fixed point.<br><br>
+ A mayor question in HET is what is the "lanscape" of possible QFTs?. CFT are landmark points connecting them.<br><br> 
+		   
+		    <center>   <img src="{% static "img/landscape_landmark.png" %}" width="650"><br>
+		    Image produced with Google text-to-image Gemini</center><br><br>
+		    Studying the space of CFTs basically amounts to studying the space of all well-defined QFTs. <br><br>
+		    <h3>The Conformal Bootstrap</h3>
+		      <center>   <img src="{% static "img/cartoon_bootstraps.png" %}" width="250"> </center>
+		      How we study the space of CFTs?: One way is by implementing the bootstrap philosophy. Observables are highly constrained by physical requirements, therefore finding a systematic way of imposing such requirements will carve-out the space of physically allowed theories. In the case of CFT: conformal invariance, crossing symmetry, unitarity, operator product expansion. <br><br>
+		      <center>   <img src="{% static "img/3d_bootstrap.png" %}" width="450"><br>
+			 El-Showk, Paulos, Poland, Rychkov, Simmons-Duffin,  Vichi 2012
+		      </center>
+		      <h3>Bootstrap in Quantum Mechanics</h3>
+		      We can even implement the bootstrap in Quantum Mechanics. Recently, in collaboration with undergrad student Almuqtada Al-Yasiri we have made an implementation in fortran/c++/python that is able to compute the energy spectrum of bounded 1D quantum systems. <br>
+		      <center>   <img src="{% static "img/energy.gif" %}" width="600">	 <img src="{% static "img/k11.png" %}" width="600">  </center><br><br>
+
+			 In collaboration with Prof. Kurt Hinterbichler we have started to think on how to apply this methodology on higher dimensional quantum mechanical systems.  
+			   <h2>Loss Landscape in Over-Parameterized Deep Neural Networks </h2>
+			   Another landscape that is becoming increasingly important, is related to the loss function in Over-Parameterized Deep Neural Networks. In such systems we want to look for THE minimun that generalize best. The main method used to find such local minima, is Gradient Descent (GD) and Stochastic Gradient descent (SGD) and variants. Despite the affordability of (GD), the fact that it has not knowledge of the curvature introduces instabilities.<br><br>
+			   In collaboration with Michael Hinczewski we have been studying the implications of this instabilities during training, and we have discovered that they produce a repelling force some around local minima.<br><br>
+			   <center>   <img src="{% static "img/landscapeGD.png" %}" width="750"><br>
+			   Late dynamics under GD </center>
+			     <br>
+			      By introducing noise, or by doing SGD, the repelling force is screened by the noise. These explain why SGD descent choice more generalizable minimums, which are associated to flatter minima.<br><br>
+			     <center>   <img src="{% static "img/landscapeSGD.png" %}" width="750"><br>
+			       Late dynamics under SGD </center> <br>
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -22,7 +22,8 @@ urlpatterns = [
     path("about/", about, name="about"),
     path("contact/", contact, name="contact"),
 
-    
+    ############## Talks #############################
+    path("talk_10/", talk_10, name="talk_10"),
     ############ phys 221 Spring 2024 ##############################
     #path("syllabus/", syllabus, name="syllabus"),
     path("home_modern_phys_spring_2024/",home_modern_phys_spring_2024, name="home_modern_phys_spring_2024"),

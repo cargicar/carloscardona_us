@@ -12,6 +12,11 @@ def about(request):
 def contact(request):
     return TemplateResponse(request,"weeks/contact.html",)
 
+##################### Talsk ##########################
+def talk_10(request):
+    return TemplateResponse(request,"weeks/talk_10.html",)
+
+
 #######################################################
 #### Phys 221 Fall 2023 Site #############################
 def home_modern_phys_spring_2024(request):
