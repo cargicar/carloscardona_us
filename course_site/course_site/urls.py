@@ -54,6 +54,7 @@ urlpatterns = [
     path("phys221_spring2024/atoms_3/", atoms_3, name="atoms_3"),
     path("phys221_spring2024/atoms_4/", atoms_4, name="atoms_4"),
     path("phys221_spring2024/atoms_5/", atoms_5, name="atoms_5"),
+    path("phys221_spring2024/atoms_6/", atoms_6, name="atoms_6"),
 
     ############ phys 221 Fall 2023 ##############################
     path("syllabus/", syllabus, name="syllabus"),

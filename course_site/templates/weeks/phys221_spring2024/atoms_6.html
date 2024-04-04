@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Atoms_6</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/hydrogen-atom.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Atoms </h1>
+                        <hr class="small">
+                        <h2>Schrodinger Equation Solutions for the Hydrogen Atom </h2>
+                        <h3>PHYS-221 April 6 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-preview">
+		
+		                     		  <h2>Learning Objectives</h2>
+		  <ol>		    
+		    <li>Learn to use the radial probabilities of the Hydrogen atom. </li>
+		  </ol>
+                                    <h3>Refresher: Normalization and Radial probabilities</h3>
+                                    $$|\Psi_{(n,\ell,m_{\ell})}|^2=|R_{n,\ell}|^2|\Theta_{\ell, m_{\ell}}|^2 $$
+                                    which is usually split into angular and radial normalizations:
+                                    $$\int_{0}^{\infty}R^2(r)r^2 dr=1,\qquad 2\pi\int_0^{2\pi}\Theta^2(\theta) {\rm sin\theta}d\theta=1 $$ 
+                                   
+
+                                    From the total probability expresion above, we infer that the probability per unit lenght is given by,
+                                    $$ \boxed{P(r)=r^2 R^2(r)} $$
+                                    plotting this function for few different energies looks like:<br><br>
+                                    <center>   <img src="{% static "img/radial_prob0.png" %}" width="800"> </center>
+                                    <br><br><br>
+Which statement is correct?
+				    		    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		   <li> Higher $n$ has fewer nodes (regions of zero probability) </li>
+		   <li> Higher $n$ has average $r$ bigger</li>
+		    <li> Higher $n$ has more probability to be near to the nucleus </li>
+
+		 <li> None of the above </li>
+				</ol>
+<br>
+                                    <h3>Total Probabilities</h3>
+                             With all that in hand, we can imagine a bit better how the total probabilities look like 
+                                    <center> <img src="{% static "img/electron_where0.png" %}" width="370"> <img src="{% static "img/radial_prob0.png" %}" width="370"> </center>
+                                    </center><br><br>
+<h3>Where is most likely to find the electron?</h3>
+For the following clickers, let us take an electron living  on  a $3p$ shell, what is the degree of degeneracy? 
+ 	    		    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		   <li>4</li>
+		   <li>9</li>
+		    <li>12</li>
+
+		 <li> None of the above </li>
+				</ol>
+<br>
+Now let's assume such electron has $m_{\ell}=1$, or in other words, has a wavefunction given by
+$$\Theta_{\ell=2, m_{\ell}=1}(\theta)\Phi_{m_{\ell}=1}(\phi)R_{n=3}(r)=A\cos\theta\sin\theta\,e^{i\phi}r\,e^{-r/2a_0}\,,$$ where $a_0=0.0529nm$ is known as the Bohr radius.
+<br>
+What is the most probable angular location to find such electron? (take $q$ to be an integer)
+ 	    		    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		   <li>$\theta={q\over 2}$</li>
+		   	   <li>$\theta={2q-1\over2 }$</li>
+		   <li>$\theta={q\over 4}$</li>
+		    <li>$\theta={2q-1\over 4}$</li>
+
+		 <li> None of the above </li>
+				</ol>
+<br>
+Does it match our spectation from the polar plots?<br>
+<a href="https://www.wolframalpha.com/input?i=Solve%5BD%5Bsin+t+cos+t%2Ct%5D%3D%3D0%2Ct%5D" target="_blank"  style="color:blue;"> Let's check</a>
+<br><br>
+
+What is the most probable radial location to find such electron?
+ 	    		    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		   <li>$r = a_0$</li>
+		   <li>$r =2 a_0$</li>
+		     <li>$r =4 a_0$</li>
+		   	  
+		 <li> None of the above </li>
+				</ol>
+			<br>
+Does it match our spectation from the radial plots?<br>			<a href="https://www.wolframalpha.com/input?i=Solve%5BD%5Br%5E4+e%5E%28-2+r%2F%282+a%29%29%2Cr%5D%3D%3D0%2Cr%5D" target="_blank"  style="color:blue;"> Let's check</a>
+<br><br>
+It turns out that for the states with the largest rotational energy, namely $\ell=n-1$, we can write a pattern for the larget probability:
+$$R_{n,\ell=n-1}(r)\sim r^{n-1}\,e^{-r/na_0}\,,\quad{\rm or}\quad P(r)\sim r^{2n}\,e^{-r/na_0}$$
+Lets compute the <a href="https://www.wolframalpha.com/input?i=Solve%5BD%5Br%5E%282+n%29+e%5E%28-2+r%2F%28n+a%29%29%2Cr%5D%3D%3D0%2Cr%5D" target="_blank"  style="color:blue;"> critical points</a>.
+$$r^{\rm most\,probable}_{\ell=n-1}=n^2 a_0$$
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
