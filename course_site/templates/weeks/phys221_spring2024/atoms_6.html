@@ -172,8 +172,30 @@ Does it match our spectation from the radial plots?<br>			<a href="https://www.w
 It turns out that for the states with the largest rotational energy, namely $\ell=n-1$, we can write a pattern for the larget probability:
 $$R_{n,\ell=n-1}(r)\sim r^{n-1}\,e^{-r/na_0}\,,\quad{\rm or}\quad P(r)\sim r^{2n}\,e^{-r/na_0}$$
 Lets compute the <a href="https://www.wolframalpha.com/input?i=Solve%5BD%5Br%5E%282+n%29+e%5E%28-2+r%2F%28n+a%29%29%2Cr%5D%3D%3D0%2Cr%5D" target="_blank"  style="color:blue;"> critical points</a>.
-$$r^{\rm most\,probable}_{\ell=n-1}=n^2 a_0$$
-                    <br><br><br>
+$$r^{\rm most\,probable}_{\ell=n-1}=n^2 a_0$$<br>
+<h2>Hydrogen-like Atoms</h2>
+Hydrogenlike atoms are those with a single electron and nuclear charge $+Z\, e$ with $Z$ an integer (ionized atoms), in which case we can write the potential exerted on the electron as,
+$$ U(r)=-{1\over 4\pi\epsilon_0 }{Z e^2\over r}\,.$$ all our formulas for hydrogen apply to hydrogenlike atoms if we simply
+replace $e^2$, wherever it is found, by $Ze^2$, in particular the energy levels are given by
+$$ E_n=-Z^2{13.6\,{\rm eV}\over n^2 }\,.$$
+And the most probable radius for $\ell=n-1$ we computed few minutes ago, is modified to,
+$$r^{\rm most\,probable}_{\ell=n-1}={1\over Z}n^2 a_0$$<br>
+<br>
+What is the ionization energy and the most probable radius of the electron in the
+ground state of He$^+\,$ ($Z=2$) ?
+<br><br>
+	    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		   <li>$-27.2\,eV $</li>
+		   <li>$-54.4\,eV $</li>
+			   	  
+		 <li> None of the above </li>
+				</ol>
+			<br>
+			<h2>Next: Spin</h2><br>
+			<br><br><br>
                 </div>
             </div>
         </div>
