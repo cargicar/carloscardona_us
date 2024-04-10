@@ -94,7 +94,7 @@
 		                     		  <h2>Learning Objectives</h2>
 						  <ol>
 						    <li>Refresher: Magnetic Dipole Moment.</li>
-		    <li>Learn what is quantum spin. </li>
+		    <li>Learn what is Quantum Spin. </li>
 		  </ol>
 
 		                     
@@ -145,35 +145,62 @@ When a magnetic dipole moment experiences an external magnetic field, it precess
 <br>
 <center>   <img src="{% static "img/precess.gif" %}" width="450"></center><br>
 when it does, the projection of $\mu$ over the direction of $B$, namely $\mu_z$ is constant.<br>
-
-With this, we can measure the force felt by a charged particle under the influence of a magnetic field: $\vec{F}=-\vec{\nabla} U$, with, $$ U=-\vec{\mu}\cdot\vec{B}\,.$$ <br><br>
-<hr>
-Taking $\vec{B}=\vec{B}(z)$, what are the non zero components of $\vec{F}$?
 <br>
-		    <ol type = "A">
-		      <li> $\vec{F}_x$ and $\vec{F}_y$. </li>
-		      
-		      <li> $\vec{F}_x$. </li>
-		      
-		      <li> $\vec{F}_y$ </li>
-
-		      <li>$\vec{F}_z$ </li>
-		      </ol>
+We can then measure the force felt by a rotating charged particle under the influence of a magnetic field $ U=-\vec{\mu}\cdot\vec{B}\,,$
+$$\vec{F}=-\vec{\nabla} U=\vec{\nabla}(\vec{\mu}\cdot\vec{B})\,.$$<br><br>
+We now know that $\vec{\mu}$ is related to the angular momenta of the orbiting charged particle. Therefore measuring the force produced by a magnetic field acting on it, will allow us to measure angular momenta, and henceforth to test the prediction on angular momentum quantization made by the Schrodinger solutions to the Hydrogen atom.
 <hr>
-By using the relation between magnetic dipole moment and angular momenta, we should see a quantization of force by passing atoms through a magnetic field,
-$$\vec{F}=\left(-\frac{e}{2m_e}L_z\right)\frac{\partial B_z}{\partial z}\,. $$
+<!-- Taking $\vec{B}=\vec{B}(z)$, what are the non zero components of $\vec{F}$? -->
+<!-- <br> -->
+		   
+<!-- 			<ol  style="line-height:300%" type="A"> -->
+<!-- 		   <img src="{% static "img/iclicker.png" %}" width="100"> <br> -->
+<!-- 		 <\!-- longer -\-> -->
+<!-- 		      <li> $\vec{F}_x$ and $\vec{F}_y$. </li> -->
+		      
+<!-- 		      <li> $\vec{F}_x$. </li> -->
+		      
+<!-- 		      <li> $\vec{F}_y$ </li> -->
+
+<!-- 		      <li>$\vec{F}_z$ </li> -->
+<!-- 		      </ol> -->
+<!-- 			<hr> -->
+<!-- 			<br><br> -->
+		
                     <h3>The Stern-Gerlach Experiment</h3>
                    
                     <center>   <img src="{% static "img/stern_gerl0.png" %}" width="450"></center>
                     <a href="https://en.wikipedia.org/wiki/Stern–Gerlach_experiment">Stern-Gerlach  experiment.</a><br><br>
+			        <center>   <img src="{% static "img/SternBField.png" %}" width="300"></center><br><br>
+By using the relation between magnetic dipole moment and angular momenta, we should see a quantization of force by passing atoms through a magnetic field. For the particular $B-$configuration shown above, the force is given by,
+$$\vec{F}=\mu_z{\partial B_z\over \partial z}\hat{z}=\left(-\frac{e}{2m_e}L_z\right)\frac{\partial B_z}{\partial z}\hat{z}\,. $$
+				According to the momentum quantization property found from the solutions to the wave function of the Hydrogen atom, $$L_z=m_{\ell}\hbar\,,\qquad -\ell\leq m_{\ell}\leq \ell\,.$$ <br>
+				Say we prepare an bunch of Hydrogen atoms at the state $n=2$, $\ell =1$, and send them (one by one) through an Stern-Gerlach setup. What we should expect to observe on the screen?
+				
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+				 <li>A continuous vertical line.  </li>
+		      
+		      <li> One fat dot at the middle. </li>
+		      
+		      <li> Two fat dots center around the middle screen.  </li>
 
+		      <li>  Three fat dots center around the middle screen.  </li> </li>
+
+		      <li> None of the above </li>
+		      </ol>
+<br><br>		     
                     The experiment confirm sucesfully the quantization of angular momenta in atoms, seeing discrete splitings along the z-axis of the screen for $\ell=1,2,\cdots$,
-		      $$\vec{F}=-{e\over 2 m_e}m_{\ell}\,\hbar\, \partial_z B_z \hat{z},\qquad \boxed{-\ell\leq m_{\ell}\leq \ell} $$
-                  but it found an incredible surprise.<br><br>
+$$\vec{F}=-{e\over 2 m_e}m_{\ell}\,\hbar\, {\partial B_z\over \partial z} \hat{z},\qquad -\ell\leq m_{\ell}\leq \ell\,, $$ in particular for $\ell =1$:
+                    <center>   <img src="{% static "img/SternGerlachSketch.png" %}" width="550"></center><br>
+                  But the experiment found an incredible surprise.<br><br>
 		    <hr>
-		    If the usual atomic rules for the quantum numbers $(n,\ell,m)$ hold, how many allowable $m$ states are there for an $\ell=1/2$ object? <br><br>
-		      <ol type = "A">
-		      <li>None </li>
+		    If the usual atomic rules for the quantum numbers $(n,\ell,m)$ hold, how many allowable $m$ states are there for an state at $\ell=1/2$ object? (Spoiler alert: assuming it was allowed by nature) <br><br>
+		     
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
 		      
 		      <li> 1 </li>
 		      
@@ -186,60 +213,66 @@ $$\vec{F}=\left(-\frac{e}{2m_e}L_z\right)\frac{\partial B_z}{\partial z}\,. $$
 		      <hr>
 		      <br><br>
                     <h3>Spin</h3>
-                    When $\ell=0$ we know that $m_{\ell}=0$, and we should see a single small cloud right in the middle of the screen. But the Stern-Gerlach experiment produces something like the second box below: 
+                    It turns out that when the Stern-Gerlach experiment is perform with Hydrogen at the ground state, or $\ell=0$, we know that the only possible value of the $m_{\ell}=0$, and we should see a single small  cloud (fat dot) right in the middle of the screen. But the experiment produces something like the second box below: 
                     <center>   <img src="{% static "img/espin0.png" %}" width="400"></center><br>
                     It was an indication of the intrinsic magnetic dipole moment of the electron! or the  <b>Spin</b>, which satsifies the following,
                     <ul>
                         <li>Similarly as orbital angular momenta, spin is quantized in terms of a discrete, but not neccesarilly integer $s$ by can be semi-integer,
                             $$ \boxed{|S|=\hbar\sqrt{s(s+1)}}.$$ Also, similarly to $L_z$, we have
-                            $$ \boxed{S_z=\hbar m_s\,\quad m_{s}= -s,-s+1,\cdots,s} $$
+                            $$ \boxed{S_z=\hbar m_s\,\quad m_{s}= -s,-s+1,\cdots,s\,,\qquad{\rm or}\quad -s\leq m_s\leq s}\,. $$
                        </li>
 
                         <li>Unlike $\ell$, $s$ is not a quantum number that can be changed by say, excite an state, but is number that depends on the fundamental particle we are considering. An electron for example has $s=1/2$, whereas a photon has $s=1$. </li>
-                        <li>The intrinsic magnetic dipole $\mu_S=g{q\over 2m}S$, where $g$ is known as the <b>gyromagnetic radius</b> $$</li>
+                        <li>The intrinsic magnetic dipole $\mu_S=g{q\over 2m}S$, where $g$ is known as the <b>gyromagnetic radius</b> </li>
                     </ul>
                     Returning to the Stern-Gerlach experiment, what they really observed at $\ell=0$ was,
-                    $$\vec{F}=-{e\over m_e}m_{s}\,\hbar\, \partial_z B_z \hat{z},\qquad-s \leq m_{\ell}\leq s, $$
-                    since for the electron $s=1/2$, then $m_s=\pm {1\over 2}$
-                    <h3>Spin ad Wave funtions</h3>
+                    $$\vec{F}=-{e\over m_e}m_{s}\,\hbar\, \partial_z B_z \hat{z},\qquad-{1\over2} \leq m_{s}\leq {1\over 2}\,,$$
+                    since for the electron $s=1/2$, then $m_s=\pm {1\over 2}$<br><br>
+<iframe width="660" height="415" src="https://www.youtube.com/embed/lYl6uLNT9vc?si=HcC3GdLa5dJoocbZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <h3>Spin and Wave funtions</h3>
                     All in all, we have just found that in our description of the wave function for an electron in an hyrogen atom, we are missing one quantum number, i.e, each state should be labeled by the quantum numbers $(n,\ell,m_{\ell},m_{s})$. Fortunately, for the case of the electron, only two values of $m_s$ are allowed, and we can just split our wave functions as,
                     $$
                     \boxed{ \psi_{n,\ell,m_{\ell}}^{+}\qquad {\rm spin\,\,up}\,\qquad                    \psi_{n,\ell,m_{\ell}}^{-}\qquad {\rm spin\,\,down}}
                     $$
-		    <h3>From Fall 2023</h3>
-		                        <h3>Angular momentum and magnetic dipole</h3>
-                    Lets again imagine the electron orbitin a proton. Since it is a charge particle, it will produce a magnetic dipole moment $\mu= I A$.
-                    <center>   <img src="{% static "img/dipole.jpg" %}" width="800"></center><br>
-                    Which can be used to write $$\vec{\mu}=-{e\over 2 m_e}\vec{ L}.$$ The minus sign is a convention. With this, we can measure the force felt by a charged particle under the influence of a magnetic field: $\vec{F}=-\vec{\nabla} U$, with, $$ U=-\vec{\mu}\cdot\vec{B}\,,$$ then by using the relation between magnetic dipole moment and angular momenta, we should see a quantization of force by passing atoms through a magnetic field,
-                    <h3>The Stern-Gerlach Experiment</h3>
-                    Assuming the magnetic field is oriented in the $z$ direction, we have,
-                    $$\vec{F}=-{e\over 2 m_e}m_{\ell}\,\hbar\, \partial_z B_z \hat{z},\qquad \boxed{-\ell\leq m_{\ell}\leq \ell} $$
-                    <center>   <img src="{% static "img/stern_gerl.png" %}" width="450"></center>
-                    <a href="https://en.wikipedia.org/wiki/Stern–Gerlach_experiment">Stern-Gerlach  experiment.</a><br><br>
+		                
+		    <h3>Degeneracy and Spin</h3>
+		    Given that the quantum numbers of a given wave function for an electron in a Hydrogen atom are given by,
+		    $$ (n,\ell,m_{\ell},m_{s})\,,\quad{\rm with}\quad 0\leq\ell\leq n-1\,,\quad -\ell\leq m_{\ell}\leq\ell\,,\quad -{1\over2} \leq m_{s}\leq {1\over 2}\,, $$
+		    What is the degree of degeneracy of the energy level  $n=2$?
+		    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		      
+		      <li> 4 </li>
+		      
+		      <li> 6 </li>
 
-                    The experiment confirm sucesfully the quantization of angular momenta in atoms, seeing discrete splitings along the z-axis of the screen for $\ell=1,2,\cdots$, but it found an incredible surprise.
-                    <h3>Spin</h3>
-                    When $\ell=0$ we know that $m_{\ell}=0$, and we should see a single small cloud right in the middle of the screen. But the Stern-Gerlach experiment produces something like the second box below: 
-                    <center>   <img src="{% static "img/espin.png" %}" width="400"></center><br>
-                    It was an indication of the intrinsic magnetic dipole moment of the electron! or the  <b>Spin</b>, which satsifies the following,
-                    <ul>
-                        <li>Similarly as orbital angular momenta, spin is quantized in terms of a discrete, but not neccesarilly integer $s$ by can be semi-integer,
-                            $$ \boxed{|S|=\hbar\sqrt{s(s+1)}}.$$ Also, similarly to $L_z$, we have
-                            $$ \boxed{S_z=\hbar m_s\,\quad m_{s}= -s,-s+1,\cdots,s} $$
-                       </li>
+		      <li> 8 </li>
 
-                        <li>Unlike $\ell$, $s$ is not a quantum number that can be changed by say, excite an state, but is number that depends on the fundamental particle we are considering. An electron for example has $s=1/2$, whereas a photon has $s=1$. </li>
-                        <li>The intrinsic magnetic dipole $\mu_S=g{q\over 2m}S$, where $g$ is known as the <b>gyromagnetic radius</b> $$</li>
-                    </ul>
-                    Returning to the Stern-Gerlach experiment, what they really observed at $\ell=0$ was,
-                    $$\vec{F}=-{e\over m_e}m_{s}\,\hbar\, \partial_z B_z \hat{z},\qquad-s \leq m_{\ell}\leq s, $$
-                    since for the electron $s=1/2$, then $m_s=\pm {1\over 2}$
-                    <h3>Spin ad Wave funtions</h3>
-                    All in all, we have just found that in our description of the wave function for an electron in an hyrogen atom, we are missing one quantum number, i.e, each state should be labeled by the quantum numbers $(n,\ell,m_{\ell},m_{s})$. Fortunately, for the case of the electron, only two values of $m_s$ are allowed, and we can just split our wave functions as,
-                    $$
-                    \boxed{ \psi_{n,\ell,m_{\ell}}^{+}\qquad {\rm spin\,\,up}\,\qquad                    \psi_{n,\ell,m_{\ell}}^{-}\qquad {\rm spin\,\,down}}
-                    $$
+		      <li> None of the above </li>
+		      </ol>
+		      <hr>
+		      <br><br>
+                
+		    What is the degree of degeneracy of the energy level  $n$?
+		    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		      
+		      <li> $n^2$ </li>
+		      
+		      <li> $2n^2$ </li>
 
+		      <li> $4n^2$ </li>
+
+		      <li> None of the above </li>
+		      </ol>
+		      <hr>
+		      <br><br>
+                      <h3>Next: The exclusion principle</h3>
 			<br><br><br>
                 </div>
             </div>
