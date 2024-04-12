@@ -70,15 +70,16 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url({% static 'img/hydrogen-atom.jpg' %})">
+    <header class="intro-header" style="background-image: url({% static 'img/pauli.jpg' %})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <h1>Atoms </h1>
+                  <div class="site-heading">
+		    <br><br><br><br>
+                        <h1 >Atoms </h1>
                         <hr class="small">
-                        <h2>Spin </h2>
-                        <h3>PHYS-221 April 10 / 2024 </h3>
+                        <h2>Pauli Exlusion Principle</h2>
+                        <h3>PHYS-221 April 12 / 2024 </h3>
                     </div>
                 </div>
             </div>
@@ -93,44 +94,53 @@
 		
 		                     		  <h2>Learning Objectives</h2>
 						  <ol>
-						    <li>Refresher: Magnetic Dipole Moment.</li>
-		    <li>Learn what is Quantum Spin. </li>
+						    <li>Learn Pauli Exclusion Principle.</li>
+		   
 		  </ol>
 
-		                     
-<!-- <br> -->
-		   
-<!-- 			<ol  style="line-height:300%" type="A"> -->
-<!-- 		   <img src="{% static "img/iclicker.png" %}" width="100"> <br> -->
-<!-- 		 <\!-- longer -\-> -->
-<!-- 		      <li> $\vec{F}_x$ and $\vec{F}_y$. </li> -->
+		    <h3>Degeneracy and Spin</h3>
+		    Given that the quantum numbers of a given wave function for an electron in a Hydrogen atom are given by,
+		    $$ (n,\ell,m_{\ell},m_{s})\,,\quad{\rm with}\quad 0\leq\ell\leq n-1\,,\quad -\ell\leq m_{\ell}\leq\ell\,,\quad -{1\over2} \leq m_{s}\leq {1\over 2}\,, $$
+		    What is the degree of degeneracy of the energy level  $n=2$?
+		    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
 		      
-<!-- 		      <li> $\vec{F}_x$. </li> -->
+		      <li> 4 </li>
 		      
-<!-- 		      <li> $\vec{F}_y$ </li> -->
+		      <li> 6 </li>
 
-<!-- 		      <li>$\vec{F}_z$ </li> -->
-<!-- 		      </ol> -->
-<!-- 			<hr> -->
-<!-- 			<br><br> -->
-		
-                   
-                    <!-- <center>   <img src="{% static "img/stern_gerl0.png" %}" width="450"></center> -->
-                    <!-- <a href="https://en.wikipedia.org/wiki/Stern–Gerlach_experiment">Stern-Gerlach  experiment.</a><br><br> -->
-		 <!-- 	<ol  style="line-height:300%" type="A"> -->
-		 <!--   <img src="{% static "img/iclicker.png" %}" width="100"> <br> -->
-		 <!-- <\!-- longer -\-> -->
-		 <!-- 		 <li>A continuous vertical line.  </li> -->
-		      
-		 <!--      <li> One fat dot at the middle. </li> -->
-		      
-		 <!--      <li> Two fat dots center around the middle screen.  </li> -->
+		      <li> 8 </li>
 
-		 <!--      <li>  Three fat dots center around the middle screen.  </li> </li> -->
+		      <li> None of the above </li>
+		      </ol>
+		      <hr>
+		      <br><br>
+                
+		    What is the degree of degeneracy of the energy level  $n$?
+		    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		      
+		      <li> $n^2$ </li>
+		      
+		      <li> $2n^2$ </li>
 
-		 <!--      <li> None of the above </li> -->
-		 <!--      </ol> -->
-                    <h2>Indistinguishability</h2>
+		      <li> $4n^2$ </li>
+
+		      <li> None of the above </li>
+		      </ol>
+		      <hr>
+		      <br>
+		                      
+                    <center>   <img src="{% static "img/particles_spins.png" %}" width="650"></center>
+                    <br><br>
+		    
+		    <h2> Two particles system</h2>
+		    
+		    
                     What is the wave function of a two-particle system?. We need to solve the Schrodinger equation for it.
                     $$-{\hbar\over 2m}\left({\partial^2\over\partial x_1^2}+{\partial^2\over\partial x_1^2}\right)\Psi(x_1,x_2)+U(x_1,x_2)\Psi(x_1,x_2)= E\Psi(x_1,x_2) $$
                     Lets apply this to a infinite well. By doing the very crude
@@ -139,9 +149,27 @@
                     with $i=1,2$. Which corresponds to the solution $$\Psi(x_1, x_2)=\psi(x_1)_{n_1}\psi(x_2)_{n_2} $$ and
                     $$E={n_1^2\pi^2\hbar^2\over 2 m L}+{n_2^2\pi^2\hbar^2\over 2 m L} $$
                     <h3>What about probability?</h3>
-                    Fundamental particles are indistinguishable. Every electron in the universe is identical to every other electron.<br>
-		    Say we have two electrons in a box, label 1 and 2. Then we measure that one of them is at level $n=3$. Which is it at that level, 1 or 2?.<br> since we can't distinguish them,  we don't know, i.e, we can't compute the probability as a sum of two independent probabilities $P_1+P_2$. We should be free to swap particle 1 and 2 without changing the total probability.<br>
-                    We then need to define a symmetric probability, that does not change when we swap 1 and 2. It turns out, there are two ways of doing that:
+
+		    Say we have two electrons living inside the same infinite potential well, lets call them $e_1$ and $e_2$. The energy of one of them is measured and we get that such electron was at the energy level $n=3$.  Which electron was at energy level $n=3$. 
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		      
+		      <li> $e_1$ </li>
+		      
+		      <li> $e_2$ </li>
+
+		      <li> $e_1+e_2$ </li>
+
+		      <li> None </li>
+		      </ol>
+		      <hr>
+		      <br><br>
+
+                    Fundamental particles are indistinguishable. Every electron in the universe was born identical to every other electron.<br>
+		      Since we can't distinguish them, we can't compute the probability as a sum of two independent probabilities $P_1+P_2$. <br><br>
+		      We should be free to swap particle 1 and 2 without changing the total probability.<br>
+                    We then need to define a probability that does not change when we swap $e_1$ and $e_2$. It turns out, there are two ways of doing that:
                     <br> <br>
                     $$ \boxed{\Psi_S(x_1, x_2)=\psi_{n_1}(x_1)\psi_{n_2}(x_2)+\psi_{n_1}(x_2)\psi_{n_2}(x_1)\,\qquad{\rm Symmetric}} $$
                     $$ \boxed{\Psi_A(x_1, x_2)=\psi_{n_1}(x_1)\psi_{n_2}(x_2)-\psi_{n_1}(x_2)\psi_{n_2}(x_1)\,\qquad{\rm Anti-symmetric} }$$
@@ -151,29 +179,96 @@
                     and
                     $$P_A(x_1,x_2)=\psi_A^2(x_1,x_2)=(\psi_{n_1}(x_1)\psi_{n_2}(x_2))^2+(\psi_{n_1}(x_2)\psi_{n_2}(x_1))^2 $$
                     $$-2\psi_{n_1}(x_1)\psi_{n_2}(x_2)\psi_{n_1}(x_2)\psi_{n_2}(x_1) $$
-                    <!-- <a href="https://en.wikipedia.org/wiki/Laguerre_polynomials">associated Laguerre equation</a>, which defined the associated Laguerre polynomials.<br><br>
-                         <br>
-                         <center>   <img src="{% static "img/spherical_harm.png" %}" width="800"></center><br> -->
                     <br>
-                    <center>   <img src="{% static "img/sym_anti_sym.png" %}" width="800"></center><br><br>
-                    <hr>
-                    --------------------------------------------------------------------------
-                    <h3>Spin-Statistics Theorem</h3>
+		    Let us consider as an example, two particles in an infinite well, one at $n_1=3$ the other at $n_2=4$, then the symmetric and anti-symmetric combinations of the wave function can be represented by the following plot, 
+                    <center>   <img src="{% static "img/sym_anti_sym0.png" %}" width="800"></center>
+               
+		    Say the system is described by a symmetric wavefunction, which of the following assertions is true <b>Think-Pair-Share</b>,
+		    <ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		      
+		   <li> A vanishing probability occurs when the two particles are far apart, say  $x_1=0,\, x_2 = L$ </li>
+		 
+		   <li> A vanishing  probability occurs when the two particles are close to each other, say  $x_1=0,\, x_2 = 0$ </li>
+		      		      <li> None </li>
+		      </ol>
+		      <hr>
+		      <br><br>
+	    Say the system is instead described by an anti- symmetric wavefunction, which of the following assertions is true,
+     <center>   <img src="{% static "img/sym_anti_sym0.png" %}" width="800"></center>
+               
+		    <ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		     
+		   <li> A vanishing probability occurs when the two particles are far apart, say  $x_1=0,\, x_2 = L$ </li>
+		 
+		   <li> A vanishing  probability occurs when the two particles are close to each other, say  $x_1=0,\, x_2 = 0$ </li>
+		      		      <li> None </li>
+		       </ol>
+		      <hr>
+		      <br><br>
+
+                                   <h3>Spin-Statistics Theorem</h3>
                     <div class="boxed"> The theorem states that:
-                    <ul>
-                        <li> The wave function of a system of identical integer-spin particles has the same value when the positions of any two particles are swapped. Particles with wave functions symmetric under exchange are called <b>bosons</b>.
-                    </li>
-                    <li>   The wave function of a system of identical half-integer–spin particles changes sign when two particles are swapped. Particles with wave functions antisymmetric under exchange are called <b>fermions</b>.
-                     </li>
-                    </ul>
+                    <ul  style="line-height:200%">
+                      <li> The wave function of a system of identical <b>integer-spin</b> particles,  called <b>bosons</b>, is described by <b> symmetric </b> wavefunctions.
+                      </li>
+		      <li> The wave function of a system of identical <b>half-integer-spin</b> particles, called <b>fermions</b>, is described by <b>anti-symmetric </b> wavefunctions. </li>
+                    </ul><br>
                     <h3>Pauli Exclusion Principle</h3>
                     Consider a system of two fermions occupying states $n_1$ and $n_2$. If $n_1=n_2$:
                     $$\Psi_A(x_1, x_2)=\psi_{n_1}(x_1)\psi_{n_1}(x_2)-\psi_{n_1}(x_2)\psi_{n_1}(x_1)=0. $$
-                    <b>Exclusion principle:</b> No two indistinguishable fermions may occupy the same individual-particle state.<br>
+                    <b>Exclusion principle:</b> No two indistinguishable fermions may occupy the same individual-particle state in a isolated system.<br>
                     -                    Wolfgang Pauli (Nobel 1945).
                     <br>
+		    Notice that the exclusion principle <b>does not apply to bosons</b>.
                     <hr>
-                    --------------------------------------------------------------------------
+
+		    <br>
+		    Pauli exclusion principle, make our existence possible. If we didn't have the Exclusion Principle to prevent multiple fermions from having the same quantum state, our Universe would be extremely different. Every atom would have almost identical properties to hydrogen, making the possible structures we could form extremely simplistic. <br><br>
+		    To see this more clearly, let us go back to the Hydrogen atom. Each possible state is describe by four quantum numbers with the following rules,
+		    $$ (n,\ell,m_{\ell},m_{s})\,,\quad{\rm with}\quad 0\leq\ell\leq n-1\,,\quad -\ell\leq m_{\ell}\leq\ell\,,\quad -{1\over2} \leq m_{s}\leq {1\over 2}\,, $$
+
+		    Say we have one electron at the ground state level $n=1$, then $\ell$ can only be $\ell=0$ and $m_{\ell}=0$, but the electron can still have $m_s=\pm {1\over 2}$, say it has $m_s={1\over 2}$ so if we were to add another electron to that Hydrogen at the same energy level, it can only be at  $m_s=-{1\over 2}$. No if we were to add yet another one, that new electron can't have an energy level $n=1$ anymore, it needs to go a different energy level, most likely $n=2$.
+
+		    <br><br>
+		    Following the rules for the Hydrogen atom, how many electrons can we pack into an energy level (<b>shell</b>) $n=2$? 
+		    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		      
+		      <li> 4 </li>
+		      
+		      <li> 6 </li>
+
+		      <li> 8 </li>
+
+		      <li> None of the above </li>
+		      </ol>
+		      <hr>
+		      <br><br>
+                
+                		    Following the rules for the Hydrogen atom, how many electrons can we pack into an energy level (<b>shell</b>) $n$? 
+		    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		      
+		      <li> $n^2$ </li>
+		      
+		      <li> $2n^2$ </li>
+
+		      <li> $4n^2$ </li>
+
+		      <li> None of the above </li>
+		      </ol>
+		      <hr>
+		      <br>
+<iframe id="embed-iframe" allowTransparency="true" allow="encrypted-media *" allowfullscreen height="615" width="660" border="0" scrolling="no" frameborder="0" marginwheight="0" marginwidth="0" src="https://app.jove.com/embed/player?id=11305&t=1&s=1&fpv=1"></iframe>
+		    --------------------------------------------------------------------------
                     <h3>Composite particles</h3>
                     We can combine fundamental particles in order to form composite particles. which satisfies the following ``logic'' table, for positive intenger $n$:<br><br>
                     $(n)-$Bosons  &#8611;   Composite  Boson <br>
@@ -184,7 +279,7 @@
                     <br><br><br>
 
 <br><br>		     
-                      <h3>Next: The exclusion principle</h3>
+                      <h3>Next: The Quantum mechanical derivation of the periodic table.</h3>
 			<br><br><br>
                 </div>
             </div>
