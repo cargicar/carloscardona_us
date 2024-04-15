@@ -1,0 +1,292 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Atoms_9</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/mendelev.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <div class="site-heading">
+		    <br><br><br><br>
+                        <h1 >Atoms </h1>
+                        <hr class="small">
+                        <h2>Multielectron Atoms and the Periodic Table</h2>
+                        <h3>PHYS-221 April 15 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-preview">
+		
+		                     		  <h2>Learning Objectives</h2>
+						  <ol>
+						    <li>Learn Pauli Exclusion Principle.</li>
+		   
+		  </ol>
+
+		    <h3>Degeneracy and Spin</h3>
+		    Given that the quantum numbers of a given wave function for an electron in a Hydrogen atom are given by,
+		    $$ (n,\ell,m_{\ell},m_{s})\,,\quad{\rm with}\quad 0\leq\ell\leq n-1\,,\quad -\ell\leq m_{\ell}\leq\ell\,,\quad -{1\over2} \leq m_{s}\leq {1\over 2}\,, $$
+		    What is the degree of degeneracy of the energy level  $n=2$?
+		    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		      
+		      <li> 4 </li>
+		      
+		      <li> 6 </li>
+
+		      <li> 8 </li>
+
+		      <li> None of the above </li>
+		      </ol>
+		      <hr>
+		      <br><br>
+                
+		    What is the degree of degeneracy of the energy level  $n$?
+		    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		      
+		      <li> $n^2$ </li>
+		      
+		      <li> $2n^2$ </li>
+
+		      <li> $4n^2$ </li>
+
+		      <li> None of the above </li>
+		      </ol>
+		      <hr>
+		      <br>
+		                      
+                    <center>   <img src="{% static "img/particles_spins.png" %}" width="650"></center>
+                    <br><br>
+		    
+		    <h2> Two particles system</h2>
+		    
+		    
+                    What is the wave function of a two-particle system?. We need to solve the Schrodinger equation for it.
+                    $$-{\hbar\over 2m}\left({\partial^2\over\partial x_1^2}+{\partial^2\over\partial x_1^2}\right)\Psi(x_1,x_2)+U(x_1,x_2)\Psi(x_1,x_2)= E\Psi(x_1,x_2) $$
+                    Lets apply this to a infinite well. By doing the very crude
+                    approximation $U(x_1,x_2)\sim U(x_1)+U(x_2)$, we get:
+                    $$\psi_{n_i}=\sqrt{2\over L}{\rm sin}{n_i\pi\,x_i\over L} $$
+                    with $i=1,2$. Which corresponds to the solution $$\Psi(x_1, x_2)=\psi(x_1)_{n_1}\psi(x_2)_{n_2} $$ and
+                    $$E={n_1^2\pi^2\hbar^2\over 2 m L}+{n_2^2\pi^2\hbar^2\over 2 m L} $$
+                    <h3>What about probability?</h3>
+
+		    Say we have two electrons living inside the same infinite potential well, lets call them $e_1$ and $e_2$. The energy of one of them is measured and we get that such electron was at the energy level $n=3$.  Which electron was at energy level $n=3$. 
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		      
+		      <li> $e_1$ </li>
+		      
+		      <li> $e_2$ </li>
+
+		      <li> $e_1+e_2$ </li>
+
+		      <li> None </li>
+		      </ol>
+		      <hr>
+		      <br><br>
+
+                    Fundamental particles are indistinguishable. Every electron in the universe was born identical to every other electron.<br>
+		      Since we can't distinguish them, we can't compute the probability as a sum of two independent probabilities $P_1+P_2$. <br><br>
+		      We should be free to swap particle 1 and 2 without changing the total probability.<br>
+                    We then need to define a probability that does not change when we swap $e_1$ and $e_2$. It turns out, there are two ways of doing that:
+                    <br> <br>
+                    $$ \boxed{\Psi_S(x_1, x_2)=\psi_{n_1}(x_1)\psi_{n_2}(x_2)+\psi_{n_1}(x_2)\psi_{n_2}(x_1)\,\qquad{\rm Symmetric}} $$
+                    $$ \boxed{\Psi_A(x_1, x_2)=\psi_{n_1}(x_1)\psi_{n_2}(x_2)-\psi_{n_1}(x_2)\psi_{n_2}(x_1)\,\qquad{\rm Anti-symmetric} }$$
+                    which produce probabilites:
+                    $$P_S(x_1,x_2)=\psi_S^2(x_1,x_2)=(\psi_{n_1}(x_1)\psi_{n_2}(x_2))^2+(\psi_{n_1}(x_2)\psi_{n_2}(x_1))^2 $$
+                    $$+2\psi_{n_1}(x_1)\psi_{n_2}(x_2)\psi_{n_1}(x_2)\psi_{n_2}(x_1) $$
+                    and
+                    $$P_A(x_1,x_2)=\psi_A^2(x_1,x_2)=(\psi_{n_1}(x_1)\psi_{n_2}(x_2))^2+(\psi_{n_1}(x_2)\psi_{n_2}(x_1))^2 $$
+                    $$-2\psi_{n_1}(x_1)\psi_{n_2}(x_2)\psi_{n_1}(x_2)\psi_{n_2}(x_1) $$
+                    <br>
+		    Let us consider as an example, two particles in an infinite well, one at $n_1=3$ the other at $n_2=4$, then the symmetric and anti-symmetric combinations of the wave function can be represented by the following plot, 
+                    <center>   <img src="{% static "img/sym_anti_sym0.png" %}" width="800"></center>
+               
+		    Say the system is described by a symmetric wavefunction, which of the following assertions is true <b>Think-Pair-Share</b>,
+		    <ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		      
+		   <li> A vanishing probability occurs when the two particles are far apart, say  $x_1=0,\, x_2 = L$ </li>
+		 
+		   <li> A vanishing  probability occurs when the two particles are close to each other, say  $x_1=0,\, x_2 = 0$ </li>
+		      		      <li> None </li>
+		      </ol>
+		      <hr>
+		      <br><br>
+	    Say the system is instead described by an anti- symmetric wavefunction, which of the following assertions is true,
+     <center>   <img src="{% static "img/sym_anti_sym0.png" %}" width="800"></center>
+               
+		    <ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		     
+		   <li> A vanishing probability occurs when the two particles are far apart, say  $x_1=0,\, x_2 = L$ </li>
+		 
+		   <li> A vanishing  probability occurs when the two particles are close to each other, say  $x_1=0,\, x_2 = 0$ </li>
+		      		      <li> None </li>
+		       </ol>
+		      <hr>
+		      <br><br>
+
+                                   <h3>Spin-Statistics Theorem</h3>
+                    <div class="boxed"> The theorem states that:
+                    <ul  style="line-height:200%">
+                      <li> The wave function of a system of identical <b>integer-spin</b> particles,  called <b>bosons</b>, is described by <b> symmetric </b> wavefunctions.
+                      </li>
+		      <li> The wave function of a system of identical <b>half-integer-spin</b> particles, called <b>fermions</b>, is described by <b>anti-symmetric </b> wavefunctions. </li>
+                    </ul><br>
+                    <h3>Pauli Exclusion Principle</h3>
+                    Consider a system of two fermions occupying states $n_1$ and $n_2$. If $n_1=n_2$:
+                    $$\Psi_A(x_1, x_2)=\psi_{n_1}(x_1)\psi_{n_1}(x_2)-\psi_{n_1}(x_2)\psi_{n_1}(x_1)=0. $$
+                    <b>Exclusion principle:</b> No two indistinguishable fermions may occupy the same individual-particle state in a isolated system.<br>
+                    -                    Wolfgang Pauli (Nobel 1945).
+                    <br>
+		    Notice that the exclusion principle <b>does not apply to bosons</b>.
+                    <hr>
+
+		    <br>
+		    Pauli exclusion principle, make our existence possible. If we didn't have the Exclusion Principle to prevent multiple fermions from having the same quantum state, our Universe would be extremely different. Every atom would have almost identical properties to hydrogen, making the possible structures we could form extremely simplistic. <br><br>
+		    To see this more clearly, let us go back to the Hydrogen atom. Each possible state is describe by four quantum numbers with the following rules,
+		    $$ (n,\ell,m_{\ell},m_{s})\,,\quad{\rm with}\quad 0\leq\ell\leq n-1\,,\quad -\ell\leq m_{\ell}\leq\ell\,,\quad -{1\over2} \leq m_{s}\leq {1\over 2}\,, $$
+
+		    Say we have one electron at the ground state level $n=1$, then $\ell$ can only be $\ell=0$ and $m_{\ell}=0$, but the electron can still have $m_s=\pm {1\over 2}$, say it has $m_s={1\over 2}$ so if we were to add another electron to that Hydrogen at the same energy level, it can only be at  $m_s=-{1\over 2}$. No if we were to add yet another one, that new electron can't have an energy level $n=1$ anymore, it needs to go a different energy level, most likely $n=2$.
+
+		    <br><br>
+		    Following the rules for the Hydrogen atom, how many electrons can we pack into an energy level (<b>shell</b>) $n=2$? 
+		    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		      
+		      <li> 4 </li>
+		      
+		      <li> 6 </li>
+
+		      <li> 8 </li>
+
+		      <li> None of the above </li>
+		      </ol>
+		      <hr>
+		      <br><br>
+                
+                		    Following the rules for the Hydrogen atom, how many electrons can we pack into an energy level (<b>shell</b>) $n$? 
+		    
+			<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		      
+		      <li> $n^2$ </li>
+		      
+		      <li> $2n^2$ </li>
+
+		      <li> $4n^2$ </li>
+
+		      <li> None of the above </li>
+		      </ol>
+		      <hr>
+		      <br>
+<iframe id="embed-iframe" allowTransparency="true" allow="encrypted-media *" allowfullscreen height="615" width="660" border="0" scrolling="no" frameborder="0" marginwheight="0" marginwidth="0" src="https://app.jove.com/embed/player?id=11305&t=1&s=1&fpv=1"></iframe>
+		    --------------------------------------------------------------------------
+                    <h3>Composite particles</h3>
+                    We can combine fundamental particles in order to form composite particles. which satisfies the following ``logic'' table, for positive intenger $n$:<br><br>
+                    $(n)-$Bosons  &#8611;   Composite  Boson <br>
+                    $(2n)-$Fermions  &#8611;   Composite  Boson <br>
+                    $(2n+1)-$Fermions  &#8611;   Composite  Fermion <br>
+                    <br>
+                    Examples include the proton (1/2), the neutron (1/2), Bose-Einstein (1). Several composite particles, have powerful (potential) technological applications. 
+                    <br><br><br>
+
+<br><br>		     
+                      <h3>Next: The Quantum mechanical derivation of the periodic table.</h3>
+			<br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
