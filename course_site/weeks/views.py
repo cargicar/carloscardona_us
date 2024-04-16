@@ -16,6 +16,9 @@ def contact(request):
 def talk_10(request):
     return TemplateResponse(request,"weeks/talk_10.html",)
 
+def pizza_cerca(request):
+    return TemplateResponse(request,"weeks/pizza_cerca.html",)
+
 
 #######################################################
 #### Phys 221 Fall 2023 Site #############################
@@ -114,6 +117,9 @@ def atoms_8(request):
 
 def atoms_9(request):
     return TemplateResponse(request,"weeks/phys221_spring2024/atoms_9.html",)
+
+def sm_1(request):
+    return TemplateResponse(request,"weeks/phys221_spring2024/sm_1.html",)
 
 #######################################################
 #### Phys 221 Fall 2023 Site #############################

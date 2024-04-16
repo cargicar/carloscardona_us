@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Search for Positivity</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/think_positive.png' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1> A Search for Positivity </h1>
+                        <hr class="small">
+			<h2> Carlos Cardona and  Moq Al-Yasiri  </h2>
+                        <h3>Pizza Meeting </h3>
+                        <h3>April 19 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-preview">
+
+		    <h3>What's the matter?</h3>
+		    Two issues we want to address:
+		    <ul>
+		      <li> Most quantum mechanical systems, even in one dimension, are not soluble by analytical means. Developing a quick numerical and general method is desired (some good ones already exist in the market). </li>
+		      <li> A systematic way to compute observables non-perturbatively is desired. (Some already exist, but they have limitations)</li>
+		     	
+		    </ul>
+		    <br><br>
+		    A couple of personal believes:
+		    <ul>
+		      <li> Wavefunction is just an artifact. Not actual physical meaning. Maybe less controversial: observables should be computable without any reference to a wavefunction. </li> 
+		      <li> QM is a statistical theory and can be treated purely in statistical terms.</li>
+		    <br><br>
+		      <li> An a philosophy: Physical observables should be highly constraint just by physical conditions. <b> Not fancy math required. </b> (path integrals, variational methods, etc...). This philosophy is known as <b>the bootstrap</b>. </li>
+		     	
+		    </ul>
+		    <br><br><br>
+		    <!-- <center>   <img src="{% static "img/landscape_landmark.png" %}" width="650"><br> -->
+		    <!-- Image produced with Google text-to-image Gemini</center><br><br> -->
+		    <!-- Studying the space of allowed CFTs basically amounts to studying the space of all well-defined QFTs. <br><br> -->
+
+  <h3>Bootstrap in Quantum Mechanics</h3>
+		    <center>   <img src="{% static "img/cartoon_bootstraps.png" %}" width="250"> </center>
+		    <br><br>
+		    <h3>General Method</h3>
+		    Any physical observable ${\cal O}$ which is an eigenstate of the Hamiltonian, must satisfy the following conditions:
+		    $$\langle [H,{\cal O}]\rangle=0\,,$$
+		    $$\langle H{\cal O}\rangle =0\,,$$
+		    $$\langle {\cal O}^{\dagger}{\cal O}\rangle\geq 0\,,$$
+		    The End. <br><br>
+		    <h3>Explicit Method</h3>
+		    Let's take a generic 1D Hamiltonian,
+		    $$H={p^2\over 2M}+V(x)\,,$$
+		    and consider two particular observables ${\cal O}=x^s$ and ${\cal O}=x^m\,p$.<br> Applying the fist two conditions above $\langle [H,{\cal O}]\rangle=0\,,$
+		    $\langle H{\cal O}\rangle =0\,,$ lead us to a recursion relation:
+		    $$2m E\langle x^{m-1}\rangle+{m(m-1)(m-2)\over 4}\langle x^{m-3}\rangle-\langle x^{m}V'(x)\rangle-\langle x^{m-1}V(x)\rangle=0\,. $$
+		    <br><br>
+		    There are two alternative ways to arrive at this result,
+		    <ul>
+		      <li>Pick two convenient operators as the ones above, and use recursively the fundamental commutation relation $[x,p]=i\hbar.$($\quad\hbar$ = 1 in this talk).</li>
+		      		      <li> Generalized Krammers relations for the Hydrogen atom. Developed by Moq and myself. More systematic, not need to perform any commutator gymnastics. </li>
+		    </ul>
+		    <center>
+		      <img src="{% static "img/moq.jpeg" %}" width="200"></center><br><br>
+
+		    <h2>A Search for Positivity</h2>
+		    		    Now it comes the important piece in the bootstrap program, as in life :<br><br>
+<center>		    		      <img src="{% static "img/search_positivity.jpeg" %}" width="400"></center><br><br>
+
+<br> Take a general operator to be $${\cal O}=\sum_ic_n x^n\,,$$ then for $c_n\in \mathbb{C}$. <br><br> By the third condition, it needs to satisfy
+		    $$ 0\leq \langle {\cal O}^{\dagger}{\cal O}\rangle=\sum_{i\,,j}c_i^{*}\langle x^{i+j}\rangle c_j\,,$$ or in other words,
+		    the matrix $M_{ij}=\langle x^{i+j}\rangle$ has to be positive-definite. <br><br>
+		    
+		    This can be easily implemented on a computer:
+		    <br><br>
+		    <ul>
+		     
+		<li>  Use recursion relation to reduce the order of monomials $\langle x^{i+j}\rangle$  in terms of an independent basis, say for the sake of explanation such basis is
+		    $\{\langle x^{2}\rangle,\, E\}$.
+		<li> Define a large <b>grid</b> (array) for the space  $\{\langle x^{2}\rangle,\, E\}$.</li><br>
+		<li>  Define Array <b>M</b>  $M_{ij}=\langle x^{i+j}\rangle$<br></li><br>
+		<li>  Write array <b></b> in the basis.</li><br>
+		<li> For $p,\, q$ in <b>grid</b> {<br>
+		  &nbsp;&nbsp;&nbsp; Evaluate <b>M</b><br>
+		  
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If  <b>M</b>$\geq 0\,\,$ {
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Save $(p,q)$
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else <b>continue</b> }
+		  }</li>
+		
+		    </ul>
+
+		    <br> We have implemented this in different languages python/fortran/c++ (in performance order) and have been able to compute the energy spectrum of several bounded (and unbounded) 1D quantum systems. <br>
+		      <center>   <img src="{% static "img/energy.gif" %}" width="600">	 <img src="{% static "img/k11.png" %}" width="600">  </center><br><br>
+
+	            <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

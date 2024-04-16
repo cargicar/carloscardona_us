@@ -24,6 +24,7 @@ urlpatterns = [
 
     ############## Talks #############################
     path("talk_10/", talk_10, name="talk_10"),
+    path("pizza_cerca/", pizza_cerca, name="pizza_cerca"),
     ############ phys 221 Spring 2024 ##############################
     #path("syllabus/", syllabus, name="syllabus"),
     path("home_modern_phys_spring_2024/",home_modern_phys_spring_2024, name="home_modern_phys_spring_2024"),
@@ -58,4 +59,5 @@ urlpatterns = [
     path("phys221_spring2024/atoms_7/", atoms_7, name="atoms_7"),
     path("phys221_spring2024/atoms_8/", atoms_8, name="atoms_8"),
     path("phys221_spring2024/atoms_9/", atoms_9, name="atoms_9"),
+    path("phys221_spring2024/sm_1/", sm_1, name="sm_1"),
 ]
