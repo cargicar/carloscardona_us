@@ -1,0 +1,299 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SM_1</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/gas1.gif' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <div class="site-heading">
+		    <br><br><br><br>
+                        <h1  style="color:black;" >Statistical Mechanics </h1>
+                        <hr class="small">
+                        <h2  style="color:black;">A Simple Thermodynamic System</h2>
+                        <h3  style="color:black;">PHYS-221 April 17 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-preview">
+		
+		                     		  <h2>Learning Objectives</h2>
+
+		  <ol>
+		    <li>Identify macro and micro states for simple systems </li> 
+		    <li> Compute Entropy by counting microstates  </li>
+		     <li> Compute Entropy from Energy  </li>
+		  </ol>
+
+                    <h2>Simple Multi-particle System</h2>
+                    Think about a classical system with billions of particles interacting. We know very well the laws and principles describing the behaviour of such system: we only need to solve the Newton's equation for EACH particle. However, it is almost obvious that approach is close to imposible, when the number of particles is about $ 6.022140857\times 10^{23}=$<b>Avogadro number</b>$\equiv AN$. Just to have a rough idea of how large this number is, Avogadro's number is the approximate number of milliliters of water in the Pacific Ocean.<br><br> In such situation we need to developed a more useful formalism, one in which we describe the macroscopic physics, regardles of the microscopic individual state of each particle. <br><br>
+                    Lets start with a very simple system: A chamber with some gas of free particles, and let's imagine we split it in two half, without any physical separation,
+                    <br><br>
+                    <center>   <img src="{% static "img/gas1.gif" %}" width="400"></center><br><br>
+                    Here is a question we can answer using only our intuition.
+		    <br><br>Suppose we have $ 6.022140857\times 10^{23} $ particles in the chamber above.  Approximately, what proportion of particles will be at the left hand half of the chamber at a given time?.
+
+	<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		      <li> 30% </li>
+		      
+		      <li> 40% </li>
+		      
+		      <li> 50% </li>
+		      <li> 60% </li>
+		      <li> 100% </li>
+		      </ol>
+
+		    <br><br>
+                    Certainly, provided we have the advanced technology, we can answer this question by solving the Newtonian mechanical problem, but there is a simpler approach which will also answer the question within a very good approximation.<br><br> Before moving into such approach, we need to remember a basic concept from statistics:
+                    <ul>
+                        <li>$N!=$ Number of different ways of arranging $N$ distinguishable objects.(Think of say 3 shapes: circle, triangle, square, there is 6 ways of arranging them in a row.) </li>
+                        <li>$W(N)={N!\over \prod_i^M N_i!}=$ Number of different ways of arranging $N$ distinguishable objects in $M$ distintic categories (Boxes, Regions, Colors, etc.) </li>
+                        <li>The simpler case of only two categories, i.e, $n$ objects in one category and the remaining $N-n$ in the other,
+                            $$W(n)=\begin{pmatrix}N \\ n\end{pmatrix}= {N!\over n! (N-n)!}$$ has a special name, the <b>binomial coefficient</b> .</li>
+                    </ul><br>
+                    Now lets go back to the gas in a box and start simple: If we have $N=4$ particles,
+<br><br> <center>   <img src="{% static "img/combinatorics.png" %}" width="300"></center><br><br>
+
+
+ how many arrangements have  4 particles to the left half and 0 to the right?		    ${4!\over 0! 4!}=1$  what about 3 and 1?  ${4!\over 1! 3!}=4$  and  2 and 2?  ${4!\over 2! 2!}=6$. <br>
+                    <br> An important fact from statistics, is that, as long as all the arrangements are independent, each different way of arranging is equally probable. Henceforth, the more arrangments a given configurations has, the higher the probability.
+		    What is the total number of arrangements on a binomial (bi-category) system?. Recall the
+	<a href="https://en.wikipedia.org/wiki/Binomial_coefficient" target="_blank"  style="color:blue;"> binomial expansion. </a><br><br>
+		    We have $2^N$, and so $$P(n_L)={W(n_L)\over 2^N }$$
+                    Let's see the distributions of probabilities for different $N$ with a simple script.<br><br>
+                    <center>   <img src="{% static "img/binomial0.png" %}" width="700"></center><br><br>
+                    We can see that the simpler statistical analysis tell us that the highest probability occurs when half particles are to the left and half to the right of the chamber, which agrees with our intuition. <br>
+		    <br>An interesting observation is that the previous analysis does not rule out the possibility of having not particles to the left, but it tell us that the probability is punishingly small: $1/N$. Another way to think about this is by imaging a door separating left and right, with the right side containing all $N$ particles and the left empty. By opening up  the door, the particles will start filling up the whole volume, producing an overall collective movement from right to left. However, the oposite, particle moving from left to right, making the left half empty again, has a probability of occuring incredible small, we call this phenomena an <b>irreversible process</b>.
+		    
+                    <h3>Macro- and Micro-states</h3>
+		    Let's go back to the two-sides box with $N=4$ particles. How many different ways or arrangements correspond to $N_R=N/2=2$? ________.<br><br>
+		    Each way or individual arrangement is a  <b>microstate</b>. We need to track individual particles to count them. <br><br>
+		    In contrast, the overall state $N_R=N/2=2$, does not require to count individual particles, but just total number of particles on the right hand side. The overall configuration is called a  <b>macrostate</b>. All $N_R=2$  <b>microstate</b>  correspond to the same <b>macrostate</b>.<br><br>
+		    
+                    Say we have  instead $N=10^{23}$ particles in the box.  Around $10^{10^{22}}$ of ways, or  <b>microstate</b>, corresponds to the same <b>macrostate</b> $N_R=N/2$, i.e, the same macroscopic overall description with the same values of temperature, pressure, volume, etc.  In systems with billions and up particles, we are interested in the macroscopic description, and that is the goal of statistical mechanics.<br><br>
+                    <h3>Equilibrium</h3>
+                    We have just seen that in the chamber example, the highest probability corresponds to the macrostate where half of the particles are to the left and half to the right. Such most (overwhelmingly) probable macrostate is what defines <b>the equilibrium state</b>, due to the fact that probabilistically, we can only deviate from it by very small perturbations, and on average, the system will be permanently in such state. <br> <br>
+
+                    As in the example of the chamber with the gas filling  an empty region from a full region, any physical statistical system or <b>thermodynamic system</b> will move towards the equilibrium state, any time that it starts from an non-equilibrium or unlikely state.<br><br>
+                    At the microscopic level, the system ``oscillates'' around the equilibrium state, or in other words, the microscopic state still changes, but the deviations are so tiny that the value of the macroscopic variables, such temperature, pressure, volume, do not change in appreciable manner, when this happend we say we have <b>reached equilibrium</b>.
+
+		    		  <br><br>	 <br> 
+ Consider a two-sided room containing six distinguishable particles, a, b, c, d, e, and f, with two on the left and four on the right.
+
+What is the macrostate of the system? 
+	<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+
+		   <li>$ N_L =1,\quad N_R =5$</li>
+		   <li>$ N_L =2,\quad N_R =4$</li>
+		   <li>$ N_L =3,\quad N_R =3$</li>
+		   <li>None of the above</li>
+		 </ol>
+		 
+	<br><br>
+	What is the number of  microstates that can make up such  macrostate?
+	<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+
+		   <li>$6$</li>
+		   <li>$15$</li>
+		   <li>$20$</li>
+		   <li>None of the above</li>
+		 </ol>
+	<br><br>
+	Can you build them up? 	<br><br><br>
+	
+	
+				 [ab | cdef], [ac | bdef], [ad | bcef], [ae | bcdf], [af | bcde],<br>
+				       [bc | adef], [bd | acef], [be | acdf], [bf | acde],<br>
+				       [cd | abef], [ce | abdf], [cf | abde],<br>
+				       [de | abcf], [df | abce],<br>
+				       [ef | abcd]</li></ol><br><br>
+
+                    <h2>Entropy and Temperature</h2>
+
+		    Entropy is a measure of disorder. In more accurate mathematical terms, it measures the number of ways (microstates) a given macroscopic state can be achieved, or equivalently to the probability of a given macrostate. It is defined as,$$\boxed{S=k_B\log W\,,} $$ where $k_B=1.380649\times 10^{−23} J⋅K^{-1}\,,$ is the Boltzmann constant and $W$ denotes the number of microscopic configurations giving the same macroscopic state.
+		    <br><br>
+
+How many microstates are required to have zero entropy? 		    
+	<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+
+		   <li>$W=0$</li>
+		   <li>$W=1$</li>
+		     <li>$W=\infty$</li>
+		   <li>None of the above</li>
+		 </ol>
+	<br><br>
+
+		    
+		    Recall that the equilibrium state is the one with the largest probability, what this implies for the entropy of such state (equilibrium state)
+	<ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+
+		   <li>Entropy is zero</li>
+		   <li>Entropy is the largest</li>
+		     <li>Entropy is the smallest</li>
+		   <li>None of the above</li>
+		 </ol>
+	<br><br>
+
+You have deduced the
+        <b> Second Law of Thermodynamics</b>, which establish that <em> in an isolated system, the entropy will never decrease.</em><br><br>
+	Notice that, if a system moves from a macrostate with $W_i$ number of microstates, to a macrostate with $W_f$ number of microstates, the change of entropy can be computed fairly simply as, $$\boxed{\Delta S=k_B\log{W_f\over W_i},}\,. $$  However, computing the number of microstates is not always easy. Let's see an alternative way of computing entropy changes.
+        <br><br>
+	<h3>Entropy and Temperature</h3>
+	What is temperature? ________________<br><br>
+	<em> Temperature is a  measured of the average kinetic energy of the vibrating and colliding atoms making up a substance.</em><br><br> 
+        Let's once again use our intuition to define a useful quantity. Imagine again a gas in a box splited in half, this time by a membrane that allows to transfer energy from one side to the other by collisions of particles on the membrane.  If one portion of the gas is heated, we expect the temperature of such side (as measure by a thermometer) to rise: <em> Heat is defined as the transfer of energy across the boundary of a system due to a temperature difference between the system and its surroundings</em>. <br><br>
+	From the microscopic point of view, this increase in temperature is due to the increase of the overall kinetic energy of the constituent particles. If left alone, particles hitting the membrane will transfer part of its kinetic energy to the some particles at the other side, until we reach the equilibrium of the whole system. By the Second Law, this new equilibium state must have a higher entropy that the previous equilibrium state, and since the new state is an equilibrium state, the temperature of both sides must be the same now and the entropy should have increased.<br><br>
+                    With this intuitive picture in mind, the heat transfer, or energy transferred from one side of the box to the other, produce a change of entropy from the previous state to the new equilibrium state at temperature $T$,  $$\Delta Q=T\Delta S. $$ With this definition, we can compute changes in entropy by knowing the amount of energy transfered in form of heat,
+                    $$\Delta S=\int_i^f{dQ\over T}. $$
+
+	<h3>Next: The Boltzmann Distribution.</h3><br><br>
+                    <hr>
+<!--                     <b> Example</b>: Consider a gas with $N=10^{23}$ molecules. Initially, the gas is contained in one half of a box, but eventually it is allowed to fill the remaining half. Compute the change of entropy using both formulas for $\Delta S$ we have seen, i,e, by counting the number of microstates, and by heat transfer. -->
+<!--                     <hr> -->
+<!--                     <br><br><br> -->
+<!--                     <br><br><br> -->
+
+<!-- <br><br>		      -->
+<!--  <h2>Problem 9.23</h2>	   -->
+<!-- The entropy of an ideal monatomic gas is $(3/2)N\,k_B \ln E + N\,k_B \ln V - N\,k_B \ln N$, to within an additive constant. -->
+<!-- Show that this implies the correct relationship between internal energy E and temperature. -->
+<!-- <br>   		  -->
+<!-- 				  <b> Pair up and work on it</b>. -->
+				 
+<!-- 				  <iframe width="560" height="315" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+<!-- 		 <br><br><br><br> -->
+<!-- 		 <h2>Problem 9.27</h2> -->
+<!-- Four distinguishable harmonic oscillators $a, b, c$, and $d$ may exchange energy. The energies allowed for particle $a$ are -->
+<!-- 		 $E_a=n_a\hbar\omega_0$ and so on. -->
+<!-- 		 Consider an overall state (macrostate) in which -->
+<!-- the total energy is $3\hbar\omega_0$. One possible microstate would have particles a, b, and c in their $n=0$ states and particle d in its $n = 3$ state; that is, $(n_a, n_b, n_c, n_d) = (0, 0, 0, 3)$. -->
+<!--  <ol type="A">  -->
+<!-- 		   <li>  List all possible microstates.</li> -->
+<!-- 		   <li>  What is the probability -->
+<!-- 		     that a given particle will be in its $n= 0$ state?</li> -->
+<!-- 		   <li> Answer part (b) for all other possible values of $n$.</li> -->
+<!-- 		   <li> Plot the probability versus $n$.</li></ol> -->
+
+<!-- <br>   		  -->
+<!-- 				  <b> Pair up and work on it</b>. -->
+				 
+<!-- 				  <iframe width="560" height="315" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+<!-- 				  <br><br><br><br> -->
+				  
+<!--  <ol type="A">  -->
+<!--    <li>  (3,0,0,0), (0,3,0,0), (0,0,3,0), (0,0,0,3),<br> -->
+<!--      (2,1,0,0), (2,0,1,0), (2,0,0,1),<br> (1,2,0,0), (1,0,2,0), (1,0,0,2),<br> -->
+<!--      (0,2,1,0), (0,2,0,1), (0,1,2,0), (0,1,0,2), (0,0,2,1), (0,0,1,2),<br> -->
+<!--      (1,1,1,0), (1,1,0,1), (1,0,1,1), (0,1,1,1).</li> -->
+<!--    <li> $n = 0$ appears 10 times out of a total of 20 quantum numbers, for a probability of 0.5.</li> -->
+<!-- 		   <li> $n = 1$ appears 6 times; 6/20 = 0.3. $n = 2$ appears 3 times; 3/20 = 0.15. $n = 3$ appears 1 time; 1/20 = 0.05.</li> -->
+<!-- 		   <li> Plot the probability versus $n$.</li></ol> -->
+
+<!-- <br><br>   		  -->
+<!--                   <h2> Problem A.</h2> -->
+<!-- 		  Consider a gas with $N=10^{23}$  molecules. Initially, the gas is contained in one half of a box, but eventually it is allowed to fill the remaining half. -->
+<!-- <ol> -->
+<!--   <li> Compute the change of entropy by counting the number of micro-states.</li> -->
+
+<!--   <li> Use the Stirling Approximation Links to an external site. to rewrite the computation above for very large N </li> -->
+
+<!--   <li> Compute the change of entropy again, but now use the heat transfer formula.</li> -->
+ 
+<!--   <br> -->
+
+<!-- 				  <b> Pair up and work on it</b>. -->
+				 
+<!-- 				  <iframe width="560" height="315" src="https://www.youtube.com/embed/iHdviZkM7S4?si=P7COxfkgZMfCxZ-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+
+
+			<br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -165,8 +165,31 @@
 		    </ul>
 
 		    <br> We have implemented this in different languages python/fortran/c++ (in performance order) and have been able to compute the energy spectrum of several bounded (and unbounded) 1D quantum systems. <br>
-		      <center>   <img src="{% static "img/energy.gif" %}" width="600">	 <img src="{% static "img/k11.png" %}" width="600">  </center><br><br>
+		    <br>
+		    Simple example, quartic anharmonic oscillator,  $$H=p^2+w^2 x^2+g x^4$$
+		    <center>   <img src="{% static "img/energy.gif" %}" width="600">	</center>
 
+<br><br>
+<center>	    <img src="{% static "img/anhar_islands0.png" %}" width="600">  </center><br><br>
+<center>	    <img src="{% static "img/anhar_k16.png" %}" width="600">  </center><br><br>
+<h3>Non-Perturbative Physics</h3>
+	Since this is a non-perturbative method, we can use it to capture some non-perturbative phenomena. Take
+$$H=p^2-|w^2| x^2+g x^4$$
+<center>	    <img src="{% static "img/double_wall.png" %}" width="600">  </center><br><br>
+The ground state of these system can be computed in the large frequency regime ($|w^2|\to \infty$), at leading order:
+$$E_0=-{|w^4|\over 4}+\sqrt{2|w^2|}-{1\over |w^2|}\,. $$
+Two-fold degenerate: two-harmonic oscilators plus anharmonic corrections.<br><br>
+
+It is well known that non-perturbative instanton solutions, split this degeneracy
+$$\Delta E_0\sim |w|^{5/2}\,e^{-\sqrt{2}|w|^3\over 3}\,.$$
+<br>
+<center>	    <img src="{% static "img/double_spectrum.png" %}" width="600">  </center><br><br>
+Some potential applications want to consider:
+<ul  style="line-height:300%">
+  <li>Decay of metastable states.</li>
+  <li>Particle production / Schwinger effect (?).</li>
+   <li>Growth order for coefficients in perturbation theory.</li>
+</ul>
 	            <br><br><br>
                 </div>
             </div>
