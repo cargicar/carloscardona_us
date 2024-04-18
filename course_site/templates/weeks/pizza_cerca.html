@@ -103,7 +103,7 @@
 		    A couple of personal believes:
 		    <ul>
 		      <li> Wavefunction is just an artifact. Not actual physical meaning. Maybe less controversial: observables should be computable without any reference to a wavefunction. </li> 
-		      <li> QM is a statistical theory and can be treated purely in statistical terms.</li>
+		      <li> QM is a probabilistic theory and should be treated purely in probabilistic terms.</li>
 		    <br><br>
 		      <li> An a philosophy: Physical observables should be highly constraint just by physical conditions. <b> Not fancy math required. </b> (path integrals, variational methods, etc...). This philosophy is known as <b>the bootstrap</b>. </li>
 		     	
@@ -117,31 +117,33 @@
 		    <center>   <img src="{% static "img/cartoon_bootstraps.png" %}" width="250"> </center>
 		    <br><br>
 		    <h3>General Method</h3>
-		    Any physical observable ${\cal O}$ which is an eigenstate of the Hamiltonian, must satisfy the following conditions:
+		    Any physical observable ${\cal O}$ which is an eigenstate of the Hamiltonian, must satisfy the following conditions (<em>Xizhi Han, Sean A. Hartnoll, Jorrit Kruthoff, 2020</em>):
 		    $$\langle [H,{\cal O}]\rangle=0\,,$$
-		    $$\langle H{\cal O}\rangle =0\,,$$
+		    $$\langle H{\cal O}\rangle =E\langle {\cal O}\rangle\,,$$
 		    $$\langle {\cal O}^{\dagger}{\cal O}\rangle\geq 0\,,$$
 		    The End. <br><br>
 		    <h3>Explicit Method</h3>
 		    Let's take a generic 1D Hamiltonian,
 		    $$H={p^2\over 2M}+V(x)\,,$$
-		    and consider two particular observables ${\cal O}=x^s$ and ${\cal O}=x^m\,p$.<br> Applying the fist two conditions above $\langle [H,{\cal O}]\rangle=0\,,$
-		    $\langle H{\cal O}\rangle =0\,,$ lead us to a recursion relation:
-		    $$2m E\langle x^{m-1}\rangle+{m(m-1)(m-2)\over 4}\langle x^{m-3}\rangle-\langle x^{m}V'(x)\rangle-\langle x^{m-1}V(x)\rangle=0\,. $$
-		    <br><br>
-		    There are two alternative ways to arrive at this result,
-		    <ul>
-		      <li>Pick two convenient operators as the ones above, and use recursively the fundamental commutation relation $[x,p]=i\hbar.$($\quad\hbar$ = 1 in this talk).</li>
-		      		      <li> Generalized Krammers relations for the Hydrogen atom. Developed by Moq and myself. More systematic, not need to perform any commutator gymnastics. </li>
+ We want to apply the fist two conditions above $\langle [H,{\cal O}]\rangle=0\,,$
+		    $\langle H{\cal O}\rangle =0\,,$<br><br>
+		    There are two alternative ways to approach this,<br><br>
+		    <ul type ="A">
+		      <li>Pick two convenient operators ( for a polynomial $V(x)$,  ${\cal O}=x^s$ and ${\cal O}=x^m\,p$), and use recursively the fundamental commutation relation $[x,p]=i\hbar.\quad$($\hbar$ = 1 in this talk).  Perform some commutator gymnastics</li><br>
+		      <li> Write down the Schrödinger equation (I know I said we dont need the wave function, but that is ilustrated in alternative above), multiplied it by $x^s$ and perform integration by parts to get rip of the $p$ operator. This has been developed by Moq and myself and is a generalization of and old result for the Hydrogen atom known and <em>Kramer's relation</em>. More systematic, not need to perform any commutator gymnastics, incorporates boundary condition explicitly.
+		      		    <center>
+		      <img src="{% static "img/moq.jpeg" %}" width="200"></center></li>
 		    </ul>
-		    <center>
-		      <img src="{% static "img/moq.jpeg" %}" width="200"></center><br><br>
+<br><br>	Either of this approaches, lead us to a recursion relation:
+		    $$2m E\langle x^{m-1}\rangle+{m(m-1)(m-2)\over 4}\langle x^{m-3}\rangle-\langle x^{m}V'(x)\rangle-\langle x^{m-1}V(x)\rangle=0\,, $$
+		    which allow us to get higher order monomials from lower order monomials.
+		    <br><br>
 
 		    <h2>A Search for Positivity</h2>
 		    		    Now it comes the important piece in the bootstrap program, as in life :<br><br>
 <center>		    		      <img src="{% static "img/search_positivity.jpeg" %}" width="400"></center><br><br>
 
-<br> Take a general operator to be $${\cal O}=\sum_ic_n x^n\,,$$ then for $c_n\in \mathbb{C}$. <br><br> By the third condition, it needs to satisfy
+<br> Take a general operator to be $${\cal O}=\sum_nc_n x^n\,,$$ then for $c_n\in \mathbb{C}$. <br><br> By the third condition, it needs to satisfy
 		    $$ 0\leq \langle {\cal O}^{\dagger}{\cal O}\rangle=\sum_{i\,,j}c_i^{*}\langle x^{i+j}\rangle c_j\,,$$ or in other words,
 		    the matrix $M_{ij}=\langle x^{i+j}\rangle$ has to be positive-definite. <br><br>
 		    
@@ -149,8 +151,8 @@
 		    <br><br>
 		    <ul>
 		     
-		<li>  Use recursion relation to reduce the order of monomials $\langle x^{i+j}\rangle$  in terms of an independent basis, say for the sake of explanation such basis is
-		    $\{\langle x^{2}\rangle,\, E\}$.
+		<li>  Use recursion relation to reduce the order of monomials $\langle x^{i+j}\rangle$  in terms of an independent basis, say for the sake of explanation say such basis is
+		    $\{\langle x^{0}\rangle,\langle x^{2}\rangle,\, E\}=\{\langle x^{2}\rangle,\, E\}$.
 		<li> Define a large <b>grid</b> (array) for the space  $\{\langle x^{2}\rangle,\, E\}$.</li><br>
 		<li>  Define Array <b>M</b>  $M_{ij}=\langle x^{i+j}\rangle$<br></li><br>
 		<li>  Write array <b></b> in the basis.</li><br>
