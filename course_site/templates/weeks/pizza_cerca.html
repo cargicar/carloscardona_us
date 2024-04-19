@@ -93,17 +93,17 @@
               <div class="post-preview">
 
 		    <h3>What's the matter?</h3>
-		    Two issues we want to address:
+
 		    <ul>
 		      <li> Most quantum mechanical systems, even in one dimension, are not soluble by analytical means. Developing a quick numerical and general method is desired (some good ones already exist in the market). </li>
 		      <li> A systematic way to compute observables non-perturbatively is desired. (Some already exist, but they have limitations)</li>
 		     	
 		    </ul>
-		    <br><br>
 		    A couple of personal believes:
 		    <ul>
-		      <li> Wavefunction is just an artifact. Not actual physical meaning. Maybe less controversial: observables should be computable without any reference to a wavefunction. </li> 
-		      <li> QM is a probabilistic theory and should be treated purely in probabilistic terms.</li>
+		      <li> Wavefunction is just an artifact. Maybe less controversial: observables should be computable without any reference to a wavefunction. </li>
+		      <li> Quantum Mechanics is a probabilistic theory. Should be described by probabilistic quantities</li> 
+
 		    <br><br>
 		      <li> An a philosophy: Physical observables should be highly constraint just by physical conditions. <b> Not fancy math required. </b> (path integrals, variational methods, etc...). This philosophy is known as <b>the bootstrap</b>. </li>
 		     	
@@ -126,10 +126,10 @@
 		    Let's take a generic 1D Hamiltonian,
 		    $$H={p^2\over 2M}+V(x)\,,$$
  We want to apply the fist two conditions above $\langle [H,{\cal O}]\rangle=0\,,$
-		    $\langle H{\cal O}\rangle =0\,,$<br><br>
+		    $\langle H{\cal O}\rangle =E\langle {\cal O}\rangle\,.$<br><br>
 		    There are two alternative ways to approach this,<br><br>
 		    <ul type ="A">
-		      <li>Pick two convenient operators ( for a polynomial $V(x)$,  ${\cal O}=x^s$ and ${\cal O}=x^m\,p$), and use recursively the fundamental commutation relation $[x,p]=i\hbar.\quad$($\hbar$ = 1 in this talk).  Perform some commutator gymnastics</li><br>
+		      <li>Pick a few convenient "generic" operators ( for a polynomial $V(x)$,  ${\cal O}=x^s$ and ${\cal O}=x^m\,p$), and use recursively the fundamental commutation relation $[x,p]=i\hbar.\quad$($\hbar$ = 1 in this talk).  Perform some commutator gymnastics</li><br>
 		      <li> Write down the Schrödinger equation (I know I said we dont need the wave function, but that is ilustrated in alternative above), multiplied it by $x^s$ and perform integration by parts to get rip of the $p$ operator. This has been developed by Moq and myself and is a generalization of and old result for the Hydrogen atom known and <em>Kramer's relation</em>. More systematic, not need to perform any commutator gymnastics, incorporates boundary condition explicitly.
 		      		    <center>
 		      <img src="{% static "img/moq.jpeg" %}" width="200"></center></li>
@@ -189,7 +189,8 @@ $$\Delta E_0\sim |w|^{5/2}\,e^{-\sqrt{2}|w|^3\over 3}\,.$$
 Some potential applications want to consider:
 <ul  style="line-height:300%">
   <li>Decay of metastable states.</li>
-  <li>Particle production / Schwinger effect (?).</li>
+  <li>Particle production /    <a href="https://en.wikipedia.org/wiki/Schwinger_effect" target="_blank" style="color:blue;">  Schwinger effect </a>(?).
+ </li>
    <li>Growth order for coefficients in perturbation theory.</li>
 </ul>
 	            <br><br><br>
