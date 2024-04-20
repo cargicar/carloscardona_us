@@ -156,35 +156,35 @@ This is in turn would be the total number of ways the energy could be distribute
 		   
                    Using  <a href="https://en.wikipedia.org/wiki/Lagrange_multiplier" target= "_blank"  style="color:blue;"> lagrange multipliers</a>, we are looking for  the maximum of,
 
-                   $$ \Phi(n_i)=\log W+\alpha_1 (\sum_i n_i-N)+\alpha_2(\sum_i\epsilon_in_i-E)\,.$$
+                   $$ \Phi(n_i)=\log W+\alpha (\sum_i n_i-N)+\beta(\sum_i\epsilon_in_i-E)\,.$$
 
         <br><br>
 	In general, of we have a system of $N$ particles, with $n_i$ particles at energy $\epsilon_i$, the number of micro-states is given by,
 	$$ W= {N!\over n_1!n_2!n_3!...}\,,$$
 	Then we can write,
-	                   $$ \Phi(n_i)=\log N!-\sum_i\log n_i!+\alpha_1 (\sum_i n_i-N)+\alpha_2(\sum_i\epsilon_in_i-E)\,$$
+	                   $$ \Phi(n_i)=\log N!-\sum_i\log n_i!+\alpha (\sum_i n_i-N)+\beta(\sum_i\epsilon_in_i-E)\,$$
         Using the Stirling approximation,
 	$$\log n_i!\sim n_i\log n_i\,,$$
 	and ignoring irrelevant constants,
-	 $$ \Phi(n_i)\sim- \sum_{i}n_i\log n_i+\alpha_1 (\sum_i n_i-N)+\alpha_2(\sum_i\epsilon_in_i-E)\,$$
+	 $$ \Phi(n_i)\sim- \sum_{i}n_i\log n_i+\alpha (\sum_i n_i-N)+\beta(\sum_i\epsilon_in_i-E)\,$$
 <br><br>
 Now we can find the maximum. What is the value of $n^{(0)}_i$ that maximizes $\Phi(n_i)$
 
 		   <ol  style="line-height:300%" type="A">
 		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
 		 <!-- longer -->
-		   <li>$ \log n_i=(\alpha_1-1)+\alpha_2$ </li>
-		   <li>$ \log n_i=(\alpha_1-1)+\alpha_2 \epsilon_i$</li>
-		 		   <li> $\log n_i=\alpha_1 $</li>
+		   <li>$ \log n_i=(\alpha-1)+\beta$ </li>
+		   <li>$ \log n_i=(\alpha-1)+\beta \epsilon_i$</li>
+		 		   <li> $\log n_i=\alpha $</li>
 		 		   <li> None of the above </li>
 
 				</ol>
 	<br><br>
 Then we get:
 
-                   $$ n_i = e^{\alpha-1}\,e^{-\beta E_i}=A\,e^{-\beta E_i} $$
+                   $$ n_i = e^{\alpha-1}\,e^{-\beta E_i}=A\,e^{-\beta \epsilon_i} $$
 
-                   which is the Boltzmann distribution.
+        taking the constant $\beta={1\over k_{B}T}$, we get the <b> Boltzmann distribution</b>.
 
                    Thus, the Boltzmann distribution is the probability distribution that maximizes the entropy of a system of particles in thermal equilibrium subject to the constraint that the total energy of the system is fixed. It describes the distribution of particles in energy levels and is widely used in statistical mechanics to model the behavior of particles in gases, liquids, and solids.
 
@@ -197,10 +197,14 @@ The result is shockingly quite universal: for large systems of distinguishable p
                    In other words, the Boltzman distribution is given by,
                    $$\boxed{P(E_n)={e^{-E_n\over k_B T}\over \sum_n A\,e^{-E_n\over k_B T} }\,.}$$ 
                    <center> <img src="{% static "img/pnvsbol.png" %}" width="800"></center><br><br>
-
+		   Once the probability is know, we can compute physical quantities, for example, the average energy,
+		  $$\boxed{\bar{E}=\sum_{n}E_nP(E_n)= \sum_n E_n{e^{-E_n\over k_B T}\over \sum_p \,e^{-E_p\over k_B T} }\,.}$$
+		   
                    <hr>
-                    <b> Example</b>: Consider a gas with $N=10^{23}$ molecules. Initially, the gas is contained in one half of a box, but eventually it is allowed to fill the remaining half. Compute the change of entropy using both formulas for $\Delta S$ we have seen, i,e, by counting the number of microstates, and by heat transfer.
-                    <hr>
+		   <br><br>
+		   <h2>Next: Maxwell Speed Distribution</h2>
+                    <!-- <b> Example</b>: Consider a gas with $N=10^{23}$ molecules. Initially, the gas is contained in one half of a box, but eventually it is allowed to fill the remaining half. Compute the change of entropy using both formulas for $\Delta S$ we have seen, i,e, by counting the number of microstates, and by heat transfer. -->
+                    <!-- <hr> -->
 
                     <hr>
 <!--                     <b> Example</b>: Consider a gas with $N=10^{23}$ molecules. Initially, the gas is contained in one half of a box, but eventually it is allowed to fill the remaining half. Compute the change of entropy using both formulas for $\Delta S$ we have seen, i,e, by counting the number of microstates, and by heat transfer. -->
