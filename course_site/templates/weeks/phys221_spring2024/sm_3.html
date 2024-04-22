@@ -1,0 +1,199 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SM_3</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/gas1.gif' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <div class="site-heading">
+		    <br><br><br><br>
+                        <h1  style="color:black;" >Statistical Mechanics 3 </h1>
+                        <hr class="small">
+                        <h2  style="color:black;">Boltzmann-Maxwell Distribution</h2>
+                        <h3  style="color:black;">PHYS-221 April 19 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-preview">
+		
+		                     		  <h2>Learning Objectives</h2>
+
+		  <ol>
+		    <li>Learn the Boltzmann Distribution </li> 
+		  </ol>
+		  <br><br>
+		  <b>Fill in the blanks</b>:<br>
+		  Consider a system of distinguishable particles at temperature $T$, the probability of an individual particle to be at state $n$ with energy $E_n$ is given by _________________________.<br><br>
+
+		  According to the Boltzmann distribution lower energy states have __________ (more, less, equal) probability to be found than higher energy states.<br>
+		  <br>
+
+                    <h2>Boltzmann distribution: continuation</h2>
+                    Last class, we have derived to Boltzmann distribution. Let's see some plots of it for different temperatures,
+                    <br><br>
+                    <center>   <img src="{% static "img/boltz_diff_temps0.png" %}" width="600"></center><br><br>
+
+		    We can see that the higher the temperature of the system, 
+
+
+
+		   <ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		   <li>the lower the probabilities of finding higher energy states. </li>
+		   <li>the higher the probabilities of finding higher energy states. </li>
+		   <li>the the probabilities of finding higher energy states remain the same. </li>
+		   
+		 		   <li> None of the above </li>
+
+				</ol>
+	<br><br>
+
+	The higher the temperature, the larger the probabilities of higher energy levels to be occupied, which is absolutely reasonable due to the fact that we have
+	more total energy available, and therefore more can be distributed among all the particles.<br><br>
+                   Previously we have also defined the <b>occupation number</b>
+                    $$\boxed{\mathcal{N}(E_n)=N\,A\,e^{-E_n\over k_B T}={N\,e^{-E_n\over k_B T}\over \sum_n\, e^{-E_n\over k_B T}}\,,} $$
+                    Obviously the occupation number over all states, gives the total number of particles, as expected,
+                    $$\sum_n\mathcal{N}(E_n)=N\,\sum_n\, Ae^{-E_n\over k_B T}=N\,. $$
+                    Let's now apply the Boltzmann distribution to our first example: a gas of harmonic oscilators. We can obtain the average energy of such gas by computing,
+                    $$\bar{E}=\sum_n E_n\, P(E_n)={\sum_n\, n\hbar \omega\,e^{-n\hbar\omega\over k_B T}\over\sum_n\,e^{-n\hbar\omega\over k_B T} }  $$
+                    which can be rapidly computed by using the geometric series to give (Homework),
+                    $$\bar{E}={\hbar\omega\over e^{\hbar\omega\over k_B T}-1} $$
+                    this looks similar to a distribution you all already know! and of course is not a coincidence. <br><br>
+                    <!-- One can similarly write such expectation value in terms of occupacy number as, -->
+                    <!-- $$\boxed{\bar{E}={\sum_n\, E_n\, \mathcal{N}(E_n)\over\sum_n\, \mathcal{N}(E_n) }\,,} $$ -->
+                    <!-- This says that the average energy is the energy $E_n$ of a given state times the number of particles in that state, summed over all the states and then divided by the total number of particles in all states. -->
+                    <h2>From states to energies </h2>
+                    Notice that in the sums above, $n$ represents (in a compact form) <b>all state</b> labels. Since degeneracy will introduce some over counting, we would like to have a representation that sums over energies instead of individual states. To see why and how, suppose we have a gas of hydrogen atoms, then we can change the sum from states to energies as follows,
+                    $$\sum_n\, E_n\, \mathcal{N}(E_n)=\sum_n\, E_nN\,A\,e^{-E_n\over k_B T} =\sum_{E_n}E_n\,N\,A\,e^{-E_n\over k_B T}\times{\rm degeneracy}\,.$$
+                    or equivalently,
+                    $$\sum_n\, E_n\, \mathcal{N}(E_n)= \sum_{E_n}\, E_n\, \mathcal{N}(E_n)\,({\rm number\,\,of\,\,states\,\,of\,\,energy}\,\, E_n)$$
+                    As we have seen from the Boltzmann distribution, the higher the temperature of a system, the larger the number of states getting occupied. If the temperature is large enough, the number of occupied states can become very large, and it is convenient to change the sum by an integral.
+                    $$ \sum_{E_n}\, E_n\, \mathcal{N}(E_n)\,({\rm number\,\,of\,\,states\,\,of\,\,energy}\,\, E_n)$$
+                    $$ =\int\, E_n\, \mathcal{N}(E_n)\,({\rm number\,\,of\,\,states\,\,of\,\,energy}\,\, E_n+dE_n){dE_n\over dE_n}$$
+                    and we can defined the <b>density of states</b> as
+                    $$\boxed{D(E_n)= { ({\rm number\,\,of\,\,states\,\,of\,\,energy}\,\, E_n+dE_n)\over dE_n}}$$
+                    which allow us to write:
+                    $$\boxed{\bar{E} ={\int\, E\, \mathcal{N}(E)\,D(E)dE\over \int\mathcal{N}(E)\,D(E)dE}\,.}$$
+                    As an example, let us consider again the harmonic oscilator in the ``continuous'' limit. For that we need to change summation over $n$ to $E_n$. We have $E_n=n\hbar\omega$, then
+                    $$dn=d\left({E\over\hbar\omega}\right)={dE\over \hbar\omega}\,,$$from which we can read $D(E)={1\over\hbar\omega}$.
+                    <hr>
+
+                    <h2>Classical averages from Boltzmann Distribution</h2>
+                    Last class we have seen that by taking the classical limit of the average energies from the Boltzmann distribution, we can replace the sum for an integral,
+                    $$\boxed{\bar{E} ={\int\, E\, \mathcal{N}(E)\,D(E)dE\over \int\mathcal{N}(E)\,D(E)dE}\,.}$$
+                    Therefore we don't need a new apparatus to compute expectation values of classical quantities, but we can just go ahead and use the above result from the classical limit. Let's consider an example:<br>
+                    <hr>
+                    <em> By approximating the atmosphere as a column of classical particles of mass $m$ at temperature $T$ in a uniform gravitational field $g$, calculate the average height of an air molecule about Earth's surface.</em>
+                    <br><br>
+                    We can compute such probability by using the classical limit of the Botltzmann distribution. To do that, we need the energy of a single particle:
+                    $$E={1\over 2}m\vec{v}^2+mgy $$
+                    Within a good approximation we have that the density of states for this system is approximately constant (Remember for example that the density of it states for an harmonic oscillator is also constant $D(E)=(\hbar \omega)^{-1}$). Since we are interested in the average height this time we need to integrate over the Y component instead of the energy, which lead us to the integral:
+                    $$\bar{y}={\int_0^{\infty}ye^{-(mgy/k_B T)}dy\over \int_0^{\infty}e^{-(mgy/k_B T)}dy}={k_B T\over mg} $$
+                    The result makes sense qualitatively: at higher temperatures particles are more energetic and so should rise to greater heights. Conversely if $m$ or $g$ were larger, we wouldn't expect the particle to rise as high.
+                    <br><br>
+                    <!-- <center>   <img src="{% static "img/boltz_diff_temps.png" %}" width="600"></center><br><br> -->
+                    <h2>Maxwell Speed Distribution</h2>
+                    By now you should have already noticed that one of the main concerns of statistical mechanics is the computation of probability distributions, from which we can get averages. So far we have seen position distributions and energy distributions (in a semiclassical tratment).  There is yet another important distribution that we need to consider, which is the speed distributions on a system of many particles. For this case, it is enough to consider the energy due to translation kinetic energy only, i.e
+                    $$ E={1\over 2}m\vec{v}^2\,.$$
+                    Since we are interested in averaging the speed, we just need to integrate over velocity (or equivalently, the integration over positions cancels), explicitly,
+                    $$\bar{v}={\int v e^{-{m v^2\over 2 k_B T}}d\vec{v}\over \int e^{-{m v^2\over 2 k_B T}}d\vec{v}}\,, $$
+                    where $v=|\vec{v}|$. We are only interested in average the absolute speed of the particles, so we can instead change to spherical coordinates,
+                    $$d\vec{v}=v^2 sin\theta\, d\theta\, d\phi\, dv $$ which simplifies to
+                    $$\bar{v}={\int v e^{-{m v^2\over 2 k_B T}}v^2dv\over \int e^{-{m v^2\over 2 k_B T}}v^2dv}\,, $$
+                    performing the integral in the denominator and rearraging terms, we have more generally,
+                    $$\overline{f(v)}=\int_0^{\infty}f(v)\left[\sqrt{2\over\pi}\left({m\over k_BT}\right)^{3/2}v^2 e^{-{m v^2\over 2 k_B T}}\right]dv\,. $$
+                    Now by recalling that an average is computed againts a probability distribution, i.e $$\overline{f(v)}=\int_0^{\infty}f(v)P_{\rm Maxwell}(v)dv\,,$$ we obtain that the speed probabilitu distribution should be given by,
+                    $$P_{\rm Maxwell}(v)={dP(v)\over dv}=\sqrt{2\over\pi}\left({m\over k_BT}\right)^{3/2}v^2 e^{-{m v^2\over 2 k_B T}}\,.$$
+                    This probability density function gives the probability, per unit speed, of finding the particle with a speed near $v$.<br><br>
+                    Often the number per unit volume per unit speed is of greater interest, which follows simply by multiplying the probability per unit speed by $N/V$, which lead us to the <b>Maxwell speed distribution</b>,
+                    $$\boxed{n(v)_{\rm Maxwell}={N\over V}\sqrt{2\over\pi}\left({m\over k_BT}\right)^{3/2}v^2 e^{-{m v^2\over 2 k_B T}}}$$
+                    <center>   <img src="{% static "img/maxwell_diff_vs.png" %}" width="600"></center><br><br>
+                    From this plot we can see that higher temperatures favor higher average velocities. Equivalently, higher temperatures are associated to higher average internal energies. See a little simulation   <a href="https://www.thephysicsaviary.com/Physics/Programs/Labs/MaxwellDistribution/" target="_blank">here.</a>
+
+			<br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
