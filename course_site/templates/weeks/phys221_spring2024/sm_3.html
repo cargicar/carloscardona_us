@@ -94,8 +94,9 @@
 		
 		                     		  <h2>Learning Objectives</h2>
 
-		  <ol>
-		    <li>Learn the Boltzmann Distribution </li> 
+						  <ol>
+						    <li> Apply the Boltzmann distribution </li> 
+		    <li>Learn the Maxwell Speed Distribution </li> 
 		  </ol>
 		  <br><br>
 		  <b>Fill in the blanks</b>:<br>
@@ -128,23 +129,54 @@
 	The higher the temperature, the larger the probabilities of higher energy levels to be occupied, which is absolutely reasonable due to the fact that we have
 	more total energy available, and therefore more can be distributed among all the particles.<br><br>
                    Previously we have also defined the <b>occupation number</b>
-                    $$\boxed{\mathcal{N}(E_n)=N\,A\,e^{-E_n\over k_B T}={N\,e^{-E_n\over k_B T}\over \sum_n\, e^{-E_n\over k_B T}}\,,} $$
-                    Obviously the occupation number over all states, gives the total number of particles, as expected,
-                    $$\sum_n\mathcal{N}(E_n)=N\,\sum_n\, Ae^{-E_n\over k_B T}=N\,. $$
+                    $$\mathcal{N}(E_n)=N\,P(E_n)={N\,e^{-E_n\over k_B T}\over \sum_n\, e^{-E_n\over k_B T}}\,, $$
+
+	Obviously the occupation number over all states, gives the total number of particles, as expected,
+        $$\sum_n\mathcal{N}(E_n)=N\,\sum_n\,P(E_n)=N\,. $$
+
+
+	Is often more convenient the average energy in term of the occupation number.
+	$$\bar{E}=\sum_{n}E_nP(E_n)={\sum_{n}E_n N P(E_n)\over N}={\sum_n E_n\mathcal{N}(E_n)\over \sum_n \mathcal{N}(E_n)} \,.$$
+
+	
                     Let's now apply the Boltzmann distribution to our first example: a gas of harmonic oscilators. We can obtain the average energy of such gas by computing,
-                    $$\bar{E}=\sum_n E_n\, P(E_n)={\sum_n\, n\hbar \omega\,e^{-n\hbar\omega\over k_B T}\over\sum_n\,e^{-n\hbar\omega\over k_B T} }  $$
-                    which can be rapidly computed by using the geometric series to give (Homework),
+        $\bar{E}={\sum_n E_n\,e^{-E_n\over k_B T}\over \sum_n\, e^{-E_n\over k_B T}}\,.$ <br><br>
+	Recalling that the energy of a single harmonic oscillator is $E_n=(n+1/2)\hbar \omega$, we can simplify things by absorbing the constant, or simply take   $E_n=n\hbar \omega$. Therefore, we want to compute,
+
+$$	\bar{E}={\sum_n\, n\hbar \omega\,e^{-n\hbar\omega\over k_B T}\over\sum_n\,e^{-n\hbar\omega\over k_B T} } . $$
+	To make things easier, let us define $x=e^{-\hbar\omega\over k_B T}$. With that,
+	$$	\bar{E}={\hbar \omega\sum_n\, n\,x^n\over\sum_n\,x^n } . $$
+	<br>
+	Do you know how much is $\sum_n\,x^n$?_______ (yes, not).<br><br>
+	we can easily do it, or just use a <a href="https://www.wolframalpha.com/input?i=sum%5Bx%5En%2C%7Bn%2C0%2Cinfty%7D%5D" target="_blank" style="color:blue;">  tool </a>.<br><br>
+Can you tell me, $\bar{E}$ for the harmonic oscillator?: 
+
+
+		   <ol  style="line-height:300%" type="A">
+		   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		 <!-- longer -->
+		   <li>                    $\bar{E}={\hbar\omega\over e^{-{\hbar\omega\over k_B T}}-1} $ </li>
+		   <li>                    $\bar{E}={\hbar\omega  e^{-{\hbar\omega\over k_B T}}\over 1-  e^{-{\hbar\omega\over k_B T}}} $ </li>
+		   		   <li>                    $\bar{E}={\hbar\omega  e^{+{\hbar\omega\over k_B T}}\over 1-  e^{+{\hbar\omega\over k_B T}}} $ </li>
+		   
+		   
+		 		   <li> None of the above </li>
+
+				</ol>
+	<br><br>
+	
+	
+        which can be simplified to give (Homework),
                     $$\bar{E}={\hbar\omega\over e^{\hbar\omega\over k_B T}-1} $$
                     this looks similar to a distribution you all already know! and of course is not a coincidence. <br><br>
                     <!-- One can similarly write such expectation value in terms of occupacy number as, -->
                     <!-- $$\boxed{\bar{E}={\sum_n\, E_n\, \mathcal{N}(E_n)\over\sum_n\, \mathcal{N}(E_n) }\,,} $$ -->
                     <!-- This says that the average energy is the energy $E_n$ of a given state times the number of particles in that state, summed over all the states and then divided by the total number of particles in all states. -->
                     <h2>From states to energies </h2>
-                    Notice that in the sums above, $n$ represents (in a compact form) <b>all state</b> labels. Since degeneracy will introduce some over counting, we would like to have a representation that sums over energies instead of individual states. To see why and how, suppose we have a gas of hydrogen atoms, then we can change the sum from states to energies as follows,
-                    $$\sum_n\, E_n\, \mathcal{N}(E_n)=\sum_n\, E_nN\,A\,e^{-E_n\over k_B T} =\sum_{E_n}E_n\,N\,A\,e^{-E_n\over k_B T}\times{\rm degeneracy}\,.$$
-                    or equivalently,
-                    $$\sum_n\, E_n\, \mathcal{N}(E_n)= \sum_{E_n}\, E_n\, \mathcal{N}(E_n)\,({\rm number\,\,of\,\,states\,\,of\,\,energy}\,\, E_n)$$
-                    As we have seen from the Boltzmann distribution, the higher the temperature of a system, the larger the number of states getting occupied. If the temperature is large enough, the number of occupied states can become very large, and it is convenient to change the sum by an integral.
+                    For a more general system, say a gas of Hydrogen, in the sums above, $n$ represents (in a compact form) all <b> quantum numbers</b> . Since we are summing over energies, degeneracy will introduce over counting, we would like to have a representation that sums over energies instead of individual states. Suppose we have a gas of Hydrogen atoms, then we can change the sum from states to energies as follows,
+	  $$\boxed{\bar{E}={\sum_n E_n\mathcal{N}(E_n)\over \sum_n \mathcal{N}(E_n)} ={\sum_{E_n} E_n\mathcal{N}(E_n)\times{\rm degeneracy}\over \sum_{E_n} \mathcal{N}(E_n)\times{\rm degeneracy}}} \,.$$
+		   Remeber, Degeneracy= number of states of energy $\,\, E_n$.<br><br>
+                    As we have seen from the Boltzmann distribution, the higher the temperature of a system, the larger the number of states getting occupied. If the temperature is large enough, the number of occupied states can become very large. At that point the energies are approximately "continous" and it is convenient to change the sum by an integral.
                     $$ \sum_{E_n}\, E_n\, \mathcal{N}(E_n)\,({\rm number\,\,of\,\,states\,\,of\,\,energy}\,\, E_n)$$
                     $$ =\int\, E_n\, \mathcal{N}(E_n)\,({\rm number\,\,of\,\,states\,\,of\,\,energy}\,\, E_n+dE_n){dE_n\over dE_n}$$
                     and we can defined the <b>density of states</b> as
@@ -155,25 +187,22 @@
                     $$dn=d\left({E\over\hbar\omega}\right)={dE\over \hbar\omega}\,,$$from which we can read $D(E)={1\over\hbar\omega}$.
                     <hr>
 
-                    <h2>Classical averages from Boltzmann Distribution</h2>
-                    Last class we have seen that by taking the classical limit of the average energies from the Boltzmann distribution, we can replace the sum for an integral,
-                    $$\boxed{\bar{E} ={\int\, E\, \mathcal{N}(E)\,D(E)dE\over \int\mathcal{N}(E)\,D(E)dE}\,.}$$
-                    Therefore we don't need a new apparatus to compute expectation values of classical quantities, but we can just go ahead and use the above result from the classical limit. Let's consider an example:<br>
-                    <hr>
-                    <em> By approximating the atmosphere as a column of classical particles of mass $m$ at temperature $T$ in a uniform gravitational field $g$, calculate the average height of an air molecule about Earth's surface.</em>
-                    <br><br>
-                    We can compute such probability by using the classical limit of the Botltzmann distribution. To do that, we need the energy of a single particle:
-                    $$E={1\over 2}m\vec{v}^2+mgy $$
-                    Within a good approximation we have that the density of states for this system is approximately constant (Remember for example that the density of it states for an harmonic oscillator is also constant $D(E)=(\hbar \omega)^{-1}$). Since we are interested in the average height this time we need to integrate over the Y component instead of the energy, which lead us to the integral:
-                    $$\bar{y}={\int_0^{\infty}ye^{-(mgy/k_B T)}dy\over \int_0^{\infty}e^{-(mgy/k_B T)}dy}={k_B T\over mg} $$
-                    The result makes sense qualitatively: at higher temperatures particles are more energetic and so should rise to greater heights. Conversely if $m$ or $g$ were larger, we wouldn't expect the particle to rise as high.
-                    <br><br>
+                    <!-- <h2>Classical averages from Boltzmann Distribution</h2> -->
+                   
+                    <!-- <em> By approximating the atmosphere as a column of classical particles of mass $m$ at temperature $T$ in a uniform gravitational field $g$, calculate the average height of an air molecule about Earth's surface.</em> -->
+                    <!-- <br><br> -->
+                    <!-- We can compute such probability by using the classical limit of the Botltzmann distribution. To do that, we need the energy of a single particle: -->
+                    <!-- $$E={1\over 2}m\vec{v}^2+mgy $$ -->
+                    <!-- Within a good approximation we have that the density of states for this system is approximately constant (Remember for example that the density of it states for an harmonic oscillator is also constant $D(E)=(\hbar \omega)^{-1}$). Since we are interested in the average height this time we need to integrate over the Y component instead of the energy, which lead us to the integral: -->
+                    <!-- $$\bar{y}={\int_0^{\infty}ye^{-(mgy/k_B T)}dy\over \int_0^{\infty}e^{-(mgy/k_B T)}dy}={k_B T\over mg} $$ -->
+                    <!-- The result makes sense qualitatively: at higher temperatures particles are more energetic and so should rise to greater heights. Conversely if $m$ or $g$ were larger, we wouldn't expect the particle to rise as high. -->
+                    <!-- <br><br> -->
                     <!-- <center>   <img src="{% static "img/boltz_diff_temps.png" %}" width="600"></center><br><br> -->
                     <h2>Maxwell Speed Distribution</h2>
                     By now you should have already noticed that one of the main concerns of statistical mechanics is the computation of probability distributions, from which we can get averages. So far we have seen position distributions and energy distributions (in a semiclassical tratment).  There is yet another important distribution that we need to consider, which is the speed distributions on a system of many particles. For this case, it is enough to consider the energy due to translation kinetic energy only, i.e
                     $$ E={1\over 2}m\vec{v}^2\,.$$
                     Since we are interested in averaging the speed, we just need to integrate over velocity (or equivalently, the integration over positions cancels), explicitly,
-                    $$\bar{v}={\int v e^{-{m v^2\over 2 k_B T}}d\vec{v}\over \int e^{-{m v^2\over 2 k_B T}}d\vec{v}}\,, $$
+                    $$\bar{v}={\int v P(E_v)d\vec{v}\over\int  P(E_v)d\vec{v}d\vec{v}}={\int v e^{-{m v^2\over 2 k_B T}}d\vec{v}\over \int e^{-{m v^2\over 2 k_B T}}d\vec{v}}\,, $$
                     where $v=|\vec{v}|$. We are only interested in average the absolute speed of the particles, so we can instead change to spherical coordinates,
                     $$d\vec{v}=v^2 sin\theta\, d\theta\, d\phi\, dv $$ which simplifies to
                     $$\bar{v}={\int v e^{-{m v^2\over 2 k_B T}}v^2dv\over \int e^{-{m v^2\over 2 k_B T}}v^2dv}\,, $$
@@ -182,7 +211,7 @@
                     Now by recalling that an average is computed againts a probability distribution, i.e $$\overline{f(v)}=\int_0^{\infty}f(v)P_{\rm Maxwell}(v)dv\,,$$ we obtain that the speed probabilitu distribution should be given by,
                     $$P_{\rm Maxwell}(v)={dP(v)\over dv}=\sqrt{2\over\pi}\left({m\over k_BT}\right)^{3/2}v^2 e^{-{m v^2\over 2 k_B T}}\,.$$
                     This probability density function gives the probability, per unit speed, of finding the particle with a speed near $v$.<br><br>
-                    Often the number per unit volume per unit speed is of greater interest, which follows simply by multiplying the probability per unit speed by $N/V$, which lead us to the <b>Maxwell speed distribution</b>,
+                    Often the number per unit volume per unit speed is of greater interest, which follows simply by multiplying the probability per unit speed by $N/V$, which lead us to the <b>Maxwell speed distribution= </b> density of particles with speed $v$,
                     $$\boxed{n(v)_{\rm Maxwell}={N\over V}\sqrt{2\over\pi}\left({m\over k_BT}\right)^{3/2}v^2 e^{-{m v^2\over 2 k_B T}}}$$
                     <center>   <img src="{% static "img/maxwell_diff_vs.png" %}" width="600"></center><br><br>
                     From this plot we can see that higher temperatures favor higher average velocities. Equivalently, higher temperatures are associated to higher average internal energies. See a little simulation   <a href="https://www.thephysicsaviary.com/Physics/Programs/Labs/MaxwellDistribution/" target="_blank">here.</a>
