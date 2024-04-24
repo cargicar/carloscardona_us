@@ -62,4 +62,5 @@ urlpatterns = [
     path("phys221_spring2024/sm_1/", sm_1, name="sm_1"),
     path("phys221_spring2024/sm_2/", sm_2, name="sm_2"),
     path("phys221_spring2024/sm_3/", sm_3, name="sm_3"),
+    path("phys221_spring2024/sm_4/", sm_4, name="sm_4"),
 ]

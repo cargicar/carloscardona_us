@@ -127,6 +127,9 @@ def sm_2(request):
 def sm_3(request):
     return TemplateResponse(request,"weeks/phys221_spring2024/sm_3.html",)
 
+def sm_4(request):
+    return TemplateResponse(request,"weeks/phys221_spring2024/sm_4.html",)
+
 #######################################################
 #### Phys 221 Fall 2023 Site #############################
 def home_modern_phys(request):
