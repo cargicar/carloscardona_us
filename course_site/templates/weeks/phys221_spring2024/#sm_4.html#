@@ -1,0 +1,245 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SM_4</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/semi_conductor.avif' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <div class="site-heading">
+		    <br><br><br><br>
+                        <h1  style="color:black;" >Statistical Mechanics 4 </h1>
+                        <hr class="small">
+                        <h2  style="color:black;">Quantum Distributions</h2>
+                        <h3  style="color:black;">PHYS-221 April 24 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-preview">
+		
+		                     		  <h2>Learning Objectives</h2>
+
+						  <ol>
+						    <li> Learn Bose Probability distribution </li>
+						    						    <li> Learn Fermi Probability distribution </li> 
+
+		  </ol>
+		  <br><br>
+
+                    <h2>Classical vs Quantum</h2>
+                    In previous sessions we have studied the Boltzmann probability distribution, which is in a sense a semi-classical expression.  We have used it to compute averages of some quantities both, semi-classically and classically.  In this session we are going to derive a full quantum probability distribution.  It is enlightening to make a quick comparison between the different assumptions for classical and quantum systems,
+                    <ul>
+                        <li>Quantum: Discrete Energies <br>
+                        Classical: Continuous Energies</li>
+                        <li>Quantum: Energy degeneracies<br>
+                        Classical: Not degeneracies</li>
+                        <li>Quantum: Indistinguishable particles<br>
+                            Classical: Distiguishable particles</li>
+                    </ul>
+                    <br>
+		    <h2>Quantum Distributions: A unifying derivation</h2>
+                    We want compute the average number of  particles at energy level $E_i$ (occupation number). For that, think we have a system of total energy $E$, total number of particles $N$. Let's put $n_i$ of those particles at a given energy $E_i$. <br><br>
+		    What is the remaining energy of the system and in how many particles this remaining energy needs to be distributed?
+		    
+		    
+			<ol  style="line-height:300%" type="A">
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		     <!-- longer -->
+		 <li> $E_{remaining}=E-E_i$,  $\,N_{remaining}=N-n_i$</li>
+		 <li> $E_{remaining}=E-n_i E_i$,  $\,N_{remaining}=N-n_i$</li>
+		 <li> $E_{remaining}=E-n_iE_i$,  $\,N_{remaining}=N$</li>
+		 
+		 <li> None of the above </li>
+				</ol>
+	<br><br>
+
+		    Henceforth we need to distribute the remaining $E_{remaining}$ among the remaining $N_{remaining}$.<br><br> There is $W(E_{remaining},N_{remaining})=W(E-E_in_i,N-n_i)$ different ways of achieving such configuration, then:
+                    $$P(n_i E_i)={W(E-E_in_i,N-n_i)\over \sum_i W(E-E_in_i,N-n_i)}\,. $$
+                    An important observation is that $n_i << N $, and we can compute $P(E_i)$ approximately, by expanding in  small $n_i$. More explicitly, defining,
+                    $$f(E(n_i),N(n_i))=\log W(E-E_in_i,N-n_i)\,,  $$
+							     we can Taylor expand at first order in $n_i$, by using the chain rule, $$f(a(x),b(x))\sim f(a(0),b(0))+x\left({\partial f\over \partial a}{\partial a\over \partial x}+{\partial f\over \partial b}{\partial b\over \partial x}\right)|_{x=0}\,, $$
+							     with $a=N-n_i$, $\,b=E-n_i E_i$ and $x=n_i\,,$
+                    $$f(n_i<< N)=\log W(E-E_in_i,N-n_i)=\log W(E,N)+n_i\left((-E_i){\partial\over \partial E}-1{\partial\over \partial N} \right)\log W(E,N)$$
+			      We now that entropy is related to "number-of-ways" $W$ by $S=k_B \log W$.<br><br> We suspect that the probability should depend on the temperature ( recall for example the Boltzmann distribution <a href="https://www.carloscardona.us/phys221_spring2024/sm_3/" style="color:blue;" target="_blank">Boltzmann distribution </a>)
+			      <br><br>
+			      But additionally, we know that entropy and temperature are related, Do you remember such relation? _______ (yes, no).<br><br>
+
+			     
+                    $$ {\partial S\over \partial Q}= {\partial S\over \partial E}={1\over k_B T}$$ and let us introduce a new quantity,  $${1\over k_B} {\partial S\over \partial N}=\alpha\,, $$
+			      where $\alpha$ is known as <b> chemical potential</b>, we arrive to,
+			                       $$\log W(E-E_in_i,N-n_i)=\log W(E,N)+n_i\left((-E_i){1\over k_B T}-\alpha \right)\log W(E,N)$$
+			      $$W(E-n_i,N-n_i)=W(E,N)e^{-(\alpha+E_i/k_B T)n_i}\,. $$
+			         Which finally lead us to,
+			      $$P(n_i E_i)={W(E-E_in_i,N-n_i)\over \sum_i W(E-E_in_i,N-n_i)}={W(E,N)e^{-(\alpha+E_i/k_B T)n_i}\over \sum_i W(E,N)e^{-(\alpha+E_i/k_B T)n_i}}={e^{-(\alpha+E_i/k_B T)n_i}\over \sum_i e^{-(\alpha+E_i/k_B T)n_i}}=$$ <b>probability that $n_i$ particles are at state $i$.</b> <br><br>
+			      $i$ is a compact way to denote the whole set of quantum numbers distinguishing a state, example, if we have a gas of hydrogen atoms $i=(n,\ell, m_{\ell}, m_{1/2})$.
+
+			      <h2>Quantum Occupation Number</h2>
+			      With the probability at hand, we can now compute the occupation number (average number of particles at state $i$),
+                    $$\bar{n_i}=\mathcal{N}(E_i)=\sum_in_i P(E_i)\,. $$
+			      we need to carry over the sum.
+
+			      <h3>Gas of Fermions</h3>
+			      Fermions obey Pauli's exclusion principle, <!-- ' --> and this has important consequences in the macroscopic thermodynamic behavior of systems of fermions (such as electrons.   <br><br>
+			      What does the exclusion principle states?_________<br><br>
+			      
+			      Knowing that $i$ is a compact way to denote the whole set of quantum numbers distinguishing a state. What can we say about $n_i$?:
+
+			<ol  style="line-height:300%" type="A">
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		     <!-- longer -->
+		 <li> $n_i = 1$ only</li>
+		 <li> $n_i = 0$ only</li>
+		 <li> $n_i = 0$ or $n_i = 1$ only </li>
+		 		 <li> None of the above </li>
+				</ol>
+	<br><br>
+	Now we can proceed to perform the sum for a system of fermions:
+	                    $$\mathcal{N}_{fermi}(E_i)=\sum_in_i P(E_i)=(\sum_{i}n_i e^{-(\alpha+E_i/k_B T)n_i})/ \sum_j e^{-(\alpha+E_j/k_B T)n_j}= $$
+
+			<ol  style="line-height:300%" type="A">
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		     <!-- longer -->
+		 <li>  ${1\over  e^{\alpha+E_i/k_B T}+1}$</li>
+		 <li>  ${1\over  e^{-\alpha-E_i/k_B T}+1}$</li>
+		 	 <li>  ${e^{\alpha+E_i/k_B T}\over  e^{\alpha+E_i/k_B T}+1}$</li>
+
+		 		 <li> None of the above </li>
+				</ol>
+
+
+	<h3>Gas of Bosons</h3>
+Bosons, do not satisfy Pauli exclusion principle, and as such $n_i$ is not restricted as for fermions. The sum can be done easily, as we have seen in previous classes, by using the geometric series
+$\sum_n x^n={1\over 1-x}\,,\quad {\rm for}\quad x<1\,.$ The computation follows very closely the average energy for a gas of harmonic oscillators  <a href="https://www.carloscardona.us/phys221_spring2024/sm_3/" style="color:blue;" target="_blank"> discussed last session  </a>.
+
+		 $$\mathcal{N}_{bos}(E_i)={1\over  e^{\alpha+E_i/k_B T}+1}\,.$$
+						   <h3>Unifying Expression</h3>
+Last two expressions allow us to  write an unifying expression for the three energy distributions we have learn so far:
+                    $$\boxed{ \mathcal{N}(E_i)={1\over B e^{E_i/k_B T}-\epsilon}}$$
+                    with $\epsilon=1$ for boson,  $\epsilon=-1$ for fermions, and  $\epsilon=0$ for Boltzmann (classical/semiclassical systems).
+                    Lets plot and compare them at a given temperature. At low temperatures we have,
+                    <center>   <img src="{% static "img/bolt_bose_ferm0.png" %}" width="600"></center><br><br>
+                    where they look very differently. While for high energies we have
+                    <center>   <img src="{% static "img/bolt_bose_ferm_high0.png" %}" width="600"></center><br><br>
+                    they converge to each other, or in other words, they all become the Boltzmann distribution. Quantum behaviour is relevant at low temperatures, while at high energies, a classical approximation is a good enough description.
+                    <h2>The Fermi Distribution</h2>
+                    The Fermi distribution is particularly important due to its large departure from Bose and Boltzmann. At low enough energy, it looks like
+                    <center>   <img src="{% static "img/ferm0.png" %}" width="600"></center><br><br>
+                    At low enough energies, the occupation number is  one,  at some point, called the Fermi Energy $E_F$, the ocupation number is $1/2$, where if sharply drops to zero, implying that for small temperatures all  states with $ E< E_F$ are occupied, while (almost) none state with $E > E_F$ are empty!.   
+<br><br>
+                   Even though we are going to consider Bose and Fermi distributions in particular systems in the next few classes, it is convenient to take a closer look at some general features of the Fermi distribution, since it is particularly important due to its large departure from Bose and Boltzmann,
+                    $$\boxed{ \mathcal{N}(E_i)={1\over B e^{E_i/k_B T}+1}}$$
+                    At NOT-so-low temperatures, it looks like
+                    <center>   <img src="{% static "img/ferm_ht.png" %}" width="600"></center><br><br>
+                    Low energy states are fully occupied, whereas high energies states are rarely occupied.
+
+                    <h3>Fermi energy</h3> At low enough temperatures, this behaviour becomes very sharp,
+                    <center>   <img src="{% static "img/ferm.png" %}" width="600"></center><br><br>
+
+                    Here low energy states are again fully occupied, i.e the occupation number is  one,  and at certain temperature  called the Fermi Energy $E_F$ (equal to one in this particular plot), the ocupation number is $1/2$, after which the occupation number sharply drops to zero, implying that for small temperatures all states with $ E< E_F$ are occupied, while (almost) none state with $E > E_F$ are empty!.<br><br>
+                    <b> $E_F $ is defined such as $\mathcal{N}(E_F)={1\over2}$</b><br><br>
+                    By using $E_F$ definition, we can compute $B$ for the Fermi distribution: 
+                    $\mathcal{N}(E_F)={1\over2}$ lead us to $$B=e^{-E_F/k_B T}\,.$$ Therefore $E_F$ is a constant as long as $B$ remains a constant. <br>
+                    In the homework, you are going to compute constant $B$ as a function of particle density. However, a more convenient form to write this constant (not in the homework) is: 
+                    $$B= {1\over e^{\xi\over k_B T}-1} $$
+                    where $\xi$ is defined as the Fermi energy at $T=0$.  An important thing to note is that this constant (in energy) does depend on Temperature.<br>
+                    Pluggin back $B$ into the definition in terms of $E_F(T=0)$, we can obtain an expresion for Fermi energy $E_F$ as a function of temperature,
+                    $$E_F=k_B T\ln\left(e^{\xi\over k_B T}-1\right) $$
+                    of course, $E_F(T=0)=\xi$ from the last expression. In many practical applications, which happend at low energies, $E_F$ is considered a constant also in temperature,
+                    <center>   <img src="{% static "img/ef.png" %}" width="600"></center><br><br>
+                    Some applications that we might or might not have the time to consider, includes,
+                    <ul>
+                        <li>Metals:<br>
+                            Under the free electron model, the electrons in a metal can be considered to form a Fermi gas, with a Fermi energy of the order of 2 to 10 electronvolts.</li>
+
+                         <li>   White dwarfs:<br>
+                             Stars known as white dwarfs have mass comparable to the Sun, but have about a hundredth of its radius. The high densities mean that the electrons are no longer bound to single nuclei and instead form a degenerate electron gas. Their Fermi energy is about 0.3 MeV.</li>
+
+                           <li> Nucleus:<br>
+                         Gases of protons and/or neutrons are also fermion gases. A typical value for the Fermi energy in suchs systems is usually given as 38 MeV.</li>
+                    </ul>
+
+			<br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
