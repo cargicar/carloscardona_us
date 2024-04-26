@@ -102,13 +102,27 @@
 		  <br><br>
 						   <h3>Unifying Expression</h3>
 Last session we have arrived to an unifying expression for the three thermodynamic probability distributions we have learn so far:
-                    $$\boxed{ \mathcal{N}(E_i)={1\over B e^{E_i/k_B T}-\epsilon}}$$
+                    $$\boxed{ \mathcal{N}(E)={1\over B e^{E/k_B T}-\epsilon}}$$
                     with $\epsilon=1$ for boson,  $\epsilon=-1$ for fermions, and  $\epsilon=0$ for Boltzman or classical/semiclassical systems.
                     Lets plot and compare them at a given temperature. At low temperatures we have,
-                    <center>   <img src="{% static "img/bolt_bose_ferm0.png" %}" width="600"></center><br><br>
+						   <center>   <img src="{% static "img/bolt_bose_ferm.png" %}" width="600"></center><br><br>
+According to this plot, what statement is true:						   		    
+			<ol  style="line-height:300%" type="A">
+		 <br>   <img src="{% static "img/iclicker.png" %}" width="100"> <br>
+		     <!-- longer -->
+		 <li>The majority of Fermions are found at low energies whereas Bosons are more evenly distributed among many energies.  </li>
+		 <li>The majority of Bosons are found at low energies whereas Fermions are more evenly distributed among many energies.   </li>
+		 <li>For low energies we expect Bosons to follow an approximate Boltzmann distribution.   </li>
+		 
+		 <li> None of the above </li>
+				</ol>
+	<br><br>
+
                     <!--  While for high energies we have -->
                     <!-- <center>   <img src="{% static "img/bolt_bose_ferm_high0.png" %}" width="600"></center><br><br> -->
-                    <!-- they converge to each other, or in other words, they all become the Boltzmann distribution. Quantum behaviour is relevant at low temperatures, while at high energies, a classical approximation is a good enough description. -->
+        <!-- they converge to each other, or in other words, they all become the Boltzmann distribution. Quantum behaviour is relevant at low temperatures, while at high energies, a classical approximation is a good enough description. -->
+	Including some more higher energies:
+							   <center>   <img src="{% static "img/bolt_bose_ferm0.png" %}" width="600"></center><br><br>
 		    From this plot we learn:
 <ul>
 		    <li>At high temperatures, particles are spread out sparsely over
@@ -120,22 +134,27 @@ than 1, it is irrelevant whether the particles are bosons, fermions, or
 the lowest-energy individual-particle state, while fermions tend to
 		      fill states, one particle per state, up to some maximum energy.</li>
 </ul>
+
                     <h2>The Fermi Distribution</h2>
-                    The Fermi distribution is particularly important due to its large departure from Bose and Boltzmann. <br><br>
+                    The Fermi distribution is particularly important for electronic devices, such us semiconductors. <br><br>
                    
                     At NOT-so-low temperatures, it looks like
                     <center>   <img src="{% static "img/ferm_ht.png" %}" width="600"></center><br><br>
                     Low energy states are fully occupied, whereas high energies states are rarely occupied.
 <br><br>
-                    At low enough energies, the occupation number is  one,  at some point, called the Fermi Energy $E_F$, the ocupation number is $1/2$, where if sharply drops to zero, implying that for small temperatures all  states with $ E< E_F$ are occupied, while almost all states with $E > E_F$ are empty!.   
-<br><br>
+At low enough energies, the occupation number is  one,  at some point, called the Fermi Energy $E_F$, the occupation number is $1/2$.
+                    By using this definition of $E_F$, we can compute $B$ for the Fermi distribution: 
+$\mathcal{N}(E_F)={1\over2}$ lead us to $$B=e^{-E_F/k_B T}\,,$$ or 
+ $$ \mathcal{N}_{fermi}(E)={1\over e^{(E-E_F)/k_B T}+1}\,.$$
+
+Notice that $E_F$ is a constant as long as $B$ remains a constant, which is the case in most practical applications. <br>
+
                    
                     <center>   <img src="{% static "img/ferm.png" %}" width="600"></center><br><br>
 
-                    Here low energy states are again fully occupied, i.e the occupation number is  one,  and at certain temperature  called the Fermi Energy $E_F$ (equal to one in this particular plot), the ocupation number is $1/2$, after which the occupation number sharply drops to zero, implying that for small temperatures all states with $ E< E_F$ are occupied, while (almost) none state with $E > E_F$ are empty!.<br><br>
-                    <b> $E_F $ is defined such as $\mathcal{N}(E_F)={1\over2}$</b><br><br>
-                    By using $E_F$ definition, we can compute $B$ for the Fermi distribution: 
-                    $\mathcal{N}(E_F)={1\over2}$ lead us to $$B=e^{-E_F/k_B T}\,.$$ Therefore $E_F$ is a constant as long as $B$ remains a constant. <br>
+At low enough energies,  low energy states are again fully occupied, i.e the occupation number is  one,,  at the Fermi Energy $E_F$, the occupation number is $1/2$, after that it sharply drops to zero. For very low temperatures,  all  states with $ E< E_F$ are occupied, while almost all states with $E > E_F$ are empty!.   
+<br><br>
+
                     <ul>
                         <li>Metals:<br>
                             Under the free electron model, the electrons in a metal can be considered to form a Fermi gas, with a Fermi energy of the order of 2 to 10 electronvolts.</li>
