@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Review_1</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- MathJAx -->
+    <script>
+     MathJax = {
+         tex: {
+             inlineMath: [['$', '$'], ['\\(', '\\)']]
+         }
+
+     };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/black.jpeg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <div class="site-heading">
+		    <br><br><br><br>
+                        <h1 >Review Session </h1>
+                        <hr class="small">
+                        <h2></h2>
+                        <h3>PHYS-221 April 29 / 2024 </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-preview">
+		
+		<h3>Problem Relativity</h3>
+		A pole-vaulter holds a 16 ft. pole. A barn has doors at
+both ends, 10 ft. apart. The pole-vaulter on the outside
+of the barn begins running toward one of the open barn
+doors, holding the pole level in the direction he’s run-
+ning. When passing through the barn, the pole fits
+(barely) entirely within the barn all at once.<br> (a) How
+fast is the pole-vaulter running?<br> (b) According to
+whom—the pole-vaulter or an observer stationary in the
+barn—does the pole fit in all at once?<br> (c) According to
+the other person, which occurs first, the front end of the
+pole leaving the barn or the back end entering, and<br>
+(d) what is the time interval between these two events?<br><br>
+<center>
+  <img src="{% static "img/pole_vaulter.jpeg" %}" width="400"></center>
+
+		 <!-- 	<ol  style="line-height:300%" type="A"> -->
+		 <!--   <img src="{% static "img/iclicker.png" %}" width="100"> <br> -->
+		 <!-- <\!-- longer -\-> -->
+		      
+		 <!--      <li> 4 </li> -->
+		      
+		 <!--      <li> 6 </li> -->
+
+		 <!--      <li> 8 </li> -->
+
+		 <!--      <li> None of the above </li> -->
+		 <!--      </ol> -->
+		 <!--      <hr> -->
+		 <!--      <br><br> -->
+                
+                 <!-- 		    Following the rules for the Hydrogen atom, how many electrons can we pack into an energy level (<b>shell</b>) $n$?  -->
+		    
+		 <!-- 	<ol  style="line-height:300%" type="A"> -->
+		 <!--   <img src="{% static "img/iclicker.png" %}" width="100"> <br> -->
+		 <!-- <\!-- longer -\-> -->
+		      
+		 <!--      <li> $n^2$ </li> -->
+		      
+		 <!--      <li> $2n^2$ </li> -->
+
+		 <!--      <li> $4n^2$ </li> -->
+
+		 <!--      <li> None of the above </li> -->
+		 <!--      </ol> -->
+		 <!--      <hr> -->
+		 <!--      <br> -->
+			<br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
