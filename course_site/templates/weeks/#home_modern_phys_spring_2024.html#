@@ -1,0 +1,618 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Modern Physics</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src= "{% static 'img/cwru-logo.png' %}" alt="cwru-logo" width="100" height="100">
+                <header class="intro-header" style="background-image: url({% static 'img/cwru-logo.png' %})">
+                <!-- <a class="navbar-brand" href="">Home</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <!-- <li> -->
+                    <!--     <a href="syllabus">Syllabus</a> -->
+                    <!-- </li> -->
+                    <!-- <li> -->
+                    <!--     <a href="contact.html">Contact</a> -->
+                    <!-- </li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/solvay.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Modern Physics</h1>
+                        <hr class="small">
+                        <span class="subheading">PHYS-221 Spring 2024</span>
+                        <span class="subheading">Case Western Reserve University</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-preview">
+                    <a href="../phys221_spring2024/welcome">
+                        <h2 class="post-title">
+                           "Welcome"
+                        </h2>
+                        <h3 class="post-subtitle">
+                            Welcome
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="class00">Carlos Cardona</a> on January 9, 2024</p>
+                </div>
+                <hr>
+   
+	      <div class="post-preview">
+                    <a href="../phys221_spring2024/relativity_1">
+                        <h2 class="post-title">
+                           Introduction to Relativity 1
+                        </h2>
+                        <h3 class="post-subtitle">
+                            References Frames and Einstein's Postulates 
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="class00">Carlos Cardona</a> on January 15/ 2024</p>
+                </div>
+                <hr>
+   
+	      <div class="post-preview">
+                    <a href="../phys221_spring2024/relativity_2">
+                        <h2 class="post-title">
+                           Introduction to Relativity 2
+                        </h2>
+                        <h3 class="post-subtitle">
+                            Consequenses of Einstein's Postulates 
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="../phys221_spring2024/relativity_2">Carlos Cardona</a> on January 23/ 2024</p>
+                </div>
+                <hr>
+
+		   
+	      <div class="post-preview">
+                    <a href="../phys221_spring2024/relativity_3">
+                        <h2 class="post-title">
+                           Introduction to Relativity 3
+                        </h2>
+                        <h3 class="post-subtitle">
+                            Lorentz Transformations 
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="../phys221_spring2024/relativity_3">Carlos Cardona</a> on January 25/ 2024</p>
+                </div>
+                <hr>
+
+		   
+	      <div class="post-preview">
+                    <a href="../phys221_spring2024/relativity_4">
+                      <h2 class="post-title">
+                        Introduction to Relativity 4
+                        </h2>
+                        <h3 class="post-subtitle">
+                            Consequences revisited, proper time and proper length
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="../phys221_spring2024/relativity_4">Carlos Cardona</a> on January 29/ 2024</p>
+                </div>
+              <hr>
+		   
+	      <div class="post-preview">
+                    <a href="../phys221_spring2024/relativity_5">
+                        <h2 class="post-title">
+                           Introduction to Relativity 5
+                        </h2>
+                        <h3 class="post-subtitle">
+                         Working on some Exercises 
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="../phys221_spring2024/relativity_5">Carlos Cardona</a> on January 30/ 2024</p>
+                </div>
+              <hr>
+	      
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/relativity_6">
+                      <h2 class="post-title">
+			Introduction to Relativity 6
+                      </h2>
+		        <h3 class="post-subtitle">
+			  Velocity Transformations</h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on February 2,  2024</p>
+                </div>
+		<!--                 <hr> -->
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/relativity_7">
+                      <h2 class="post-title">
+			Introduction to Relativity 7
+                      </h2>
+		        <h3 class="post-subtitle">
+
+			Momentum and Energy</h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on February 4,  2024</p>
+                </div>
+		<!--                 <hr> -->
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/relativity_8">
+                      <h2 class="post-title">
+			Introduction to Relativity 8
+                      </h2>
+		        <h3 class="post-subtitle">
+
+		Mass and Energy</h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on February 7,  2024</p>
+                </div>
+		<!--                 <hr> -->
+
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/quantum_mechanics_1">
+                      <h2 class="post-title">
+			Pre- Quantum Mechanics 
+                      </h2>
+		        <h3 class="post-subtitle">
+	Electromagnetic Waves
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on February 9,  2024</p>
+                </div>
+
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/quantum_mechanics_2">
+                      <h2 class="post-title">
+			Quantum Mechanics I 
+                      </h2>
+		        <h3 class="post-subtitle">
+	Experimental Evidence
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on February 12,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/quantum_mechanics_3">
+                      <h2 class="post-title">
+			Quantum Mechanics 2
+                      </h2>
+		        <h3 class="post-subtitle">
+	Experimental Evidence 2
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on February 14,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/quantum_mechanics_4">
+                      <h2 class="post-title">
+			Quantum Mechanics 3
+                      </h2>
+		        <h3 class="post-subtitle">
+	Matter Waves
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on February 19,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/quantum_mechanics_5">
+                      <h2 class="post-title">
+			Quantum Mechanics 4
+                      </h2>
+		        <h3 class="post-subtitle">
+	Matter Waves Properties
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on February 21,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/quantum_mechanics_6">
+                      <h2 class="post-title">
+			Quantum Mechanics 5
+                      </h2>
+		        <h3 class="post-subtitle">
+	Schrödinger equation
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on February 22,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/quantum_mechanics_7">
+                      <h2 class="post-title">
+			Quantum Mechanics 6
+                      </h2>
+		        <h3 class="post-subtitle">
+	Heisenberg Uncertainty Principle
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on February 26,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/quantum_mechanics_8">
+                      <h2 class="post-title">
+			Quantum Mechanics 7
+                      </h2>
+		        <h3 class="post-subtitle">
+	Particle in a Box
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on February 27,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/quantum_mechanics_9">
+                      <h2 class="post-title">
+			Quantum Mechanics 8
+                      </h2>
+		        <h3 class="post-subtitle">
+	The Quantum Harmonic Oscillator
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on March 6,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/quantum_mechanics_10">
+                      <h2 class="post-title">
+			Quantum Mechanics 9
+                      </h2>
+		        <h3 class="post-subtitle">
+	The Quantum Harmonic Oscillator 2
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on March 8,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/quantum_mechanics_11">
+                      <h2 class="post-title">
+			Quantum Mechanics 10
+                      </h2>
+		        <h3 class="post-subtitle">
+Unbound States: Step Potential		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on March 17,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/quantum_mechanics_12">
+                      <h2 class="post-title">
+			Quantum Mechanics 11
+                      </h2>
+		        <h3 class="post-subtitle">
+Unbound States: Particle wave propagation over potential energy changes
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on March 20,  2024</p>
+                </div>
+
+
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/quantum_mechanics_13">
+                      <h2 class="post-title">
+			Quantum Mechanics 12
+                      </h2>
+		        <h3 class="post-subtitle">
+Unbound States: Potential Barrier and Tunneling 
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on March 22,  2024</p>
+                </div>
+
+		
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/atoms_1">
+                      <h2 class="post-title">
+			Atoms 1
+                      </h2>
+		        <h3 class="post-subtitle">
+The Schrödinger Equation in Three Dimensions
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on March 24,  2024</p>
+                </div>
+
+		
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/atoms_2">
+                      <h2 class="post-title">
+			Atoms 2
+                      </h2>
+		        <h3 class="post-subtitle">
+The Hydrogen Spectral Lines and Spherical Coordinates 
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on March 27,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+		
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/atoms_3">
+                      <h2 class="post-title">
+			Atoms 3
+                      </h2>
+		        <h3 class="post-subtitle">
+Schrodinger Equation Solutions for the Hydrogen Atom 
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on March 29,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+		
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/atoms_4">
+                      <h2 class="post-title">
+			Atoms 4
+                      </h2>
+		        <h3 class="post-subtitle">
+Schrodinger Equation Solutions for the Hydrogen Atom. Angular Probabilities. 
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on April 1,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+		
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/atoms_5">
+                      <h2 class="post-title">
+			Atoms 5
+                      </h2>
+		        <h3 class="post-subtitle">
+Schrodinger Equation Solutions for the Hydrogen Atom. Radial Probabilities.
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on April 3,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+		
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/atoms_6">
+                      <h2 class="post-title">
+			Atoms 6
+                      </h2>
+		        <h3 class="post-subtitle">
+Schrodinger Equation Solutions for the Hydrogen Atom. Radial Probabilities.
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on April 5,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+		
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/atoms_7">
+                      <h2 class="post-title">
+			Atoms 7
+                      </h2>
+		        <h3 class="post-subtitle">
+Spin
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on April 10,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+		
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/atoms_8">
+                      <h2 class="post-title">
+			Atoms 8
+                      </h2>
+		        <h3 class="post-subtitle">
+Pauli Exclusion Principle
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on April 12,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+		
+		
+	      <hr>
+                <div class="post-preview">
+                    <a href="../phys221_spring2024/atoms_9">
+                      <h2 class="post-title">
+			Atoms 9
+                      </h2>
+		        <h3 class="post-subtitle">
+Multielectron Atoms and the Periodic Table
+		 </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">Carlos Cardona</a> on April 15,  2024</p>
+                </div>
+
+		<!--                 <hr> -->
+
+		
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#">Older Posts &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--                 <hr> -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/cargicar?tab=repositories">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Carlos Cardona 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static "vendor/bootstrap/js/bootstrap.min.js" %}"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="{% static "js/jqBootstrapValidation.js" %}"></script>
+    <script src="{% static "js/contact_me.js" %}"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{% static "js/clean-blog.min.js" %}"></script>
+
+</body>
+
+</html>
